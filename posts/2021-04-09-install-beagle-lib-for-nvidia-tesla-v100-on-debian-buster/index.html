@@ -10,8 +10,8 @@
 		<meta property="og:title" content="Install beagle-lib for NVidia Tesla V100 on Debian buster" />
 <meta property="og:description" content="BEAGLE-LIB is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.
 When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:
-nvcc fatal : Value &#39;compute_30&#39; is not defined for option &#39;gpu-architecture&#39; 1. Install NVidia driver and CUDA toolkit Firstly, append this line in /etc/apt/sources.list
-deb http://deb.debian.org/debian buster-backports main contrib non-free Then, install:" />
+nvcc fatal   : Value &#39;compute_30&#39; is not defined for option &#39;gpu-architecture&#39;
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/" />
 <meta property="article:published_time" content="2021-04-09T15:30:10+00:00" />
@@ -20,8 +20,8 @@ deb http://deb.debian.org/debian buster-backports main contrib non-free Then, in
 		<meta itemprop="name" content="Install beagle-lib for NVidia Tesla V100 on Debian buster">
 <meta itemprop="description" content="BEAGLE-LIB is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.
 When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:
-nvcc fatal : Value &#39;compute_30&#39; is not defined for option &#39;gpu-architecture&#39; 1. Install NVidia driver and CUDA toolkit Firstly, append this line in /etc/apt/sources.list
-deb http://deb.debian.org/debian buster-backports main contrib non-free Then, install:">
+nvcc fatal   : Value &#39;compute_30&#39; is not defined for option &#39;gpu-architecture&#39;
+">
 <meta itemprop="datePublished" content="2021-04-09T15:30:10+00:00" />
 <meta itemprop="dateModified" content="2021-04-09T15:30:10+00:00" />
 <meta itemprop="wordCount" content="214">
@@ -34,8 +34,8 @@ deb http://deb.debian.org/debian buster-backports main contrib non-free Then, in
 <meta name="twitter:title" content="Install beagle-lib for NVidia Tesla V100 on Debian buster"/>
 <meta name="twitter:description" content="BEAGLE-LIB is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.
 When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:
-nvcc fatal : Value &#39;compute_30&#39; is not defined for option &#39;gpu-architecture&#39; 1. Install NVidia driver and CUDA toolkit Firstly, append this line in /etc/apt/sources.list
-deb http://deb.debian.org/debian buster-backports main contrib non-free Then, install:"/>
+nvcc fatal   : Value &#39;compute_30&#39; is not defined for option &#39;gpu-architecture&#39;
+"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -96,8 +96,7 @@ if (!doNotTrack) {
 			<p><a href="https://github.com/beagle-dev/beagle-lib">BEAGLE-LIB</a> is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.</p>
 <p>When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nvcc fatal   : Value <span style="color:#e6db74">&#39;compute_30&#39;</span> is not defined <span style="color:#66d9ef">for</span> option <span style="color:#e6db74">&#39;gpu-architecture&#39;</span>
-</code></pre></div><!-- raw HTML omitted -->
-<h1 id="1-install-nvidia-driver-and-cuda-toolkit">1. Install NVidia driver and CUDA toolkit</h1>
+</code></pre></div><h1 id="1-install-nvidia-driver-and-cuda-toolkit">1. Install NVidia driver and CUDA toolkit</h1>
 <p>Firstly, append this line in <em>/etc/apt/sources.list</em></p>
 <pre><code>deb http://deb.debian.org/debian buster-backports main contrib non-free
 </code></pre><p>Then, install:</p>
@@ -132,7 +131,6 @@ make install
 <li><a href="https://github.com/beagle-dev/beagle-lib/wiki/LinuxInstallInstructions">Installing BEAGLE on Linux</a></li>
 <li><a href="https://arnon.dk/tag/nvcc-flags/">Matching CUDA arch and CUDA gencode for various NVIDIA architectures</a></li>
 </ol>
-
 		</div>
 		<footer class="post__footer">
 			

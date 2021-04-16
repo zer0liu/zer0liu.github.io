@@ -102,10 +102,10 @@ A workthrough will be online later.
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		BEAGLE-LIB is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.
-When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:
-nvcc fatal : Value &#39;compute_30&#39; is not defined for option &#39;gpu-architecture&#39; 1. Install NVidia driver and CUDA toolkit Firstly, append this line in /etc/apt/sources.list
-deb http://deb.debian.org/debian buster-backports main contrib non-free Then, install:
+		<p><a href="https://github.com/beagle-dev/beagle-lib">BEAGLE-LIB</a> is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.</p>
+<p>When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nvcc fatal   : Value <span style="color:#e6db74">&#39;compute_30&#39;</span> is not defined <span style="color:#66d9ef">for</span> option <span style="color:#e6db74">&#39;gpu-architecture&#39;</span>
+</code></pre></div>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/">Read more…</a>
@@ -126,9 +126,7 @@ deb http://deb.debian.org/debian buster-backports main contrib non-free Then, in
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.
-1. Error: Maximum upload size exceeded E.g., Maximum upload 50M files for Pavian, simple input:
-pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000, maxUploadSize=&#34;50M&#34;)  Besides M (megabyte), B (byte), K (kilobyte) and G (gigabyte) also supported. This option is defined in the script runApp.
+		<p><a href="https://github.com/fbreitwieser/pavian">Pavian</a> is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as <a href="https://github.com/DerrickWood/kraken2">Kraken</a>, <a href="https://github.com/DaehwanKimLab/centrifuge">Centrifuge</a> and <a href="https://github.com/biobakery/MetaPhlAn">MetaPhlAn</a>. Here are a few tips for Pavian to work with large data.</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2021-03-15-tips-pavian-load-large-data/">Read more…</a>
@@ -149,11 +147,7 @@ pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.
-1. Compile and Install R for RStudio Install build dependencies: $ sudo apt update $ sudo apt build-dep r-base Install optional packages: The automatically tuned linear algebra software:
-$ sudo apt install libatlas3-base Or the multi-threaded OpenBlas library:
-$ sudo apt install libopenblas-base Download R source Download R source from: https://cran.rstudio.com/src/base/R-4/
-The latest R source is R-4.
+		<p>This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2021-02-22-install-r-and-rstudio-server-in-debian/">Read more…</a>
@@ -174,10 +168,12 @@ The latest R source is R-4.
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		While installing the R package &ldquo;hdf5r&rdquo; version 1.3.3, I encountered the error:
-fatal error: hdf5.h: No such file or directory #include &lt;hdf5.h&gt; ^~~~~~~~ compilation terminated. My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files.
-It has been resolved by:
-1. Export environment variables for header files export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH export CPLUS_INCLUDE_PATH=/usr/include/hdf5/serial/:$CPLUS_INCLUDE_PATH 2. Create symbolic links for library files cd /usr/lib/x86_64-linux-gnu/ sudo ln -s libhdf5_hl_cpp.
+		<p>While installing the R package &ldquo;<a href="https://cran.r-project.org/web/packages/hdf5r/index.html">hdf5r</a>&rdquo; version 1.3.3, I encountered the error:</p>
+<pre><code>fatal error: hdf5.h: No such file or directory
+ #include &lt;hdf5.h&gt;
+          ^~~~~~~~
+compilation terminated.
+</code></pre><p>My OS is Debian buster/10.6, and the package <strong>&ldquo;libhdf5-dev&rdquo;</strong> has been installed. It looks R cannot find the path of hdf5 header and library files.</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2020-10-20-install-hdf5r-package/">Read more…</a>
@@ -198,10 +194,8 @@ It has been resolved by:
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Aria2 creats a &ldquo;.aria2&rdquo; file for each object it downloading. It can be used to resume the download if necessary.
-The .aria2 file is a binary file and need to be decoded to magnet link.
-There are two ways to resolve it.
-Via online service  By @alphatr aria2 reader  Via a Python command  By @smasterfree aria control file parser  Note:  This &ldquo;.aria2&rdquo; file will be removed if the download complete success.
+		<p>Aria2 creats a &ldquo;.aria2&rdquo; file for each object it downloading. It can be used
+to resume the download if necessary.</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2020-09-21-resume-aria2-download-in-ariang/">Read more…</a>
@@ -222,9 +216,8 @@ Via online service  By @alphatr aria2 reader  Via a Python command  By @smasterf
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		A couple of days ago, I received an email from the Let&rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.
-So I spent some time to fix the problem.
-Background OS, HTTP server and Certbot encryption The OS for the server is Debian 10/buster and nginx HTTP server was installed.
+		<p>A couple of days ago, I received an email from the Let&rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.</p>
+<p>So I spent some time to fix the problem.</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/">Read more…</a>
@@ -245,10 +238,29 @@ Background OS, HTTP server and Certbot encryption The OS for the server is Debia
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.
-Components:
- VPS  OpenVZ VPS   OS  Debian 9.12 Kernel 2.6.32   Softwares  aria2 1.35.0 AriaNg 1.1.4 Letsencrypt/certbot 0.28.0 Nginx 1.10.3    Static build aria2 Download aria2 source code The latest aria2 release v1.35.0 is available from github.
-Install dependencies * Caution It seems that libgnutl is *NOT* compartible with aria2, and it caused the error: **/usr/bin/ld: cannot find -lp11-kit**  Remove libgnutl # apt remove --purge libgnutls30 libgnutls28-dev Install necessary packages # apt install -y libcurl4-openssl-dev libevent-dev ca-certificates libssl-dev pkg-config \ build-essential intltool libgcrypt-dev libssl-dev libxml2-dev libc-ares-dev libssl-dev \ libsqlite3-dev lzma liblzma-dev libicu-dev zlib1g-dev Compile aria2 source code $ cd aria2 $ autoreconf -i $.
+		<p>Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.</p>
+<p>Components:</p>
+<ul>
+<li>VPS
+<ul>
+<li>OpenVZ VPS</li>
+</ul>
+</li>
+<li>OS
+<ul>
+<li>Debian 9.12</li>
+<li>Kernel 2.6.32</li>
+</ul>
+</li>
+<li>Softwares
+<ul>
+<li>aria2 1.35.0</li>
+<li>AriaNg 1.1.4</li>
+<li>Letsencrypt/certbot 0.28.0</li>
+<li>Nginx 1.10.3</li>
+</ul>
+</li>
+</ul>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2020-03-28-aria2-1-35-0-letsencrypt/">Read more…</a>
@@ -269,9 +281,7 @@ Install dependencies * Caution It seems that libgnutl is *NOT* compartible with 
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by pdfposter.
-1. Install pdfposter There are several ways to install this utility.
-1.1 Install via OS package manager sudo apt-get install pdfposter 1.2 Install via pip   Note: It depends Pythonn 3.x
+		<p>Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by <strong>pdfposter</strong>.</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/">Read more…</a>
@@ -292,11 +302,9 @@ Install dependencies * Caution It seems that libgnutl is *NOT* compartible with 
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
-PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 2.7.
-This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.
-1. Install Conda Download Anaconda or Miniconda and install it.
- Note: Although PyMOL Wiki introduced PyMOL for Python 2.7 only, there are also pre-compiled PyMOL distribution for Python 3.
+		<p>Since PyMOL 2.x released, there were no binary installer avaliable for Windows.</p>
+<p><a href="https://pymolwiki.org/index.php/Windows_Install">PyMOL Wiki</a> provides the way to install open source PyMOL in Windows under Python 2.7.</p>
+<p>This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2019-05-26-install-pymol-windows/">Read more…</a>

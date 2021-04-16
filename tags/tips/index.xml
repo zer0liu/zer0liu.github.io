@@ -13,9 +13,7 @@
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
       
       <guid>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</guid>
-      <description>Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.
-1. Error: Maximum upload size exceeded E.g., Maximum upload 50M files for Pavian, simple input:
-pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000, maxUploadSize=&amp;#34;50M&amp;#34;)  Besides M (megabyte), B (byte), K (kilobyte) and G (gigabyte) also supported. This option is defined in the script runApp.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/fbreitwieser/pavian&#34;&gt;Pavian&lt;/a&gt; is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as &lt;a href=&#34;https://github.com/DerrickWood/kraken2&#34;&gt;Kraken&lt;/a&gt;, &lt;a href=&#34;https://github.com/DaehwanKimLab/centrifuge&#34;&gt;Centrifuge&lt;/a&gt; and &lt;a href=&#34;https://github.com/biobakery/MetaPhlAn&#34;&gt;MetaPhlAn&lt;/a&gt;. Here are a few tips for Pavian to work with large data.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -24,9 +22,7 @@ pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000
       <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
       
       <guid>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</guid>
-      <description>Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by pdfposter.
-1. Install pdfposter There are several ways to install this utility.
-1.1 Install via OS package manager sudo apt-get install pdfposter 1.2 Install via pip   Note: It depends Pythonn 3.x</description>
+      <description>&lt;p&gt;Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by &lt;strong&gt;pdfposter&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -35,11 +31,9 @@ pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000
       <pubDate>Sun, 26 May 2019 21:16:02 +0000</pubDate>
       
       <guid>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</guid>
-      <description>Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
-PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 2.7.
-This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.
-1. Install Conda Download Anaconda or Miniconda and install it.
- Note: Although PyMOL Wiki introduced PyMOL for Python 2.7 only, there are also pre-compiled PyMOL distribution for Python 3.</description>
+      <description>&lt;p&gt;Since PyMOL 2.x released, there were no binary installer avaliable for Windows.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;PyMOL Wiki&lt;/a&gt; provides the way to install open source PyMOL in Windows under Python 2.7.&lt;/p&gt;
+&lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,9 +42,7 @@ This post provided the method to install PyMOL 2.x by conda (Anaconda or Minocon
       <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
       
       <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
-      <description>BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.
-1. Install beagle-lib Beagle-lib accelerates Bayesian and Maximun Likelihood phylogenetic software amazingly. Especially the beagle-lib v3.x improves 20-50% than version 2.x.
-1.1 Compile beagle-lib without CUDA and OpenCL Although CUDA and OpenCL improves BEAST computing significantly, how to install beagle-lib without an Nvidia GPU card?</description>
+      <description>&lt;p&gt;BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.&lt;/p&gt;</description>
     </item>
     
   </channel>

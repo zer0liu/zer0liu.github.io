@@ -8,20 +8,14 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 		<meta property="og:title" content="通过 frp 穿透内网访问树莓派的 aria2" />
-<meta property="og:description" content="几年前就已经搭建了基于树莓派 2B&#43; 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。
-. 准备 1.1 硬件  Raspberry Pi: 尽量用 2B&#43; 或者 3B&#43; 等性能较好的版本  树莓派上挂载了一块 1T 的移动硬盘，挂载点 /data   VPS: 我用的是 IonSwitch (refer link)  1.2 系统和相关软件  树莓派: Raspbian Stable/Stable/Stretch VPS: Debian Stable/Stretch aria2 Aria2 Web UI AraiNg 内网穿透服务 frp  1.3 域名 域名是为了内网穿透访问树莓派的需要。
- 如果是独立域名，直接在已有域名下添加 CNAME 域名。 如果是动态域名，根据需要设置。  这里的使用两个域名，web.mydomain.net 和 aria2.mydomain.net，分别对应 Web 访问和 aria2 rpc 访问。
-2. 在树莓派上安装 aria2 2.1 从 Debian 源安装 # 从 Debian 源安装 sudo apt-get update sudo apt-get install aria2 目前 Debian Stable 里面的 aria2 版本是 1." />
+<meta property="og:description" content="几年前就已经搭建了基于树莓派 2B&#43; 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://omicx.cc/posts/2018-11-30-deploy-raspberrypi-aria2-frp/" />
 <meta property="article:published_time" content="2018-11-30T10:48:45+00:00" />
 <meta property="article:modified_time" content="2018-11-30T10:48:45+00:00" />
 
 		<meta itemprop="name" content="通过 frp 穿透内网访问树莓派的 aria2">
-<meta itemprop="description" content="几年前就已经搭建了基于树莓派 2B&#43; 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。
-. 准备 1.1 硬件  Raspberry Pi: 尽量用 2B&#43; 或者 3B&#43; 等性能较好的版本  树莓派上挂载了一块 1T 的移动硬盘，挂载点 /data   VPS: 我用的是 IonSwitch (refer link)  1.2 系统和相关软件  树莓派: Raspbian Stable/Stable/Stretch VPS: Debian Stable/Stretch aria2 Aria2 Web UI AraiNg 内网穿透服务 frp  1.3 域名 域名是为了内网穿透访问树莓派的需要。
- 如果是独立域名，直接在已有域名下添加 CNAME 域名。 如果是动态域名，根据需要设置。  这里的使用两个域名，web.mydomain.net 和 aria2.mydomain.net，分别对应 Web 访问和 aria2 rpc 访问。
-2. 在树莓派上安装 aria2 2.1 从 Debian 源安装 # 从 Debian 源安装 sudo apt-get update sudo apt-get install aria2 目前 Debian Stable 里面的 aria2 版本是 1.">
+<meta itemprop="description" content="几年前就已经搭建了基于树莓派 2B&#43; 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。">
 <meta itemprop="datePublished" content="2018-11-30T10:48:45+00:00" />
 <meta itemprop="dateModified" content="2018-11-30T10:48:45+00:00" />
 <meta itemprop="wordCount" content="2191">
@@ -32,10 +26,7 @@
 
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="通过 frp 穿透内网访问树莓派的 aria2"/>
-<meta name="twitter:description" content="几年前就已经搭建了基于树莓派 2B&#43; 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。
-. 准备 1.1 硬件  Raspberry Pi: 尽量用 2B&#43; 或者 3B&#43; 等性能较好的版本  树莓派上挂载了一块 1T 的移动硬盘，挂载点 /data   VPS: 我用的是 IonSwitch (refer link)  1.2 系统和相关软件  树莓派: Raspbian Stable/Stable/Stretch VPS: Debian Stable/Stretch aria2 Aria2 Web UI AraiNg 内网穿透服务 frp  1.3 域名 域名是为了内网穿透访问树莓派的需要。
- 如果是独立域名，直接在已有域名下添加 CNAME 域名。 如果是动态域名，根据需要设置。  这里的使用两个域名，web.mydomain.net 和 aria2.mydomain.net，分别对应 Web 访问和 aria2 rpc 访问。
-2. 在树莓派上安装 aria2 2.1 从 Debian 源安装 # 从 Debian 源安装 sudo apt-get update sudo apt-get install aria2 目前 Debian Stable 里面的 aria2 版本是 1."/>
+<meta name="twitter:description" content="几年前就已经搭建了基于树莓派 2B&#43; 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -119,7 +110,6 @@ if (!doNotTrack) {
 	</div>
 </div><div class="content post__content clearfix">
 			<p>几年前就已经搭建了基于树莓派 2B+ 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。</p>
-<!-- raw HTML omitted -->
 <h1 id="-准备">. 准备</h1>
 <h2 id="11-硬件">1.1 硬件</h2>
 <ul>
@@ -699,7 +689,6 @@ custom_domains <span style="color:#f92672">=</span> web.mydomain.net,aria2.mydom
 <p>访问 <a href="http://web.mydomain.net:7005">http://web.mydomain.net:7005</a> (<code>7005</code> 是 <code>dashboard_port</code> 端口)，然后输入账号和密码：</p>
 <p><img src="https://i.loli.net/2018/12/28/5c25cd5e122a6.png" alt="frp dashboard Http"></p>
 <hr>
-
 		</div>
 		<footer class="post__footer">
 			

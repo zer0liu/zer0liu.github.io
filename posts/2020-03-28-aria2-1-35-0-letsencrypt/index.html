@@ -10,8 +10,27 @@
 		<meta property="og:title" content="Nginx &#43; Letsencrypt &#43; Aria2" />
 <meta property="og:description" content="Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.
 Components:
- VPS  OpenVZ VPS   OS  Debian 9.12 Kernel 2.6.32   Softwares  aria2 1.35.0 AriaNg 1.1.4 Letsencrypt/certbot 0.28.0 Nginx 1.10.3    Static build aria2 Download aria2 source code The latest aria2 release v1.35.0 is available from github.
-Install dependencies * Caution It seems that libgnutl is *NOT* compartible with aria2, and it caused the error: **/usr/bin/ld: cannot find -lp11-kit**  Remove libgnutl # apt remove --purge libgnutls30 libgnutls28-dev Install necessary packages # apt install -y libcurl4-openssl-dev libevent-dev ca-certificates libssl-dev pkg-config \ build-essential intltool libgcrypt-dev libssl-dev libxml2-dev libc-ares-dev libssl-dev \ libsqlite3-dev lzma liblzma-dev libicu-dev zlib1g-dev Compile aria2 source code $ cd aria2 $ autoreconf -i $." />
+
+VPS
+
+OpenVZ VPS
+
+
+OS
+
+Debian 9.12
+Kernel 2.6.32
+
+
+Softwares
+
+aria2 1.35.0
+AriaNg 1.1.4
+Letsencrypt/certbot 0.28.0
+Nginx 1.10.3
+
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/" />
 <meta property="article:published_time" content="2020-03-28T21:41:07+00:00" />
@@ -20,8 +39,27 @@ Install dependencies * Caution It seems that libgnutl is *NOT* compartible with 
 		<meta itemprop="name" content="Nginx &#43; Letsencrypt &#43; Aria2">
 <meta itemprop="description" content="Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.
 Components:
- VPS  OpenVZ VPS   OS  Debian 9.12 Kernel 2.6.32   Softwares  aria2 1.35.0 AriaNg 1.1.4 Letsencrypt/certbot 0.28.0 Nginx 1.10.3    Static build aria2 Download aria2 source code The latest aria2 release v1.35.0 is available from github.
-Install dependencies * Caution It seems that libgnutl is *NOT* compartible with aria2, and it caused the error: **/usr/bin/ld: cannot find -lp11-kit**  Remove libgnutl # apt remove --purge libgnutls30 libgnutls28-dev Install necessary packages # apt install -y libcurl4-openssl-dev libevent-dev ca-certificates libssl-dev pkg-config \ build-essential intltool libgcrypt-dev libssl-dev libxml2-dev libc-ares-dev libssl-dev \ libsqlite3-dev lzma liblzma-dev libicu-dev zlib1g-dev Compile aria2 source code $ cd aria2 $ autoreconf -i $.">
+
+VPS
+
+OpenVZ VPS
+
+
+OS
+
+Debian 9.12
+Kernel 2.6.32
+
+
+Softwares
+
+aria2 1.35.0
+AriaNg 1.1.4
+Letsencrypt/certbot 0.28.0
+Nginx 1.10.3
+
+
+">
 <meta itemprop="datePublished" content="2020-03-28T21:41:07+00:00" />
 <meta itemprop="dateModified" content="2020-03-28T21:41:07+00:00" />
 <meta itemprop="wordCount" content="384">
@@ -34,8 +72,27 @@ Install dependencies * Caution It seems that libgnutl is *NOT* compartible with 
 <meta name="twitter:title" content="Nginx &#43; Letsencrypt &#43; Aria2"/>
 <meta name="twitter:description" content="Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.
 Components:
- VPS  OpenVZ VPS   OS  Debian 9.12 Kernel 2.6.32   Softwares  aria2 1.35.0 AriaNg 1.1.4 Letsencrypt/certbot 0.28.0 Nginx 1.10.3    Static build aria2 Download aria2 source code The latest aria2 release v1.35.0 is available from github.
-Install dependencies * Caution It seems that libgnutl is *NOT* compartible with aria2, and it caused the error: **/usr/bin/ld: cannot find -lp11-kit**  Remove libgnutl # apt remove --purge libgnutls30 libgnutls28-dev Install necessary packages # apt install -y libcurl4-openssl-dev libevent-dev ca-certificates libssl-dev pkg-config \ build-essential intltool libgcrypt-dev libssl-dev libxml2-dev libc-ares-dev libssl-dev \ libsqlite3-dev lzma liblzma-dev libicu-dev zlib1g-dev Compile aria2 source code $ cd aria2 $ autoreconf -i $."/>
+
+VPS
+
+OpenVZ VPS
+
+
+OS
+
+Debian 9.12
+Kernel 2.6.32
+
+
+Softwares
+
+aria2 1.35.0
+AriaNg 1.1.4
+Letsencrypt/certbot 0.28.0
+Nginx 1.10.3
+
+
+"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -139,7 +196,6 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<!-- raw HTML omitted -->
 <h1 id="static-build-aria2">Static build aria2</h1>
 <h2 id="download-aria2-source-code">Download aria2 source code</h2>
 <p>The latest aria2 release v1.35.0 is available from <a href="https://github.com/aria2/aria2/releases/tag/release-1.35.0">github</a>.</p>
@@ -234,7 +290,6 @@ rpc-private-key<span style="color:#f92672">=</span>/etc/letsencrypt/live/&lt;you
 <li><a href="https://certbot.eff.org/lets-encrypt/debianstretch-nginx">certbot instructions</a></li>
 <li><a href="https://sleele.com/2019/04/09/linux%E9%83%A8%E7%BD%B2%E6%9C%80%E6%96%B0%E7%89%88aria2ariang/">Linux部署最新版Aria2+AriaNG</a></li>
 </ol>
-
 		</div>
 		<footer class="post__footer">
 			

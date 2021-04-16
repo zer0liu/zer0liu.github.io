@@ -84,11 +84,7 @@ if (!doNotTrack) {
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.
-1. Compile and Install R for RStudio Install build dependencies: $ sudo apt update $ sudo apt build-dep r-base Install optional packages: The automatically tuned linear algebra software:
-$ sudo apt install libatlas3-base Or the multi-threaded OpenBlas library:
-$ sudo apt install libopenblas-base Download R source Download R source from: https://cran.rstudio.com/src/base/R-4/
-The latest R source is R-4.
+		<p>This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2021-02-22-install-r-and-rstudio-server-in-debian/">Read more…</a>
@@ -109,10 +105,12 @@ The latest R source is R-4.
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		While installing the R package &ldquo;hdf5r&rdquo; version 1.3.3, I encountered the error:
-fatal error: hdf5.h: No such file or directory #include &lt;hdf5.h&gt; ^~~~~~~~ compilation terminated. My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files.
-It has been resolved by:
-1. Export environment variables for header files export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH export CPLUS_INCLUDE_PATH=/usr/include/hdf5/serial/:$CPLUS_INCLUDE_PATH 2. Create symbolic links for library files cd /usr/lib/x86_64-linux-gnu/ sudo ln -s libhdf5_hl_cpp.
+		<p>While installing the R package &ldquo;<a href="https://cran.r-project.org/web/packages/hdf5r/index.html">hdf5r</a>&rdquo; version 1.3.3, I encountered the error:</p>
+<pre><code>fatal error: hdf5.h: No such file or directory
+ #include &lt;hdf5.h&gt;
+          ^~~~~~~~
+compilation terminated.
+</code></pre><p>My OS is Debian buster/10.6, and the package <strong>&ldquo;libhdf5-dev&rdquo;</strong> has been installed. It looks R cannot find the path of hdf5 header and library files.</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2020-10-20-install-hdf5r-package/">Read more…</a>

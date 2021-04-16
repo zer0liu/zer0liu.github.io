@@ -13,9 +13,7 @@
       <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
       
       <guid>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</guid>
-      <description>Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by pdfposter.
-1. Install pdfposter There are several ways to install this utility.
-1.1 Install via OS package manager sudo apt-get install pdfposter 1.2 Install via pip   Note: It depends Pythonn 3.x</description>
+      <description>&lt;p&gt;Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by &lt;strong&gt;pdfposter&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

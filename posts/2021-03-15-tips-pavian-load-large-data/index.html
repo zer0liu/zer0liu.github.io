@@ -8,18 +8,14 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 		<meta property="og:title" content="Tips: Pavian Load Large Data" />
-<meta property="og:description" content="Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.
-1. Error: Maximum upload size exceeded E.g., Maximum upload 50M files for Pavian, simple input:
-pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000, maxUploadSize=&#34;50M&#34;)  Besides M (megabyte), B (byte), K (kilobyte) and G (gigabyte) also supported. This option is defined in the script runApp." />
+<meta property="og:description" content="Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/" />
 <meta property="article:published_time" content="2021-03-15T15:54:55+00:00" />
 <meta property="article:modified_time" content="2021-03-15T15:54:55+00:00" />
 
 		<meta itemprop="name" content="Tips: Pavian Load Large Data">
-<meta itemprop="description" content="Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.
-1. Error: Maximum upload size exceeded E.g., Maximum upload 50M files for Pavian, simple input:
-pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000, maxUploadSize=&#34;50M&#34;)  Besides M (megabyte), B (byte), K (kilobyte) and G (gigabyte) also supported. This option is defined in the script runApp.">
+<meta itemprop="description" content="Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.">
 <meta itemprop="datePublished" content="2021-03-15T15:54:55+00:00" />
 <meta itemprop="dateModified" content="2021-03-15T15:54:55+00:00" />
 <meta itemprop="wordCount" content="130">
@@ -30,9 +26,7 @@ pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000
 
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tips: Pavian Load Large Data"/>
-<meta name="twitter:description" content="Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.
-1. Error: Maximum upload size exceeded E.g., Maximum upload 50M files for Pavian, simple input:
-pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000, maxUploadSize=&#34;50M&#34;)  Besides M (megabyte), B (byte), K (kilobyte) and G (gigabyte) also supported. This option is defined in the script runApp."/>
+<meta name="twitter:description" content="Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -91,7 +85,6 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p><a href="https://github.com/fbreitwieser/pavian">Pavian</a> is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as <a href="https://github.com/DerrickWood/kraken2">Kraken</a>, <a href="https://github.com/DaehwanKimLab/centrifuge">Centrifuge</a> and <a href="https://github.com/biobakery/MetaPhlAn">MetaPhlAn</a>. Here are a few tips for Pavian to work with large data.</p>
-<!-- raw HTML omitted -->
 <h1 id="1-error-maximum-upload-size-exceeded">1. Error: Maximum upload size exceeded</h1>
 <p>E.g., Maximum upload 50M files for Pavian, simple input:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">pavian<span style="color:#f92672">::</span><span style="color:#a6e22e">runApp</span>(port<span style="color:#f92672">=</span><span style="color:#ae81ff">5000</span>, maxUploadSize<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1024</span>^2)
@@ -120,7 +113,6 @@ pavian<span style="color:#f92672">::</span><span style="color:#a6e22e">runApp</s
 <li><a href="https://github.com/fbreitwieser/pavian/issues/23">https://github.com/fbreitwieser/pavian/issues/23</a></li>
 <li><a href="https://github.com/fbreitwieser/pavian/issues/63">https://github.com/fbreitwieser/pavian/issues/63</a></li>
 </ol>
-
 		</div>
 		<footer class="post__footer">
 			

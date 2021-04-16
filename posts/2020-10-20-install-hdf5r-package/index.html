@@ -9,9 +9,11 @@
 	<meta name="description" content="">
 		<meta property="og:title" content="Install hdf5r package in R 4.0.2" />
 <meta property="og:description" content="While installing the R package &ldquo;hdf5r&rdquo; version 1.3.3, I encountered the error:
-fatal error: hdf5.h: No such file or directory #include &lt;hdf5.h&gt; ^~~~~~~~ compilation terminated. My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files.
-It has been resolved by:
-1. Export environment variables for header files export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH export CPLUS_INCLUDE_PATH=/usr/include/hdf5/serial/:$CPLUS_INCLUDE_PATH 2. Create symbolic links for library files cd /usr/lib/x86_64-linux-gnu/ sudo ln -s libhdf5_hl_cpp." />
+fatal error: hdf5.h: No such file or directory
+ #include &lt;hdf5.h&gt;
+          ^~~~~~~~
+compilation terminated.
+My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://omicx.cc/posts/2020-10-20-install-hdf5r-package/" />
 <meta property="article:published_time" content="2020-10-20T15:35:10+00:00" />
@@ -19,9 +21,11 @@ It has been resolved by:
 
 		<meta itemprop="name" content="Install hdf5r package in R 4.0.2">
 <meta itemprop="description" content="While installing the R package &ldquo;hdf5r&rdquo; version 1.3.3, I encountered the error:
-fatal error: hdf5.h: No such file or directory #include &lt;hdf5.h&gt; ^~~~~~~~ compilation terminated. My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files.
-It has been resolved by:
-1. Export environment variables for header files export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH export CPLUS_INCLUDE_PATH=/usr/include/hdf5/serial/:$CPLUS_INCLUDE_PATH 2. Create symbolic links for library files cd /usr/lib/x86_64-linux-gnu/ sudo ln -s libhdf5_hl_cpp.">
+fatal error: hdf5.h: No such file or directory
+ #include &lt;hdf5.h&gt;
+          ^~~~~~~~
+compilation terminated.
+My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files.">
 <meta itemprop="datePublished" content="2020-10-20T15:35:10+00:00" />
 <meta itemprop="dateModified" content="2020-10-20T15:35:10+00:00" />
 <meta itemprop="wordCount" content="95">
@@ -33,9 +37,11 @@ It has been resolved by:
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install hdf5r package in R 4.0.2"/>
 <meta name="twitter:description" content="While installing the R package &ldquo;hdf5r&rdquo; version 1.3.3, I encountered the error:
-fatal error: hdf5.h: No such file or directory #include &lt;hdf5.h&gt; ^~~~~~~~ compilation terminated. My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files.
-It has been resolved by:
-1. Export environment variables for header files export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH export CPLUS_INCLUDE_PATH=/usr/include/hdf5/serial/:$CPLUS_INCLUDE_PATH 2. Create symbolic links for library files cd /usr/lib/x86_64-linux-gnu/ sudo ln -s libhdf5_hl_cpp."/>
+fatal error: hdf5.h: No such file or directory
+ #include &lt;hdf5.h&gt;
+          ^~~~~~~~
+compilation terminated.
+My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -111,7 +117,6 @@ if (!doNotTrack) {
           ^~~~~~~~
 compilation terminated.
 </code></pre><p>My OS is Debian buster/10.6, and the package <strong>&ldquo;libhdf5-dev&rdquo;</strong> has been installed. It looks R cannot find the path of hdf5 header and library files.</p>
-<!-- raw HTML omitted -->
 <p>It has been resolved by:</p>
 <h2 id="1-export-environment-variables-for-header-files">1. Export environment variables for header files</h2>
 <pre><code>export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH
@@ -123,7 +128,6 @@ sudo ln -s libhdf5_cpp.so.103.0.0  libhdf5.so.103
 </code></pre><h2 id="3-install-package-hdf5r">3. Install package &ldquo;hdf5r&rdquo;</h2>
 <pre><code>install.packages(&quot;hdf5r&quot;)
 </code></pre><p>Now there would be OK.</p>
-
 		</div>
 		<footer class="post__footer">
 			

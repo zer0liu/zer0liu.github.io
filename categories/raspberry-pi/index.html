@@ -84,10 +84,7 @@ if (!doNotTrack) {
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		几年前就已经搭建了基于树莓派 2B+ 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。
-. 准备 1.1 硬件  Raspberry Pi: 尽量用 2B+ 或者 3B+ 等性能较好的版本  树莓派上挂载了一块 1T 的移动硬盘，挂载点 /data   VPS: 我用的是 IonSwitch (refer link)  1.2 系统和相关软件  树莓派: Raspbian Stable/Stable/Stretch VPS: Debian Stable/Stretch aria2 Aria2 Web UI AraiNg 内网穿透服务 frp  1.3 域名 域名是为了内网穿透访问树莓派的需要。
- 如果是独立域名，直接在已有域名下添加 CNAME 域名。 如果是动态域名，根据需要设置。  这里的使用两个域名，web.mydomain.net 和 aria2.mydomain.net，分别对应 Web 访问和 aria2 rpc 访问。
-2. 在树莓派上安装 aria2 2.1 从 Debian 源安装 # 从 Debian 源安装 sudo apt-get update sudo apt-get install aria2 目前 Debian Stable 里面的 aria2 版本是 1.
+		<p>几年前就已经搭建了基于树莓派 2B+ 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2018-11-30-deploy-raspberrypi-aria2-frp/">Read more…</a>

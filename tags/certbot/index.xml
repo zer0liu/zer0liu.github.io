@@ -13,9 +13,8 @@
       <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
       
       <guid>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</guid>
-      <description>A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.
-So I spent some time to fix the problem.
-Background OS, HTTP server and Certbot encryption The OS for the server is Debian 10/buster and nginx HTTP server was installed.</description>
+      <description>&lt;p&gt;A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.&lt;/p&gt;
+&lt;p&gt;So I spent some time to fix the problem.&lt;/p&gt;</description>
     </item>
     
   </channel>
