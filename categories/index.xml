@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on OmicX</title>
+    <link>https://omicx.cc/categories/</link>
+    <description>Recent content in Categories on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CUDA</title>
+      <link>https://omicx.cc/categories/cuda/</link>
+      <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/cuda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>https://omicx.cc/categories/software/</link>
+      <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NGS</title>
+      <link>https://omicx.cc/categories/ngs/</link>
+      <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/ngs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://omicx.cc/categories/r/</link>
+      <pubDate>Mon, 22 Feb 2021 16:29:04 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://omicx.cc/categories/blog/</link>
+      <pubDate>Mon, 21 Sep 2020 16:04:04 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Website</title>
+      <link>https://omicx.cc/categories/website/</link>
+      <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FigTree</title>
+      <link>https://omicx.cc/categories/figtree/</link>
+      <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/figtree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PyMOL</title>
+      <link>https://omicx.cc/categories/pymol/</link>
+      <pubDate>Sun, 26 May 2019 21:16:02 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/pymol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conda</title>
+      <link>https://omicx.cc/categories/conda/</link>
+      <pubDate>Thu, 23 May 2019 23:36:56 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/conda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hardware</title>
+      <link>https://omicx.cc/categories/hardware/</link>
+      <pubDate>Fri, 30 Nov 2018 10:48:45 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>https://omicx.cc/categories/raspberry-pi/</link>
+      <pubDate>Fri, 30 Nov 2018 10:48:45 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BEAST</title>
+      <link>https://omicx.cc/categories/beast/</link>
+      <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/beast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Phylogenetics</title>
+      <link>https://omicx.cc/categories/phylogenetics/</link>
+      <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/phylogenetics/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

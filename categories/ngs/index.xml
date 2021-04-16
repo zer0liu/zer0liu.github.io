@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NGS on OmicX</title>
+    <link>https://omicx.cc/categories/ngs/</link>
+    <description>Recent content in NGS on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Mar 2021 15:54:55 +0000</lastBuildDate><atom:link href="https://omicx.cc/categories/ngs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tips: Pavian Load Large Data</title>
+      <link>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</link>
+      <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</guid>
+      <description>Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.
+1. Error: Maximum upload size exceeded E.g., Maximum upload 50M files for Pavian, simple input:
+pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000, maxUploadSize=&amp;#34;50M&amp;#34;)  Besides M (megabyte), B (byte), K (kilobyte) and G (gigabyte) also supported. This option is defined in the script runApp.</description>
+    </item>
+    
+  </channel>
+</rss>

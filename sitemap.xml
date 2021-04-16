@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://omicx.cc/tags/beast/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/cuda/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/cuda/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/debian/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/software/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/ngs/</loc>
+    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/ngs/</loc>
+    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/pavian/</loc>
+    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/tips/</loc>
+    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</loc>
+    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</loc>
+    <lastmod>2021-02-22T16:29:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/r/</loc>
+    <lastmod>2021-02-22T16:29:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/r/</loc>
+    <lastmod>2021-02-22T16:29:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2020-10-20-install-hdf5r-package/</loc>
+    <lastmod>2020-10-20T15:35:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/aria2/</loc>
+    <lastmod>2020-09-21T16:04:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/blog/</loc>
+    <lastmod>2020-09-21T16:04:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2020-09-21-resume-aria2-download-in-ariang/</loc>
+    <lastmod>2020-09-21T16:04:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/certbot/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/cloudflare/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/letsencrypt/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/website/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/nginx/</loc>
+    <lastmod>2020-03-28T21:41:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</loc>
+    <lastmod>2020-03-28T21:41:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</loc>
+    <lastmod>2019-06-22T21:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/figtree/</loc>
+    <lastmod>2019-06-22T21:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/tree/</loc>
+    <lastmod>2019-06-22T21:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</loc>
+    <lastmod>2019-05-26T21:16:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/pymol/</loc>
+    <lastmod>2019-05-26T21:16:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/pymol/</loc>
+    <lastmod>2019-05-26T21:16:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/conda/</loc>
+    <lastmod>2019-05-23T23:36:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/conda/</loc>
+    <lastmod>2019-05-23T23:36:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</loc>
+    <lastmod>2019-05-23T23:36:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/fry/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/hardware/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/raspberry-pi/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/raspberry-pi/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2018-11-30-deploy-raspberrypi-aria2-frp/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/beast/</loc>
+    <lastmod>2018-11-16T12:13:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2018-11-16-beast-tips/</loc>
+    <lastmod>2018-11-16T12:13:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/phylogenetics/</loc>
+    <lastmod>2018-11-16T12:13:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</loc>
+    <lastmod>2018-11-16T10:03:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/nvidia/</loc>
+    <lastmod>2018-11-16T10:03:23+00:00</lastmod>
+  </url>
+  
+</urlset>

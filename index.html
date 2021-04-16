@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.80.0" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>OmicX</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="A blog for bioinformatics, statistics and Omics">
+		<meta property="og:title" content="OmicX" />
+<meta property="og:description" content="A blog for bioinformatics, statistics and Omics" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://omicx.cc/" />
+<meta property="og:updated_time" content="2021-04-09T15:30:10+00:00" />
+
+		<meta itemprop="name" content="OmicX">
+<meta itemprop="description" content="A blog for bioinformatics, statistics and Omics">
+
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="OmicX"/>
+<meta name="twitter:description" content="A blog for bioinformatics, statistics and Omics"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="OmicX">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-129304896-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="OmicX" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/logo-512x512.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">OmicX</div>
+					<div class="logo__tagline">Omics &amp; Statistics</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/" rel="bookmark">
+			Install beagle-lib for NVidia Tesla V100 on Debian buster
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-09T15:30:10Z">April 09, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/cuda/" rel="category">CUDA</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		BEAGLE-LIB is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.
+When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:
+nvcc fatal : Value &#39;compute_30&#39; is not defined for option &#39;gpu-architecture&#39; 1. Install NVidia driver and CUDA toolkit Firstly, append this line in /etc/apt/sources.list
+deb http://deb.debian.org/debian buster-backports main contrib non-free Then, install:
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2021-03-15-tips-pavian-load-large-data/" rel="bookmark">
+			Tips: Pavian Load Large Data
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-03-15T15:54:55Z">March 15, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/ngs/" rel="category">NGS</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.
+1. Error: Maximum upload size exceeded E.g., Maximum upload 50M files for Pavian, simple input:
+pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000, maxUploadSize=&#34;50M&#34;)  Besides M (megabyte), B (byte), K (kilobyte) and G (gigabyte) also supported. This option is defined in the script runApp.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2021-03-15-tips-pavian-load-large-data/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2021-02-22-install-r-and-rstudio-server-in-debian/" rel="bookmark">
+			Install R and RStudio server in Debian
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-02-22T16:29:04Z">February 22, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/r/" rel="category">R</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.
+1. Compile and Install R for RStudio Install build dependencies: $ sudo apt update $ sudo apt build-dep r-base Install optional packages: The automatically tuned linear algebra software:
+$ sudo apt install libatlas3-base Or the multi-threaded OpenBlas library:
+$ sudo apt install libopenblas-base Download R source Download R source from: https://cran.rstudio.com/src/base/R-4/
+The latest R source is R-4.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2021-02-22-install-r-and-rstudio-server-in-debian/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2020-10-20-install-hdf5r-package/" rel="bookmark">
+			Install hdf5r package in R 4.0.2
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-10-20T15:35:10Z">October 20, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		While installing the R package &ldquo;hdf5r&rdquo; version 1.3.3, I encountered the error:
+fatal error: hdf5.h: No such file or directory #include &lt;hdf5.h&gt; ^~~~~~~~ compilation terminated. My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files.
+It has been resolved by:
+1. Export environment variables for header files export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH export CPLUS_INCLUDE_PATH=/usr/include/hdf5/serial/:$CPLUS_INCLUDE_PATH 2. Create symbolic links for library files cd /usr/lib/x86_64-linux-gnu/ sudo ln -s libhdf5_hl_cpp.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2020-10-20-install-hdf5r-package/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2020-09-21-resume-aria2-download-in-ariang/" rel="bookmark">
+			Resume aria2 download in ariang
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-21T16:04:04Z">September 21, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/blog/" rel="category">blog</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Aria2 creats a &ldquo;.aria2&rdquo; file for each object it downloading. It can be used to resume the download if necessary.
+The .aria2 file is a binary file and need to be decoded to magnet link.
+There are two ways to resolve it.
+Via online service  By @alphatr aria2 reader  Via a Python command  By @smasterfree aria control file parser  Note:  This &ldquo;.aria2&rdquo; file will be removed if the download complete success.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2020-09-21-resume-aria2-download-in-ariang/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/" rel="bookmark">
+			Enable certbot automatic renewal for cloudflare CDN
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-08-04T23:11:34Z">August 04, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/website/" rel="category">Website</a>, <a class="meta__link" href="/categories/blog/" rel="category">blog</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		A couple of days ago, I received an email from the Let&rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.
+So I spent some time to fix the problem.
+Background OS, HTTP server and Certbot encryption The OS for the server is Debian 10/buster and nginx HTTP server was installed.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2020-03-28-aria2-1-35-0-letsencrypt/" rel="bookmark">
+			Nginx &#43; Letsencrypt &#43; Aria2
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-28T21:41:07Z">March 28, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/website/" rel="category">Website</a>, <a class="meta__link" href="/categories/blog/" rel="category">blog</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.
+Components:
+ VPS  OpenVZ VPS   OS  Debian 9.12 Kernel 2.6.32   Softwares  aria2 1.35.0 AriaNg 1.1.4 Letsencrypt/certbot 0.28.0 Nginx 1.10.3    Static build aria2 Download aria2 source code The latest aria2 release v1.35.0 is available from github.
+Install dependencies * Caution It seems that libgnutl is *NOT* compartible with aria2, and it caused the error: **/usr/bin/ld: cannot find -lp11-kit**  Remove libgnutl # apt remove --purge libgnutls30 libgnutls28-dev Install necessary packages # apt install -y libcurl4-openssl-dev libevent-dev ca-certificates libssl-dev pkg-config \ build-essential intltool libgcrypt-dev libssl-dev libxml2-dev libc-ares-dev libssl-dev \ libsqlite3-dev lzma liblzma-dev libicu-dev zlib1g-dev Compile aria2 source code $ cd aria2 $ autoreconf -i $.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2020-03-28-aria2-1-35-0-letsencrypt/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/" rel="bookmark">
+			Create pdf file for huge phylogenetic tree
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-06-22T21:26:00Z">June 22, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/figtree/" rel="category">FigTree</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by pdfposter.
+1. Install pdfposter There are several ways to install this utility.
+1.1 Install via OS package manager sudo apt-get install pdfposter 1.2 Install via pip   Note: It depends Pythonn 3.x
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2019-05-26-install-pymol-windows/" rel="bookmark">
+			Install Open Source Pymol in Windows by Conda
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-05-26T21:16:02Z">May 26, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/pymol/" rel="category">PyMOL</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
+PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 2.7.
+This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.
+1. Install Conda Download Anaconda or Miniconda and install it.
+ Note: Although PyMOL Wiki introduced PyMOL for Python 2.7 only, there are also pre-compiled PyMOL distribution for Python 3.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2019-05-26-install-pymol-windows/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2019-05-23-install-conda-compiler-tools/" rel="bookmark">
+			Install conda compiler tools
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-05-23T23:36:56Z">May 23, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/conda/" rel="category">Conda</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Conda is quite convenient for non-root users to install softwares in Linux system. But sometimes there is no packages available in anaconda repository and we have to install these softwares from source. This post introduces the way to compile and install softwares from source, use the Kyoto Cabinet Perl module as an example.
+1. Install compiler tools According to conda document, conda packages for Linux and macOS compilers is available since Anaconda 5.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2019-05-23-install-conda-compiler-tools/">Read more…</a>
+	</div>
+</article>
+</main>
+
+<div class="pagination">
+	<span class="pagination__item pagination__item--current">1/2</span>
+	<a class="pagination__item pagination__item--next btn" href="/page/2/">»</a>
+</div>
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://omicx.cc/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/">Install beagle-lib for NVidia Tesla V100 on Debian buster</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-03-15-tips-pavian-load-large-data/">Tips: Pavian Load Large Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-02-22-install-r-and-rstudio-server-in-debian/">Install R and RStudio server in Debian</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2020-10-20-install-hdf5r-package/">Install hdf5r package in R 4.0.2</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2020-09-21-resume-aria2-download-in-ariang/">Resume aria2 download in ariang</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/beast/">BEAST</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/blog/">blog</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/conda/">Conda</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/cuda/">CUDA</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/figtree/">FigTree</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/hardware/">Hardware</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/ngs/">NGS</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/phylogenetics/">Phylogenetics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/pymol/">PyMOL</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/r/">R</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/raspberry-pi/">Raspberry Pi</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/software/">Software</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/website/">Website</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/aria2/" title="aria2">aria2</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/beast/" title="BEAST">BEAST</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/certbot/" title="certbot">certbot</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cloudflare/" title="cloudflare">cloudflare</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/conda/" title="conda">conda</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cuda/" title="CUDA">CUDA</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/debian/" title="Debian">Debian</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fry/" title="fry">fry</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/letsencrypt/" title="Letsencrypt">Letsencrypt</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="nginx">nginx</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ngs/" title="NGS">NGS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nvidia/" title="Nvidia">Nvidia</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pavian/" title="Pavian">Pavian</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pymol/" title="PyMOL">PyMOL</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/r/" title="R">R</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tips/" title="Tips">Tips</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tree/" title="Tree">Tree</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zer0liu" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:zeroliu@gmail.com">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>zeroliu@gmail.com</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 zeroliu.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

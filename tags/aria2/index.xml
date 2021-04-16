@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aria2 on OmicX</title>
+    <link>https://omicx.cc/tags/aria2/</link>
+    <description>Recent content in aria2 on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Sep 2020 16:04:04 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/aria2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resume aria2 download in ariang</title>
+      <link>https://omicx.cc/posts/2020-09-21-resume-aria2-download-in-ariang/</link>
+      <pubDate>Mon, 21 Sep 2020 16:04:04 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2020-09-21-resume-aria2-download-in-ariang/</guid>
+      <description>Aria2 creats a &amp;ldquo;.aria2&amp;rdquo; file for each object it downloading. It can be used to resume the download if necessary.
+The .aria2 file is a binary file and need to be decoded to magnet link.
+There are two ways to resolve it.
+Via online service  By @alphatr aria2 reader  Via a Python command  By @smasterfree aria control file parser  Note:  This &amp;ldquo;.aria2&amp;rdquo; file will be removed if the download complete success.</description>
+    </item>
+    
+    <item>
+      <title>Nginx &#43; Letsencrypt &#43; Aria2</title>
+      <link>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</link>
+      <pubDate>Sat, 28 Mar 2020 21:41:07 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</guid>
+      <description>Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.
+Components:
+ VPS  OpenVZ VPS   OS  Debian 9.12 Kernel 2.6.32   Softwares  aria2 1.35.0 AriaNg 1.1.4 Letsencrypt/certbot 0.28.0 Nginx 1.10.3    Static build aria2 Download aria2 source code The latest aria2 release v1.35.0 is available from github.
+Install dependencies * Caution It seems that libgnutl is *NOT* compartible with aria2, and it caused the error: **/usr/bin/ld: cannot find -lp11-kit**  Remove libgnutl # apt remove --purge libgnutls30 libgnutls28-dev Install necessary packages # apt install -y libcurl4-openssl-dev libevent-dev ca-certificates libssl-dev pkg-config \ build-essential intltool libgcrypt-dev libssl-dev libxml2-dev libc-ares-dev libssl-dev \ libsqlite3-dev lzma liblzma-dev libicu-dev zlib1g-dev Compile aria2 source code $ cd aria2 $ autoreconf -i $.</description>
+    </item>
+    
+    <item>
+      <title>通过 frp 穿透内网访问树莓派的 aria2</title>
+      <link>https://omicx.cc/posts/2018-11-30-deploy-raspberrypi-aria2-frp/</link>
+      <pubDate>Fri, 30 Nov 2018 10:48:45 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2018-11-30-deploy-raspberrypi-aria2-frp/</guid>
+      <description>几年前就已经搭建了基于树莓派 2B+ 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。
+. 准备 1.1 硬件  Raspberry Pi: 尽量用 2B+ 或者 3B+ 等性能较好的版本  树莓派上挂载了一块 1T 的移动硬盘，挂载点 /data   VPS: 我用的是 IonSwitch (refer link)  1.2 系统和相关软件  树莓派: Raspbian Stable/Stable/Stretch VPS: Debian Stable/Stretch aria2 Aria2 Web UI AraiNg 内网穿透服务 frp  1.3 域名 域名是为了内网穿透访问树莓派的需要。
+ 如果是独立域名，直接在已有域名下添加 CNAME 域名。 如果是动态域名，根据需要设置。  这里的使用两个域名，web.mydomain.net 和 aria2.mydomain.net，分别对应 Web 访问和 aria2 rpc 访问。
+2. 在树莓派上安装 aria2 2.1 从 Debian 源安装 # 从 Debian 源安装 sudo apt-get update sudo apt-get install aria2 目前 Debian Stable 里面的 aria2 版本是 1.</description>
+    </item>
+    
+  </channel>
+</rss>

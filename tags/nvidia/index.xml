@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nvidia on OmicX</title>
+    <link>https://omicx.cc/tags/nvidia/</link>
+    <description>Recent content in Nvidia on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Nov 2018 10:03:23 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/nvidia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Nvidia CUDA in Debian Way</title>
+      <link>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</link>
+      <pubDate>Fri, 16 Nov 2018 10:03:23 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</guid>
+      <description>For Debian stable/Stretch  Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.
+1. Check repository source: For Debian stable/Stretch, the content of /etc/apt/sources.list file may looks like:
+deb http://ftp.debian.org/debian/ stretch main contrib non-free 2. Remove previous installed NVidia drivers if necessary # apt-get remove --purge nvidia* 3.</description>
+    </item>
+    
+  </channel>
+</rss>

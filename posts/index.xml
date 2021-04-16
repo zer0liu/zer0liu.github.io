@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on OmicX</title>
+    <link>https://omicx.cc/posts/</link>
+    <description>Recent content in Posts on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install beagle-lib for NVidia Tesla V100 on Debian buster</title>
+      <link>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</link>
+      <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</guid>
+      <description>BEAGLE-LIB is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.
+When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:
+nvcc fatal : Value &amp;#39;compute_30&amp;#39; is not defined for option &amp;#39;gpu-architecture&amp;#39; 1. Install NVidia driver and CUDA toolkit Firstly, append this line in /etc/apt/sources.list
+deb http://deb.debian.org/debian buster-backports main contrib non-free Then, install:</description>
+    </item>
+    
+    <item>
+      <title>Tips: Pavian Load Large Data</title>
+      <link>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</link>
+      <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</guid>
+      <description>Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.
+1. Error: Maximum upload size exceeded E.g., Maximum upload 50M files for Pavian, simple input:
+pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000, maxUploadSize=&amp;#34;50M&amp;#34;)  Besides M (megabyte), B (byte), K (kilobyte) and G (gigabyte) also supported. This option is defined in the script runApp.</description>
+    </item>
+    
+    <item>
+      <title>Install R and RStudio server in Debian</title>
+      <link>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</link>
+      <pubDate>Mon, 22 Feb 2021 16:29:04 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</guid>
+      <description>This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.
+1. Compile and Install R for RStudio Install build dependencies: $ sudo apt update $ sudo apt build-dep r-base Install optional packages: The automatically tuned linear algebra software:
+$ sudo apt install libatlas3-base Or the multi-threaded OpenBlas library:
+$ sudo apt install libopenblas-base Download R source Download R source from: https://cran.rstudio.com/src/base/R-4/
+The latest R source is R-4.</description>
+    </item>
+    
+    <item>
+      <title>Install hdf5r package in R 4.0.2</title>
+      <link>https://omicx.cc/posts/2020-10-20-install-hdf5r-package/</link>
+      <pubDate>Tue, 20 Oct 2020 15:35:10 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2020-10-20-install-hdf5r-package/</guid>
+      <description>While installing the R package &amp;ldquo;hdf5r&amp;rdquo; version 1.3.3, I encountered the error:
+fatal error: hdf5.h: No such file or directory #include &amp;lt;hdf5.h&amp;gt; ^~~~~~~~ compilation terminated. My OS is Debian buster/10.6, and the package &amp;ldquo;libhdf5-dev&amp;rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files.
+It has been resolved by:
+1. Export environment variables for header files export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH export CPLUS_INCLUDE_PATH=/usr/include/hdf5/serial/:$CPLUS_INCLUDE_PATH 2. Create symbolic links for library files cd /usr/lib/x86_64-linux-gnu/ sudo ln -s libhdf5_hl_cpp.</description>
+    </item>
+    
+    <item>
+      <title>Resume aria2 download in ariang</title>
+      <link>https://omicx.cc/posts/2020-09-21-resume-aria2-download-in-ariang/</link>
+      <pubDate>Mon, 21 Sep 2020 16:04:04 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2020-09-21-resume-aria2-download-in-ariang/</guid>
+      <description>Aria2 creats a &amp;ldquo;.aria2&amp;rdquo; file for each object it downloading. It can be used to resume the download if necessary.
+The .aria2 file is a binary file and need to be decoded to magnet link.
+There are two ways to resolve it.
+Via online service  By @alphatr aria2 reader  Via a Python command  By @smasterfree aria control file parser  Note:  This &amp;ldquo;.aria2&amp;rdquo; file will be removed if the download complete success.</description>
+    </item>
+    
+    <item>
+      <title>Enable certbot automatic renewal for cloudflare CDN</title>
+      <link>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</link>
+      <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</guid>
+      <description>A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.
+So I spent some time to fix the problem.
+Background OS, HTTP server and Certbot encryption The OS for the server is Debian 10/buster and nginx HTTP server was installed.</description>
+    </item>
+    
+    <item>
+      <title>Nginx &#43; Letsencrypt &#43; Aria2</title>
+      <link>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</link>
+      <pubDate>Sat, 28 Mar 2020 21:41:07 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</guid>
+      <description>Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.
+Components:
+ VPS  OpenVZ VPS   OS  Debian 9.12 Kernel 2.6.32   Softwares  aria2 1.35.0 AriaNg 1.1.4 Letsencrypt/certbot 0.28.0 Nginx 1.10.3    Static build aria2 Download aria2 source code The latest aria2 release v1.35.0 is available from github.
+Install dependencies * Caution It seems that libgnutl is *NOT* compartible with aria2, and it caused the error: **/usr/bin/ld: cannot find -lp11-kit**  Remove libgnutl # apt remove --purge libgnutls30 libgnutls28-dev Install necessary packages # apt install -y libcurl4-openssl-dev libevent-dev ca-certificates libssl-dev pkg-config \ build-essential intltool libgcrypt-dev libssl-dev libxml2-dev libc-ares-dev libssl-dev \ libsqlite3-dev lzma liblzma-dev libicu-dev zlib1g-dev Compile aria2 source code $ cd aria2 $ autoreconf -i $.</description>
+    </item>
+    
+    <item>
+      <title>Create pdf file for huge phylogenetic tree</title>
+      <link>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</link>
+      <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</guid>
+      <description>Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by pdfposter.
+1. Install pdfposter There are several ways to install this utility.
+1.1 Install via OS package manager sudo apt-get install pdfposter 1.2 Install via pip   Note: It depends Pythonn 3.x</description>
+    </item>
+    
+    <item>
+      <title>Install Open Source Pymol in Windows by Conda</title>
+      <link>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</link>
+      <pubDate>Sun, 26 May 2019 21:16:02 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</guid>
+      <description>Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
+PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 2.7.
+This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.
+1. Install Conda Download Anaconda or Miniconda and install it.
+ Note: Although PyMOL Wiki introduced PyMOL for Python 2.7 only, there are also pre-compiled PyMOL distribution for Python 3.</description>
+    </item>
+    
+    <item>
+      <title>Install conda compiler tools</title>
+      <link>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</link>
+      <pubDate>Thu, 23 May 2019 23:36:56 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</guid>
+      <description>Conda is quite convenient for non-root users to install softwares in Linux system. But sometimes there is no packages available in anaconda repository and we have to install these softwares from source. This post introduces the way to compile and install softwares from source, use the Kyoto Cabinet Perl module as an example.
+1. Install compiler tools According to conda document, conda packages for Linux and macOS compilers is available since Anaconda 5.</description>
+    </item>
+    
+    <item>
+      <title>通过 frp 穿透内网访问树莓派的 aria2</title>
+      <link>https://omicx.cc/posts/2018-11-30-deploy-raspberrypi-aria2-frp/</link>
+      <pubDate>Fri, 30 Nov 2018 10:48:45 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2018-11-30-deploy-raspberrypi-aria2-frp/</guid>
+      <description>几年前就已经搭建了基于树莓派 2B+ 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。
+. 准备 1.1 硬件  Raspberry Pi: 尽量用 2B+ 或者 3B+ 等性能较好的版本  树莓派上挂载了一块 1T 的移动硬盘，挂载点 /data   VPS: 我用的是 IonSwitch (refer link)  1.2 系统和相关软件  树莓派: Raspbian Stable/Stable/Stretch VPS: Debian Stable/Stretch aria2 Aria2 Web UI AraiNg 内网穿透服务 frp  1.3 域名 域名是为了内网穿透访问树莓派的需要。
+ 如果是独立域名，直接在已有域名下添加 CNAME 域名。 如果是动态域名，根据需要设置。  这里的使用两个域名，web.mydomain.net 和 aria2.mydomain.net，分别对应 Web 访问和 aria2 rpc 访问。
+2. 在树莓派上安装 aria2 2.1 从 Debian 源安装 # 从 Debian 源安装 sudo apt-get update sudo apt-get install aria2 目前 Debian Stable 里面的 aria2 版本是 1.</description>
+    </item>
+    
+    <item>
+      <title>BEAST Tips</title>
+      <link>https://omicx.cc/posts/2018-11-16-beast-tips/</link>
+      <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
+      <description>BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.
+1. Install beagle-lib Beagle-lib accelerates Bayesian and Maximun Likelihood phylogenetic software amazingly. Especially the beagle-lib v3.x improves 20-50% than version 2.x.
+1.1 Compile beagle-lib without CUDA and OpenCL Although CUDA and OpenCL improves BEAST computing significantly, how to install beagle-lib without an Nvidia GPU card?</description>
+    </item>
+    
+    <item>
+      <title>Install Nvidia CUDA in Debian Way</title>
+      <link>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</link>
+      <pubDate>Fri, 16 Nov 2018 10:03:23 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</guid>
+      <description>For Debian stable/Stretch  Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.
+1. Check repository source: For Debian stable/Stretch, the content of /etc/apt/sources.list file may looks like:
+deb http://ftp.debian.org/debian/ stretch main contrib non-free 2. Remove previous installed NVidia drivers if necessary # apt-get remove --purge nvidia* 3.</description>
+    </item>
+    
+  </channel>
+</rss>

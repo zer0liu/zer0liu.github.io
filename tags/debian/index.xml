@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian on OmicX</title>
+    <link>https://omicx.cc/tags/debian/</link>
+    <description>Recent content in Debian on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install beagle-lib for NVidia Tesla V100 on Debian buster</title>
+      <link>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</link>
+      <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</guid>
+      <description>BEAGLE-LIB is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.
+When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:
+nvcc fatal : Value &amp;#39;compute_30&amp;#39; is not defined for option &amp;#39;gpu-architecture&amp;#39; 1. Install NVidia driver and CUDA toolkit Firstly, append this line in /etc/apt/sources.list
+deb http://deb.debian.org/debian buster-backports main contrib non-free Then, install:</description>
+    </item>
+    
+    <item>
+      <title>Enable certbot automatic renewal for cloudflare CDN</title>
+      <link>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</link>
+      <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</guid>
+      <description>A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.
+So I spent some time to fix the problem.
+Background OS, HTTP server and Certbot encryption The OS for the server is Debian 10/buster and nginx HTTP server was installed.</description>
+    </item>
+    
+    <item>
+      <title>Install Nvidia CUDA in Debian Way</title>
+      <link>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</link>
+      <pubDate>Fri, 16 Nov 2018 10:03:23 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</guid>
+      <description>For Debian stable/Stretch  Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.
+1. Check repository source: For Debian stable/Stretch, the content of /etc/apt/sources.list file may looks like:
+deb http://ftp.debian.org/debian/ stretch main contrib non-free 2. Remove previous installed NVidia drivers if necessary # apt-get remove --purge nvidia* 3.</description>
+    </item>
+    
+  </channel>
+</rss>

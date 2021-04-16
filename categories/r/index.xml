@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on OmicX</title>
+    <link>https://omicx.cc/categories/r/</link>
+    <description>Recent content in R on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Feb 2021 16:29:04 +0000</lastBuildDate><atom:link href="https://omicx.cc/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install R and RStudio server in Debian</title>
+      <link>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</link>
+      <pubDate>Mon, 22 Feb 2021 16:29:04 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</guid>
+      <description>This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.
+1. Compile and Install R for RStudio Install build dependencies: $ sudo apt update $ sudo apt build-dep r-base Install optional packages: The automatically tuned linear algebra software:
+$ sudo apt install libatlas3-base Or the multi-threaded OpenBlas library:
+$ sudo apt install libopenblas-base Download R source Download R source from: https://cran.rstudio.com/src/base/R-4/
+The latest R source is R-4.</description>
+    </item>
+    
+  </channel>
+</rss>

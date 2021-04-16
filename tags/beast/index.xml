@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BEAST on OmicX</title>
+    <link>https://omicx.cc/tags/beast/</link>
+    <description>Recent content in BEAST on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/beast/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install beagle-lib for NVidia Tesla V100 on Debian buster</title>
+      <link>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</link>
+      <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</guid>
+      <description>BEAGLE-LIB is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.
+When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:
+nvcc fatal : Value &amp;#39;compute_30&amp;#39; is not defined for option &amp;#39;gpu-architecture&amp;#39; 1. Install NVidia driver and CUDA toolkit Firstly, append this line in /etc/apt/sources.list
+deb http://deb.debian.org/debian buster-backports main contrib non-free Then, install:</description>
+    </item>
+    
+    <item>
+      <title>BEAST Tips</title>
+      <link>https://omicx.cc/posts/2018-11-16-beast-tips/</link>
+      <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
+      <description>BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.
+1. Install beagle-lib Beagle-lib accelerates Bayesian and Maximun Likelihood phylogenetic software amazingly. Especially the beagle-lib v3.x improves 20-50% than version 2.x.
+1.1 Compile beagle-lib without CUDA and OpenCL Although CUDA and OpenCL improves BEAST computing significantly, how to install beagle-lib without an Nvidia GPU card?</description>
+    </item>
+    
+  </channel>
+</rss>

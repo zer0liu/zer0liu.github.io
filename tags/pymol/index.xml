@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PyMOL on OmicX</title>
+    <link>https://omicx.cc/tags/pymol/</link>
+    <description>Recent content in PyMOL on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 May 2019 21:16:02 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/pymol/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Open Source Pymol in Windows by Conda</title>
+      <link>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</link>
+      <pubDate>Sun, 26 May 2019 21:16:02 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</guid>
+      <description>Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
+PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 2.7.
+This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.
+1. Install Conda Download Anaconda or Miniconda and install it.
+ Note: Although PyMOL Wiki introduced PyMOL for Python 2.7 only, there are also pre-compiled PyMOL distribution for Python 3.</description>
+    </item>
+    
+  </channel>
+</rss>

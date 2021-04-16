@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Letsencrypt on OmicX</title>
+    <link>https://omicx.cc/tags/letsencrypt/</link>
+    <description>Recent content in Letsencrypt on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Aug 2020 23:11:34 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/letsencrypt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable certbot automatic renewal for cloudflare CDN</title>
+      <link>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</link>
+      <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</guid>
+      <description>A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.
+So I spent some time to fix the problem.
+Background OS, HTTP server and Certbot encryption The OS for the server is Debian 10/buster and nginx HTTP server was installed.</description>
+    </item>
+    
+    <item>
+      <title>Nginx &#43; Letsencrypt &#43; Aria2</title>
+      <link>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</link>
+      <pubDate>Sat, 28 Mar 2020 21:41:07 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</guid>
+      <description>Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.
+Components:
+ VPS  OpenVZ VPS   OS  Debian 9.12 Kernel 2.6.32   Softwares  aria2 1.35.0 AriaNg 1.1.4 Letsencrypt/certbot 0.28.0 Nginx 1.10.3    Static build aria2 Download aria2 source code The latest aria2 release v1.35.0 is available from github.
+Install dependencies * Caution It seems that libgnutl is *NOT* compartible with aria2, and it caused the error: **/usr/bin/ld: cannot find -lp11-kit**  Remove libgnutl # apt remove --purge libgnutls30 libgnutls28-dev Install necessary packages # apt install -y libcurl4-openssl-dev libevent-dev ca-certificates libssl-dev pkg-config \ build-essential intltool libgcrypt-dev libssl-dev libxml2-dev libc-ares-dev libssl-dev \ libsqlite3-dev lzma liblzma-dev libicu-dev zlib1g-dev Compile aria2 source code $ cd aria2 $ autoreconf -i $.</description>
+    </item>
+    
+  </channel>
+</rss>

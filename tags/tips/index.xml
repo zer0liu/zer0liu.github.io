@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on OmicX</title>
+    <link>https://omicx.cc/tags/tips/</link>
+    <description>Recent content in Tips on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Mar 2021 15:54:55 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tips: Pavian Load Large Data</title>
+      <link>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</link>
+      <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</guid>
+      <description>Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as Kraken, Centrifuge and MetaPhlAn. Here are a few tips for Pavian to work with large data.
+1. Error: Maximum upload size exceeded E.g., Maximum upload 50M files for Pavian, simple input:
+pavian::runApp(port=5000, maxUploadSize=50*1024^2) # Or pavian::runApp(port=5000, maxUploadSize=&amp;#34;50M&amp;#34;)  Besides M (megabyte), B (byte), K (kilobyte) and G (gigabyte) also supported. This option is defined in the script runApp.</description>
+    </item>
+    
+    <item>
+      <title>Create pdf file for huge phylogenetic tree</title>
+      <link>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</link>
+      <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</guid>
+      <description>Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by pdfposter.
+1. Install pdfposter There are several ways to install this utility.
+1.1 Install via OS package manager sudo apt-get install pdfposter 1.2 Install via pip   Note: It depends Pythonn 3.x</description>
+    </item>
+    
+    <item>
+      <title>Install Open Source Pymol in Windows by Conda</title>
+      <link>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</link>
+      <pubDate>Sun, 26 May 2019 21:16:02 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</guid>
+      <description>Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
+PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 2.7.
+This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.
+1. Install Conda Download Anaconda or Miniconda and install it.
+ Note: Although PyMOL Wiki introduced PyMOL for Python 2.7 only, there are also pre-compiled PyMOL distribution for Python 3.</description>
+    </item>
+    
+    <item>
+      <title>BEAST Tips</title>
+      <link>https://omicx.cc/posts/2018-11-16-beast-tips/</link>
+      <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
+      <description>BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.
+1. Install beagle-lib Beagle-lib accelerates Bayesian and Maximun Likelihood phylogenetic software amazingly. Especially the beagle-lib v3.x improves 20-50% than version 2.x.
+1.1 Compile beagle-lib without CUDA and OpenCL Although CUDA and OpenCL improves BEAST computing significantly, how to install beagle-lib without an Nvidia GPU card?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conda on OmicX</title>
+    <link>https://omicx.cc/tags/conda/</link>
+    <description>Recent content in conda on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 May 2019 23:36:56 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/conda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install conda compiler tools</title>
+      <link>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</link>
+      <pubDate>Thu, 23 May 2019 23:36:56 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</guid>
+      <description>Conda is quite convenient for non-root users to install softwares in Linux system. But sometimes there is no packages available in anaconda repository and we have to install these softwares from source. This post introduces the way to compile and install softwares from source, use the Kyoto Cabinet Perl module as an example.
+1. Install compiler tools According to conda document, conda packages for Linux and macOS compilers is available since Anaconda 5.</description>
+    </item>
+    
+  </channel>
+</rss>
