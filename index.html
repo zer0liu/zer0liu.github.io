@@ -12,7 +12,7 @@
 <meta property="og:description" content="A blog for bioinformatics, statistics and Omics" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://omicx.cc/" />
-<meta property="og:updated_time" content="2021-04-09T15:30:10+00:00" />
+<meta property="og:updated_time" content="2021-04-16T15:31:39+08:00" />
 
 		<meta itemprop="name" content="OmicX">
 <meta itemprop="description" content="A blog for bioinformatics, statistics and Omics">
@@ -68,6 +68,25 @@ if (!doNotTrack) {
 			
 <main class="main list" role="main">
 	<article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2021-04-16-migrate-to-hugo/" rel="bookmark">
+			Migrate to Hugo
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-16T15:31:39&#43;08:00">April 16, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/note/" rel="category">Note</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		The dependency of Node.js packages is over complicated and I have waste lost of time on it. So I migrated the blog from Hexo to Hugo. Further more, a comment system moved to a self-hosted Isso-based server.
+A workthrough will be online later.
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
 			<a href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/" rel="bookmark">
@@ -282,28 +301,6 @@ This post provided the method to install PyMOL 2.x by conda (Anaconda or Minocon
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2019-05-26-install-pymol-windows/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2019-05-23-install-conda-compiler-tools/" rel="bookmark">
-			Install conda compiler tools
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-05-23T23:36:56Z">May 23, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/conda/" rel="category">Conda</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Conda is quite convenient for non-root users to install softwares in Linux system. But sometimes there is no packages available in anaconda repository and we have to install these softwares from source. This post introduces the way to compile and install softwares from source, use the Kyoto Cabinet Perl module as an example.
-1. Install compiler tools According to conda document, conda packages for Linux and macOS compilers is available since Anaconda 5.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/2019-05-23-install-conda-compiler-tools/">Read more…</a>
-	</div>
 </article>
 </main>
 
@@ -326,11 +323,11 @@ This post provided the method to install PyMOL 2.x by conda (Anaconda or Minocon
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-04-16-migrate-to-hugo/">Migrate to Hugo</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/">Install beagle-lib for NVidia Tesla V100 on Debian buster</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-03-15-tips-pavian-load-large-data/">Tips: Pavian Load Large Data</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-02-22-install-r-and-rstudio-server-in-debian/">Install R and RStudio server in Debian</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2020-10-20-install-hdf5r-package/">Install hdf5r package in R 4.0.2</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/2020-09-21-resume-aria2-download-in-ariang/">Resume aria2 download in ariang</a></li>
 		</ul>
 	</div>
 </div>
@@ -352,6 +349,8 @@ This post provided the method to install PyMOL 2.x by conda (Anaconda or Minocon
 				<a class="widget__link" href="/categories/hardware/">Hardware</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/ngs/">NGS</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/note/">Note</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/phylogenetics/">Phylogenetics</a></li>
 			<li class="widget__item">
@@ -381,6 +380,7 @@ This post provided the method to install PyMOL 2.x by conda (Anaconda or Minocon
 		<a class="widget-taglist__link widget__link btn" href="/tags/letsencrypt/" title="Letsencrypt">Letsencrypt</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="nginx">nginx</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/ngs/" title="NGS">NGS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/note/" title="Note">Note</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nvidia/" title="Nvidia">Nvidia</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/pavian/" title="Pavian">Pavian</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/pymol/" title="PyMOL">PyMOL</a>

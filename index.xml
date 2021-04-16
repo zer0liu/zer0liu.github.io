@@ -6,7 +6,17 @@
     <description>Recent content on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate><atom:link href="https://omicx.cc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Apr 2021 15:31:39 +0800</lastBuildDate><atom:link href="https://omicx.cc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migrate to Hugo</title>
+      <link>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</link>
+      <pubDate>Fri, 16 Apr 2021 15:31:39 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</guid>
+      <description>The dependency of Node.js packages is over complicated and I have waste lost of time on it. So I migrated the blog from Hexo to Hugo. Further more, a comment system moved to a self-hosted Isso-based server.
+A workthrough will be online later.</description>
+    </item>
+    
     <item>
       <title>Install beagle-lib for NVidia Tesla V100 on Debian buster</title>
       <link>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</link>

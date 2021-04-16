@@ -6,7 +6,16 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Apr 2021 15:31:39 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Note</title>
+      <link>https://omicx.cc/categories/note/</link>
+      <pubDate>Fri, 16 Apr 2021 15:31:39 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/note/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CUDA</title>
       <link>https://omicx.cc/categories/cuda/</link>

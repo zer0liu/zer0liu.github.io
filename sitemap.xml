@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://omicx.cc/tags/beast/</loc>
-    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+    <loc>https://omicx.cc/categories/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://omicx.cc/categories/</loc>
+    <loc>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/note/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/note/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/beast/</loc>
     <lastmod>2021-04-09T15:30:10+00:00</lastmod>
   </url>
   
@@ -33,22 +63,7 @@
   </url>
   
   <url>
-    <loc>https://omicx.cc/</loc>
-    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/posts/</loc>
-    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://omicx.cc/categories/software/</loc>
-    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/tags/</loc>
     <lastmod>2021-04-09T15:30:10+00:00</lastmod>
   </url>
   

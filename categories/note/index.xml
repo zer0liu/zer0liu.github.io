@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Note on OmicX</title>
+    <link>https://omicx.cc/categories/note/</link>
+    <description>Recent content in Note on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Apr 2021 15:31:39 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migrate to Hugo</title>
+      <link>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</link>
+      <pubDate>Fri, 16 Apr 2021 15:31:39 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</guid>
+      <description>The dependency of Node.js packages is over complicated and I have waste lost of time on it. So I migrated the blog from Hexo to Hugo. Further more, a comment system moved to a self-hosted Isso-based server.
+A workthrough will be online later.</description>
+    </item>
+    
+  </channel>
+</rss>
