@@ -40,7 +40,7 @@ Both local computer and remote server work on Debian bullseye.
 ">
 <meta itemprop="datePublished" content="2021-04-18T15:58:17+08:00" />
 <meta itemprop="dateModified" content="2021-04-18T15:58:17+08:00" />
-<meta itemprop="wordCount" content="1908">
+<meta itemprop="wordCount" content="1850">
 
 
 
@@ -513,28 +513,7 @@ git clone https://github.com/vimux/mainroad
 <p>Considering the complicated template syntax, it&rsquo;s a bit complicated to integrate Isso with Hugo theme.</p>
 <p>For the theme <code>mainroad</code>, just edit the file <em>comments.html</em> in the <em>themes/mainroad/layouts/partials/</em>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim myblog/themes/mainroad/layouts/partials/comments.html
-</code></pre></div><p>Insert these rows before the last row <code>{{ END }}</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{/* Add support for ISSO comment system */}}
-{{ else if .Site.Params.isso.enabled }}
-  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
-    &lt;<span style="color:#f92672">script</span>
-        <span style="color:#a6e22e">data-isso</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.data }}&#34;</span>
-        <span style="color:#a6e22e">data-isso-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.id}}&#34;</span>
-        <span style="color:#a6e22e">data-isso-css</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.css }}&#34;</span>
-        <span style="color:#a6e22e">data-isso-lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.lang }}&#34;</span>
-        <span style="color:#a6e22e">data-isso-reply-to-self</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.replyToSelf }}&#34;</span>
-        <span style="color:#a6e22e">data-isso-require-author</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.requireAuthor }}&#34;</span>
-        <span style="color:#a6e22e">data-isso-require-email</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.requireEmail }}&#34;</span>
-        <span style="color:#a6e22e">data-isso-avatar</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.avatar }}&#34;</span>
-        <span style="color:#a6e22e">data-isso-avatar-bg</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.avatarBg }}&#34;</span>
-        <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.jsLocation }}&#34;</span>&gt;
-    &lt;/<span style="color:#f92672">script</span>&gt;
-    &lt;<span style="color:#f92672">noscript</span>&gt;Please enable JavaScript to view the comments powered by &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://posativ.org/isso/&#34;</span>&gt;Isso&lt;/<span style="color:#f92672">a</span>&gt;.&lt;/<span style="color:#f92672">noscript</span>&gt;
-    &lt;<span style="color:#f92672">div</span>&gt;
-      &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;isso-thread&#34;</span>&gt;&lt;/<span style="color:#f92672">section</span>&gt;
-    &lt;/<span style="color:#f92672">div</span>&gt;
-&lt;/<span style="color:#f92672">article</span>&gt;
-</code></pre></div><p>The modified <em>comments.html</em> file would be like:</p>
+</code></pre></div><p>Insert Isso templates before the last row <code>{{ END }}</code>. The modified <em>comments.html</em> file would be like:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if and .Site.DisqusShortname (index .Params &#34;comments&#34; | default &#34;true&#34;) (not .Site.IsServer) }}
 &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;comments&#34;</span>&gt;
 	{{ template &#34;_internal/disqus.html&#34; . }}
@@ -572,12 +551,13 @@ git clone https://github.com/vimux/mainroad
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">mysite.com
 </code></pre></div><p>(3) Publish to GitHub Pages repository:</p>
 <p>Since I already created a GitHub Page, I just replace the contents in the existing repository:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd myblog/
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd myblog/public
 <span style="color:#75715e"># Init an empty Git repo</span>
 git init
 git add .
 git commit
-git --set-upstream push origin master https://github.com/zer0liu/zer0liu.github.io
+git remote add origin https://github.com/zer0liu/zer0liu.github.io.git
+git push -f origin master
 </code></pre></div><p>The whole workflow completed. We could visit <a href="https://mysite.com">https://mysite.com</a> now.</p>
 <hr>
 <h1 id="references">References:</h1>
