@@ -40,7 +40,7 @@ Both local computer and remote server work on Debian bullseye.
 ">
 <meta itemprop="datePublished" content="2021-04-18T15:58:17+08:00" />
 <meta itemprop="dateModified" content="2021-04-18T15:58:17+08:00" />
-<meta itemprop="wordCount" content="1864">
+<meta itemprop="wordCount" content="1836">
 
 
 
@@ -280,18 +280,7 @@ pip3 install gevent
 </code></pre></div><p>If there were no error message output, the condifuration file is ok.</p>
 <p>Press Ctrl-C to stop Isso running right now.</p>
 <h2 id="14-configure-nginx">1.4 Configure Nginx</h2>
-<p>Simple insert these rows in your site configuration file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini">    <span style="color:#a6e22e">location /isso {</span>
-        <span style="color:#a6e22e">proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span>
-        <span style="color:#a6e22e">proxy_set_header X-Script-Name /isso;</span>
-        <span style="color:#a6e22e">proxy_set_header Host $host;</span>
-        <span style="color:#a6e22e">proxy_set_header X-Forwarded-Proto $scheme;</span>
-        <span style="color:#a6e22e">proxy_pass http://localhost:8080;</span>
-    <span style="color:#a6e22e">}</span>
-</code></pre></div><p>Now the Nginx configur file <em>/etc/nginx/site-enabled/mysite.conf</em> is:</p>
-<blockquote>
-<p>Note: The HTTPS has been configured by <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>.</p>
-</blockquote>
+<p>Edit the Nginx configure file <em>/etc/nginx/site-enabled/mysite.conf</em>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">server {</span>
         <span style="color:#a6e22e">server_name comments.mysite.com;</span>
 
@@ -331,7 +320,10 @@ pip3 install gevent
         <span style="color:#a6e22e">server_name comments.mysite.com;</span>
     <span style="color:#a6e22e">return 404; # managed by Certbot</span>
 <span style="color:#a6e22e">}</span>
-</code></pre></div><p>Test the modification first:</p>
+</code></pre></div><blockquote>
+<p>Note: The HTTPS has been configured by <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>.</p>
+</blockquote>
+<p>Test the modification first:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nginx -t
 </code></pre></div><p>If no error message printed, restart Nginx server:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo systemctl restart nginx
