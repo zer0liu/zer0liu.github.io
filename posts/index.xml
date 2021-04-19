@@ -6,14 +6,34 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Apr 2021 15:31:39 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 15:58:17 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a Hugo Blog, along with Isso comment server</title>
+      <link>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</link>
+      <pubDate>Sun, 18 Apr 2021 15:58:17 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</guid>
+      <description>&lt;p&gt;This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.&lt;/p&gt;
+&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install and configure of Hugo&lt;/li&gt;
+&lt;li&gt;Install and configure of Isso comment server in a remote server&lt;/li&gt;
+&lt;li&gt;Integrate Isso with Hugo&lt;/li&gt;
+&lt;li&gt;Publish to an existing &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Environment:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Both local computer and remote server work on &lt;a href=&#34;https://www.debian.org/releases/bullseye/&#34;&gt;Debian bullseye&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
     <item>
       <title>Migrate to Hugo</title>
       <link>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</link>
       <pubDate>Fri, 16 Apr 2021 15:31:39 +0800</pubDate>
       
       <guid>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</guid>
-      <description>The dependency of Node.js packages is over complicated and I have waste lost of time on it. So I migrated the blog from Hexo to Hugo. Further more, a comment system moved to a self-hosted Isso-based server.
+      <description>The dependency of Node.js packages is over complicated and I have wasted lost of time on it. So I migrated the blog from Hexo to Hugo. Further more, the comment system moved to a self-hosted Isso-based server.
 A workthrough will be online later.</description>
     </item>
     

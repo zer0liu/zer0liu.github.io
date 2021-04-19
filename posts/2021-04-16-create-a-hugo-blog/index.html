@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Create a Hugo Blog, along with Isso comment server - OmicX</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Create a Hugo Blog, along with Isso comment server" />
+<meta property="og:description" content="This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.
+Steps:
+
+Install and configure of Hugo
+Install and configure of Isso comment server in a remote server
+Integrate Isso with Hugo
+Publish to an existing GitHub Page
+
+Environment:
+
+Both local computer and remote server work on Debian bullseye.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/" />
+<meta property="article:published_time" content="2021-04-18T15:58:17+08:00" />
+<meta property="article:modified_time" content="2021-04-18T15:58:17+08:00" />
+
+		<meta itemprop="name" content="Create a Hugo Blog, along with Isso comment server">
+<meta itemprop="description" content="This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.
+Steps:
+
+Install and configure of Hugo
+Install and configure of Isso comment server in a remote server
+Integrate Isso with Hugo
+Publish to an existing GitHub Page
+
+Environment:
+
+Both local computer and remote server work on Debian bullseye.
+">
+<meta itemprop="datePublished" content="2021-04-18T15:58:17+08:00" />
+<meta itemprop="dateModified" content="2021-04-18T15:58:17+08:00" />
+<meta itemprop="wordCount" content="1908">
+
+
+
+<meta itemprop="keywords" content="Hugo," />
+
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Create a Hugo Blog, along with Isso comment server"/>
+<meta name="twitter:description" content="This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.
+Steps:
+
+Install and configure of Hugo
+Install and configure of Isso comment server in a remote server
+Integrate Isso with Hugo
+Publish to an existing GitHub Page
+
+Environment:
+
+Both local computer and remote server work on Debian bullseye.
+"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-129304896-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="OmicX" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/logo-512x512.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">OmicX</div>
+					<div class="logo__tagline">Omics &amp; Statistics</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Create a Hugo Blog, along with Isso comment server</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-18T15:58:17&#43;08:00">April 18, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/blog/" rel="category">blog</a>, <a class="meta__link" href="/categories/hugo/" rel="category">Hugo</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#11-install-isso-in-debian">1.1 Install Isso in Debian</a></li>
+    <li><a href="#12-configuration">1.2 Configuration</a></li>
+    <li><a href="#13-test-configuration">1.3 Test configuration</a></li>
+    <li><a href="#14-configure-nginx">1.4 Configure Nginx</a></li>
+    <li><a href="#15-web-interface-of-isso-comments-database">1.5 Web interface of Isso comments database</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#21-install-hugo">2.1 Install Hugo</a></li>
+    <li><a href="#22-create-a-site">2.2 Create a site</a></li>
+    <li><a href="#23-customize-hugo-theme">2.3 Customize Hugo theme</a></li>
+    <li><a href="#24-customize-the-theme">2.4 Customize the theme</a></li>
+    <li><a href="#25-create-your-first-post">2.5 Create your first post</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.</p>
+<p>Steps:</p>
+<ul>
+<li>Install and configure of Hugo</li>
+<li>Install and configure of Isso comment server in a remote server</li>
+<li>Integrate Isso with Hugo</li>
+<li>Publish to an existing <a href="https://pages.github.com/">GitHub Page</a></li>
+</ul>
+<p>Environment:</p>
+<blockquote>
+<p>Both local computer and remote server work on <a href="https://www.debian.org/releases/bullseye/">Debian bullseye</a>.</p>
+</blockquote>
+<h1 id="0-prerequisites">0. Prerequisites</h1>
+<ul>
+<li>A domain name for GitHub pages:
+<ul>
+<li>myblog.com</li>
+<li>or <em>username.github.io</em>, provided by GitHub Pages.</li>
+</ul>
+</li>
+<li>A remote server:
+<ul>
+<li>You can log in the server via SSH, and work as root, or by sudo</li>
+<li>Installed the Nginx web server, and (or) enabled https</li>
+<li>With domain name: comments.mysite.com</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-install--setup-isso-server">1. Install &amp; setup Isso server</h1>
+<h2 id="11-install-isso-in-debian">1.1 Install Isso in Debian</h2>
+<p>Although there is a Isso package in <a href="https://packages.debian.org/search?keywords=isso">Debian repository</a>, it could not work properly. So I installed it accroding to the <a href="https://posativ.org/isso/docs/install/">documentation</a>.</p>
+<p>(1) Install necessary packages</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+sudo apt install python3-setuptools python3-virtualenv python3-dev sqlite3 build-essential
+</code></pre></div><p>(2) Create a user called &lsquo;isso&rsquo;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo adduser isso
+</code></pre></div><p>(3) Login as user &lsquo;isso&rsquo; and install Isso</p>
+<ul>
+<li>The Isso document emphasized that never install Python packages as &lsquo;root&rsquo;.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Switch to user &#39;isso&#39;</span>
+su isso
+<span style="color:#75715e"># Create necessary dirs</span>
+mkdir db etc log
+<span style="color:#75715e"># Create virtual environment &#39;isso&#39;</span>
+virtualenv ~/venv/isso
+<span style="color:#75715e"># Activate the environment</span>
+source ~/venv/isso/bin/activate
+<span style="color:#75715e"># Install Isso</span>
+pip3 install isso
+<span style="color:#75715e"># Install gevent if necessary</span>
+pip3 install gevent
+</code></pre></div><p>(4) Upgrade</p>
+<p>If you&rsquo;d like to upgrade Isso later, simply run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip3 install --upgrade isso
+</code></pre></div><h2 id="12-configuration">1.2 Configuration</h2>
+<p>(1) Directiry structure</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$HOME
+├── db
+│   └── omicx-cc.db
+├── etc
+│   └── omicx-cc.conf
+├── log
+│   ├── isso-cmd.log
+│   └── isso.log
+└── venv
+    └── isso
+        ├── bin
+        ├── include
+        ├── lib
+        └── pyvenv.cfg
+</code></pre></div><p>(2) Custom Isso configure file</p>
+<p>Create an ini-format configure file &ldquo;<em>~/etc/comments.cfg</em>&quot;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[general]</span>
+<span style="color:#75715e">; Batabase location, check permissions, automatically created if not exists</span>
+<span style="color:#a6e22e">dbpath</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/home/isso/db/comments.db</span>
+<span style="color:#75715e">; Blog website url</span>
+<span style="color:#a6e22e">host</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">https://comments.mysite.com/</span>
+<span style="color:#75715e">; Get new comments notification via SMTP</span>
+<span style="color:#a6e22e">notify</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">smtp</span>
+<span style="color:#75715e">; Log file</span>
+<span style="color:#a6e22e">log-file</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/home/isso/log/isso.log</span>
+
+<span style="color:#66d9ef">[moderation]</span>
+<span style="color:#75715e">; Enable comment moderation</span>
+<span style="color:#a6e22e">enabled</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
+<span style="color:#a6e22e">purge-after</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">30d</span>
+
+<span style="color:#66d9ef">[server]</span>
+<span style="color:#75715e">; Listen port 8080</span>
+<span style="color:#a6e22e">listen</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">http://localhost:8080</span>
+
+<span style="color:#66d9ef">[smtp]</span>
+<span style="color:#75715e">; Please read the information of email server</span>
+<span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">mailuser</span>
+<span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">mailpwd</span>
+<span style="color:#a6e22e">host</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">smtp.mailserver.com</span>
+<span style="color:#a6e22e">port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">465</span>
+<span style="color:#a6e22e">security</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">ssl</span>
+<span style="color:#a6e22e">to</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">my@mail.com</span>
+<span style="color:#a6e22e">from</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;my blog comments&#34;&lt;isso@mailserver.com&gt;</span>
+<span style="color:#a6e22e">timeout</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">10</span>
+
+<span style="color:#66d9ef">[guard]</span>
+<span style="color:#75715e">; Enable basic spam protection features</span>
+<span style="color:#75715e">; REMEMBER to edit the client configuration accordingly</span>
+<span style="color:#a6e22e">enabled</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
+<span style="color:#75715e">; limit to 2 new comments per minute</span>
+<span style="color:#a6e22e">ratelimit</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">2</span>
+<span style="color:#75715e">; limit 25 comments directly to the thread</span>
+<span style="color:#a6e22e">direct-reply</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">25</span>
+<span style="color:#75715e">; allow commenters to reply to their own comments when they could </span>
+<span style="color:#75715e">; still edit the comment</span>
+<span style="color:#a6e22e">reply-to-self</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
+<span style="color:#75715e">; force commenters to enter a value into the author field</span>
+<span style="color:#a6e22e">require-author</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
+<span style="color:#a6e22e">require-email</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">false</span>
+
+<span style="color:#66d9ef">[markup]</span>
+<span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">strikethrough, superscript, autolink</span>
+<span style="color:#a6e22e">allowed-elements</span> <span style="color:#f92672">=</span>
+<span style="color:#a6e22e">allowed-attributes</span> <span style="color:#f92672">=</span>
+
+<span style="color:#66d9ef">[hash]</span>
+<span style="color:#a6e22e">salt</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">Eech7co8Ohloopo9Ol6baimi</span>
+<span style="color:#a6e22e">algorithm</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">pbkdf2</span>
+
+<span style="color:#66d9ef">[rss]</span>
+<span style="color:#75715e">; provide an Atom feed for each comment thread</span>
+
+<span style="color:#66d9ef">[admin]</span>
+<span style="color:#75715e">; Provide a web administration interface</span>
+<span style="color:#a6e22e">enabled</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
+<span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">isso_admin_password</span>
+</code></pre></div><p>Please refer More parameters to the <a href="https://posativ.org/isso/docs/configuration/server/">documentation</a>.</p>
+<h2 id="13-test-configuration">1.3 Test configuration</h2>
+<p>Simply run Isso as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">isso -c ~/etc/comments.cfg run
+</code></pre></div><p>If there were no error message output, the condifuration file is ok.</p>
+<p>Press Ctrl-C to stop Isso running right now.</p>
+<h2 id="14-configure-nginx">1.4 Configure Nginx</h2>
+<p>Simple insert these rows in your site configuration file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini">    <span style="color:#a6e22e">location /isso {</span>
+        <span style="color:#a6e22e">proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span>
+        <span style="color:#a6e22e">proxy_set_header X-Script-Name /isso;</span>
+        <span style="color:#a6e22e">proxy_set_header Host $host;</span>
+        <span style="color:#a6e22e">proxy_set_header X-Forwarded-Proto $scheme;</span>
+        <span style="color:#a6e22e">proxy_pass http://localhost:8080;</span>
+    <span style="color:#a6e22e">}</span>
+</code></pre></div><p>Now the Nginx configur file <em>/etc/nginx/site-enabled/mysite.conf</em> is:</p>
+<blockquote>
+<p>Note: The HTTPS has been configured by <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">server {</span>
+        <span style="color:#a6e22e">server_name comments.mysite.com;</span>
+
+        <span style="color:#a6e22e">root /var/www/isso;</span>
+        <span style="color:#a6e22e">index index.html;</span>
+
+        <span style="color:#a6e22e">location / {</span>
+                <span style="color:#a6e22e">try_files $uri $uri/</span> <span style="color:#f92672">=</span><span style="color:#e6db74">404;
+</span><span style="color:#e6db74">        }</span>
+
+    <span style="color:#a6e22e">listen [::]:443 ssl ipv6only</span><span style="color:#f92672">=</span><span style="color:#e6db74">on; # managed by Certbot
+</span><span style="color:#e6db74">    listen 443 ssl; # managed by Certbot
+</span><span style="color:#e6db74">    ssl_certificate /etc/letsencrypt/live/mysite/fullchain.pem; # managed by Certbot
+</span><span style="color:#e6db74">    ssl_certificate_key /etc/letsencrypt/live/mysite/privkey.pem; # managed by Certbot
+</span><span style="color:#e6db74">    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+</span><span style="color:#e6db74">    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot</span>
+
+    <span style="color:#75715e"># For isso</span>
+    <span style="color:#a6e22e">location /isso {</span>
+        <span style="color:#a6e22e">proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span>
+        <span style="color:#a6e22e">proxy_set_header X-Script-Name /isso;</span>
+        <span style="color:#a6e22e">proxy_set_header Host $host;</span>
+        <span style="color:#a6e22e">proxy_set_header X-Forwarded-Proto $scheme;</span>
+        <span style="color:#a6e22e">proxy_pass http://localhost:5226;</span>
+    <span style="color:#a6e22e">}</span>
+<span style="color:#a6e22e">}</span>
+
+<span style="color:#a6e22e">server {</span>
+    <span style="color:#a6e22e">if ($host</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">comments.mysite.com) {
+</span><span style="color:#e6db74">        return 301 https://$host$request_uri;
+</span><span style="color:#e6db74">    } # managed by Certbot</span>
+
+
+        <span style="color:#a6e22e">listen 80;</span>
+        <span style="color:#a6e22e">listen [::]:80;</span>
+
+        <span style="color:#a6e22e">server_name comments.mysite.com;</span>
+    <span style="color:#a6e22e">return 404; # managed by Certbot</span>
+<span style="color:#a6e22e">}</span>
+</code></pre></div><p>Test the modification first:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nginx -t
+</code></pre></div><p>If no error message printed, restart Nginx server:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart nginx
+</code></pre></div><h2 id="15-web-interface-of-isso-comments-database">1.5 Web interface of Isso comments database</h2>
+<p>Re-run the Isso server:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">isso -c ~/etc/comments.cfg run &amp;
+</code></pre></div><p>Then the comments database would be available at:
+<a href="https://comments.mysite.com/isso/admin">https://comments.mysite.com/isso/admin</a></p>
+<h1 id="2-hugo">2. Hugo</h1>
+<h2 id="21-install-hugo">2.1 Install Hugo</h2>
+<p>Hugo is already in Debian repository.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+sudo apt install hugo
+</code></pre></div><h2 id="22-create-a-site">2.2 Create a site</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site myblog
+</code></pre></div><p>It creats a new Hugo site in the folder <em>myblog</em>, and the dir structure is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">myblog/
+├── archetypes
+│   └── default.md
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre></div><table>
+<thead>
+<tr>
+<th>Directory &amp; File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>archetypes</td>
+<td>Store <em>.mdtemplate</em> files, it has higher priority than <em>archetypes/</em> folders under the <em>theme/</em>.</td>
+</tr>
+<tr>
+<td>config.toml</td>
+<td>The main configuration file.</td>
+</tr>
+<tr>
+<td>content</td>
+<td>Stores all the content of the website. Each top-level folder in Hugo is considered a content section. e.g., blog/, articles/, and tutorials/. Hugo uses sections to assign default content types.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Store configuration files that can be used by Hugo when generating your website. Support YAML, JSON and TOMI format.</td>
+</tr>
+<tr>
+<td>layouts</td>
+<td>Stores templates in the form of <em>.html</em> files that specify how views of your content will be rendered into a static website.</td>
+</tr>
+<tr>
+<td>static</td>
+<td>Stores all the static content: images, CSS, JavaScript, <em>etc</em>. The files in this directory will be directly copied to <em>/public</em> later.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="23-customize-hugo-theme">2.3 Customize Hugo theme</h2>
+<p>Hugo does not provide a default theme. So user have to choose a theme from <a href="https://themes.gohugo.io/">themes.gohugo.io</a> first. I&rsquo;m using the theme <a href="https://themes.gohugo.io/mainroad/">mainroad</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd myblog/themes
+git clone https://github.com/vimux/mainroad
+</code></pre></div><p>The <em>myblog/</em> directory would be like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">myblog/
+├── archetypes
+│   └── default.md
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+    └── mainroad
+        ├── archetypes
+        ├── assets
+        ├── CONTRIBUTING.md
+        ├── exampleSite
+        ├── i18n
+        ├── images
+        ├── layouts
+        ├── LICENSE.md
+        ├── package.json
+        ├── package-lock.json
+        ├── README.md
+        ├── static
+        └── theme.toml
+</code></pre></div><h2 id="24-customize-the-theme">2.4 Customize the theme</h2>
+<p>Edit the configuration file <em>config.toml</em> under the <em>myblog/</em> folder:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">baseURL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://myblog.com/&#34; # The blog url. Don&#39;t forget the tailing &#39;/&#39;</span>
+<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;OmicX&#34;</span>
+<span style="color:#a6e22e">languageCode</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;en-us&#34;</span>
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mainroad&#34; # Using Hugo theme &#39;mainroad&#39;</span>
+<span style="color:#a6e22e">googleAnalytics</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;UA-000000000-0&#34; # Google Analytics tacking id</span>
+
+<span style="color:#66d9ef">[Author]</span>
+  <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John Doe&#34;
+</span><span style="color:#e6db74">  bio = &#39;John Doe&#39;s biography&#39;
+</span><span style="color:#e6db74">  avatar = &#34;img/avatar.png&#34; # Path &#39;myblog/static/img/&#39;</span>
+
+<span style="color:#66d9ef">[Params]</span>
+  <span style="color:#a6e22e">subtitle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34; # Deprecated in favor of .Site.Params.logo.subtitle
+</span><span style="color:#e6db74">  description = &#34;John Doe&#39;s Blog&#34; # Site description. Used in meta description
+</span><span style="color:#e6db74">  copyright = &#34;John Doe&#34; # Footer copyright holder, otherwise will use site title
+</span><span style="color:#e6db74">  opengraph = true # Enable OpenGraph if true
+</span><span style="color:#e6db74">  schema = true # Enable Schema
+</span><span style="color:#e6db74">  twitter_cards = true # Enable Twitter Cards if true
+</span><span style="color:#e6db74">  readmore = true # Show &#34;Read more&#34; button in list if true
+</span><span style="color:#e6db74">  authorbox = false # Do not show authorbox at bottom of pages if true
+</span><span style="color:#e6db74">  toc = true # Enable Table of Contents
+</span><span style="color:#e6db74">  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
+</span><span style="color:#e6db74">  post_meta = [&#34;author&#34;, &#34;date&#34;, &#34;categories&#34;, &#34;translations&#34;] # Order of post meta information
+</span><span style="color:#e6db74">  mainSections = [&#34;posts&#34;, &#34;blogs&#34;, &#34;news&#34;] # Specify section pages to show on home page and the &#34;Recent articles&#34; widget
+</span><span style="color:#e6db74">  DateForm = &#34;2020-01-01&#34;
+</span><span style="color:#e6db74">  googleFontsLink = &#34;https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&#34; # Load Google Fonts</span>
+
+<span style="color:#66d9ef">[Params.style.vars]</span>
+  <span style="color:#a6e22e">hightlightColor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#2B547E&#34;</span>
+
+  <span style="color:#75715e"># Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font</span>
+  <span style="color:#75715e"># Take care of different quotes OR escaping symbols in these params if necessary</span>
+  <span style="color:#a6e22e">fontFamilyPrimary</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#39;Open Sans&#39;, Helvetica, Arial, sans-serif&#34;
+</span><span style="color:#e6db74">  fontFamilySecondary = &#34;SFMono-Regular, Menlo, Monaco, Consolas, &#39;Liberation Mono&#39;, &#39;Courier New&#39;, monospace&#34;</span>
+
+<span style="color:#66d9ef">[Params.logo]</span>
+  <span style="color:#a6e22e">image</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;img/logo.png&#34; # Logo image. Path relative to &#34;static&#34;
+</span><span style="color:#e6db74">  title = &#34;John Doe&#39;s Blog&#34; # Logo title, otherwise will use site title
+</span><span style="color:#e6db74">  subtitle = &#34;A bit more details&#34; # Logo subtitle</span>
+
+<span style="color:#66d9ef">[Params.sidebar]</span>
+  <span style="color:#a6e22e">home</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;right&#34; # Configure layout for home page
+</span><span style="color:#e6db74">  list = &#34;right&#34;  # Configure layout for list pages
+</span><span style="color:#e6db74">  single = &#34;right&#34; # Configure layout for single pages
+</span><span style="color:#e6db74">  # Enable widgets in given order
+</span><span style="color:#e6db74">  widgets = [&#34;search&#34;, &#34;recent&#34;, &#34;categories&#34;, &#34;taglist&#34;, &#34;social&#34;]</span>
+
+<span style="color:#66d9ef">[Params.widgets]</span>
+  <span style="color:#a6e22e">recent_num</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">5 # Set the number of articles in the &#34;Recent articles&#34; widget
+</span><span style="color:#e6db74">  categories_counter = false # Enable counter for each category in &#34;Categories&#34; widget
+</span><span style="color:#e6db74">  tags_counter = false # Enable counter for each tag in &#34;Tags&#34; widget</span>
+
+<span style="color:#66d9ef">[Params.widgets.social]</span>
+  <span style="color:#75715e"># Enable parts of social widget</span>
+  <span style="color:#75715e"># facebook = &#34;username&#34;</span>
+  <span style="color:#75715e"># twitter = &#34;username&#34;</span>
+  <span style="color:#75715e"># instagram = &#34;username&#34;</span>
+  <span style="color:#75715e"># linkedin = &#34;username&#34;</span>
+  <span style="color:#75715e"># telegram = &#34;username&#34;</span>
+  <span style="color:#a6e22e">github</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username&#34;
+</span><span style="color:#e6db74">  # gitlab = &#34;username&#34;
+</span><span style="color:#e6db74">  # bitbucket = &#34;username&#34;
+</span><span style="color:#e6db74">  email = &#34;john_doe@example.com&#34;</span>
+
+<span style="color:#66d9ef">[Params.isso]</span>
+  <span style="color:#75715e"># Parameters for Isso comment server</span>
+  <span style="color:#75715e"># Besure to mofity related parameters according to the &#34;[guard]&#34; section</span>
+  <span style="color:#75715e"># in the Isso configure file &#34;comment.cfg&#34;</span>
+  <span style="color:#a6e22e">enabled</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true
+</span><span style="color:#e6db74">  data = &#34;https://comments.mysite.com/isso/&#34;
+</span><span style="color:#e6db74">  id = &#34;thread-id&#34;
+</span><span style="color:#e6db74">  css = true
+</span><span style="color:#e6db74">  lang = &#34;en&#34;
+</span><span style="color:#e6db74">  replyToSelf = true
+</span><span style="color:#e6db74">  requireAuthor = true
+</span><span style="color:#e6db74">  requireEmail = false
+</span><span style="color:#e6db74">  avatar = true
+</span><span style="color:#e6db74">  avatar-bg = &#34;#f0f0f0&#34;
+</span><span style="color:#e6db74">  jsLocation = &#34;https://comments.mysite.com/isso/js/embed.min.js&#34;</span>
+</code></pre></div><h2 id="25-create-your-first-post">2.5 Create your first post</h2>
+<p>Under the <em>myblog</em> directory, run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new posts/my-first-post.md
+</code></pre></div><p>Edit and add some contents in this file. Then run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><p>Visit the site at <a href="http://localhost:1313">http://localhost:1313/</a>.</p>
+<h1 id="3-integrate-hugomainroad-with-isso-comment-server">3. Integrate Hugo/mainroad with Isso comment server</h1>
+<blockquote>
+<p>Hugo uses Go’s html/template and text/template libraries as the basis for the templating.</p>
+</blockquote>
+<p>Considering the complicated template syntax, it&rsquo;s a bit complicated to integrate Isso with Hugo theme.</p>
+<p>For the theme <code>mainroad</code>, just edit the file <em>comments.html</em> in the <em>themes/mainroad/layouts/partials/</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim myblog/themes/mainroad/layouts/partials/comments.html
+</code></pre></div><p>Insert these rows before the last row <code>{{ END }}</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{/* Add support for ISSO comment system */}}
+{{ else if .Site.Params.isso.enabled }}
+  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+    &lt;<span style="color:#f92672">script</span>
+        <span style="color:#a6e22e">data-isso</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.data }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.id}}&#34;</span>
+        <span style="color:#a6e22e">data-isso-css</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.css }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.lang }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-reply-to-self</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.replyToSelf }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-require-author</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.requireAuthor }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-require-email</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.requireEmail }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-avatar</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.avatar }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-avatar-bg</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.avatarBg }}&#34;</span>
+        <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.jsLocation }}&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">noscript</span>&gt;Please enable JavaScript to view the comments powered by &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://posativ.org/isso/&#34;</span>&gt;Isso&lt;/<span style="color:#f92672">a</span>&gt;.&lt;/<span style="color:#f92672">noscript</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;
+      &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;isso-thread&#34;</span>&gt;&lt;/<span style="color:#f92672">section</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">article</span>&gt;
+</code></pre></div><p>The modified <em>comments.html</em> file would be like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if and .Site.DisqusShortname (index .Params &#34;comments&#34; | default &#34;true&#34;) (not .Site.IsServer) }}
+&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;comments&#34;</span>&gt;
+	{{ template &#34;_internal/disqus.html&#34; . }}
+&lt;/<span style="color:#f92672">section</span>&gt;
+{{/* Add support for ISSO comment system */}}
+{{ else if .Site.Params.isso.enabled }}
+  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+    &lt;<span style="color:#f92672">script</span>
+        <span style="color:#a6e22e">data-isso</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.data }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.id}}&#34;</span>
+        <span style="color:#a6e22e">data-isso-css</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.css }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.lang }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-reply-to-self</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.replyToSelf }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-require-author</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.requireAuthor }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-require-email</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.requireEmail }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-avatar</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.avatar }}&#34;</span>
+        <span style="color:#a6e22e">data-isso-avatar-bg</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.avatarBg }}&#34;</span>
+        <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.isso.jsLocation }}&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">noscript</span>&gt;Please enable JavaScript to view the comments powered by &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://posativ.org/isso/&#34;</span>&gt;Isso&lt;/<span style="color:#f92672">a</span>&gt;.&lt;/<span style="color:#f92672">noscript</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;
+      &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;isso-thread&#34;</span>&gt;&lt;/<span style="color:#f92672">section</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">article</span>&gt;
+{{ end }}
+</code></pre></div><p>All parameters listed here could be found in the <code>[Params.isso]</code> section in the main <em>config.toml</em> file.</p>
+<p>You can add more parameters in it according to Isso <a href="https://posativ.org/isso/docs/configuration/server/">documentation</a>.</p>
+<p>If the Hugo server is still running, you could find the page refreshed automatically in web browser and the comment area appears. Otherwise, re-run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><h1 id="4-publish-to-github-page">4. Publish to GitHub Page</h1>
+<p>(1) Remove or comment the row <code>draft: true</code> in the heading area of your post page.</p>
+<p>(2) Run the command to build static pages:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo -D
+</code></pre></div><p>It creates a new directory <em>public/</em>. Create a file <em>CNAME</em>, of which content is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">mysite.com
+</code></pre></div><p>(3) Publish to GitHub Pages repository:</p>
+<p>Since I already created a GitHub Page, I just replace the contents in the existing repository:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd myblog/
+<span style="color:#75715e"># Init an empty Git repo</span>
+git init
+git add .
+git commit
+git --set-upstream push origin master https://github.com/zer0liu/zer0liu.github.io
+</code></pre></div><p>The whole workflow completed. We could visit <a href="https://mysite.com">https://mysite.com</a> now.</p>
+<hr>
+<h1 id="references">References:</h1>
+<ol>
+<li><a href="https://gohugo.io/documentation/">Hugo Documentation</a></li>
+<li><a href="https://posativ.org/isso/docs/">Isso Documentation</a></li>
+<li><a href="https://themes.gohugo.io/mainroad/">Hugo Theme: Mainroad</a></li>
+<li><a href="https://stiobhart.com/2017-02-24-isso-comments/">Adding Isso Comments to Hugo</a></li>
+<li><a href="https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7">Build a Personal Website With Github Pages and Hugo</a></li>
+<li><a href="https://oktomus.com/posts/2020/add-comments-to-a-static-blog-with-isso/">Add comments to a static blog with Isso</a></li>
+<li><a href="https://sb.sb/blog/debian-ubuntu-install-isso/">Debian / Ubuntu 搭建 Isso 评论系统教程</a></li>
+<li><a href="https://www.lonecpluspluscoder.com/2021/02/15/static-site-migration-we-have-working-comments-with-isso/">Static site migration - we have working comments with isso!</a></li>
+<li><a href="https://therandombits.com/2018/12/how-to-add-isso-comments-to-your-site/">How to add Isso comments to your site</a></li>
+</ol>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/2021-04-16-migrate-to-hugo/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Migrate to Hugo</p>
+		</a>
+	</div>
+</nav>
+
+  <article class="post">
+    <script 
+        data-isso="https://vmla1.a2h.top/isso/" 
+        data-isso-id="thread-id"
+        data-isso-css="true"
+        data-isso-lang="en"
+        data-isso-reply-to-self="true"
+        data-isso-require-author="true" 
+        data-isso-require-email="false" 
+        data-isso-avatar="true"
+        data-isso-avatar-bg=""
+        src="https://vmla1.a2h.top/isso/js/embed.min.js">
+    </script>
+    <noscript>Please enable JavaScript to view the comments powered by <a href="https://posativ.org/isso/">Isso</a>.</noscript>
+    <div>
+      <section id="isso-thread"></section>
+    </div>
+</article>
+
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://omicx.cc/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-04-16-create-a-hugo-blog/">Create a Hugo Blog, along with Isso comment server</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-04-16-migrate-to-hugo/">Migrate to Hugo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/">Install beagle-lib for NVidia Tesla V100 on Debian buster</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-03-15-tips-pavian-load-large-data/">Tips: Pavian Load Large Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-02-22-install-r-and-rstudio-server-in-debian/">Install R and RStudio server in Debian</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/beast/">BEAST</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/blog/">blog</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/conda/">Conda</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/cuda/">CUDA</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/figtree/">FigTree</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/hardware/">Hardware</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/hugo/">Hugo</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/ngs/">NGS</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/note/">Note</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/phylogenetics/">Phylogenetics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/pymol/">PyMOL</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/r/">R</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/raspberry-pi/">Raspberry Pi</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/software/">Software</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/website/">Website</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/aria2/" title="aria2">aria2</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/beast/" title="BEAST">BEAST</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/certbot/" title="certbot">certbot</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cloudflare/" title="cloudflare">cloudflare</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/conda/" title="conda">conda</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cuda/" title="CUDA">CUDA</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/debian/" title="Debian">Debian</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fry/" title="fry">fry</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/letsencrypt/" title="Letsencrypt">Letsencrypt</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="nginx">nginx</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ngs/" title="NGS">NGS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/note/" title="Note">Note</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nvidia/" title="Nvidia">Nvidia</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pavian/" title="Pavian">Pavian</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pymol/" title="PyMOL">PyMOL</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/r/" title="R">R</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tips/" title="Tips">Tips</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tree/" title="Tree">Tree</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zer0liu" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:zeroliu@gmail.com">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>zeroliu@gmail.com</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 zeroliu.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

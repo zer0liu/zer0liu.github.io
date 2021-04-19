@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on OmicX</title>
+    <link>https://omicx.cc/categories/hugo/</link>
+    <description>Recent content in Hugo on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Apr 2021 15:58:17 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a Hugo Blog, along with Isso comment server</title>
+      <link>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</link>
+      <pubDate>Sun, 18 Apr 2021 15:58:17 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</guid>
+      <description>&lt;p&gt;This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.&lt;/p&gt;
+&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install and configure of Hugo&lt;/li&gt;
+&lt;li&gt;Install and configure of Isso comment server in a remote server&lt;/li&gt;
+&lt;li&gt;Integrate Isso with Hugo&lt;/li&gt;
+&lt;li&gt;Publish to an existing &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Environment:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Both local computer and remote server work on &lt;a href=&#34;https://www.debian.org/releases/bullseye/&#34;&gt;Debian bullseye&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

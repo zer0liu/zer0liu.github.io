@@ -4,20 +4,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tips - OmicX</title>
+	<title>Hugo - OmicX</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Tips" />
+		<meta property="og:title" content="Hugo" />
 <meta property="og:description" content="A blog for bioinformatics, statistics and Omics" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://omicx.cc/tags/tips/" />
-<meta property="og:updated_time" content="2021-03-15T15:54:55+00:00" />
+<meta property="og:url" content="https://omicx.cc/tags/hugo/" />
+<meta property="og:updated_time" content="2021-04-18T15:58:17+08:00" />
 
-		<meta itemprop="name" content="Tips">
+		<meta itemprop="name" content="Hugo">
 <meta itemprop="description" content="A blog for bioinformatics, statistics and Omics">
 
 		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tips"/>
+<meta name="twitter:title" content="Hugo"/>
 <meta name="twitter:description" content="A blog for bioinformatics, statistics and Omics"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	
-	<link rel="alternate" type="application/rss+xml" href="/tags/tips/index.xml" title="OmicX">
+	<link rel="alternate" type="application/rss+xml" href="/tags/hugo/index.xml" title="OmicX">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -67,92 +67,38 @@ if (!doNotTrack) {
 			
 <main class="main list" role="main">
 	<header class="main__header">
-		<h1 class="main__title">Tips</h1>
+		<h1 class="main__title">Hugo</h1>
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/posts/2021-03-15-tips-pavian-load-large-data/" rel="bookmark">
-			Tips: Pavian Load Large Data
+			<a href="/posts/2021-04-16-create-a-hugo-blog/" rel="bookmark">
+			Create a Hugo Blog, along with Isso comment server
 			</a>
 		</h2>
 		<div class="list__meta meta"><div class="meta__item-author meta__item">
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
 </div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-03-15T15:54:55Z">March 15, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/ngs/" rel="category">NGS</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-18T15:58:17&#43;08:00">April 18, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/blog/" rel="category">blog</a>, <a class="meta__link" href="/categories/hugo/" rel="category">Hugo</a>
 	</span>
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		<p><a href="https://github.com/fbreitwieser/pavian">Pavian</a> is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as <a href="https://github.com/DerrickWood/kraken2">Kraken</a>, <a href="https://github.com/DaehwanKimLab/centrifuge">Centrifuge</a> and <a href="https://github.com/biobakery/MetaPhlAn">MetaPhlAn</a>. Here are a few tips for Pavian to work with large data.</p>
+		<p>This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.</p>
+<p>Steps:</p>
+<ul>
+<li>Install and configure of Hugo</li>
+<li>Install and configure of Isso comment server in a remote server</li>
+<li>Integrate Isso with Hugo</li>
+<li>Publish to an existing <a href="https://pages.github.com/">GitHub Page</a></li>
+</ul>
+<p>Environment:</p>
+<blockquote>
+<p>Both local computer and remote server work on <a href="https://www.debian.org/releases/bullseye/">Debian bullseye</a>.</p>
+</blockquote>
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/2021-03-15-tips-pavian-load-large-data/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/" rel="bookmark">
-			Create pdf file for huge phylogenetic tree
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-06-22T21:26:00Z">June 22, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/figtree/" rel="category">FigTree</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by <strong>pdfposter</strong>.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2019-05-26-install-pymol-windows/" rel="bookmark">
-			Install Open Source Pymol in Windows by Conda
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-05-26T21:16:02Z">May 26, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/pymol/" rel="category">PyMOL</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>Since PyMOL 2.x released, there were no binary installer avaliable for Windows.</p>
-<p><a href="https://pymolwiki.org/index.php/Windows_Install">PyMOL Wiki</a> provides the way to install open source PyMOL in Windows under Python 2.7.</p>
-<p>This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/2019-05-26-install-pymol-windows/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2018-11-16-beast-tips/" rel="bookmark">
-			BEAST Tips
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">zeroliu</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-11-16T12:13:43Z">November 16, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/phylogenetics/" rel="category">Phylogenetics</a>, <a class="meta__link" href="/categories/beast/" rel="category">BEAST</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/2018-11-16-beast-tips/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/posts/2021-04-16-create-a-hugo-blog/">Read more…</a>
 	</div>
 </article>
 </main>
