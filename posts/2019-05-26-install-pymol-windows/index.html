@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 		<meta property="og:title" content="Install Open Source Pymol in Windows by Conda" />
 <meta property="og:description" content="
-This post was first released at 2019-05-26, and updated at 2020-04-20.
+This post was first released at 2019-05-26, and updated at 2021-04-20.
 
 Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
 PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 3.x.
@@ -21,14 +21,14 @@ This post provided the method to install PyMOL 2.x by conda (Anaconda or Minocon
 
 		<meta itemprop="name" content="Install Open Source Pymol in Windows by Conda">
 <meta itemprop="description" content="
-This post was first released at 2019-05-26, and updated at 2020-04-20.
+This post was first released at 2019-05-26, and updated at 2021-04-20.
 
 Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
 PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 3.x.
 This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.">
 <meta itemprop="datePublished" content="2019-05-26T21:16:02+00:00" />
 <meta itemprop="dateModified" content="2019-05-26T21:16:02+00:00" />
-<meta itemprop="wordCount" content="605">
+<meta itemprop="wordCount" content="604">
 
 
 
@@ -37,7 +37,7 @@ This post provided the method to install PyMOL 2.x by conda (Anaconda or Minocon
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install Open Source Pymol in Windows by Conda"/>
 <meta name="twitter:description" content="
-This post was first released at 2019-05-26, and updated at 2020-04-20.
+This post was first released at 2019-05-26, and updated at 2021-04-20.
 
 Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
 PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 3.x.
@@ -100,7 +100,7 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<blockquote>
-<p>This post was first released at <strong>2019-05-26</strong>, and updated at <strong>2020-04-20</strong>.</p>
+<p>This post was first released at <strong>2019-05-26</strong>, and updated at <strong>2021-04-20</strong>.</p>
 </blockquote>
 <p>Since PyMOL 2.x released, there were no binary installer avaliable for Windows.</p>
 <p><a href="https://pymolwiki.org/index.php/Windows_Install">PyMOL Wiki</a> provides the way to install open source PyMOL in Windows under Python 3.x.</p>
@@ -108,8 +108,8 @@ if (!doNotTrack) {
 <h1 id="1-install-conda">1. Install Conda</h1>
 <p>Download <a href="https://www.anaconda.com/distribution/">Anaconda</a> or <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> and install it.</p>
 <blockquote>
-<p>Since I am using Windows 10 64 bit version, <a href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe">miniconda3-py3.8</a> was installed.
-Miniconda3 was installed at <code>D:\miniconda3</code>.</p>
+<p>Since I am using Windows 10 64 bit version, <a href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe">miniconda3-py3.8</a> was installed.</p>
+<p>E.g., Miniconda3 was installed at <code>D:\miniconda3</code>.</p>
 </blockquote>
 <h1 id="2-create-pymol-envrionment">2. Create PyMOL envrionment</h1>
 <p>Click Start menu, and run &ldquo;Anaconda Prompt (miniconda3)&rdquo;.</p>
@@ -118,13 +118,12 @@ Miniconda3 was installed at <code>D:\miniconda3</code>.</p>
 </code></pre></div><p>Then, activate created environment</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda activate pymol
 </code></pre></div><h1 id="3-install-supporting-packages">3. Install supporting packages</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># pip</span>
-conda install -c conda-forge pip numpy pmw
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda install -c conda-forge pip numpy pmw
 </code></pre></div><p>All other supporting packages would be installed automatically.</p>
 <h1 id="4-download-pymol-whl-files">4. Download PyMOL whl files</h1>
 <p>Download pre-compiled Open-Source PyMOL from <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymol-open-source">Christoph Gohlke of the Laboratory for Fluorescence Dynamics, University of California, Irvine</a>:</p>
 <p>Here listed lots of pre-compiled distributions. The filename format is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  pymol-2.4.0-cp39-cp39-win_amd64.whl
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  pymol-2.4.0-cp38-cp38-win_amd64.whl
            \        \          \
             \        \          \__ for 64 bit Windows
              \        \
@@ -132,7 +131,7 @@ conda install -c conda-forge pip numpy pmw
                \
                 \__________________ PyMOL version 2.4.0
 </code></pre></div><p>Download both &ldquo;<em>pymol.whl</em>&rdquo; and &ldquo;<em>pymol_launcher.whl</em>&rdquo; files.</p>
-<p>Here <code>pymol‑2.4.0‑cp39‑cp39‑win_amd64.whl</code> and <code>pymol_launcher‑2.1‑cp39‑cp39‑win_amd64.whl</code> were downloaded.</p>
+<p>Here <code>pymol-2.4.0-cp38-cp38-win_amd64.whl</code> and <code>pymol_launcher-2.1-cp38-cp38-win_amd64.whl</code> were downloaded.</p>
 <h1 id="5-install-whl-files">5. Install whl files</h1>
 <ul>
 <li>In the conda <code>pymol</code> environment, switch to download directory (<em>e.g.</em>, <code>D:\Downloads</code>)</li>
@@ -141,11 +140,11 @@ conda install -c conda-forge pip numpy pmw
 </code></pre></div><ul>
 <li>Install pymol_launcher first</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install --no-index --find-links<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;%CD%&#34;</span> pymol_launcher-2.1-cp39-cp39-win_amd64.whl
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install --no-index --find-links<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;%CD%&#34;</span> pymol_launcher-2.1-cp38-cp38-win_amd64.whl
 </code></pre></div><p>Output would be like:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Looking in links: c:\Downloads
-Processing c:\downloads\pymol_launcher-2.1-cp39-cp39-win_amd64.whl
-Processing c:\downloads\pymol-2.4.0-cp39-cp39-win_amd64.whl
+Processing c:\downloads\pymol_launcher-2.1-cp38-cp38-win_amd64.whl
+Processing c:\downloads\pymol-2.4.0-cp38-cp38-win_amd64.whl
 Requirement already satisfied: numpy in c:\miniconda3\envs\pymol\lib\site-packages (from pymol-&gt;pymol-launcher==2.1) (1.20.2)
 Requirement already satisfied: Pmw in c:\miniconda3\envs\pymol\lib\site-packages (from pymol-&gt;pymol-launcher==2.1) (2.0.1)
 Installing collected packages: pymol, pymol-launcher
@@ -154,7 +153,7 @@ Successfully installed pymol-2.4.0 pymol-launcher-2.1
 <p>You might have noticed PyMOL has been installed automatically.</p>
 </blockquote>
 <p>To update PyMOL later, run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install --upgrade --no-deps pymol-2.4.0-cp39-cp39-win_amd64.whl
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install --upgrade --no-deps pymol-2.4.0-cp38-cp38-win_amd64.whl
 </code></pre></div><blockquote>
 <p>The pymol_launcher do not need update.</p>
 </blockquote>
