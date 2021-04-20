@@ -31,8 +31,11 @@
       <pubDate>Sun, 26 May 2019 21:16:02 +0000</pubDate>
       
       <guid>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</guid>
-      <description>&lt;p&gt;Since PyMOL 2.x released, there were no binary installer avaliable for Windows.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;PyMOL Wiki&lt;/a&gt; provides the way to install open source PyMOL in Windows under Python 2.7.&lt;/p&gt;
+      <description>&lt;blockquote&gt;
+&lt;p&gt;This post was first released at 2019-05-26, and updated at 2020-04-20.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Since PyMOL 2.x released, there were no binary installer avaliable for Windows.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;PyMOL Wiki&lt;/a&gt; provides the way to install open source PyMOL in Windows under Python 3.x.&lt;/p&gt;
 &lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
     </item>
     
