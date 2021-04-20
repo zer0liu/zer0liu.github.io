@@ -28,7 +28,7 @@ PyMOL Wiki provides the way to install open source PyMOL in Windows under Python
 This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.">
 <meta itemprop="datePublished" content="2019-05-26T21:16:02+00:00" />
 <meta itemprop="dateModified" content="2019-05-26T21:16:02+00:00" />
-<meta itemprop="wordCount" content="606">
+<meta itemprop="wordCount" content="605">
 
 
 
@@ -98,19 +98,9 @@ if (!doNotTrack) {
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-05-26T21:16:02Z">May 26, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/pymol/" rel="category">PyMOL</a>
 	</span>
 </div></div>
-		</header>
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
-	<div class="toc__menu">
-		<nav id="TableOfContents">
-  <ul>
-    <li><a href="#81-un-solved-conflicts">8.1 Un-solved conflicts</a></li>
-  </ul>
-</nav>
-	</div>
-</div><div class="content post__content clearfix">
+		</header><div class="content post__content clearfix">
 			<blockquote>
-<p>This post was first released at 2019-05-26, and updated at 2020-04-20.</p>
+<p>This post was first released at <strong>2019-05-26</strong>, and updated at <strong>2020-04-20</strong>.</p>
 </blockquote>
 <p>Since PyMOL 2.x released, there were no binary installer avaliable for Windows.</p>
 <p><a href="https://pymolwiki.org/index.php/Windows_Install">PyMOL Wiki</a> provides the way to install open source PyMOL in Windows under Python 3.x.</p>
@@ -208,8 +198,10 @@ pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</s
 pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</span>preferences <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;instantsave&#39;</span>: True, <span style="color:#e6db74">&#39;verbose&#39;</span>: False}
 </code></pre></div><p>Lanuch PyMOL, you&rsquo;ll find extend scripts under the Menu <code>Plugins-&gt;Legacy Plugins</code>:</p>
 <p><img src="/img/pymol-plugins-list.png" alt="Install PyMOL Plugins"></p>
-<h2 id="81-un-solved-conflicts">8.1 Un-solved conflicts</h2>
-<p>There are still some errors:</p>
+<blockquote>
+<p><strong>Note:</strong></p>
+</blockquote>
+<p>There are still some un-solved errors:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">module <span style="color:#e6db74">&#39;base64&#39;</span> has no attribute <span style="color:#e6db74">&#39;encodestring&#39;</span>
 Unable to initialize plugin <span style="color:#e6db74">&#39;bnitools&#39;</span> <span style="color:#f92672">(</span>pmg_tk.startup.bnitools<span style="color:#f92672">)</span>.
 No module named <span style="color:#e6db74">&#39;tkintertable&#39;</span>
