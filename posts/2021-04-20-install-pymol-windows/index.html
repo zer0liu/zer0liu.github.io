@@ -198,25 +198,24 @@ pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</s
 </code></pre></div><p>(5) Lanuch PyMOL, you&rsquo;ll find extend scripts under the Menu <code>Plugins-&gt;Legacy Plugins</code>:</p>
 <p><img src="/img/pymol-plugins-list.png" alt="Install PyMOL Plugins"></p>
 <blockquote>
-<p><strong>Note:</strong></p>
+<p><strong>Note:</strong> There are still some un-solved errors:</p>
 </blockquote>
-<p>There are still some un-solved errors:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">module <span style="color:#e6db74">&#39;base64&#39;</span> has no attribute <span style="color:#e6db74">&#39;encodestring&#39;</span>
-Unable to initialize plugin <span style="color:#e6db74">&#39;bnitools&#39;</span> <span style="color:#f92672">(</span>pmg_tk.startup.bnitools<span style="color:#f92672">)</span>.
-No module named <span style="color:#e6db74">&#39;tkintertable&#39;</span>
-Unable to initialize plugin <span style="color:#e6db74">&#39;mtsslDockGui&#39;</span> <span style="color:#f92672">(</span>pmg_tk.startup.mtsslDockGui<span style="color:#f92672">)</span>.
-use<span style="color:#f92672">()</span> got an unexpected keyword argument <span style="color:#e6db74">&#39;warn&#39;</span>
-Unable to initialize plugin <span style="color:#e6db74">&#39;mtsslPlotter&#39;</span> <span style="color:#f92672">(</span>pmg_tk.startup.mtsslPlotter<span style="color:#f92672">)</span>.
-D:<span style="color:#ae81ff">\m</span>iniconda3<span style="color:#ae81ff">\e</span>nvs<span style="color:#ae81ff">\p</span>ymol<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\s</span>ite-packages<span style="color:#ae81ff">\w</span>x<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\p</span>ubsub<span style="color:#ae81ff">\_</span>_init__.py:23: wxPyDeprecationWarning: wx.lib.pubsub has been deprecated, plese migrate your code to use pypubsub, available on PyPI.
-  warnings.warn<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;wx.lib.pubsub has been deprecated, plese migrate your &#39;</span>
-<span style="color:#f92672">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><span style="color:#e6db74">&lt;&lt;
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">Optimize plug-in needs openbabel to be installed in your system, please follow the instructions at
-</span><span style="color:#e6db74">http://openbabel.org/wiki/Get_Op</span>en_Babel
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">module &#39;base64&#39; has no attribute &#39;encodestring&#39;
+Unable to initialize plugin &#39;bnitools&#39; (pmg_tk.startup.bnitools).
+No module named &#39;tkintertable&#39;
+Unable to initialize plugin &#39;mtsslDockGui&#39; (pmg_tk.startup.mtsslDockGui).
+use() got an unexpected keyword argument &#39;warn&#39;
+Unable to initialize plugin &#39;mtsslPlotter&#39; (pmg_tk.startup.mtsslPlotter).
+D:\miniconda3\envs\pymol\lib\site-packages\wx\lib\pubsub\__init__.py:23: wxPyDeprecationWarning: wx.lib.pubsub has been deprecated, plese migrate your code to use pypubsub, available on PyPI.
+  warnings.warn(&#39;wx.lib.pubsub has been deprecated, plese migrate your &#39;
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+
+Optimize plug-in needs openbabel to be installed in your system, please follow the instructions at
+http://openbabel.org/wiki/Get_Open_Babel
 
 &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
-No module named <span style="color:#e6db74">&#39;cctbx&#39;</span>
-Unable to initialize plugin <span style="color:#e6db74">&#39;SuperSymPlugin&#39;</span> <span style="color:#f92672">(</span>pmg_tk.startup.SuperSymPlugin<span style="color:#f92672">)</span>.
+No module named &#39;cctbx&#39;
+Unable to initialize plugin &#39;SuperSymPlugin&#39; (pmg_tk.startup.SuperSymPlugin).
  Detected OpenGL version 1.1. Shaders and volumes unavailable.
  OpenGL graphics engine:
   GL_VENDOR:   Microsoft Corporation
