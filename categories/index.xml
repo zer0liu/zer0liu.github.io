@@ -6,7 +6,25 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Apr 2021 15:58:17 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 21:36:12 +0000</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyMOL</title>
+      <link>https://omicx.cc/categories/pymol/</link>
+      <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/pymol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>https://omicx.cc/categories/software/</link>
+      <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
+      
+      <guid>https://omicx.cc/categories/software/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>blog</title>
       <link>https://omicx.cc/categories/blog/</link>
@@ -44,15 +62,6 @@
     </item>
     
     <item>
-      <title>Software</title>
-      <link>https://omicx.cc/categories/software/</link>
-      <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
-      
-      <guid>https://omicx.cc/categories/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>NGS</title>
       <link>https://omicx.cc/categories/ngs/</link>
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
@@ -85,15 +94,6 @@
       <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
       
       <guid>https://omicx.cc/categories/figtree/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PyMOL</title>
-      <link>https://omicx.cc/categories/pymol/</link>
-      <pubDate>Sun, 26 May 2019 21:16:02 +0000</pubDate>
-      
-      <guid>https://omicx.cc/categories/pymol/</guid>
       <description></description>
     </item>
     

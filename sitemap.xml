@@ -3,12 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://omicx.cc/categories/blog/</loc>
-    <lastmod>2021-04-18T15:58:17+08:00</lastmod>
+    <loc>https://omicx.cc/categories/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://omicx.cc/categories/</loc>
+    <loc>https://omicx.cc/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/pymol/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/pymol/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/software/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/tips/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/blog/</loc>
     <lastmod>2021-04-18T15:58:17+08:00</lastmod>
   </url>
   
@@ -24,21 +64,6 @@
   
   <url>
     <loc>https://omicx.cc/categories/hugo/</loc>
-    <lastmod>2021-04-18T15:58:17+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/</loc>
-    <lastmod>2021-04-18T15:58:17+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/posts/</loc>
-    <lastmod>2021-04-18T15:58:17+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/tags/</loc>
     <lastmod>2021-04-18T15:58:17+08:00</lastmod>
   </url>
   
@@ -83,11 +108,6 @@
   </url>
   
   <url>
-    <loc>https://omicx.cc/categories/software/</loc>
-    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://omicx.cc/tags/ngs/</loc>
     <lastmod>2021-03-15T15:54:55+00:00</lastmod>
   </url>
@@ -99,11 +119,6 @@
   
   <url>
     <loc>https://omicx.cc/tags/pavian/</loc>
-    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/tags/tips/</loc>
     <lastmod>2021-03-15T15:54:55+00:00</lastmod>
   </url>
   
@@ -190,21 +205,6 @@
   <url>
     <loc>https://omicx.cc/tags/tree/</loc>
     <lastmod>2019-06-22T21:26:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/tags/pymol/</loc>
-    <lastmod>2019-05-26T21:16:02+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/categories/pymol/</loc>
-    <lastmod>2019-05-26T21:16:02+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</loc>
-    <lastmod>2019-05-26T21:16:02+00:00</lastmod>
   </url>
   
   <url>

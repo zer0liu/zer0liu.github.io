@@ -6,7 +6,21 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Apr 2021 15:58:17 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 21:36:12 +0000</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Step by Step Install Open Source Pymol 2.x in Windows by Conda</title>
+      <link>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</link>
+      <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;This post was first released at &lt;strong&gt;2019-05-26&lt;/strong&gt;, and updated at &lt;strong&gt;2021-04-20&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Since PyMOL 2.x released, there were no binary installer avaliable for Windows.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;PyMOL Wiki&lt;/a&gt; provides the way to install open source PyMOL in Windows under Python 3.x.&lt;/p&gt;
+&lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Create a Hugo Blog, along with Isso comment server</title>
       <link>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</link>
@@ -139,20 +153,6 @@ to resume the download if necessary.&lt;/p&gt;</description>
       
       <guid>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</guid>
       <description>&lt;p&gt;Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by &lt;strong&gt;pdfposter&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Step by Step Install Open Source Pymol 2.x in Windows by Conda</title>
-      <link>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</link>
-      <pubDate>Sun, 26 May 2019 21:16:02 +0000</pubDate>
-      
-      <guid>https://omicx.cc/posts/2019-05-26-install-pymol-windows/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;This post was first released at &lt;strong&gt;2019-05-26&lt;/strong&gt;, and updated at &lt;strong&gt;2021-04-20&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Since PyMOL 2.x released, there were no binary installer avaliable for Windows.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;PyMOL Wiki&lt;/a&gt; provides the way to install open source PyMOL in Windows under Python 3.x.&lt;/p&gt;
-&lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -6,7 +6,25 @@
     <description>Recent content in Tags on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Apr 2021 15:58:17 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 21:36:12 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyMOL</title>
+      <link>https://omicx.cc/tags/pymol/</link>
+      <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
+      
+      <guid>https://omicx.cc/tags/pymol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tips</title>
+      <link>https://omicx.cc/tags/tips/</link>
+      <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
+      
+      <guid>https://omicx.cc/tags/tips/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hugo</title>
       <link>https://omicx.cc/tags/hugo/</link>
@@ -71,15 +89,6 @@
     </item>
     
     <item>
-      <title>Tips</title>
-      <link>https://omicx.cc/tags/tips/</link>
-      <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
-      
-      <guid>https://omicx.cc/tags/tips/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>R</title>
       <link>https://omicx.cc/tags/r/</link>
       <pubDate>Mon, 22 Feb 2021 16:29:04 +0000</pubDate>
@@ -139,15 +148,6 @@
       <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
       
       <guid>https://omicx.cc/tags/tree/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PyMOL</title>
-      <link>https://omicx.cc/tags/pymol/</link>
-      <pubDate>Sun, 26 May 2019 21:16:02 +0000</pubDate>
-      
-      <guid>https://omicx.cc/tags/pymol/</guid>
       <description></description>
     </item>
     
