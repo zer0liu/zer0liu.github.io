@@ -3,18 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/</loc>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://omicx.cc/categories/</loc>
-    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/gnu-parallel/</loc>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/linux/</loc>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/linux/</loc>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://omicx.cc/</loc>
-    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://omicx.cc/posts/</loc>
-    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/</loc>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
   </url>
   
   <url>
@@ -34,11 +59,6 @@
   
   <url>
     <loc>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</loc>
-    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/tags/</loc>
     <lastmod>2021-04-20T21:36:12+00:00</lastmod>
   </url>
   
