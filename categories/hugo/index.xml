@@ -14,6 +14,7 @@
       
       <guid>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</guid>
       <description>&lt;p&gt;This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/hugo-logo-wide-120.png&#34; alt=&#34;Hugo logo&#34;&gt; &lt;img src=&#34;https://omicx.cc/img/plus.png&#34; alt=&#34;Plus&#34;&gt; &lt;img src=&#34;https://omicx.cc/img/isso-logo-120.png&#34; alt=&#34;Isso logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Steps:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Install and configure of Hugo&lt;/li&gt;
