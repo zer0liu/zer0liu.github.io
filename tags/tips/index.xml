@@ -18,7 +18,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;Since PyMOL 2.x released, there were no binary installer avaliable for Windows.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;PyMOL Wiki&lt;/a&gt; provides the way to install open source PyMOL in Windows under Python 3.x.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;img/120px-PyMOL_logo.png&#34; alt=&#34;PyMOL logo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/120px-PyMOL_logo.png&#34; alt=&#34;PyMOL logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
     </item>
     
