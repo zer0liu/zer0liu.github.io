@@ -6,22 +6,49 @@
     <description>Recent content in Tags on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Apr 2021 11:51:45 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Jun 2021 12:55:33 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GNU parallel</title>
-      <link>https://omicx.cc/tags/gnu-parallel/</link>
-      <pubDate>Wed, 28 Apr 2021 11:51:45 +0800</pubDate>
+      <title>Debian</title>
+      <link>https://omicx.cc/tags/debian/</link>
+      <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
       
-      <guid>https://omicx.cc/tags/gnu-parallel/</guid>
+      <guid>https://omicx.cc/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KVM</title>
+      <link>https://omicx.cc/tags/kvm/</link>
+      <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/kvm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
       <link>https://omicx.cc/tags/linux/</link>
-      <pubDate>Wed, 28 Apr 2021 11:51:45 +0800</pubDate>
+      <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
       
       <guid>https://omicx.cc/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QEMU</title>
+      <link>https://omicx.cc/tags/qemu/</link>
+      <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/qemu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GNU parallel</title>
+      <link>https://omicx.cc/tags/gnu-parallel/</link>
+      <pubDate>Wed, 28 Apr 2021 11:51:45 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/gnu-parallel/</guid>
       <description></description>
     </item>
     
@@ -76,15 +103,6 @@
       <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
       
       <guid>https://omicx.cc/tags/cuda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debian</title>
-      <link>https://omicx.cc/tags/debian/</link>
-      <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
-      
-      <guid>https://omicx.cc/tags/debian/</guid>
       <description></description>
     </item>
     

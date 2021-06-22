@@ -6,7 +6,18 @@
     <description>Recent content on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Apr 2021 11:51:45 +0800</lastBuildDate><atom:link href="https://omicx.cc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Jun 2021 12:55:33 +0800</lastBuildDate><atom:link href="https://omicx.cc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install QEMU/KVM Server on Debian 10 Headless Server</title>
+      <link>https://omicx.cc/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/</link>
+      <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/</guid>
+      <description>&lt;p&gt;Kernel based Virtual Machine (KVM) is a widely used free and open source type 2 hypervisor for Linux distributions.&lt;/p&gt;
+&lt;p&gt;This post described a workthrough on how to install and configure QEMU/KVM on a Debian 10/buster server.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.linux-kvm.org/kvmless/kvmbanner-logo3.png&#34; alt=&#34;KVM logo&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title> Batch Calculate and Verify MD5 Checksum With GNU Parallel</title>
       <link>https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/</link>
