@@ -22,7 +22,7 @@ This post described a workthrough on how to install and configure QEMU/KVM on a 
 ">
 <meta itemprop="datePublished" content="2021-06-22T12:55:33+08:00" />
 <meta itemprop="dateModified" content="2021-06-22T12:55:33+08:00" />
-<meta itemprop="wordCount" content="899">
+<meta itemprop="wordCount" content="959">
 
 
 
@@ -226,9 +226,13 @@ iface br0 inet static
 </span><span style="color:#ae81ff"></span>    --hvm <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --cdrom<span style="color:#f92672">=</span>/data/iso/ubuntu-18.04.5-live-server-amd64.iso <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --network<span style="color:#f92672">=</span>bridge<span style="color:#f92672">=</span>br0,model<span style="color:#f92672">=</span>virtio <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --graphics vnc <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --graphics vnc,listen<span style="color:#f92672">=</span>0.0.0.0 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --disk path<span style="color:#f92672">=</span>/data/vm/images/ubuntu.qcow2,size<span style="color:#f92672">=</span>40,bus<span style="color:#f92672">=</span>virtio,format<span style="color:#f92672">=</span>qcow2
-</code></pre></div><p>This command created a Ubuntu-18.04 VM, with 4 virtual CPUs, 2048 MB memory and 40 GB virtual disk.</p>
+</code></pre></div><p>Note:</p>
+<ul>
+<li>This command created a Ubuntu-18.04 VM, with 4 virtual CPUs, 2048 MB memory and 40 GB virtual disk.</li>
+<li><code>--grahpics vnc,listen=0.0.0.0</code> allows you can connent to the VM from any IP addreee. Otherwise, the default value <code>listen=127.0.0.1</code> only permits connect from the same computer of the VM.</li>
+</ul>
 <p>The output:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Starting install...
 Domain installation still in progress. You can reconnect to
@@ -243,9 +247,12 @@ the console to complete the installation process.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh vncdisplay ubuntu-vm
 </code></pre></div><p>Output:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:0
-</code></pre></div><p>Now create an SSH tunnel in your client computer for VNC access:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh myuser@192.168.1.100 -L 5901:127.0.0.1:5901
-</code></pre></div><h1 id="7-useful-commands">7. Useful commands</h1>
+</code></pre></div><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>From your client computer, connect to VM through <strong>TightVNC Java Viewer</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar tightvnc-jviewer.jar -port<span style="color:#f92672">=</span><span style="color:#ae81ff">5901</span> -host<span style="color:#f92672">=</span>192.168.1.100
+</code></pre></div><p><img src="/img/TightVNC_connection.png" alt="TightVNC connection"></p>
+<h1 id="7-useful-commands">7. Useful commands</h1>
 <h2 id="71-list-running-vmsdomains">7.1 List running VMs/domains</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh list
 </code></pre></div><h2 id="72-shutdown-the-vmdomain">7.2 Shutdown the VM/domain</h2>
@@ -267,9 +274,11 @@ sudo virsh destroy ubuntu-vm
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh help
 </code></pre></div><h1 id="reference">Reference</h1>
 <ol>
-<li><a href="https://wiki.debian.org/KVM">https://wiki.debian.org/KVM</a></li>
-<li><a href="https://www.cyberciti.biz/faq/install-kvm-server-debian-linux-9-headless-server/">https://www.cyberciti.biz/faq/install-kvm-server-debian-linux-9-headless-server/</a></li>
-<li><a href="https://www.linuxtechi.com/install-configure-kvm-debian-10-buster/">https://www.linuxtechi.com/install-configure-kvm-debian-10-buster/</a></li>
+<li><a href="https://wiki.debian.org/KVM">Debian wiki: KVM</a></li>
+<li><a href="https://www.cyberciti.biz/faq/install-kvm-server-debian-linux-9-headless-server/">How to install KVM server on Debian 9/10 Headless Server</a></li>
+<li><a href="https://www.linuxtechi.com/install-configure-kvm-debian-10-buster/">How to Install and Configure KVM on Debian 10 (Buster)</a></li>
+<li><a href="https://linux.die.net/man/1/virt-install">Linux man page: virt-install</a></li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_virtualization/index">Red Hat Document: Configuring and managing virtualization</a></li>
 </ol>
 		</div>
 		<footer class="post__footer">
