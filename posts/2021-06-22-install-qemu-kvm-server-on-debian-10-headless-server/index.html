@@ -22,7 +22,7 @@ This post described a workthrough on how to install and configure QEMU/KVM on a 
 ">
 <meta itemprop="datePublished" content="2021-06-22T12:55:33+08:00" />
 <meta itemprop="dateModified" content="2021-06-22T12:55:33+08:00" />
-<meta itemprop="wordCount" content="959">
+<meta itemprop="wordCount" content="1180">
 
 
 
@@ -103,14 +103,19 @@ if (!doNotTrack) {
   </ul>
 
   <ul>
-    <li><a href="#71-list-running-vmsdomains">7.1 List running VMs/domains</a></li>
-    <li><a href="#72-shutdown-the-vmdomain">7.2 Shutdown the VM/domain</a></li>
-    <li><a href="#73-start-vmdomain">7.3 Start VM/domain</a></li>
-    <li><a href="#74-suspend-vmdomain">7.4 Suspend VM/domain</a></li>
-    <li><a href="#75-soft-safe-reboot-vmdomain">7.5 Soft (safe) reboot VM/domain</a></li>
-    <li><a href="#76-hard-not-safe-reset-vmdomain">7.6 Hard (not safe) reset VM/domain</a></li>
-    <li><a href="#77-deleteremove-vmdomain">7.7 Delete/remove VM/domain</a></li>
-    <li><a href="#78-more-commands-of-virsh">7.8 More commands of <code>virsh</code></a></li>
+    <li><a href="#71-modify-memory-or-vcpu-for-an-active-vm">7.1 Modify memory or vCPU for an active VM</a></li>
+    <li><a href="#72-permanent-modification">7.2 Permanent modification</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#81-list-running-vmsdomains">8.1 List running VMs/domains</a></li>
+    <li><a href="#82-shutdown-the-vmdomain">8.2 Shutdown the VM/domain</a></li>
+    <li><a href="#83-start-vmdomain">8.3 Start VM/domain</a></li>
+    <li><a href="#84-suspend-vmdomain">8.4 Suspend VM/domain</a></li>
+    <li><a href="#85-soft-safe-reboot-vmdomain">8.5 Soft (safe) reboot VM/domain</a></li>
+    <li><a href="#86-hard-not-safe-reset-vmdomain">8.6 Hard (not safe) reset VM/domain</a></li>
+    <li><a href="#87-deleteremove-vmdomain">8.7 Delete/remove VM/domain</a></li>
+    <li><a href="#88-more-commands-of-virsh">8.8 More commands of <code>virsh</code></a></li>
   </ul>
 </nav>
 	</div>
@@ -124,64 +129,58 @@ if (!doNotTrack) {
 <li>All commands in this walkthrough were input over SSH session to above server.</li>
 <li>A VNC (Virtual Network Computing) client in client computer. Available VNC clients are:
 <ul>
-<li><a href="https://www.realvnc.com/en/connect/download/viewer/">RealVNC VNC Viewer</a></li>
 <li><a href="https://www.tightvnc.com/download.php">TightVNC Java Viewer</a></li>
+<li><a href="https://www.realvnc.com/en/connect/download/viewer/">RealVNC VNC Viewer</a></li>
 </ul>
 </li>
 </ul>
 <h1 id="2-check-whether-virtualization-extension-is-enabled">2. Check whether virtualization extension is enabled</h1>
 <p>Login to the Debian 10 server and run the below command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">egrep --color <span style="color:#e6db74">&#39;vmx|svm&#39;</span> /proc/cpuinfo
-</code></pre></div><p>Output might be like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap intel_pt xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm arat pln pts md_clear flush_l1d
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ egrep --color <span style="color:#e6db74">&#39;vmx|svm&#39;</span> /proc/cpuinfo
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap intel_pt xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm arat pln pts md_clear flush_l1d
 </code></pre></div><p>If the output contains <strong>vmx</strong> then you have a Intel based processor and <strong>svm</strong> confirms that it is AMD processor.</p>
 <h1 id="3-start-default-network">3. Start default network</h1>
 <p>List available networks for VMs:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh net-list --all
-</code></pre></div><p>Got:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> Name      State      Autostart   Persistent
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh net-list --all
+ Name      State      Autostart   Persistent
 ----------------------------------------------
  default   inactive   no          yes
 </code></pre></div><p>Here we need to make the default network active and auto-start later:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh net-start default
-
-sudo virsh net-autostart default
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh net-start default
+$ sudo virsh net-autostart default
 </code></pre></div><p>And add <code>vhost_net</code> kernel module to improve the VMs performance:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo modprobe vhost_net
-
-echo <span style="color:#e6db74">&#34;vhost_net&#34;</span> | sudo tee -a /etc/modules
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo modprobe vhost_net
+$ echo <span style="color:#e6db74">&#34;vhost_net&#34;</span> | sudo tee -a /etc/modules
 </code></pre></div><p>Check available mod:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lsmod | grep vhost
-</code></pre></div><p>Output like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vhost_net              <span style="color:#ae81ff">24576</span>  <span style="color:#ae81ff">0</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsmod | grep vhost
+vhost_net              <span style="color:#ae81ff">24576</span>  <span style="color:#ae81ff">0</span>
 vhost                  <span style="color:#ae81ff">49152</span>  <span style="color:#ae81ff">1</span> vhost_net
 tap                    <span style="color:#ae81ff">28672</span>  <span style="color:#ae81ff">1</span> vhost_net
 tun                    <span style="color:#ae81ff">49152</span>  <span style="color:#ae81ff">2</span> vhost_net
 </code></pre></div><h1 id="4-install-qemu-kvm-and-libvirt-packages">4. Install QEMU-KVM and Libvirt packages</h1>
 <p>Simply run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
-sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libguestfs-tools genisoimage virtinst libosinfo-bin
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
+$ sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libguestfs-tools genisoimage virtinst libosinfo-bin
 </code></pre></div><p>Once above packages are installed successfully then libvirtd service will be started automatically, run the below systemctl command to verify the status</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl status libvirtd.service
-</code></pre></div><p>The output might like:</p>
-<pre><code>● libvirtd.service - Virtualization daemon
-   Loaded: loaded (/lib/systemd/system/libvirtd.service; enabled; vendor preset:
-   Active: active (running) since Tue 2021-06-22 10:18:37 CST; 4h 26min ago
-     Docs: man:libvirtd(8)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ systemctl status libvirtd.service
+● libvirtd.service - Virtualization daemon
+   Loaded: loaded <span style="color:#f92672">(</span>/lib/systemd/system/libvirtd.service; enabled; vendor preset:
+   Active: active <span style="color:#f92672">(</span>running<span style="color:#f92672">)</span> since Tue 2021-06-22 10:18:37 CST; 4h 26min ago
+     Docs: man:libvirtd<span style="color:#f92672">(</span>8<span style="color:#f92672">)</span>
            https://libvirt.org
- Main PID: 2077 (libvirtd)
-    Tasks: 64 (limit: 32768)
+ Main PID: <span style="color:#ae81ff">2077</span> <span style="color:#f92672">(</span>libvirtd<span style="color:#f92672">)</span>
+    Tasks: <span style="color:#ae81ff">64</span> <span style="color:#f92672">(</span>limit: 32768<span style="color:#f92672">)</span>
    Memory: 62.2M
    CGroup: /system.slice/libvirtd.service
            ├─2077 /usr/sbin/libvirtd
            ├─...
-</code></pre><h2 id="41-allow-normal-user-to-manage-virtual-machine">4.1 Allow normal user to manage virtual machine</h2>
+</code></pre></div><h2 id="41-allow-normal-user-to-manage-virtual-machine">4.1 Allow normal user to manage virtual machine</h2>
 <p>If you want normal user (<em>e.g.</em>, <code>myuser</code>) can manage virtual machines, add the user to libvirt abd libvirt-qemu groups:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo adduser myuser libvirt
-sudo adduser myuser libvirt-qemu
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo adduser myuser libvirt
+$ sudo adduser myuser libvirt-qemu
 </code></pre></div><p>And refresh group membership with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">newgrp libvirt
-newgrp libvirt-qemu
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ newgrp libvirt
+$ newgrp libvirt-qemu
 </code></pre></div><h1 id="5-create-linux-bridge-for-kvm-vms">5. Create Linux bridge for KVM VMs</h1>
 <p>A networking bridge <code>virbr0</code> has been created for test environment. But if you&rsquo;d like to access your VMs over the network, an extra Linux bridge has to be created and attached to the physical nic of the Debian 10 server.</p>
 <p>Here edit the network configuration file <code>/etc/network/interfaces</code> and append the following contents:</p>
@@ -199,24 +198,23 @@ iface br0 inet static
         bridge_maxwait <span style="color:#ae81ff">0</span>
         dns-nameservers 8.8.8.8
 </code></pre></div><p>Restart networking service to enable changes:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart network-manager
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart network-manager
 </code></pre></div><p>Next confrim whether the beidge <code>br0</code> was up:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ip a s br0
-</code></pre></div><p>Output:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">3: br0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noqueue state UP group default qlen <span style="color:#ae81ff">1000</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ip a s br0
+3: br0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noqueue state UP group default qlen <span style="color:#ae81ff">1000</span>
     link/ether fe:54:00:b5:c9:02 brd ff:ff:ff:ff:ff:ff
     inet 10.10.10.1/24 brd 10.10.10.255 scope global br0
        valid_lft forever preferred_lft forever
     inet6 fe80::7c49:43ff:feaf:4d4b/64 scope link 
        valid_lft forever preferred_lft forever
 </code></pre></div><p>You can check the current KVM network setting:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh net-list --all
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh net-list --all
 </code></pre></div><h1 id="6-create-vm-using-an-iso-image">6. Create VM using an ISO image</h1>
 <p>Now create an Ubuntu 18.04 LTS VM.</p>
 <p>First download the latest <a href="https://releases.ubuntu.com/18.04/ubuntu-18.04.5-live-server-amd64.iso">Ubuntu 18.04 LTS server</a> ISO image. It was stored at, <em>e.g.</em>, <code>/data/iso/ubuntu-18.04.5-live-server-amd64.iso</code>.</p>
 <p>Let&rsquo;s assume the VM virtual disks store at <code>/data/vm/images</code>.</p>
 <p>Create VM by the command <code>virt-install</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virt-install <span style="color:#ae81ff">\
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virt-install <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --name ubuntu-vm <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --os-type linux <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --os-variant<span style="color:#f92672">=</span>ubuntu18.04 <span style="color:#ae81ff">\
@@ -224,6 +222,7 @@ iface br0 inet static
 </span><span style="color:#ae81ff"></span>    --ram <span style="color:#ae81ff">2048</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --vcpu<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --hvm <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --noautoconsole <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --cdrom<span style="color:#f92672">=</span>/data/iso/ubuntu-18.04.5-live-server-amd64.iso <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --network<span style="color:#f92672">=</span>bridge<span style="color:#f92672">=</span>br0,model<span style="color:#f92672">=</span>virtio <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --graphics vnc,listen<span style="color:#f92672">=</span>0.0.0.0 <span style="color:#ae81ff">\
@@ -252,33 +251,81 @@ the console to complete the installation process.
 <p>From your client computer, connect to VM through <strong>TightVNC Java Viewer</strong>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar tightvnc-jviewer.jar -port<span style="color:#f92672">=</span><span style="color:#ae81ff">5901</span> -host<span style="color:#f92672">=</span>192.168.1.100
 </code></pre></div><p><img src="/img/TightVNC_connection.png" alt="TightVNC connection"></p>
-<h1 id="7-useful-commands">7. Useful commands</h1>
-<h2 id="71-list-running-vmsdomains">7.1 List running VMs/domains</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh list
-</code></pre></div><h2 id="72-shutdown-the-vmdomain">7.2 Shutdown the VM/domain</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh shutdown ubuntu-vm
-</code></pre></div><h2 id="73-start-vmdomain">7.3 Start VM/domain</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh start ubuntu-vm
-</code></pre></div><h2 id="74-suspend-vmdomain">7.4 Suspend VM/domain</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh suspend ubuntu-vm
-</code></pre></div><h2 id="75-soft-safe-reboot-vmdomain">7.5 Soft (safe) reboot VM/domain</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh reboot ubuntu-vm
-</code></pre></div><h2 id="76-hard-not-safe-reset-vmdomain">7.6 Hard (not safe) reset VM/domain</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh reset ubuntu-vm
-</code></pre></div><h2 id="77-deleteremove-vmdomain">7.7 Delete/remove VM/domain</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh undefine ubuntu-vm
-sudo virsh destroy ubuntu-vm
+<h1 id="7-modify-vms-memory-vcpu">7. Modify VMs memory, vCPU</h1>
+<p>List VM configuration at first:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh dominfo ubuntu-vm
+Id:             <span style="color:#ae81ff">2</span>
+Name:           ubuntu-vm
+UUID:           6013be3b-08f9-4827-82fe-390bc5a86de6
+OS Type:        hvm
+State:          running
+CPU<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>:         <span style="color:#ae81ff">4</span>
+CPU time:       42318.4s
+Max memory:     <span style="color:#ae81ff">2097152</span> KiB
+Used memory:    <span style="color:#ae81ff">2097152</span> KiB
+Persistent:     yes
+Autostart:      disable
+Managed save:   no
+Security model: apparmor
+Security DOI:   <span style="color:#ae81ff">0</span>
+Security label: libvirt-10b64982-a04c-4f2d-b8b0-c5c4b154ca25 <span style="color:#f92672">(</span>enforcing<span style="color:#f92672">)</span>
+</code></pre></div><h2 id="71-modify-memory-or-vcpu-for-an-active-vm">7.1 Modify memory or vCPU for an active VM</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Increase memory to 4 G</span>
+$ sudo virsh setmem ubuntu-vm 4096M
+
+<span style="color:#75715e"># Increate vCPUs to 8</span>
+$ sudo virsh setvcpus ubuntu-vm <span style="color:#ae81ff">8</span>
+
+<span style="color:#75715e"># Decrease memory to 512 M</span>
+$ sudo virsh setmen ubuntu-vm 512M
+</code></pre></div><h2 id="72-permanent-modification">7.2 Permanent modification</h2>
+<p>If you&rsquo;d like to preserve the modification, you have to edit the VM configuration.</p>
+<p>Poweroff the VM at first:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh shutdown ubuntu-vm
+</code></pre></div><p>Then edit the VM configuration with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh setmem ubuntu-vm 4096M --config
+</code></pre></div><p>Or edit configuration file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh edit ubuntu-vm
+</code></pre></div><ul>
+<li>For memory, edit</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  &lt;memory unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;KiB&#39;</span>&gt;2097152&lt;/memory&gt;
+</code></pre></div><ul>
+<li>For vCPU, edit</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  &lt;vcpu placement<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;static&#39;</span>&gt;4&lt;/vcpu&gt;
+</code></pre></div><p>Next start the VM to check the modifications:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh start ubuntu-vm
+</code></pre></div><h1 id="8-useful-commands">8. Useful commands</h1>
+<h2 id="81-list-running-vmsdomains">8.1 List running VMs/domains</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh list
+</code></pre></div><h2 id="82-shutdown-the-vmdomain">8.2 Shutdown the VM/domain</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh shutdown ubuntu-vm
+</code></pre></div><h2 id="83-start-vmdomain">8.3 Start VM/domain</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh start ubuntu-vm
+</code></pre></div><h2 id="84-suspend-vmdomain">8.4 Suspend VM/domain</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh suspend ubuntu-vm
+</code></pre></div><h2 id="85-soft-safe-reboot-vmdomain">8.5 Soft (safe) reboot VM/domain</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh reboot ubuntu-vm
+</code></pre></div><h2 id="86-hard-not-safe-reset-vmdomain">8.6 Hard (not safe) reset VM/domain</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh reset ubuntu-vm
+</code></pre></div><h2 id="87-deleteremove-vmdomain">8.7 Delete/remove VM/domain</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh undefine ubuntu-vm
+$ sudo virsh destroy ubuntu-vm
 </code></pre></div><p>Note: The virtual disk can <strong>not</strong> be deleted automatically. You need to run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo rm /data/vm/images/ubuntu.qcow2
-</code></pre></div><h2 id="78-more-commands-of-virsh">7.8 More commands of <code>virsh</code></h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo virsh help
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rm /data/vm/images/ubuntu.qcow2
+</code></pre></div><h2 id="88-more-commands-of-virsh">8.8 More commands of <code>virsh</code></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh help
 </code></pre></div><h1 id="reference">Reference</h1>
 <ol>
 <li><a href="https://wiki.debian.org/KVM">Debian wiki: KVM</a></li>
 <li><a href="https://www.cyberciti.biz/faq/install-kvm-server-debian-linux-9-headless-server/">How to install KVM server on Debian 9/10 Headless Server</a></li>
 <li><a href="https://www.linuxtechi.com/install-configure-kvm-debian-10-buster/">How to Install and Configure KVM on Debian 10 (Buster)</a></li>
 <li><a href="https://linux.die.net/man/1/virt-install">Linux man page: virt-install</a></li>
+<li><a href="https://linux.die.net/man/1/virsh">Linux man page: virsh</a></li>
 <li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_virtualization/index">Red Hat Document: Configuring and managing virtualization</a></li>
+<li><a href="https://www.thegeekstuff.com/2015/02/add-memory-cpu-disk-to-kvm-vm/">How to Add Memory, vCPU, Hard Disk to Linux KVM Virtual Machine</a></li>
+<li><a href="https://www.unixarena.com/2015/12/linux-kvm-how-to-add-remove-memory-to-guest-on-fly.html/">Linux KVM – How to add /Remove Memory to Guest on Fly ? Part 8</a></li>
 </ol>
 		</div>
 		<footer class="post__footer">
