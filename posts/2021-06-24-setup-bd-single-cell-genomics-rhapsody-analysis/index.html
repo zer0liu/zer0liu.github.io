@@ -18,7 +18,7 @@
 <meta itemprop="description" content="This post provides instruction of installing DB Genomics Rhapsody™ Analysis pipeline in a local Linux server.">
 <meta itemprop="datePublished" content="2021-06-24T12:28:10+08:00" />
 <meta itemprop="dateModified" content="2021-06-24T12:28:10+08:00" />
-<meta itemprop="wordCount" content="349">
+<meta itemprop="wordCount" content="459">
 
 
 
@@ -173,6 +173,43 @@ $ newgrp docker
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://bitbucket.org/CRSwDev/cwl/ bd-cwl
 </code></pre></div><p>Files in the sub-directory <code>v1.9.1/</code> are what we need.</p>
 <p>Now the BD Genomics Rhapsody Analysis Pipeline installed completely.</p>
+<h1 id="6-a-pseudo-run">6. A pseudo-run</h1>
+<p>Here show a sample yml file: <code>demo.yml</code> for Rhapsody pipeline:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/env cwl-runner
+</span><span style="color:#75715e"></span>
+cwl:tool: rhapsody
+
+Reads:
+ - class: File
+   location: <span style="color:#e6db74">&#34;demo_S1_L001_R1_001.fq.gz&#34;</span>
+ - class: File
+   location: <span style="color:#e6db74">&#34;demo_S1_L001_R2_001.fq.gz&#34;</span>
+
+Reference_Genome:
+   class: File
+   location: <span style="color:#e6db74">&#34;GRCh38-gencodev29.tar.gz&#34;</span>
+
+Transcriptome_Annotation:
+   class: File
+   location: <span style="color:#e6db74">&#34;gencodev29.gtf&#34;</span>
+
+Sample_Tags_Version: human
+Subsample_Tags: 0.2
+</code></pre></div><p>Please see more details and description in the template file: <code>bd-cwl/v1.9.1/template_wta_1.9.1.yml</code>.</p>
+<p>Next launch the pipeline:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cwltool <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --parallel <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --tmpdir-prefix tmp_ <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --outdir result/ <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    rhapsody_wta_1.9.1.cwl <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    bd-demo.yml &gt; demo.log 2&gt;&amp;<span style="color:#ae81ff">1</span>
+</code></pre></div><blockquote>
+<p>Note:</p>
+<ul>
+<li>This pipeline will generate lots of temporary files. So don&rsquo;t forget use the option <code>--tempdir-prefix</code>. Otherwise all temporary files/dirs will be stored in the <code>/tmp</code> directory.</li>
+<li>Output directory <code>result/</code> need to be created before hand.</li>
+</ul>
+</blockquote>
 <h1 id="reference">Reference</h1>
 <ol>
 <li><a href="https://www.bd.com/documents/guides/user-guides/GMX_BD-Rhapsody-genomics-analysis-setup_UG_EN.pdf">BD Single Cell Genomics Analysis Setup User Guide</a></li>
