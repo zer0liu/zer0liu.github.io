@@ -6,7 +6,25 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jun 2021 12:55:33 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jun 2021 12:28:10 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BD Rhapsody</title>
+      <link>https://omicx.cc/categories/bd-rhapsody/</link>
+      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/bd-rhapsody/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scRNA-Seq</title>
+      <link>https://omicx.cc/categories/scrna-seq/</link>
+      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/scrna-seq/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Linux</title>
       <link>https://omicx.cc/categories/linux/</link>
