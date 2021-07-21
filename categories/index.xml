@@ -6,7 +6,25 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Jun 2021 12:28:10 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 14:50:54 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R</title>
+      <link>https://omicx.cc/categories/r/</link>
+      <pubDate>Wed, 21 Jul 2021 14:50:54 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>https://omicx.cc/categories/software/</link>
+      <pubDate>Wed, 21 Jul 2021 14:50:54 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/software/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>BD Rhapsody</title>
       <link>https://omicx.cc/categories/bd-rhapsody/</link>
@@ -40,15 +58,6 @@
       <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
       
       <guid>https://omicx.cc/categories/pymol/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Software</title>
-      <link>https://omicx.cc/categories/software/</link>
-      <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
-      
-      <guid>https://omicx.cc/categories/software/</guid>
       <description></description>
     </item>
     
@@ -94,15 +103,6 @@
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
       
       <guid>https://omicx.cc/categories/ngs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://omicx.cc/categories/r/</link>
-      <pubDate>Mon, 22 Feb 2021 16:29:04 +0000</pubDate>
-      
-      <guid>https://omicx.cc/categories/r/</guid>
       <description></description>
     </item>
     

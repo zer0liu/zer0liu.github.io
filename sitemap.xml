@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://omicx.cc/categories/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/r/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/r/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/rstudio-server/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/software/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://omicx.cc/tags/bd-genomics/</loc>
     <lastmod>2021-06-24T12:28:10+08:00</lastmod>
   </url>
@@ -18,22 +63,7 @@
   </url>
   
   <url>
-    <loc>https://omicx.cc/categories/</loc>
-    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://omicx.cc/tags/linux/</loc>
-    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/</loc>
-    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/posts/</loc>
     <lastmod>2021-06-24T12:28:10+08:00</lastmod>
   </url>
   
@@ -54,11 +84,6 @@
   
   <url>
     <loc>https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/</loc>
-    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/tags/</loc>
     <lastmod>2021-06-24T12:28:10+08:00</lastmod>
   </url>
   
@@ -104,11 +129,6 @@
   
   <url>
     <loc>https://omicx.cc/categories/pymol/</loc>
-    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/categories/software/</loc>
     <lastmod>2021-04-20T21:36:12+00:00</lastmod>
   </url>
   
@@ -199,16 +219,6 @@
   
   <url>
     <loc>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</loc>
-    <lastmod>2021-02-22T16:29:04+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/tags/r/</loc>
-    <lastmod>2021-02-22T16:29:04+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omicx.cc/categories/r/</loc>
     <lastmod>2021-02-22T16:29:04+00:00</lastmod>
   </url>
   

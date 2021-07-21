@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on OmicX</title>
-    <link>https://omicx.cc/categories/r/</link>
-    <description>Recent content in R on OmicX</description>
+    <title>RStudio Server on OmicX</title>
+    <link>https://omicx.cc/tags/rstudio-server/</link>
+    <description>Recent content in RStudio Server on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Jul 2021 14:50:54 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 14:50:54 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/rstudio-server/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup RStudio Server Over Nginx Https</title>
       <link>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</link>
@@ -17,15 +17,6 @@
 &lt;p&gt;This post introduces to secure RStudio Server by an Nginx reverse proxy.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/rstudio-server-logo.png&#34; alt=&#34;RStudio Server logo&#34;&gt;
 &lt;img src=&#34;https://omicx.cc/img/certbot-logo.png&#34; alt=&#34;Certbot logo&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Install R and RStudio server in Debian</title>
-      <link>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</link>
-      <pubDate>Mon, 22 Feb 2021 16:29:04 +0000</pubDate>
-      
-      <guid>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</guid>
-      <description>&lt;p&gt;This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.&lt;/p&gt;</description>
     </item>
     
   </channel>
