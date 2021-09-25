@@ -42,7 +42,7 @@ Both local computer and remote server work on Debian bullseye.
 ">
 <meta itemprop="datePublished" content="2021-04-18T15:58:17+08:00" />
 <meta itemprop="dateModified" content="2021-04-18T15:58:17+08:00" />
-<meta itemprop="wordCount" content="2013">
+<meta itemprop="wordCount" content="2076">
 
 
 
@@ -160,7 +160,7 @@ if (!doNotTrack) {
 <ul>
 <li>A domain name for GitHub pages:
 <ul>
-<li>myblog.com</li>
+<li>e.g., <em>myblog.com</em></li>
 <li>or <em>username.github.io</em>, provided by GitHub Pages.</li>
 </ul>
 </li>
@@ -168,7 +168,7 @@ if (!doNotTrack) {
 <ul>
 <li>You can log in the server via SSH, and work as root, or by sudo</li>
 <li>Installed the Nginx web server, and (or) enabled https</li>
-<li>With domain name: comments.mysite.com</li>
+<li>With domain name: <em>comments.mysite.com</em></li>
 </ul>
 </li>
 </ul>
@@ -180,12 +180,18 @@ if (!doNotTrack) {
 $ sudo apt install python3-setuptools python3-virtualenv python3-dev sqlite3 build-essential
 </code></pre></div><p>(2) Create a user called &lsquo;isso&rsquo;:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo adduser isso
+</code></pre></div><p>For security consideration, the user <em>isso</em> do <strong>NOT</strong> able to login the server. Simple add it to the <code>DenyUsers</code> of <em>/etc/ssh/sshd_config</em> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">DenyUsers isso
+</code></pre></div><p>and restart sshd service:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo systemctl restart sshd.service
 </code></pre></div><p>(3) Login as user &lsquo;isso&rsquo; and install Isso</p>
 <ul>
 <li>The Isso document emphasized that never install Python packages as &lsquo;root&rsquo;.</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Switch to user &#39;isso&#39;</span>
 $ sudo su isso
+<span style="color:#75715e"># Switch to HOME dir of &#39;isso&#39;</span>
+$ su
 </code></pre></div><p>The next operations as the user <code>isso</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Create necessary dirs</span>
 $ mkdir db etc log
@@ -286,7 +292,10 @@ $ pip3 install gevent
 </code></pre></div><p>If there were no error message output, the condifuration file is ok.</p>
 <p>Press Ctrl-C to stop Isso running right now.</p>
 <h2 id="14-configure-nginx">1.4 Configure Nginx</h2>
-<p>Edit the Nginx configure file <code>/etc/nginx/site-enabled/mysite.conf</code>:</p>
+<ul>
+<li>NOTE: Pleasae see the <a href="https://certbot.eff.org/">certbot tutorial</a> to enable https of your site.</li>
+</ul>
+<p>Edit the Nginx configure file <code>/etc/nginx/site-enabled/mysite.conf</code> and insert isso-related configuration:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">server {</span>
         <span style="color:#a6e22e">server_name comments.mysite.com;</span>
 
@@ -353,7 +362,7 @@ ISSO_CFG<span style="color:#f92672">=</span>/home/isso/etc/omicx-cc.conf
 isso -c $ISSO_CFG 
 </code></pre></div><p>Next</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chmod u+x ~/bin/start-isso.sh
-</code></pre></div><p>Now, in a new terminal, as your normal user (the one has <code>sudo</code> privilege), create systemd service file <code>isso.service</code>:</p>
+</code></pre></div><p>Now, in a new terminal, as your normal user (the one has <code>sudo</code> privilege, not the user <em>isso</em>), create systemd service file <code>isso.service</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo vim /lib/systemd/system/isso.service
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[Unit]</span>
 <span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">Isso Comment Server</span>
