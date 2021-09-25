@@ -210,9 +210,9 @@ $ pip3 install gevent
 <p>(1) Directiry structure</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$HOME
 ├── db
-│   └── omicx-cc.db
+│   └── comments.db
 ├── etc
-│   └── omicx-cc.conf
+│   └── comments.cfg
 ├── log
 │   ├── isso-cmd.log
 │   └── isso.log
@@ -356,7 +356,7 @@ $ pip3 install gevent
 <span style="color:#75715e"># Lanuch venv `isso`</span>
 source /home/isso/venv/isso/bin/activate
 
-ISSO_CFG<span style="color:#f92672">=</span>/home/isso/etc/omicx-cc.conf
+ISSO_CFG<span style="color:#f92672">=</span>/home/isso/etc/comments.cfg
 
 <span style="color:#75715e"># launch isso server</span>
 isso -c $ISSO_CFG 
