@@ -42,7 +42,7 @@ Both local computer and remote server work on Debian bullseye.
 ">
 <meta itemprop="datePublished" content="2021-04-18T15:58:17+08:00" />
 <meta itemprop="dateModified" content="2021-04-18T15:58:17+08:00" />
-<meta itemprop="wordCount" content="2077">
+<meta itemprop="wordCount" content="2078">
 
 
 
@@ -240,8 +240,8 @@ $ pip3 install gevent
 <span style="color:#a6e22e">purge-after</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">30d</span>
 
 <span style="color:#66d9ef">[server]</span>
-<span style="color:#75715e">; Listen port 8080</span>
-<span style="color:#a6e22e">listen</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">http://localhost:8080</span>
+<span style="color:#75715e">; Listen custom port 7845</span>
+<span style="color:#a6e22e">listen</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">http://localhost:7845</span>
 
 <span style="color:#66d9ef">[smtp]</span>
 <span style="color:#75715e">; Please read the information of email server</span>
@@ -319,7 +319,7 @@ $ pip3 install gevent
         <span style="color:#a6e22e">proxy_set_header X-Script-Name /isso;</span>
         <span style="color:#a6e22e">proxy_set_header Host $host;</span>
         <span style="color:#a6e22e">proxy_set_header X-Forwarded-Proto $scheme;</span>
-        <span style="color:#a6e22e">proxy_pass http://localhost:5226;</span>
+        <span style="color:#a6e22e">proxy_pass http://localhost:7845;</span>
     <span style="color:#a6e22e">}</span>
 <span style="color:#a6e22e">}</span>
 
