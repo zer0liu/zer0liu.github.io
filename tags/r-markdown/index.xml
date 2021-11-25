@@ -13,11 +13,11 @@
       <pubDate>Thu, 25 Nov 2021 12:26:00 +0800</pubDate>
       
       <guid>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</guid>
-      <description>Here are some miscellaneous tips for working on RStudio and writing R Markdown file. It will be updated from time to time.
-See also:
- RStudio Cheatsheets   1. RStudio 1.1 Re-view generated html file in RStudio If need to view closed html result file, simply run:
-rstudioapi::viewer(&amp;#34;myfile.html&amp;#34;)  2. R Markdown 2.1 Show code but not run Add eval=FALSE in chunk option.
-2.2 Output data frames as tables Use kable(data, caption):</description>
+      <description>&lt;p&gt;Here are some miscellaneous tips for working on RStudio and writing R Markdown file. It will be updated from time to time.&lt;/p&gt;
+&lt;p&gt;See also:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/resources/cheatsheets/&#34;&gt;RStudio Cheatsheets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>
