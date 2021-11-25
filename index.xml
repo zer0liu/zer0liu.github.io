@@ -6,7 +6,20 @@
     <description>Recent content on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Nov 2021 15:32:05 +0800</lastBuildDate><atom:link href="https://omicx.cc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Nov 2021 12:26:00 +0800</lastBuildDate><atom:link href="https://omicx.cc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RStudio and R Markdown Tips</title>
+      <link>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</link>
+      <pubDate>Thu, 25 Nov 2021 12:26:00 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</guid>
+      <description>Here are some miscellaneous tips for working on RStudio and writing R Markdown file. It will be updated from time to time.
+See also:
+ RStudio Cheatsheets   1. RStudio 1.1 Re-view generated html file in RStudio If need to view closed html result file, simply run:
+rstudioapi::viewer(&amp;#34;myfile.html&amp;#34;)  2. R Markdown 2.1 Show code but not run Add eval=FALSE in chunk option.
+2.2 Output data frames as tables Use kable(data, caption):</description>
+    </item>
+    
     <item>
       <title>Fix Corrupted EndNote Library</title>
       <link>https://omicx.cc/posts/2021-11-04-fix-corrupted-endnote-library/</link>

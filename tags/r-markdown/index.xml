@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Markdown on OmicX</title>
+    <link>https://omicx.cc/tags/r-markdown/</link>
+    <description>Recent content in R Markdown on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Nov 2021 12:26:00 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RStudio and R Markdown Tips</title>
+      <link>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</link>
+      <pubDate>Thu, 25 Nov 2021 12:26:00 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</guid>
+      <description>Here are some miscellaneous tips for working on RStudio and writing R Markdown file. It will be updated from time to time.
+See also:
+ RStudio Cheatsheets   1. RStudio 1.1 Re-view generated html file in RStudio If need to view closed html result file, simply run:
+rstudioapi::viewer(&amp;#34;myfile.html&amp;#34;)  2. R Markdown 2.1 Show code but not run Add eval=FALSE in chunk option.
+2.2 Output data frames as tables Use kable(data, caption):</description>
+    </item>
+    
+  </channel>
+</rss>
