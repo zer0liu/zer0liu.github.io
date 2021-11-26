@@ -42,7 +42,7 @@ Both local computer and remote server work on Debian bullseye.
 ">
 <meta itemprop="datePublished" content="2021-04-18T15:58:17+08:00" />
 <meta itemprop="dateModified" content="2021-04-18T15:58:17+08:00" />
-<meta itemprop="wordCount" content="2082">
+<meta itemprop="wordCount" content="2106">
 
 
 
@@ -296,7 +296,9 @@ $ source ~/venv/isso/bin/activate
 <ul>
 <li>NOTE: Pleasae see the <a href="https://certbot.eff.org/">certbot tutorial</a> to enable https of your site.</li>
 </ul>
-<p>Edit the Nginx configure file <code>/etc/nginx/site-enabled/mysite.conf</code> and insert isso-related configuration:</p>
+<p>Switch back to your normal user now.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">(</span>isso<span style="color:#f92672">)</span> $ exit
+</code></pre></div><p>Edit the Nginx configure file <code>/etc/nginx/site-enabled/mysite.conf</code> and insert isso-related configuration:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">server {</span>
         <span style="color:#a6e22e">server_name comments.mysite.com;</span>
 
@@ -344,7 +346,10 @@ $ source ~/venv/isso/bin/activate
 </code></pre></div><p>If no error message printed, restart Nginx server:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo systemctl restart nginx
 </code></pre></div><h2 id="15-web-interface-of-isso-comments-database">1.5 Web interface of Isso comments database</h2>
-<p>Re-run the Isso server:</p>
+<p>Now switch user &ldquo;isso&rdquo; and launch virtualenv:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo su isso
+$ source ~/venv/isso/bin/activate
+</code></pre></div><p>Re-run the Isso server:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ isso -c ~/etc/comments.cfg run &amp;
 </code></pre></div><p>Then the comments database would be available at:
 <a href="https://comments.mysite.com/isso/admin">https://comments.mysite.com/isso/admin</a></p>
@@ -657,7 +662,7 @@ git push
 
   <article class="post">
     <script 
-        data-isso="https://vmla1.a2h.top/isso/" 
+        data-isso="https://spt.a2h.top/isso/" 
         data-isso-id="thread-id"
         data-isso-css="true"
         data-isso-lang="en"
@@ -666,7 +671,7 @@ git push
         data-isso-require-email="false" 
         data-isso-avatar="true"
         data-isso-avatar-bg=""
-        src="https://vmla1.a2h.top/isso/js/embed.min.js">
+        src="https://spt.a2h.top/isso/js/embed.min.js">
     </script>
     <noscript>Please enable JavaScript to view the comments powered by <a href="https://posativ.org/isso/">Isso</a>.</noscript>
     <div>
