@@ -26,7 +26,7 @@ RStudio Cheatsheets
 ">
 <meta itemprop="datePublished" content="2021-11-25T12:26:00+08:00" />
 <meta itemprop="dateModified" content="2021-11-25T12:26:00+08:00" />
-<meta itemprop="wordCount" content="95">
+<meta itemprop="wordCount" content="112">
 
 
 
@@ -132,6 +132,10 @@ if (!doNotTrack) {
 knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</span>(data,
              caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Table with kable&#34;</span>)
 
+</code></pre></div><p>For a nice-looking table, the package <a href="https://cran.r-project.org/web/packages/htmlTable/vignettes/general.html">htmlTable</a> what you need.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(htmlTalble)
+
+<span style="color:#a6e22e">htmlTable</span>(data, caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Table with htmlTable&#34;</span>)
 </code></pre></div><hr>
 <h1 id="reference">Reference</h1>
 <ol>
