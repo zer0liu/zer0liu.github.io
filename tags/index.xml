@@ -6,7 +6,25 @@
     <description>Recent content in Tags on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Nov 2021 12:26:00 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Dec 2021 15:36:59 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://omicx.cc/tags/linux/</link>
+      <pubDate>Fri, 17 Dec 2021 15:36:59 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metagenomics</title>
+      <link>https://omicx.cc/tags/metagenomics/</link>
+      <pubDate>Fri, 17 Dec 2021 15:36:59 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/metagenomics/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>R</title>
       <link>https://omicx.cc/tags/r/</link>
@@ -58,15 +76,6 @@
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
       
       <guid>https://omicx.cc/tags/bd-rhapsody/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://omicx.cc/tags/linux/</link>
-      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
-      <guid>https://omicx.cc/tags/linux/</guid>
       <description></description>
     </item>
     

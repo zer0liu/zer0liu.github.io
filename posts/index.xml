@@ -6,7 +6,18 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Nov 2021 12:26:00 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Dec 2021 15:36:59 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install and Setup MetaPhlAn 3.0</title>
+      <link>https://omicx.cc/posts/2021-12-17-install-and-setup-metaphlan-3/</link>
+      <pubDate>Fri, 17 Dec 2021 15:36:59 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2021-12-17-install-and-setup-metaphlan-3/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://huttenhower.sph.harvard.edu/metaphlan/&#34;&gt;MetaPhlAn (Metagenomic Phylogenetic Analysis)&lt;/a&gt; is a computational tool for profiling the composition of microbial communities from metagenomic shotgun sequencing data.&lt;/p&gt;
+&lt;p&gt;This post describes the installation and setup of MetaPhlAn 3.0 in Debian 11/bullseye.&lt;/p&gt;
+&lt;p&gt;Last updated at: 2021-12-17.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>RStudio and R Markdown Tips</title>
       <link>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</link>

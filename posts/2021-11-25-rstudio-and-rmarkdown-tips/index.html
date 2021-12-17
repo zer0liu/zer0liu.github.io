@@ -26,7 +26,7 @@ RStudio Cheatsheets
 ">
 <meta itemprop="datePublished" content="2021-11-25T12:26:00+08:00" />
 <meta itemprop="dateModified" content="2021-11-25T12:26:00+08:00" />
-<meta itemprop="wordCount" content="112">
+<meta itemprop="wordCount" content="216">
 
 
 
@@ -108,6 +108,7 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#21-show-code-but-not-run">2.1 Show code but not run</a></li>
     <li><a href="#22-output-data-frames-as-tables">2.2 Output data frames as tables</a></li>
+    <li><a href="#23-output-text-as-raw-markdown-content">2.3 Output text as raw Markdown content</a></li>
   </ul>
 </nav>
 	</div>
@@ -132,15 +133,26 @@ if (!doNotTrack) {
 knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</span>(data,
              caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Table with kable&#34;</span>)
 
-</code></pre></div><p>For a nice-looking table, the package <a href="https://cran.r-project.org/web/packages/htmlTable/vignettes/general.html">htmlTable</a> what you need.</p>
+</code></pre></div><p>For a nice-looking table, the package <a href="https://cran.r-project.org/web/packages/htmlTable/vignettes/general.html">htmlTable</a> is what you need.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(htmlTalble)
 
 <span style="color:#a6e22e">htmlTable</span>(data, caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Table with htmlTable&#34;</span>)
-</code></pre></div><hr>
+</code></pre></div><h2 id="23-output-text-as-raw-markdown-content">2.3 Output text as raw Markdown content</h2>
+<p>By default, text output from code chunks will be written out verbatim with two leading hashes. If you would like to output text as Markdown content, simply insert <code>results = 'asis'</code> into the chunk option. This option tells knitr not to wrap your text output in verbatim code blocks, but treat it “as is.” This can be particularly useful when you want to generate content dynamically from R code.</p>
+<p>E.g.,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">```{r, results=&#39;asis&#39;}
+cat(&#39;# This is a header&#39;)
+```
+</code></pre></div><p>will output as:</p>
+<h1 id="this-is-a-header">This is a header</h1>
+<p>Rather than:</p>
+<pre><code>## # This is a header
+</code></pre><hr>
 <h1 id="reference">Reference</h1>
 <ol>
 <li><a href="https://stackoverflow.com/questions/22954623/view-markdown-generated-html-in-rstudio-viewer">View markdown generated html in RStudio viewer</a></li>
 <li><a href="https://stackoverflow.com/questions/23389547/include-code-that-does-not-run-in-rpresentation-markdown/23390094">Include code that does not run in Rpresentation Markdown</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a></li>
 </ol>
 		</div>
 		<footer class="post__footer">
@@ -166,6 +178,12 @@ knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</spa
 		<a class="pager__link" href="/posts/2021-11-04-fix-corrupted-endnote-library/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
 			<p class="pager__title">Fix Corrupted EndNote Library</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/2021-12-17-install-and-setup-metaphlan-3/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Install and Setup MetaPhlAn 3.0</p>
 		</a>
 	</div>
 </nav>
@@ -205,11 +223,11 @@ knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</spa
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-12-17-install-and-setup-metaphlan-3/">Install and Setup MetaPhlAn 3.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-11-25-rstudio-and-rmarkdown-tips/">RStudio and R Markdown Tips</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-11-04-fix-corrupted-endnote-library/">Fix Corrupted EndNote Library</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-07-21-setup-rstudio-server-over-nginx-https/">Setup RStudio Server Over Nginx Https</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/">Setup BD Single Cell Genomics Rhapsody Analysis</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/">Install QEMU/KVM Server on Debian 10 Headless Server</a></li>
 		</ul>
 	</div>
 </div>
@@ -235,6 +253,8 @@ knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</spa
 				<a class="widget__link" href="/categories/hugo/">Hugo</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/linux/">Linux</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/metagenomics/">Metagenomics</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/ngs/">NGS</a></li>
 			<li class="widget__item">
@@ -275,6 +295,7 @@ knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</spa
 		<a class="widget-taglist__link widget__link btn" href="/tags/kvm/" title="KVM">KVM</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/letsencrypt/" title="Letsencrypt">Letsencrypt</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/metagenomics/" title="Metagenomics">Metagenomics</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="nginx">nginx</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/ngs/" title="NGS">NGS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/note/" title="Note">Note</a>
