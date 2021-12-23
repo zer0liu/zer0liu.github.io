@@ -96,27 +96,39 @@ if (!doNotTrack) {
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#41-allow-normal-user-to-manage-virtual-machine">4.1 Allow normal user to manage virtual machine</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#61-connect-the-vm-installation-from-client-computer-through-vnc">6.1 Connect the VM installation from client computer through VNC</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#71-modify-memory-or-vcpu-for-an-active-vm">7.1 Modify memory or vCPU for an active VM</a></li>
-    <li><a href="#72-permanent-modification">7.2 Permanent modification</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#81-list-running-vmsdomains">8.1 List running VMs/domains</a></li>
-    <li><a href="#82-shutdown-the-vmdomain">8.2 Shutdown the VM/domain</a></li>
-    <li><a href="#83-start-vmdomain">8.3 Start VM/domain</a></li>
-    <li><a href="#84-suspend-vmdomain">8.4 Suspend VM/domain</a></li>
-    <li><a href="#85-soft-safe-reboot-vmdomain">8.5 Soft (safe) reboot VM/domain</a></li>
-    <li><a href="#86-hard-not-safe-reset-vmdomain">8.6 Hard (not safe) reset VM/domain</a></li>
-    <li><a href="#87-deleteremove-vmdomain">8.7 Delete/remove VM/domain</a></li>
-    <li><a href="#88-more-commands-of-virsh">8.8 More commands of <code>virsh</code></a></li>
+    <li><a href="#1-prerequistes">1. Prerequistes</a></li>
+    <li><a href="#2-check-whether-virtualization-extension-is-enabled">2. Check whether virtualization extension is enabled</a></li>
+    <li><a href="#3-start-default-network">3. Start default network</a></li>
+    <li><a href="#4-install-qemu-kvm-and-libvirt-packages">4. Install QEMU-KVM and Libvirt packages</a>
+      <ul>
+        <li><a href="#41-allow-normal-user-to-manage-virtual-machine">4.1 Allow normal user to manage virtual machine</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-create-linux-bridge-for-kvm-vms">5. Create Linux bridge for KVM VMs</a></li>
+    <li><a href="#6-create-vm-using-an-iso-image">6. Create VM using an ISO image</a>
+      <ul>
+        <li><a href="#61-connect-the-vm-installation-from-client-computer-through-vnc">6.1 Connect the VM installation from client computer through VNC</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-modify-vms-memory-vcpu">7. Modify VMs memory, vCPU</a>
+      <ul>
+        <li><a href="#71-modify-memory-or-vcpu-for-an-active-vm">7.1 Modify memory or vCPU for an active VM</a></li>
+        <li><a href="#72-permanent-modification">7.2 Permanent modification</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-useful-commands">8. Useful commands</a>
+      <ul>
+        <li><a href="#81-list-running-vmsdomains">8.1 List running VMs/domains</a></li>
+        <li><a href="#82-shutdown-the-vmdomain">8.2 Shutdown the VM/domain</a></li>
+        <li><a href="#83-start-vmdomain">8.3 Start VM/domain</a></li>
+        <li><a href="#84-suspend-vmdomain">8.4 Suspend VM/domain</a></li>
+        <li><a href="#85-soft-safe-reboot-vmdomain">8.5 Soft (safe) reboot VM/domain</a></li>
+        <li><a href="#86-hard-not-safe-reset-vmdomain">8.6 Hard (not safe) reset VM/domain</a></li>
+        <li><a href="#87-deleteremove-vmdomain">8.7 Delete/remove VM/domain</a></li>
+        <li><a href="#88-more-commands-of-virsh">8.8 More commands of <code>virsh</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
 	</div>

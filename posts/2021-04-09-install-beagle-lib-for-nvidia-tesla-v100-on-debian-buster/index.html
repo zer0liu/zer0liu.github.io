@@ -93,7 +93,20 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header>
-		<div class="content post__content clearfix">
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-install-nvidia-driver-and-cuda-toolkit">1. Install NVidia driver and CUDA toolkit</a></li>
+    <li><a href="#2-download-and-install-beagle-lib">2. Download and install beagle-lib</a></li>
+    <li><a href="#3-more">3. More</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
 			<p><a href="https://github.com/beagle-dev/beagle-lib">BEAGLE-LIB</a> is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.</p>
 <p>When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nvcc fatal   : Value <span style="color:#e6db74">&#39;compute_30&#39;</span> is not defined <span style="color:#66d9ef">for</span> option <span style="color:#e6db74">&#39;gpu-architecture&#39;</span>

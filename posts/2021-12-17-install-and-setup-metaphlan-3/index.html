@@ -90,7 +90,20 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header>
-		<div class="content post__content clearfix">
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-install-metaphlan-30">1. Install MetaPhlAn 3.0</a></li>
+    <li><a href="#2-download-and-setup-database">2. Download and setup database</a></li>
+    <li><a href="#3-test-the-installation">3. Test the installation</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
 			<p><a href="https://huttenhower.sph.harvard.edu/metaphlan/">MetaPhlAn (Metagenomic Phylogenetic Analysis)</a> is a computational tool for profiling the composition of microbial communities from metagenomic shotgun sequencing data.</p>
 <p>This post describes the installation and setup of MetaPhlAn 3.0 in Debian 11/bullseye.</p>
 <p>Last updated at: 2021-12-17.</p>
@@ -110,7 +123,7 @@ Otherwise, the setup database step will be fail.</p>
 </blockquote>
 <p>Now, create an isolated conda environment <code>mpa</code> and install MetaPhlAn into it.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ conda create --name mpa -c bioconda python<span style="color:#f92672">=</span>3.7 metaphlan
-</code></pre></div><h1 id="3-download-and-setup-database">3. Download and setup database</h1>
+</code></pre></div><h1 id="2-download-and-setup-database">2. Download and setup database</h1>
 <p>MetaPhlAn needs the clade markers and the database to be downloaded locally. The default MetaPhlAn 3.0 database folder path is <code>$HOME/miniconda3/envs/mpa/lib/python3.7/site-packages/metaphlan/metaphlan_databases/</code>. But it&rsquo;s recommended to install the database in a folder outside the Conda environment.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Database dir: $HOME/db/metaphlan_databases</span>
 $ cd
@@ -127,7 +140,7 @@ $ conda activate mpa
 <li><a href="https://zenodo.org/record/3957592">Zenodo</a></li>
 </ul>
 <p>Only download the <em>.tar</em>, <em>.md5</em>, and the <em>mpa_latest</em> files and place them in the <em>metaphlan_databases</em> folder.</p>
-<h1 id="4-test-the-installation">4. Test the installation</h1>
+<h1 id="3-test-the-installation">3. Test the installation</h1>
 <p>Create a new folder <code>metaphlan_analysis</code> and enter:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">(</span>mpa<span style="color:#f92672">)</span> $ mkdir metaphlan_analysis
 <span style="color:#f92672">(</span>mpa<span style="color:#f92672">)</span> $ cd metaphlan_analysis
