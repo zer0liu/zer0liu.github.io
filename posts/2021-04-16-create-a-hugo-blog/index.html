@@ -42,7 +42,7 @@ Both local computer and remote server work on Debian bullseye.
 ">
 <meta itemprop="datePublished" content="2021-04-18T15:58:17+08:00" />
 <meta itemprop="dateModified" content="2021-04-18T15:58:17+08:00" />
-<meta itemprop="wordCount" content="2192">
+<meta itemprop="wordCount" content="2273">
 
 
 
@@ -160,7 +160,18 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#3-integrate-hugomainroad-with-isso-comment-server">3. Integrate Hugo/mainroad with Isso comment server</a></li>
-    <li><a href="#4-publish-to-github-page">4. Publish to GitHub Page</a></li>
+    <li><a href="#4-publish-to-github-page">4. Publish to GitHub Page</a>
+      <ul>
+        <li><a href="#41-let-the-hugo-know-to-publish-the-post">4.1 Let the Hugo know to publish the post</a></li>
+        <li><a href="#42-build-static-pages">4.2 Build static pages</a></li>
+        <li><a href="#43-publish-to-github-pages-repository">4.3 Publish to GitHub Pages repository</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-misc-tips">5. Misc Tips</a>
+      <ul>
+        <li><a href="#51-change-the-start-level-of-table-of-contents-toc">5.1 Change the start level of table of contents (TOC)</a></li>
+      </ul>
+    </li>
     <li><a href="#references">References:</a></li>
   </ul>
 </nav>
@@ -621,12 +632,14 @@ $ git clone https://github.com/vimux/mainroad
 <p>If the Hugo server is still running, you could find the page refreshed automatically in web browser and the comment area appears. Otherwise, re-run:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hugo server -D
 </code></pre></div><h1 id="4-publish-to-github-page">4. Publish to GitHub Page</h1>
-<p>(1) Remove or comment the row <code>draft: true</code> in the heading area of your post page.</p>
-<p>(2) Run the command to build static pages:</p>
+<h2 id="41-let-the-hugo-know-to-publish-the-post">4.1 Let the Hugo know to publish the post</h2>
+<p>Remove or comment the row <code>draft: true</code> in the heading area of your post page.</p>
+<h2 id="42-build-static-pages">4.2 Build static pages</h2>
+<p>Run the command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hugo -D
 </code></pre></div><p>It creates a new directory <em>public/</em>. Create a file <em>CNAME</em>, of which content is:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">mysite.com
-</code></pre></div><p>(3) Publish to GitHub Pages repository:</p>
+</code></pre></div><h2 id="43-publish-to-github-pages-repository">4.3 Publish to GitHub Pages repository</h2>
 <p>Since I already created a GitHub Page, I just replace the contents in the existing repository:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cd myblog/public
 <span style="color:#75715e"># Init an empty Git repo</span>
@@ -640,8 +653,16 @@ $ git push -f origin master
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git add .
 $ git commit
 $ git push
-
-</code></pre></div><hr>
+</code></pre></div><h1 id="5-misc-tips">5. Misc Tips</h1>
+<h2 id="51-change-the-start-level-of-table-of-contents-toc">5.1 Change the start level of table of contents (TOC)</h2>
+<p>At the begining of the post, there is a <code>TOC</code> to show the heading levels. The default start level of it is <code>2</code>. So the level <code>1</code> will never be displayed. To modify it, simple add the next block into your <code>config.toml</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[markup]</span>
+  <span style="color:#66d9ef">[markup.tableOfContents]</span>
+    <span style="color:#a6e22e">endLevel</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">3
+</span><span style="color:#e6db74">    ordered = false
+</span><span style="color:#e6db74">    startLevel = 1</span>
+</code></pre></div><p>Save the file and re-publish your blog.</p>
+<hr>
 <h1 id="references">References:</h1>
 <ol>
 <li><a href="https://gohugo.io/documentation/">Hugo Documentation</a></li>
