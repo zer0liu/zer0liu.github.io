@@ -24,7 +24,7 @@ nvcc fatal   : Value &#39;compute_30&#39; is not defined for option &#39;gpu-arc
 ">
 <meta itemprop="datePublished" content="2021-04-09T15:30:10+00:00" />
 <meta itemprop="dateModified" content="2021-04-09T15:30:10+00:00" />
-<meta itemprop="wordCount" content="214">
+<meta itemprop="wordCount" content="215">
 
 
 
@@ -102,7 +102,7 @@ if (!doNotTrack) {
     <li><a href="#1-install-nvidia-driver-and-cuda-toolkit">1. Install NVidia driver and CUDA toolkit</a></li>
     <li><a href="#2-download-and-install-beagle-lib">2. Download and install beagle-lib</a></li>
     <li><a href="#3-more">3. More</a></li>
-    <li><a href="#reference">Reference</a></li>
+    <li><a href="#a-reference">A. Reference</a></li>
   </ul>
 </nav>
 	</div>
@@ -140,7 +140,7 @@ make install
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cc1plus: error: /usr/bin/nvcc/include: Not a directory
 </code></pre></div><p>It could be solved by:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./configure --prefix<span style="color:#f92672">=</span>$HOME --with-cuda<span style="color:#f92672">=</span>/usr
-</code></pre></div><h1 id="reference">Reference</h1>
+</code></pre></div><h1 id="a-reference">A. Reference</h1>
 <ol>
 <li><a href="https://github.com/beagle-dev/beagle-lib/wiki/LinuxInstallInstructions">Installing BEAGLE on Linux</a></li>
 <li><a href="https://arnon.dk/tag/nvcc-flags/">Matching CUDA arch and CUDA gencode for various NVIDIA architectures</a></li>

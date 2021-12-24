@@ -24,7 +24,7 @@
       <pubDate>Thu, 25 Nov 2021 12:26:00 +0800</pubDate>
       
       <guid>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</guid>
-      <description>&lt;p&gt;Here are some miscellaneous tips for working on RStudio and writing R Markdown file. It will be updated from time to time.&lt;/p&gt;
+      <description>&lt;p&gt;Here are some miscellaneous tips for working on RStudio and writing R Markdown file. This blog will be updated from time to time.&lt;/p&gt;
 &lt;p&gt;See also:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/resources/cheatsheets/&#34;&gt;RStudio Cheatsheets&lt;/a&gt;&lt;/li&gt;
@@ -178,8 +178,7 @@ compilation terminated.
       <pubDate>Mon, 21 Sep 2020 16:04:04 +0000</pubDate>
       
       <guid>https://omicx.cc/posts/2020-09-21-resume-aria2-download-in-ariang/</guid>
-      <description>&lt;p&gt;Aria2 creats a &amp;ldquo;.aria2&amp;rdquo; file for each object it downloading. It can be used
-to resume the download if necessary.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Aria2 creats a &amp;ldquo;&lt;em&gt;&lt;strong&gt;.aria2&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; file for each object it downloading. It can be used to resume the download if necessary.&lt;/p&gt;</description>
     </item>
     
     <item>
