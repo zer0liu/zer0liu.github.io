@@ -6,7 +6,27 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Dec 2021 15:36:59 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Jan 2022 22:31:09 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
+      <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/</link>
+      <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/</guid>
+      <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
+&lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian 11/bullseye server.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
+      <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</link>
+      <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</guid>
+      <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
+&lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian 11/bullseye server.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Install and Setup MetaPhlAn 3.0</title>
       <link>https://omicx.cc/posts/2021-12-17-install-and-setup-metaphlan-3/</link>
