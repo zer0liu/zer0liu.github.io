@@ -20,7 +20,7 @@ This post is the workthrough of installation and configuration of OneDrive Linux
 This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian 11/bullseye server.">
 <meta itemprop="datePublished" content="2022-01-23T22:31:09+08:00" />
 <meta itemprop="dateModified" content="2022-01-23T22:31:09+08:00" />
-<meta itemprop="wordCount" content="748">
+<meta itemprop="wordCount" content="955">
 
 
 
@@ -102,11 +102,17 @@ if (!doNotTrack) {
         <li><a href="#33-some-common-used-configurations">3.3 Some common used configurations</a>
           <ul>
             <li><a href="#331-onedrive-root-dir">3.3.1 OneDrive root dir</a></li>
-            <li><a href="#331-file-not-synchronized">3.3.1 File not synchronized</a></li>
+            <li><a href="#332-skip-some-files">3.3.2 Skip some files</a></li>
+            <li><a href="#333-skip-dot-files">3.3.3 Skip dot files</a></li>
+            <li><a href="#334-skip-symlinks">3.3.4 Skip symlinks</a></li>
+            <li><a href="#335-limit-internet-bandwith-usage">3.3.5 Limit internet bandwith usage</a></li>
           </ul>
         </li>
       </ul>
     </li>
+    <li><a href="#4-test-the-configuration">4. Test the configuration</a></li>
+    <li><a href="#5-performing-a-sync">5. Performing a sync</a></li>
+    <li><a href="#6-run-onedrive-as-a-non-root-user-via-systemd-in-debian">6. Run <code>onedrive</code> as a non-root user via systemd in Debian</a></li>
     <li><a href="#a-reference">A. Reference</a></li>
   </ul>
 </nav>
@@ -225,22 +231,112 @@ cp /usr/share/doc/onedrive/config ~/.config/onedrive/config
 <li>Param: <code>sync_dir</code></li>
 <li>Default: <code>sync_dir = &quot;~/OneDrive&quot;</code></li>
 <li>Note:
-<ol>
+<ul>
 <li>After changing <code>sync_dir</code>, you must perform a full re-synchronization by adding <code>--resync</code> to your existing command line - for example:</li>
-</ol>
+</ul>
 </li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ onedrive --synchronize --resync
-</code></pre></div><ol start="2">
+</code></pre></div><ul>
 <li>Directory and file permissions:
-- Directories: <code>0700</code>, or <code>drwx------</code>
-- Files: <code>0600</code>, or <code>-rw-------</code>
-- <strong>Important:</strong> Special permission bits (setuid, setgid, sticky bit) are <strong>not</strong> supported.</li>
-</ol>
-<h3 id="331-file-not-synchronized">3.3.1 File not synchronized</h3>
+<ul>
+<li>Directories: <code>0700</code>, or <code>drwx------</code></li>
+<li>Files: <code>0600</code>, or <code>-rw-------</code></li>
+<li><strong>Important:</strong> Special permission bits (setuid, setgid, sticky bit) are <strong>not</strong> supported.</li>
+</ul>
+</li>
+</ul>
+<h3 id="332-skip-some-files">3.3.2 Skip some files</h3>
 <ul>
 <li>Param: <code>skip_file</code></li>
+<li>Default: <code>skip_file = &quot;~*|.~*|*.tmp&quot;</code></li>
+<li>Note:
+<ul>
+<li>Patterns are case insensitive.</li>
+<li><code>*</code> and <code>?</code> wildcards characters are supported.</li>
+<li>Use <code>|</code> to separate multiple patterns.</li>
+<li><strong>Important:</strong> Do not use a <code>skip_file</code> entry of <code>.*</code> as this will prevent correct searching of local changes to process.</li>
 </ul>
+</li>
+</ul>
+<h3 id="333-skip-dot-files">3.3.3 Skip dot files</h3>
+<ul>
+<li>Param: <code>skip_dotfiles</code></li>
+<li>Default: <code>skip_dotfiles = &quot;false&quot;</code></li>
+</ul>
+<h3 id="334-skip-symlinks">3.3.4 Skip symlinks</h3>
+<ul>
+<li>Param: <code>skip_symlinks</code></li>
+<li>Default: <code>skip_symlinks = &quot;false&quot;</code></li>
+</ul>
+<h3 id="335-limit-internet-bandwith-usage">3.3.5 Limit internet bandwith usage</h3>
+<ul>
+<li>Param: <code>rate_limit</code></li>
+<li>Default: <code>rate_limit = &quot;131072&quot;</code></li>
+<li>Valid rate limit values:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Value</th>
+<th style="text-align:right">Speed</th>
+<th style="text-align:left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">131072</td>
+<td style="text-align:right">128 KB/s</td>
+<td style="text-align:left">minimum for basic application operations to prevent timeouts</td>
+</tr>
+<tr>
+<td style="text-align:left">262144</td>
+<td style="text-align:right">256 KB/s</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">524288</td>
+<td style="text-align:right">512 KB/s</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">1048576</td>
+<td style="text-align:right">1 MB/s</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">10485760</td>
+<td style="text-align:right">10 MB/s</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">104857600</td>
+<td style="text-align:right">100 MB/s</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="4-test-the-configuration">4. Test the configuration</h1>
+<p>You can test your configuration by utilising the <code>--dry-run</code> CLI option, no changes will be applied.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ onedrive --synchronize --verbose --dry-run
+DRY-RUN Configured. Output below shows what <span style="color:#e6db74">&#39;would&#39;</span> have occurred.
+Loading config ...
+Using Config Dir: /home/user/.config/onedrive
+Initializing the OneDrive API ...
+Opening the item database ...
+All operations will be performed in: /home/user/OneDrive
+Initializing the Synchronization Engine ...
+Account Type: personal
+...
+</code></pre></div><h1 id="5-performing-a-sync">5. Performing a sync</h1>
+<p>Simply running:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ onedrive --synchronize
+</code></pre></div><h1 id="6-run-onedrive-as-a-non-root-user-via-systemd-in-debian">6. Run <code>onedrive</code> as a non-root user via systemd in Debian</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ systemctl --user enable onedrive
+$ systemctl --user start onedrive
+</code></pre></div><blockquote>
+<p><strong>NOTE:</strong> For other Linux distributions, please visit <a href="https://github.com/abraunegg/onedrive/blob/master/docs/USAGE.md#running-onedrive-as-a-system-service">document</a>.</p>
+</blockquote>
 <h1 id="a-reference">A. Reference</h1>
 <ol>
 <li><a href="https://github.com/abraunegg/onedrive">OneDrive client for Linux github page</a></li>
@@ -267,9 +363,9 @@ cp /usr/share/doc/onedrive/config ~/.config/onedrive/config
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/" rel="prev">
+		<a class="pager__link" href="/posts/2021-12-17-install-and-setup-metaphlan-3/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Install and Setup OneDrive Client in a Headless Debian Server</p>
+			<p class="pager__title">Install and Setup MetaPhlAn 3.0</p>
 		</a>
 	</div>
 </nav>
@@ -310,10 +406,10 @@ cp /usr/share/doc/onedrive/config ~/.config/onedrive/config
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/">Install and Setup OneDrive Client in a Headless Debian Server</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/">Install and Setup OneDrive Client in a Headless Debian Server</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-12-17-install-and-setup-metaphlan-3/">Install and Setup MetaPhlAn 3.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-11-25-rstudio-and-rmarkdown-tips/">RStudio and R Markdown Tips</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2021-11-04-fix-corrupted-endnote-library/">Fix Corrupted EndNote Library</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2021-07-21-setup-rstudio-server-over-nginx-https/">Setup RStudio Server Over Nginx Https</a></li>
 		</ul>
 	</div>
 </div>
