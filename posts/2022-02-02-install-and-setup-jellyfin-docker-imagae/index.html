@@ -216,9 +216,9 @@ $ sudo mkdir -p /srv/jellyfin/cache
 <p><strong>Note:</strong> Here assume both of the <code>uid</code> and <code>gid</code> of user <code>jellyfin</code> were <code>2000</code>.</p>
 </blockquote>
 <h2 id="24-issues">2.4 Issues</h2>
-<p>Here you may be encountered the error:</p>
+<p>Here you may encounter this error:</p>
 <blockquote>
-<p>docker: Error response from daemon: Conflict. The container name &ldquo;/jellyfin&rdquo; is already in use by container &ldquo;<!-- raw HTML omitted -->&rdquo;. You have to remove (or rename) that container to be able to reuse that name.
+<p>docker: Error response from daemon: Conflict. The container name &ldquo;/jellyfin&rdquo; is already in use by container &ldquo;&lt;container ID&gt;&rdquo;. You have to remove (or rename) that container to be able to reuse that name.
 See &lsquo;docker run &ndash;help&rsquo;.</p>
 </blockquote>
 <p>To solve this issue, first list all containers:</p>
