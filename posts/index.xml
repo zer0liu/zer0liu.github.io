@@ -6,7 +6,39 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jan 2022 22:31:09 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Feb 2022 00:26:24 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install and Setup Jellyfin Docker Imagae</title>
+      <link>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</link>
+      <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
+      <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv-2/</link>
+      <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv-2/</guid>
+      <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
+&lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian 11/bullseye server.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
+      <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv-omv/</link>
+      <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv-omv/</guid>
+      <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
+&lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian 11/bullseye server.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
       <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/</link>
@@ -15,6 +47,16 @@
       <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/</guid>
       <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
 &lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
+      <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</link>
+      <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</guid>
+      <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
+&lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian 11/bullseye server.&lt;/p&gt;</description>
     </item>
     
     <item>

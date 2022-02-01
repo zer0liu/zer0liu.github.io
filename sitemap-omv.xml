@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://omicx.cc/categories/</loc>
+    <lastmod>2022-01-23T22:31:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/</loc>
+    <lastmod>2022-01-23T22:31:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</loc>
+    <lastmod>2022-01-23T22:31:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/linux/</loc>
+    <lastmod>2022-01-23T22:31:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/linux/</loc>
+    <lastmod>2022-01-23T22:31:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/</loc>
+    <lastmod>2022-01-23T22:31:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/onedrive/</loc>
+    <lastmod>2022-01-23T22:31:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/</loc>
+    <lastmod>2022-01-23T22:31:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/</loc>
+    <lastmod>2022-01-23T22:31:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-12-17-install-and-setup-metaphlan-3/</loc>
+    <lastmod>2021-12-17T15:36:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/metagenomics/</loc>
+    <lastmod>2021-12-17T15:36:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/metagenomics/</loc>
+    <lastmod>2021-12-17T15:36:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/r/</loc>
+    <lastmod>2021-11-25T12:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/r/</loc>
+    <lastmod>2021-11-25T12:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/r-markdown/</loc>
+    <lastmod>2021-11-25T12:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</loc>
+    <lastmod>2021-11-25T12:26:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/endnote/</loc>
+    <lastmod>2021-11-04T15:32:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-11-04-fix-corrupted-endnote-library/</loc>
+    <lastmod>2021-11-04T15:32:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/software/</loc>
+    <lastmod>2021-11-04T15:32:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/rstudio-server/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</loc>
+    <lastmod>2021-07-21T14:50:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/bd-genomics/</loc>
+    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/bd-rhapsody/</loc>
+    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/bd-rhapsody/</loc>
+    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/rna-seq/</loc>
+    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/scrna-seq/</loc>
+    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/scrna-seq/</loc>
+    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/</loc>
+    <lastmod>2021-06-24T12:28:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/debian/</loc>
+    <lastmod>2021-06-22T12:55:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/</loc>
+    <lastmod>2021-06-22T12:55:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/kvm/</loc>
+    <lastmod>2021-06-22T12:55:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/qemu/</loc>
+    <lastmod>2021-06-22T12:55:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/</loc>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/gnu-parallel/</loc>
+    <lastmod>2021-04-28T11:51:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/pymol/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/pymol/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/tips/</loc>
+    <lastmod>2021-04-20T21:36:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/blog/</loc>
+    <lastmod>2021-04-18T15:58:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</loc>
+    <lastmod>2021-04-18T15:58:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/hugo/</loc>
+    <lastmod>2021-04-18T15:58:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/hugo/</loc>
+    <lastmod>2021-04-18T15:58:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/note/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/note/</loc>
+    <lastmod>2021-04-16T15:31:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/beast/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/cuda/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/cuda/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</loc>
+    <lastmod>2021-04-09T15:30:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/ngs/</loc>
+    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/ngs/</loc>
+    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/pavian/</loc>
+    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</loc>
+    <lastmod>2021-03-15T15:54:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</loc>
+    <lastmod>2021-02-22T16:29:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2020-10-20-install-hdf5r-package/</loc>
+    <lastmod>2020-10-20T15:35:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/aria2/</loc>
+    <lastmod>2020-09-21T16:04:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2020-09-21-resume-aria2-download-in-ariang/</loc>
+    <lastmod>2020-09-21T16:04:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/certbot/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/cloudflare/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/letsencrypt/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/website/</loc>
+    <lastmod>2020-08-04T23:11:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/nginx/</loc>
+    <lastmod>2020-03-28T21:41:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</loc>
+    <lastmod>2020-03-28T21:41:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</loc>
+    <lastmod>2019-06-22T21:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/figtree/</loc>
+    <lastmod>2019-06-22T21:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/tree/</loc>
+    <lastmod>2019-06-22T21:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/conda/</loc>
+    <lastmod>2019-05-23T23:36:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/conda/</loc>
+    <lastmod>2019-05-23T23:36:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</loc>
+    <lastmod>2019-05-23T23:36:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/fry/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/hardware/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/raspberry-pi/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/raspberry-pi/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2018-11-30-deploy-raspberrypi-aria2-frp/</loc>
+    <lastmod>2018-11-30T10:48:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/beast/</loc>
+    <lastmod>2018-11-16T12:13:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2018-11-16-beast-tips/</loc>
+    <lastmod>2018-11-16T12:13:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/categories/phylogenetics/</loc>
+    <lastmod>2018-11-16T12:13:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</loc>
+    <lastmod>2018-11-16T10:03:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omicx.cc/tags/nvidia/</loc>
+    <lastmod>2018-11-16T10:03:23+00:00</lastmod>
+  </url>
+  
+</urlset>
