@@ -6,7 +6,27 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Feb 2022 00:26:24 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Mar 2022 15:13:11 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run MrBayes With Beagle-lib</title>
+      <link>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib-omv/</link>
+      <pubDate>Mon, 21 Mar 2022 15:13:11 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib-omv/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nbisweden.github.io/MrBayes/&#34;&gt;MrBayes 3&lt;/a&gt; is a program for Bayesian inference and model choice across a large space of phylogenetic and evolutionary models. And &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. BEAGLE is able to accelerate MrBayes analyses very much.&lt;/p&gt;
+&lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Run MrBayes With Beagle-lib</title>
+      <link>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</link>
+      <pubDate>Mon, 21 Mar 2022 15:13:11 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nbisweden.github.io/MrBayes/&#34;&gt;MrBayes 3&lt;/a&gt; is a program for Bayesian inference and model choice across a large space of phylogenetic and evolutionary models. And &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. BEAGLE is able to accelerate MrBayes analyses very much.&lt;/p&gt;
+&lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Install and Setup Jellyfin Docker Image</title>
       <link>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</link>
@@ -156,7 +176,7 @@ A workthrough will be online later.</description>
       <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
       
       <guid>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE-LIB&lt;/a&gt; is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.&lt;/p&gt;
 &lt;p&gt;When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nvcc fatal   : Value &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;compute_30&amp;#39;&lt;/span&gt; is not defined &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gpu-architecture&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
