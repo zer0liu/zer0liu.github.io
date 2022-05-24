@@ -22,7 +22,7 @@ This post described a workthrough on how to install and configure QEMU/KVM on a 
 ">
 <meta itemprop="datePublished" content="2021-06-22T12:55:33+08:00" />
 <meta itemprop="dateModified" content="2021-06-22T12:55:33+08:00" />
-<meta itemprop="wordCount" content="1181">
+<meta itemprop="wordCount" content="1190">
 
 
 
@@ -118,14 +118,15 @@ if (!doNotTrack) {
     </li>
     <li><a href="#8-useful-commands">8. Useful commands</a>
       <ul>
-        <li><a href="#81-list-running-vmsdomains">8.1 List running VMs/domains</a></li>
-        <li><a href="#82-shutdown-the-vmdomain">8.2 Shutdown the VM/domain</a></li>
-        <li><a href="#83-start-vmdomain">8.3 Start VM/domain</a></li>
-        <li><a href="#84-suspend-vmdomain">8.4 Suspend VM/domain</a></li>
-        <li><a href="#85-soft-safe-reboot-vmdomain">8.5 Soft (safe) reboot VM/domain</a></li>
-        <li><a href="#86-hard-not-safe-reset-vmdomain">8.6 Hard (not safe) reset VM/domain</a></li>
-        <li><a href="#87-deleteremove-vmdomain">8.7 Delete/remove VM/domain</a></li>
-        <li><a href="#88-more-commands-of-virsh">8.8 More commands of <code>virsh</code></a></li>
+        <li><a href="#81-list-all-vmsdomains">8.1 List all VMs/domains</a></li>
+        <li><a href="#82-list-running-vmsdomains">8.2 List running VMs/domains</a></li>
+        <li><a href="#83-shutdown-the-vmdomain">8.3 Shutdown the VM/domain</a></li>
+        <li><a href="#84-start-vmdomain">8.4 Start VM/domain</a></li>
+        <li><a href="#85-suspend-vmdomain">8.5 Suspend VM/domain</a></li>
+        <li><a href="#86-soft-safe-reboot-vmdomain">8.6 Soft (safe) reboot VM/domain</a></li>
+        <li><a href="#87-hard-not-safe-reset-vmdomain">8.7 Hard (not safe) reset VM/domain</a></li>
+        <li><a href="#88-deleteremove-vmdomain">8.8 Delete/remove VM/domain</a></li>
+        <li><a href="#89-more-commands-of-virsh">8.9 More commands of <code>virsh</code></a></li>
       </ul>
     </li>
     <li><a href="#a-reference">A. Reference</a></li>
@@ -310,24 +311,26 @@ $ sudo virsh setmen ubuntu-vm 512M
 </code></pre></div><p>Next start the VM to check the modifications:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh start ubuntu-vm
 </code></pre></div><h1 id="8-useful-commands">8. Useful commands</h1>
-<h2 id="81-list-running-vmsdomains">8.1 List running VMs/domains</h2>
+<h2 id="81-list-all-vmsdomains">8.1 List all VMs/domains</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh list --all
+</code></pre></div><h2 id="82-list-running-vmsdomains">8.2 List running VMs/domains</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh list
-</code></pre></div><h2 id="82-shutdown-the-vmdomain">8.2 Shutdown the VM/domain</h2>
+</code></pre></div><h2 id="83-shutdown-the-vmdomain">8.3 Shutdown the VM/domain</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh shutdown ubuntu-vm
-</code></pre></div><h2 id="83-start-vmdomain">8.3 Start VM/domain</h2>
+</code></pre></div><h2 id="84-start-vmdomain">8.4 Start VM/domain</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh start ubuntu-vm
-</code></pre></div><h2 id="84-suspend-vmdomain">8.4 Suspend VM/domain</h2>
+</code></pre></div><h2 id="85-suspend-vmdomain">8.5 Suspend VM/domain</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh suspend ubuntu-vm
-</code></pre></div><h2 id="85-soft-safe-reboot-vmdomain">8.5 Soft (safe) reboot VM/domain</h2>
+</code></pre></div><h2 id="86-soft-safe-reboot-vmdomain">8.6 Soft (safe) reboot VM/domain</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh reboot ubuntu-vm
-</code></pre></div><h2 id="86-hard-not-safe-reset-vmdomain">8.6 Hard (not safe) reset VM/domain</h2>
+</code></pre></div><h2 id="87-hard-not-safe-reset-vmdomain">8.7 Hard (not safe) reset VM/domain</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh reset ubuntu-vm
-</code></pre></div><h2 id="87-deleteremove-vmdomain">8.7 Delete/remove VM/domain</h2>
+</code></pre></div><h2 id="88-deleteremove-vmdomain">8.8 Delete/remove VM/domain</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh undefine ubuntu-vm
 $ sudo virsh destroy ubuntu-vm
 </code></pre></div><p>Note: The virtual disk can <strong>not</strong> be deleted automatically. You need to run:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo rm /data/vm/images/ubuntu.qcow2
-</code></pre></div><h2 id="88-more-commands-of-virsh">8.8 More commands of <code>virsh</code></h2>
+</code></pre></div><h2 id="89-more-commands-of-virsh">8.9 More commands of <code>virsh</code></h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo virsh help
 </code></pre></div><h1 id="a-reference">A. Reference</h1>
 <ol>
