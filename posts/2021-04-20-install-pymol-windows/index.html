@@ -16,9 +16,10 @@ PyMOL Wiki provides the way to install open source PyMOL in Windows under Python
 
 This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2021-04-20-install-pymol-windows/" />
+<meta property="og:url" content="https://omicx.cc/posts/2021-04-20-install-pymol-windows/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-04-20T21:36:12+00:00" />
 <meta property="article:modified_time" content="2021-04-20T21:36:12+00:00" />
+
 
 		<meta itemprop="name" content="Step by Step Install Open Source Pymol 2.x in Windows by Conda">
 <meta itemprop="description" content="
@@ -27,15 +28,10 @@ This post was first released at 2019-05-26, and updated at 2021-04-20.
 Since PyMOL 2.x released, there were no binary installer avaliable for Windows.
 PyMOL Wiki provides the way to install open source PyMOL in Windows under Python 3.x.
 
-This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.">
-<meta itemprop="datePublished" content="2021-04-20T21:36:12+00:00" />
+This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows."><meta itemprop="datePublished" content="2021-04-20T21:36:12+00:00" />
 <meta itemprop="dateModified" content="2021-04-20T21:36:12+00:00" />
 <meta itemprop="wordCount" content="618">
-
-
-
 <meta itemprop="keywords" content="PyMOL,Tips," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Step by Step Install Open Source Pymol 2.x in Windows by Conda"/>
 <meta name="twitter:description" content="
@@ -55,17 +51,16 @@ This post provided the method to install PyMOL 2.x by conda (Anaconda or Minocon
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -139,117 +134,117 @@ if (!doNotTrack) {
 <h1 id="2-create-pymol-envrionment">2. Create PyMOL envrionment</h1>
 <p>Click Start menu, and run &ldquo;Anaconda Prompt (miniconda3)&rdquo;.</p>
 <p>Input next command to create a virtual environment <code>pymol</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda create -n pymol
-</code></pre></div><p>Then, activate created environment</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda activate pymol
-</code></pre></div><h1 id="3-install-supporting-packages">3. Install supporting packages</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda install -c conda-forge pip numpy pmw
-</code></pre></div><p>All other supporting packages would be installed automatically.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>conda create -n pymol
+</span></span></code></pre></div><p>Then, activate created environment</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>conda activate pymol
+</span></span></code></pre></div><h1 id="3-install-supporting-packages">3. Install supporting packages</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>conda install -c conda-forge pip numpy pmw
+</span></span></code></pre></div><p>All other supporting packages would be installed automatically.</p>
 <h1 id="4-download-pymol-whl-files">4. Download PyMOL whl files</h1>
 <p>Download pre-compiled Open-Source PyMOL from <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymol-open-source">Christoph Gohlke of the Laboratory for Fluorescence Dynamics, University of California, Irvine</a>:</p>
 <p>Here listed lots of pre-compiled distributions. The filename format is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  pymol-2.4.0-cp38-cp38-win_amd64.whl
-           \        \          \
-            \        \          \__ for 64 bit Windows
-             \        \
-              \        \___________ for Python 3.8.x 
-               \
-                \__________________ PyMOL version 2.4.0
-</code></pre></div><p>Download both &ldquo;<em>pymol.whl</em>&rdquo; and &ldquo;<em>pymol_launcher.whl</em>&rdquo; files.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>  pymol-2.4.0-cp38-cp38-win_amd64.whl
+</span></span><span style="display:flex;"><span>           \        \          \
+</span></span><span style="display:flex;"><span>            \        \          \__ for 64 bit Windows
+</span></span><span style="display:flex;"><span>             \        \
+</span></span><span style="display:flex;"><span>              \        \___________ for Python 3.8.x 
+</span></span><span style="display:flex;"><span>               \
+</span></span><span style="display:flex;"><span>                \__________________ PyMOL version 2.4.0
+</span></span></code></pre></div><p>Download both &ldquo;<em>pymol.whl</em>&rdquo; and &ldquo;<em>pymol_launcher.whl</em>&rdquo; files.</p>
 <p>Here <code>pymol-2.4.0-cp38-cp38-win_amd64.whl</code> and <code>pymol_launcher-2.1-cp38-cp38-win_amd64.whl</code> were downloaded.</p>
 <h1 id="5-install-whl-files">5. Install whl files</h1>
 <ul>
 <li>In the conda <code>pymol</code> environment, switch to download directory (<em>e.g.</em>, <code>D:\Downloads</code>)</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Switch to Drive D:</span>
-d:
-<span style="color:#75715e"># Enter the directory</span>
-cd Downloads
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Switch to Drive D:</span>
+</span></span><span style="display:flex;"><span>d:
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Enter the directory</span>
+</span></span><span style="display:flex;"><span>cd Downloads
+</span></span></code></pre></div><ul>
 <li>Install pymol_launcher first</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install --no-index --find-links<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;%CD%&#34;</span> pymol_launcher-2.1-cp38-cp38-win_amd64.whl
-</code></pre></div><p>Output would be like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Looking in links: D:\Downloads
-Processing D:\downloads\pymol_launcher-2.1-cp38-cp38-win_amd64.whl
-Processing D:\downloads\pymol-2.4.0-cp38-cp38-win_amd64.whl
-Requirement already satisfied: numpy in D:\miniconda3\envs\pymol\lib\site-packages (from pymol-&gt;pymol-launcher==2.1) (1.20.2)
-Requirement already satisfied: Pmw in D:\miniconda3\envs\pymol\lib\site-packages (from pymol-&gt;pymol-launcher==2.1) (2.0.1)
-Installing collected packages: pymol, pymol-launcher
-Successfully installed pymol-2.4.0 pymol-launcher-2.1
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install --no-index --find-links<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;%CD%&#34;</span> pymol_launcher-2.1-cp38-cp38-win_amd64.whl
+</span></span></code></pre></div><p>Output would be like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Looking in links: D:\Downloads
+</span></span><span style="display:flex;"><span>Processing D:\downloads\pymol_launcher-2.1-cp38-cp38-win_amd64.whl
+</span></span><span style="display:flex;"><span>Processing D:\downloads\pymol-2.4.0-cp38-cp38-win_amd64.whl
+</span></span><span style="display:flex;"><span>Requirement already satisfied: numpy in D:\miniconda3\envs\pymol\lib\site-packages (from pymol-&gt;pymol-launcher==2.1) (1.20.2)
+</span></span><span style="display:flex;"><span>Requirement already satisfied: Pmw in D:\miniconda3\envs\pymol\lib\site-packages (from pymol-&gt;pymol-launcher==2.1) (2.0.1)
+</span></span><span style="display:flex;"><span>Installing collected packages: pymol, pymol-launcher
+</span></span><span style="display:flex;"><span>Successfully installed pymol-2.4.0 pymol-launcher-2.1
+</span></span></code></pre></div><blockquote>
 <p>You might have noticed PyMOL has been installed automatically.</p>
 </blockquote>
 <p>To update PyMOL later, run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install --upgrade --no-deps pymol-2.4.0-cp38-cp38-win_amd64.whl
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install --upgrade --no-deps pymol-2.4.0-cp38-cp38-win_amd64.whl
+</span></span></code></pre></div><blockquote>
 <p>The pymol_launcher do not need update.</p>
 </blockquote>
 <h1 id="6-launch-pymol">6. Launch pymol</h1>
 <p>In an activated <code>pymol</code> environment, run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pymol
-</code></pre></div><p>Then, the PyMOL will be launched. Have fun!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pymol
+</span></span></code></pre></div><p>Then, the PyMOL will be launched. Have fun!</p>
 <h1 id="7-new-single-windows-interface">7. New single windows interface</h1>
 <blockquote>
 <p><strong>Note</strong>: If you&rsquo;d like to install PyMOL extend scripts, you do not need to install PyQt5 separately.</p>
 <p>Follow instructions in Section 8.</p>
 </blockquote>
 <p>If you&rsquo;d like to use the newer single-window Qt interface, simply install the PyQt5, also under the <code>pymol</code> environment:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install pyqt5
-</code></pre></div><p>The new interface would be like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install pyqt5
+</span></span></code></pre></div><p>The new interface would be like:</p>
 <p><img src="/img/pymol-2.4-single-window.png" alt="PyMol single-window interface"></p>
 <h1 id="8-install-pymol-extend-scripts">8. Install PyMOL extend scripts</h1>
 <p>(1) Install necessary packages:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda install -c conda-forge scipy matplotlib wxpython
-</code></pre></div><p>(2) Download script/plugin collection:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/Pymol-Scripts/Pymol-script-repo
-</code></pre></div><p>(3) Next copy the directory &ldquo;<em>Pymol-script-repo/</em>&rdquo; to <code>PYMOL_PATH</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">D:\miniconda3\envs\pymol\Lib\site-packages\pymol\pymol_path\
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>conda install -c conda-forge scipy matplotlib wxpython
+</span></span></code></pre></div><p>(2) Download script/plugin collection:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/Pymol-Scripts/Pymol-script-repo
+</span></span></code></pre></div><p>(3) Next copy the directory &ldquo;<em>Pymol-script-repo/</em>&rdquo; to <code>PYMOL_PATH</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>D:\miniconda3\envs\pymol\Lib\site-packages\pymol\pymol_path\
+</span></span></code></pre></div><blockquote>
 <p><code>PYMOL_PATH</code> can be determined by running the following command from within PyMOL:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">print os.environ<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;PYMOL_PATH&#39;</span><span style="color:#f92672">]</span>
-</code></pre></div></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>print os.environ<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;PYMOL_PATH&#39;</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div></blockquote>
 <p>(4) Then create a file &ldquo;<em>run_on_startup.py</em>&rdquo; under the directory <code>D:\miniconda3\envs\pymol\Lib\site-packages\pymol\pymol_path</code>, it content is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Add paths to sys.path so PyMOL can find modules and scripts</span>
-<span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> os
-pymol_git <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;PYMOL_PATH&#39;</span>], <span style="color:#e6db74">&#39;Pymol-script-repo&#39;</span>))
-os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;PYMOL_GIT_MOD&#39;</span>] <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(pymol_git,<span style="color:#e6db74">&#39;modules&#39;</span>)
-sys<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>append(pymol_git)
-sys<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>append(os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;PYMOL_GIT_MOD&#39;</span>])
-
-<span style="color:#75715e"># Make setting changes to Plugin Manager</span>
-<span style="color:#f92672">import</span> pymol.plugins
-pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</span>preferences <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;instantsave&#39;</span>: False, <span style="color:#e6db74">&#39;verbose&#39;</span>: False}
-pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</span>autoload <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;apbs_tools&#39;</span>: False}
-pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</span>set_startup_path([os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(pymol_git, <span style="color:#e6db74">&#39;plugins&#39;</span>), os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(sys<span style="color:#f92672">.</span>prefix, <span style="color:#e6db74">&#39;Lib&#39;</span>, <span style="color:#e6db74">&#39;site-packages&#39;</span>, <span style="color:#e6db74">&#39;pmg_tk&#39;</span>, <span style="color:#e6db74">&#39;startup&#39;</span>)])
-pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</span>preferences <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;instantsave&#39;</span>: True, <span style="color:#e6db74">&#39;verbose&#39;</span>: False}
-</code></pre></div><p>(5) Lanuch PyMOL, you&rsquo;ll find extend scripts under the Menu <code>Plugins-&gt;Legacy Plugins</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Add paths to sys.path so PyMOL can find modules and scripts</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> os
+</span></span><span style="display:flex;"><span>pymol_git <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;PYMOL_PATH&#39;</span>], <span style="color:#e6db74">&#39;Pymol-script-repo&#39;</span>))
+</span></span><span style="display:flex;"><span>os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;PYMOL_GIT_MOD&#39;</span>] <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(pymol_git,<span style="color:#e6db74">&#39;modules&#39;</span>)
+</span></span><span style="display:flex;"><span>sys<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>append(pymol_git)
+</span></span><span style="display:flex;"><span>sys<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>append(os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;PYMOL_GIT_MOD&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Make setting changes to Plugin Manager</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pymol.plugins
+</span></span><span style="display:flex;"><span>pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</span>preferences <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;instantsave&#39;</span>: <span style="color:#66d9ef">False</span>, <span style="color:#e6db74">&#39;verbose&#39;</span>: <span style="color:#66d9ef">False</span>}
+</span></span><span style="display:flex;"><span>pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</span>autoload <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;apbs_tools&#39;</span>: <span style="color:#66d9ef">False</span>}
+</span></span><span style="display:flex;"><span>pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</span>set_startup_path([os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(pymol_git, <span style="color:#e6db74">&#39;plugins&#39;</span>), os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(sys<span style="color:#f92672">.</span>prefix, <span style="color:#e6db74">&#39;Lib&#39;</span>, <span style="color:#e6db74">&#39;site-packages&#39;</span>, <span style="color:#e6db74">&#39;pmg_tk&#39;</span>, <span style="color:#e6db74">&#39;startup&#39;</span>)])
+</span></span><span style="display:flex;"><span>pymol<span style="color:#f92672">.</span>plugins<span style="color:#f92672">.</span>preferences <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;instantsave&#39;</span>: <span style="color:#66d9ef">True</span>, <span style="color:#e6db74">&#39;verbose&#39;</span>: <span style="color:#66d9ef">False</span>}
+</span></span></code></pre></div><p>(5) Lanuch PyMOL, you&rsquo;ll find extend scripts under the Menu <code>Plugins-&gt;Legacy Plugins</code>:</p>
 <p><img src="/img/pymol-plugins-list.png" alt="Install PyMOL Plugins"></p>
 <blockquote>
 <p><strong>Note:</strong> There are still some un-solved errors:</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">module &#39;base64&#39; has no attribute &#39;encodestring&#39;
-Unable to initialize plugin &#39;bnitools&#39; (pmg_tk.startup.bnitools).
-No module named &#39;tkintertable&#39;
-Unable to initialize plugin &#39;mtsslDockGui&#39; (pmg_tk.startup.mtsslDockGui).
-use() got an unexpected keyword argument &#39;warn&#39;
-Unable to initialize plugin &#39;mtsslPlotter&#39; (pmg_tk.startup.mtsslPlotter).
-D:\miniconda3\envs\pymol\lib\site-packages\wx\lib\pubsub\__init__.py:23: wxPyDeprecationWarning: wx.lib.pubsub has been deprecated, plese migrate your code to use pypubsub, available on PyPI.
-  warnings.warn(&#39;wx.lib.pubsub has been deprecated, plese migrate your &#39;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
-
-Optimize plug-in needs openbabel to be installed in your system, please follow the instructions at
-http://openbabel.org/wiki/Get_Open_Babel
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
-No module named &#39;cctbx&#39;
-Unable to initialize plugin &#39;SuperSymPlugin&#39; (pmg_tk.startup.SuperSymPlugin).
- Detected OpenGL version 1.1. Shaders and volumes unavailable.
- OpenGL graphics engine:
-  GL_VENDOR:   Microsoft Corporation
-  GL_RENDERER: GDI Generic
-  GL_VERSION:  1.1.0
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>module &#39;base64&#39; has no attribute &#39;encodestring&#39;
+</span></span><span style="display:flex;"><span>Unable to initialize plugin &#39;bnitools&#39; (pmg_tk.startup.bnitools).
+</span></span><span style="display:flex;"><span>No module named &#39;tkintertable&#39;
+</span></span><span style="display:flex;"><span>Unable to initialize plugin &#39;mtsslDockGui&#39; (pmg_tk.startup.mtsslDockGui).
+</span></span><span style="display:flex;"><span>use() got an unexpected keyword argument &#39;warn&#39;
+</span></span><span style="display:flex;"><span>Unable to initialize plugin &#39;mtsslPlotter&#39; (pmg_tk.startup.mtsslPlotter).
+</span></span><span style="display:flex;"><span>D:\miniconda3\envs\pymol\lib\site-packages\wx\lib\pubsub\__init__.py:23: wxPyDeprecationWarning: wx.lib.pubsub has been deprecated, plese migrate your code to use pypubsub, available on PyPI.
+</span></span><span style="display:flex;"><span>  warnings.warn(&#39;wx.lib.pubsub has been deprecated, plese migrate your &#39;
+</span></span><span style="display:flex;"><span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Optimize plug-in needs openbabel to be installed in your system, please follow the instructions at
+</span></span><span style="display:flex;"><span>http://openbabel.org/wiki/Get_Open_Babel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+</span></span><span style="display:flex;"><span>No module named &#39;cctbx&#39;
+</span></span><span style="display:flex;"><span>Unable to initialize plugin &#39;SuperSymPlugin&#39; (pmg_tk.startup.SuperSymPlugin).
+</span></span><span style="display:flex;"><span> Detected OpenGL version 1.1. Shaders and volumes unavailable.
+</span></span><span style="display:flex;"><span> OpenGL graphics engine:
+</span></span><span style="display:flex;"><span>  GL_VENDOR:   Microsoft Corporation
+</span></span><span style="display:flex;"><span>  GL_RENDERER: GDI Generic
+</span></span><span style="display:flex;"><span>  GL_VERSION:  1.1.0
+</span></span></code></pre></div><hr>
 <h1 id="a-reference">A. Reference</h1>
 <ol>
 <li><a href="https://pymolwiki.org/index.php/Windows_Install">PyMOL Wiki: Windows Install</a></li>

@@ -10,20 +10,16 @@
 		<meta property="og:title" content="Fix Corrupted EndNote Library" />
 <meta property="og:description" content="Due to the limited space of EndNote online, I still used to sync EndNote libraries through OneNote. The drawback is, the library might be corrupted occasionally (about once a couple of months)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2021-11-04-fix-corrupted-endnote-library/" />
+<meta property="og:url" content="https://omicx.cc/posts/2021-11-04-fix-corrupted-endnote-library/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-11-04T15:32:05+08:00" />
 <meta property="article:modified_time" content="2021-11-04T15:32:05+08:00" />
 
+
 		<meta itemprop="name" content="Fix Corrupted EndNote Library">
-<meta itemprop="description" content="Due to the limited space of EndNote online, I still used to sync EndNote libraries through OneNote. The drawback is, the library might be corrupted occasionally (about once a couple of months).">
-<meta itemprop="datePublished" content="2021-11-04T15:32:05+08:00" />
+<meta itemprop="description" content="Due to the limited space of EndNote online, I still used to sync EndNote libraries through OneNote. The drawback is, the library might be corrupted occasionally (about once a couple of months)."><meta itemprop="datePublished" content="2021-11-04T15:32:05+08:00" />
 <meta itemprop="dateModified" content="2021-11-04T15:32:05+08:00" />
 <meta itemprop="wordCount" content="192">
-
-
-
 <meta itemprop="keywords" content="EndNote," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fix Corrupted EndNote Library"/>
 <meta name="twitter:description" content="Due to the limited space of EndNote online, I still used to sync EndNote libraries through OneNote. The drawback is, the library might be corrupted occasionally (about once a couple of months)."/>
@@ -37,17 +33,16 @@
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -91,14 +86,13 @@ if (!doNotTrack) {
 <p>The first I could do is try to recover the corrupted library, follow the instruction in <a href="https://support.clarivate.com/Endnote/s/article/EndNote-The-proper-process-for-recovering-library-files?language=en_US">EndNote: The proper process for recovering library files</a>.</p>
 <p>But sometimes it could not work and output &ldquo;0 references were recovered&rdquo;. How to save the library?</p>
 <p>An EndNote library is composed with one &ldquo;<em>.enl</em>&rdquo; file and an &ldquo;<em>.Data</em>&rdquo; library, the structure may like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|-- mylib.Data
-|   |-- PDF
-|   |-- sdb
-|       |-- pdb.eni
-|       |-- sdb.eni
-|-- mylib.enl
-
-</code></pre></div><p>The <em>.enl</em> and <em>.eni</em> are SQLite3 databases, and the validity of these files could be checked by <a href="https://sqlitestudio.pl/">SQLiteStudio</a>. In this situation, the &ldquo;<em>mylib.enl</em>&rdquo; file might be ok, but index database &ldquo;<em>.eni</em>&rdquo; corrupted.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>|-- mylib.Data
+</span></span><span style="display:flex;"><span>|   |-- PDF
+</span></span><span style="display:flex;"><span>|   |-- sdb
+</span></span><span style="display:flex;"><span>|       |-- pdb.eni
+</span></span><span style="display:flex;"><span>|       |-- sdb.eni
+</span></span><span style="display:flex;"><span>|-- mylib.enl
+</span></span></code></pre></div><p>The <em>.enl</em> and <em>.eni</em> are SQLite3 databases, and the validity of these files could be checked by <a href="https://sqlitestudio.pl/">SQLiteStudio</a>. In this situation, the &ldquo;<em>mylib.enl</em>&rdquo; file might be ok, but index database &ldquo;<em>.eni</em>&rdquo; corrupted.</p>
 <p>Next simply remove corrupted &ldquo;<em>.eni</em>&rdquo; file (or rename, which is safer).</p>
 <p>Then try to recover the library as EndNote instruction.</p>
 <p>To avoid data loss, frequently backup EndNote library is important. The proper way to backup a library is to create a compressed EndNote library (<em>.enlx</em>), follow the instruction in <a href="https://rmit.libguides.com/endnote/backup">Backing-up your EndNote Desktop library</a>.</p>

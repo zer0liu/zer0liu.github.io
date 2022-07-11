@@ -10,20 +10,16 @@
 		<meta property="og:title" content="Setup BD Single Cell Genomics Rhapsody Analysis" />
 <meta property="og:description" content="This post provides instruction of installing DB Genomics Rhapsody™ Analysis pipeline in a local Linux server." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/" />
+<meta property="og:url" content="https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-06-24T12:28:10+08:00" />
 <meta property="article:modified_time" content="2021-06-24T12:28:10+08:00" />
 
+
 		<meta itemprop="name" content="Setup BD Single Cell Genomics Rhapsody Analysis">
-<meta itemprop="description" content="This post provides instruction of installing DB Genomics Rhapsody™ Analysis pipeline in a local Linux server.">
-<meta itemprop="datePublished" content="2021-06-24T12:28:10+08:00" />
+<meta itemprop="description" content="This post provides instruction of installing DB Genomics Rhapsody™ Analysis pipeline in a local Linux server."><meta itemprop="datePublished" content="2021-06-24T12:28:10+08:00" />
 <meta itemprop="dateModified" content="2021-06-24T12:28:10+08:00" />
-<meta itemprop="wordCount" content="476">
-
-
-
+<meta itemprop="wordCount" content="477">
 <meta itemprop="keywords" content="BD Genomics,BD Rhapsody,Linux,RNA-Seq,scRNA-Seq," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Setup BD Single Cell Genomics Rhapsody Analysis"/>
 <meta name="twitter:description" content="This post provides instruction of installing DB Genomics Rhapsody™ Analysis pipeline in a local Linux server."/>
@@ -37,17 +33,16 @@
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -130,94 +125,94 @@ if (!doNotTrack) {
 </ul>
 </blockquote>
 <h1 id="2-install-necessary-softwares">2. Install necessary softwares</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
-$ sudo apt install git cwltool
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt install git cwltool
+</span></span></code></pre></div><blockquote>
 <p>Note:
 <code>cwltool</code> from Ubuntu package repository works well. So it is not necessary to install <code>cwltool</code>/<code>cwl-runner</code> via <code>pip</code>.</p>
 </blockquote>
 <h1 id="3-install-docker">3. Install Docker</h1>
 <h2 id="31-uninstall-old-versions-of-docker-if-necessary">3.1 Uninstall old versions of Docker if necessary</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt remove docker docker-engine docker.io containerd runc
-</code></pre></div><h2 id="32-install-from-repository">3.2 Install from repository</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt remove docker docker-engine docker.io containerd runc
+</span></span></code></pre></div><h2 id="32-install-from-repository">3.2 Install from repository</h2>
 <ol>
 <li>Install necessary packages at first:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    apt-transport-https <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    ca-certificates <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    curl <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    gnupg <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    lsb-release
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get install <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    apt-transport-https <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    ca-certificates <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    curl <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    gnupg <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    lsb-release
+</span></span></code></pre></div><ol start="2">
 <li>Add Docker official GPG key:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg  
-</code></pre></div><ol start="3">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg  
+</span></span></code></pre></div><ol start="3">
 <li>Setup the stable repository:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#34;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-</span><span style="color:#e6db74">  </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> stable&#34;</span> | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-</code></pre></div><ol start="4">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#34;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> stable&#34;</span> | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span></code></pre></div><ol start="4">
 <li>Install Docker Engine</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update
-$ sudo apt-get install docker-ce docker-ce-cli containerd.io
-</code></pre></div><ol start="5">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get update
+</span></span><span style="display:flex;"><span>$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+</span></span></code></pre></div><ol start="5">
 <li>Verify installation</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo docker run hello-world
-</code></pre></div><p>This command downloads a test image and runs it in a container.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo docker run hello-world
+</span></span></code></pre></div><p>This command downloads a test image and runs it in a container.</p>
 <ol start="6">
 <li>Manage Docker as a normal user</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo usermod -aG docker $USER
-$ newgrp docker
-</code></pre></div><p>Now you can run <code>docker</code> commands without <code>sudo</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run hello-world
-</code></pre></div><h1 id="4-download-bd-genomics-rhapsody-image">4. Download BD Genomics Rhapsody image</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo usermod -aG docker $USER
+</span></span><span style="display:flex;"><span>$ newgrp docker
+</span></span></code></pre></div><p>Now you can run <code>docker</code> commands without <code>sudo</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run hello-world
+</span></span></code></pre></div><h1 id="4-download-bd-genomics-rhapsody-image">4. Download BD Genomics Rhapsody image</h1>
 <p>All bdgenomics rhapsody images are avaliable from <a href="https://hub.docker.com/r/bdgenomics/rhapsody">Docker Hub</a>. Here we install the most recent one.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker pull bdgenomics/rhapsody:1.9.1
-</code></pre></div><p>It need a while according to you net speed. After this process completed, verify it by:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker images
-</code></pre></div><h1 id="5-download-cwl-and-yml-files">5. Download CWL and YML files</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker pull bdgenomics/rhapsody:1.9.1
+</span></span></code></pre></div><p>It need a while according to you net speed. After this process completed, verify it by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker images
+</span></span></code></pre></div><h1 id="5-download-cwl-and-yml-files">5. Download CWL and YML files</h1>
 <p>These files are available from BD Genomics repository at <a href="https://bitbucket.org/CRSwDev/cwl/">Bitbucket</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://bitbucket.org/CRSwDev/cwl/ bd-cwl
-</code></pre></div><p>Files in the sub-directory <code>v1.9.1/</code> are what we need.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git clone https://bitbucket.org/CRSwDev/cwl/ bd-cwl
+</span></span></code></pre></div><p>Files in the sub-directory <code>v1.9.1/</code> are what we need.</p>
 <p>Now the BD Genomics Rhapsody Analysis Pipeline installed completely.</p>
 <h1 id="6-a-pseudo-run">6. A pseudo-run</h1>
 <p>Here show a sample yml file: <code>demo.yml</code> for Rhapsody pipeline:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/env cwl-runner
-</span><span style="color:#75715e"></span>
-cwl:tool: rhapsody
-
-Reads:
- - class: File
-   location: <span style="color:#e6db74">&#34;demo_S1_L001_R1_001.fq.gz&#34;</span>
- - class: File
-   location: <span style="color:#e6db74">&#34;demo_S1_L001_R2_001.fq.gz&#34;</span>
-
-Reference_Genome:
-   class: File
-   location: <span style="color:#e6db74">&#34;GRCh38-gencodev29.tar.gz&#34;</span>
-
-Transcriptome_Annotation:
-   class: File
-   location: <span style="color:#e6db74">&#34;gencodev29.gtf&#34;</span>
-
-Sample_Tags_Version: human
-Subsample_Tags: 0.2
-</code></pre></div><p>Please see more details and description in the template file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env cwl-runner
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>cwl:tool: rhapsody
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Reads:
+</span></span><span style="display:flex;"><span> - class: File
+</span></span><span style="display:flex;"><span>   location: <span style="color:#e6db74">&#34;demo_S1_L001_R1_001.fq.gz&#34;</span>
+</span></span><span style="display:flex;"><span> - class: File
+</span></span><span style="display:flex;"><span>   location: <span style="color:#e6db74">&#34;demo_S1_L001_R2_001.fq.gz&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Reference_Genome:
+</span></span><span style="display:flex;"><span>   class: File
+</span></span><span style="display:flex;"><span>   location: <span style="color:#e6db74">&#34;GRCh38-gencodev29.tar.gz&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Transcriptome_Annotation:
+</span></span><span style="display:flex;"><span>   class: File
+</span></span><span style="display:flex;"><span>   location: <span style="color:#e6db74">&#34;gencodev29.gtf&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Sample_Tags_Version: human
+</span></span><span style="display:flex;"><span>Subsample_Tags: 0.2
+</span></span></code></pre></div><p>Please see more details and description in the template file:</p>
 <p><code>bd-cwl/v1.9.1/template_wta_1.9.1.yml</code>.</p>
 <p>Next launch the pipeline:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cwltool <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --parallel <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --tmpdir-prefix tmp_ <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --outdir result/ <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    rhapsody_wta_1.9.1.cwl <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    demo.yml &gt; demo.log 2&gt;&amp;<span style="color:#ae81ff">1</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cwltool <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --parallel <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --tmpdir-prefix tmp_ <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --outdir result/ <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    rhapsody_wta_1.9.1.cwl <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    demo.yml &gt; demo.log 2&gt;&amp;<span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><blockquote>
 <p>Note:</p>
 <ul>
 <li>This pipeline will generate lots of temporary files. So don&rsquo;t forget use the option <code>--tempdir-prefix</code>. Otherwise all temporary files/dirs will be stored in the <code>/tmp</code> directory.</li>

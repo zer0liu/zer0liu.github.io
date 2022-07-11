@@ -13,23 +13,19 @@ Jellyfin is a Free Software Media System that puts you in control of managing an
 
 Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/" />
+<meta property="og:url" content="https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-02-02T00:26:24+08:00" />
 <meta property="article:modified_time" content="2022-02-02T00:26:24+08:00" />
+
 
 		<meta itemprop="name" content="Install and Setup Jellyfin Docker Image">
 <meta itemprop="description" content="
 Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.
 
-Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS.">
-<meta itemprop="datePublished" content="2022-02-02T00:26:24+08:00" />
+Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS."><meta itemprop="datePublished" content="2022-02-02T00:26:24+08:00" />
 <meta itemprop="dateModified" content="2022-02-02T00:26:24+08:00" />
-<meta itemprop="wordCount" content="693">
-
-
-
+<meta itemprop="wordCount" content="695">
 <meta itemprop="keywords" content="NAS,Jellyfin,Linux," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install and Setup Jellyfin Docker Image"/>
 <meta name="twitter:description" content="
@@ -46,17 +42,16 @@ Here recorded the walkthrough of install and setup of Jellyfin docker image in a
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -132,8 +127,8 @@ if (!doNotTrack) {
 <p>Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS.</p>
 <h1 id="1-install-docker">1. Install Docker</h1>
 <h2 id="11-uninstall-old-versions-of-docker-if-necessary">1.1 Uninstall old versions of Docker (if necessary)</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt remove docker docker-engine docker.io containerd runc
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt remove docker docker-engine docker.io containerd runc
+</span></span></code></pre></div><blockquote>
 <p>The contents of <code>/var/lib/docker/</code>, including images, containers, volumes, and networks, are preserved.</p>
 </blockquote>
 <h2 id="12-install-docker-using-the-repository">1.2 Install Docker using the repository</h2>
@@ -141,34 +136,34 @@ if (!doNotTrack) {
 <ol>
 <li>Update the <code>apt</code> package index and install packages to allow <code>apt</code> to use a repository over HTTPS:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update
-
-$ sudo apt-get install <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    ca-certificates <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    curl <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    gnupg <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    lsb-release
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ sudo apt-get install <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    ca-certificates <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    curl <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    gnupg <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    lsb-release
+</span></span></code></pre></div><ol start="2">
 <li>Add Docker’s official GPG key:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-</code></pre></div><ol start="3">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</span></span></code></pre></div><ol start="3">
 <li>Set up the stable repository of Docker</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#34;deb [arch=</span><span style="color:#66d9ef">$(</span>dpkg --print-architecture<span style="color:#66d9ef">)</span><span style="color:#e6db74"> signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
-</span><span style="color:#e6db74">  </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> stable&#34;</span> | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-</code></pre></div><h3 id="122-install-docker-engine">1.2.2 Install Docker engine</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#34;deb [arch=</span><span style="color:#66d9ef">$(</span>dpkg --print-architecture<span style="color:#66d9ef">)</span><span style="color:#e6db74"> signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> stable&#34;</span> | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span></code></pre></div><h3 id="122-install-docker-engine">1.2.2 Install Docker engine</h3>
 <ol>
 <li>Update the <code>apt</code> package index, and install the latest version of Docker Engine and containerd:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
-$ sudo apt install docker-ce docker-ce-cli containerd.io
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt install docker-ce docker-ce-cli containerd.io
+</span></span></code></pre></div><ol start="2">
 <li>Verify that Docker Engine is installed correctly by running the <code>hello-world</code> image.</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo docker run hello-world
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo docker run hello-world
+</span></span></code></pre></div><blockquote>
 <p>This command downloads a test image and runs it in a container. When the container runs, it prints a message and exits.</p>
 </blockquote>
 <h2 id="13-manage-jellyfin-docker-image-as-a-non-root-user-jellygin">1.3 Manage Jellyfin Docker Image as a non-root user <code>jellygin</code></h2>
@@ -181,40 +176,40 @@ $ sudo apt install docker-ce docker-ce-cli containerd.io
 <p>The <code>docker</code> group grants privileges equivalent to the <code>root</code> user. For details on how this impacts security in your system, see <a href="https://docs.docker.com/engine/security/#docker-daemon-attack-surface">Docker Daemon Attack Surface</a>.</p>
 </blockquote>
 <p>First create the user <code>jellyfin</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo adduser jellyfin
-</code></pre></div><p>Then add user <code>jellyfin</code> to the <code>docker</code> group:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo usermod -aG docker jellyfin
-</code></pre></div><p>Have a test:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run hello-world
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo adduser jellyfin
+</span></span></code></pre></div><p>Then add user <code>jellyfin</code> to the <code>docker</code> group:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo usermod -aG docker jellyfin
+</span></span></code></pre></div><p>Have a test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run hello-world
+</span></span></code></pre></div><blockquote>
 <p>For security consideration, append <code>DenyUsers jellyfin</code> to your <code>sshd</code> configuration file, then restart sshd service:</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl restart ssh.service
-</code></pre></div><h1 id="2-install-and-setup-jellyfin-docker-image">2. Install and Setup Jellyfin Docker Image</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl restart ssh.service
+</span></span></code></pre></div><h1 id="2-install-and-setup-jellyfin-docker-image">2. Install and Setup Jellyfin Docker Image</h1>
 <p>Switch user <code>jellyfin</code> at first:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ su jellyfin
-</code></pre></div><h2 id="21-download-the-latest-jellyfin-image">2.1 Download the latest Jellyfin image</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker pull jellyfin/jellyfin
-</code></pre></div><p>You may also try a special version of Jellyfin created by [nyanmisaka|https://hub.docker.com/r/nyanmisaka/jellyfin], which provides full HW filtering.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker pull nyanmisaka/jellyfin
-</code></pre></div><h2 id="22-create-persistent-storage-for-configuration-and-cache-data">2.2 Create persistent storage for configuration and cache data</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ su jellyfin
+</span></span></code></pre></div><h2 id="21-download-the-latest-jellyfin-image">2.1 Download the latest Jellyfin image</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker pull jellyfin/jellyfin
+</span></span></code></pre></div><p>You may also try a special version of Jellyfin created by [nyanmisaka|https://hub.docker.com/r/nyanmisaka/jellyfin], which provides full HW filtering.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker pull nyanmisaka/jellyfin
+</span></span></code></pre></div><h2 id="22-create-persistent-storage-for-configuration-and-cache-data">2.2 Create persistent storage for configuration and cache data</h2>
 <p>As a normal user with <code>sudo</code> privilege, create two directories:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir -p /srv/jellyfin/config
-$ sudo mkdir -p /srv/jellyfin/cache
-</code></pre></div><p>Set full privilege of these directories to user <code>jellyfin</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo chown -R jellyfin:jellyfin /srv/jellyfin
-</code></pre></div><h2 id="23-create-and-run-a-jellyfin-container">2.3 Create and run a Jellyfin container</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo mkdir -p /srv/jellyfin/config
+</span></span><span style="display:flex;"><span>$ sudo mkdir -p /srv/jellyfin/cache
+</span></span></code></pre></div><p>Set full privilege of these directories to user <code>jellyfin</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo chown -R jellyfin:jellyfin /srv/jellyfin
+</span></span></code></pre></div><h2 id="23-create-and-run-a-jellyfin-container">2.3 Create and run a Jellyfin container</h2>
 <p>Switch to user <code>jellyfin</code>, and run Jellyfin container in background:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run -d <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --name jellyfin <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --user 2000:2000 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --net<span style="color:#f92672">=</span>host <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --volume /srv/jellyfin/config:/config <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --volume /srv/jellyfin/cache:/cache <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --mount type<span style="color:#f92672">=</span>bind,source<span style="color:#f92672">=</span>/mnt/warehouse,target<span style="color:#f92672">=</span>/media <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --restart<span style="color:#f92672">=</span>unless-stopped <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  jellyfin/jellyfin
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run -d <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --name jellyfin <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --user 2000:2000 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --net<span style="color:#f92672">=</span>host <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --volume /srv/jellyfin/config:/config <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --volume /srv/jellyfin/cache:/cache <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --mount type<span style="color:#f92672">=</span>bind,source<span style="color:#f92672">=</span>/mnt/warehouse,target<span style="color:#f92672">=</span>/media <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --restart<span style="color:#f92672">=</span>unless-stopped <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  jellyfin/jellyfin
+</span></span></code></pre></div><blockquote>
 <p><strong>Note:</strong> Here assume both of the <code>uid</code> and <code>gid</code> of user <code>jellyfin</code> were <code>2000</code>.</p>
 </blockquote>
 <h2 id="24-issues">2.4 Issues</h2>
@@ -224,16 +219,16 @@ $ sudo mkdir -p /srv/jellyfin/cache
 See &lsquo;docker run &ndash;help&rsquo;.</p>
 </blockquote>
 <p>To solve this issue, first list all containers:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker container list -all
-</code></pre></div><p>The output may like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS                    PORTS     NAMES
-ea619e72b41c   nyanmisaka/jellyfin   <span style="color:#e6db74">&#34;./jellyfin/jellyfin…&#34;</span>   <span style="color:#ae81ff">3</span> hours ago    Up <span style="color:#ae81ff">3</span> hours <span style="color:#f92672">(</span>healthy<span style="color:#f92672">)</span>                jellyfin
-30ad3712cae9   hello-world           <span style="color:#e6db74">&#34;/hello&#34;</span>                 <span style="color:#ae81ff">15</span> hours ago   Exited <span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#ae81ff">15</span> hours ago             quirky_lumiere
-</code></pre></div><p>Next stop the running container <code>jellyfin</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker stop ea619e72b41c 
-</code></pre></div><p>Then remove the existing container <code>jellyfin</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker rm ea619e72b41c 
-</code></pre></div><p>Now it would be OK to run Jellyfin container again.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker container list -all
+</span></span></code></pre></div><p>The output may like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS                    PORTS     NAMES
+</span></span><span style="display:flex;"><span>ea619e72b41c   nyanmisaka/jellyfin   <span style="color:#e6db74">&#34;./jellyfin/jellyfin…&#34;</span>   <span style="color:#ae81ff">3</span> hours ago    Up <span style="color:#ae81ff">3</span> hours <span style="color:#f92672">(</span>healthy<span style="color:#f92672">)</span>                jellyfin
+</span></span><span style="display:flex;"><span>30ad3712cae9   hello-world           <span style="color:#e6db74">&#34;/hello&#34;</span>                 <span style="color:#ae81ff">15</span> hours ago   Exited <span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#ae81ff">15</span> hours ago             quirky_lumiere
+</span></span></code></pre></div><p>Next stop the running container <code>jellyfin</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker stop ea619e72b41c 
+</span></span></code></pre></div><p>Then remove the existing container <code>jellyfin</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker rm ea619e72b41c 
+</span></span></code></pre></div><p>Now it would be OK to run Jellyfin container again.</p>
 <h1 id="a-references">A. References</h1>
 <ol>
 <li><a href="https://github.com/jellyfin/jellyfin">Jellyfin project</a></li>

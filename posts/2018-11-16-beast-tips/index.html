@@ -10,20 +10,16 @@
 		<meta property="og:title" content="BEAST Tips" />
 <meta property="og:description" content="BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2018-11-16-beast-tips/" />
+<meta property="og:url" content="https://omicx.cc/posts/2018-11-16-beast-tips/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2018-11-16T12:13:43+00:00" />
 <meta property="article:modified_time" content="2018-11-16T12:13:43+00:00" />
 
+
 		<meta itemprop="name" content="BEAST Tips">
-<meta itemprop="description" content="BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.">
-<meta itemprop="datePublished" content="2018-11-16T12:13:43+00:00" />
+<meta itemprop="description" content="BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST."><meta itemprop="datePublished" content="2018-11-16T12:13:43+00:00" />
 <meta itemprop="dateModified" content="2018-11-16T12:13:43+00:00" />
 <meta itemprop="wordCount" content="212">
-
-
-
 <meta itemprop="keywords" content="BEAST,Tips," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="BEAST Tips"/>
 <meta name="twitter:description" content="BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST."/>
@@ -37,17 +33,16 @@
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -107,24 +102,24 @@ if (!doNotTrack) {
 <p><a href="https://github.com/beagle-dev/beagle-lib">Beagle-lib</a> accelerates Bayesian and Maximun Likelihood phylogenetic software amazingly. Especially the beagle-lib v3.x improves 20-50% than version 2.x.</p>
 <h2 id="11-compile-beagle-lib-without-cuda-and-opencl">1.1 Compile beagle-lib without CUDA and OpenCL</h2>
 <p>Although CUDA and OpenCL improves BEAST computing significantly, how to install beagle-lib without an Nvidia GPU card?</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./configure --without-cuda --without-opencl
-</code></pre></div><p>It will show these warning messages:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">configure: WARNING: OpenCL not found or disabled.  OpenCL implementation  will not be built. If OpenCL support is desired, check the path to OpenCL and specify --with-opencl<span style="color:#f92672">=</span>/path/to/opencl
-configure: WARNING: NVIDIA CUDA nvcc compiler not found or CUDA support disabled.  CUDA implementation will not be built. If CUDA support is desired, check the path to CUDA and specify --with-cuda<span style="color:#f92672">=</span>/path/to/cuda
-</code></pre></div><p>It&rsquo;s OK. Simply continue with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make install
-</code></pre></div><p>And do not forget run test with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make check
-</code></pre></div><h2 id="12-install-beagle-lib-in-custom-path">1.2 Install beagle-lib in custom path</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./configure --without-cuda --without-opencl
+</span></span></code></pre></div><p>It will show these warning messages:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>configure: WARNING: OpenCL not found or disabled.  OpenCL implementation  will not be built. If OpenCL support is desired, check the path to OpenCL and specify --with-opencl<span style="color:#f92672">=</span>/path/to/opencl
+</span></span><span style="display:flex;"><span>configure: WARNING: NVIDIA CUDA nvcc compiler not found or CUDA support disabled.  CUDA implementation will not be built. If CUDA support is desired, check the path to CUDA and specify --with-cuda<span style="color:#f92672">=</span>/path/to/cuda
+</span></span></code></pre></div><p>It&rsquo;s OK. Simply continue with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make install
+</span></span></code></pre></div><p>And do not forget run test with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make check
+</span></span></code></pre></div><h2 id="12-install-beagle-lib-in-custom-path">1.2 Install beagle-lib in custom path</h2>
 <p>Sometimes it&rsquo;s not possible to install beagle-lib in the default system library path <em>/usr/local/lib</em>. It could be resolved by setting the environment variable <code>LD_LIBRARY_PATH</code>.</p>
 <p>For example, to install beagle-lib into <em>/data/lib</em>, in configure step:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./configure --prefix<span style="color:#f92672">=</span>/data
-make install
-</code></pre></div><p>Then append to <em>.bashrc</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export LD_LIBRARY_PATH<span style="color:#f92672">=</span>/data/lib:$LD_LIBRARY_PATH
-</code></pre></div><p>Then run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">source .bashrc
-</code></pre></div><p>to enable the environment change.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./configure --prefix<span style="color:#f92672">=</span>/data
+</span></span><span style="display:flex;"><span>make install
+</span></span></code></pre></div><p>Then append to <em>.bashrc</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export LD_LIBRARY_PATH<span style="color:#f92672">=</span>/data/lib:$LD_LIBRARY_PATH
+</span></span></code></pre></div><p>Then run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source .bashrc
+</span></span></code></pre></div><p>to enable the environment change.</p>
 		</div>
 		<footer class="post__footer">
 			

@@ -11,21 +11,17 @@
 <meta property="og:description" content="A couple of days ago, I received an email from the Let&rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.
 So I spent some time to fix the problem." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/" />
+<meta property="og:url" content="https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-08-04T23:11:34+00:00" />
 <meta property="article:modified_time" content="2020-08-04T23:11:34+00:00" />
 
+
 		<meta itemprop="name" content="Enable certbot automatic renewal for cloudflare CDN">
 <meta itemprop="description" content="A couple of days ago, I received an email from the Let&rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.
-So I spent some time to fix the problem.">
-<meta itemprop="datePublished" content="2020-08-04T23:11:34+00:00" />
+So I spent some time to fix the problem."><meta itemprop="datePublished" content="2020-08-04T23:11:34+00:00" />
 <meta itemprop="dateModified" content="2020-08-04T23:11:34+00:00" />
 <meta itemprop="wordCount" content="327">
-
-
-
 <meta itemprop="keywords" content="certbot,cloudflare,Debian,Letsencrypt," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Enable certbot automatic renewal for cloudflare CDN"/>
 <meta name="twitter:description" content="A couple of days ago, I received an email from the Let&rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.
@@ -40,17 +36,16 @@ So I spent some time to fix the problem."/>
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -119,16 +114,16 @@ if (!doNotTrack) {
 <h1 id="1-background">1. Background</h1>
 <h2 id="11-os-http-server-and-certbot-encryption">1.1 OS, HTTP server and Certbot encryption</h2>
 <p>The OS for the server is Debian 10/buster and nginx HTTP server was installed. It has been encrypted by certbot as <a href="https://certbot.eff.org/lets-encrypt/debianbuster-nginx">suggested</a>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Install certbot</span>
-sudo apt-get install certbot python-certbot-nginx
-
-<span style="color:#75715e"># Get a certificate and have Certbot edit the Nginx configuration automatically to serve it, </span>
-<span style="color:#75715e"># turning on HTTPS access in a single step</span>
-sudo certbot --nginx
-
-<span style="color:#75715e"># Test automatic renewal</span>
-sudo certbot renew --dry-run
-</code></pre></div><p>For the Cloudflare, this domain was configured as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Install certbot</span>
+</span></span><span style="display:flex;"><span>sudo apt-get install certbot python-certbot-nginx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get a certificate and have Certbot edit the Nginx configuration automatically to serve it, </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># turning on HTTPS access in a single step</span>
+</span></span><span style="display:flex;"><span>sudo certbot --nginx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Test automatic renewal</span>
+</span></span><span style="display:flex;"><span>sudo certbot renew --dry-run
+</span></span></code></pre></div><p>For the Cloudflare, this domain was configured as:</p>
 <ul>
 <li>DNS:
 <ul>
@@ -146,38 +141,38 @@ sudo certbot renew --dry-run
 <p>When I run <code>certbot renew --dry-run</code>, there were error message mentioned DNS stuff.</p>
 <h1 id="2-fix-error">2. Fix error</h1>
 <h2 id="21-install-certbot-cloudflare-related-packages">2.1 Install certbot cloudflare related packages</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install python3-cloudflare python3-certbot-dns-cloudflare
-</code></pre></div><h2 id="22-create-a-cloudflare-credential-file">2.2 Create a cloudflare credential file</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mkdir /etc/cloudflare
-cd /etc/cloudflare
-touch credential.ini
-</code></pre></div><p>According to the version of python3-cloudflare, the content of <em><strong>credential.ini</strong></em> is different:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3-cloudflare python3-certbot-dns-cloudflare
+</span></span></code></pre></div><h2 id="22-create-a-cloudflare-credential-file">2.2 Create a cloudflare credential file</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mkdir /etc/cloudflare
+</span></span><span style="display:flex;"><span>cd /etc/cloudflare
+</span></span><span style="display:flex;"><span>touch credential.ini
+</span></span></code></pre></div><p>According to the version of python3-cloudflare, the content of <em><strong>credential.ini</strong></em> is different:</p>
 <ul>
 <li>Version 2.3.1 or later</li>
 </ul>
 <blockquote>
 <p>Use cloudflare restricted API Token (<strong>recommended</strong>)</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dns_cloudflare_api_token <span style="color:#f92672">=</span> 0123456789abcdef0123456789abcdef01234567
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dns_cloudflare_api_token <span style="color:#f92672">=</span> 0123456789abcdef0123456789abcdef01234567
+</span></span></code></pre></div><ul>
 <li>Version earlier than 2.3.1</li>
 </ul>
 <blockquote>
 <p>Use GLobal API Key (<strong>NOT recommended</strong>)</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dns_cloudflare_email <span style="color:#f92672">=</span> cloudflare@example.com
-dns_cloudflare_api_key <span style="color:#f92672">=</span> 0123456789abcdef0123456789abcdef01234
-</code></pre></div><h2 id="23-restrict-accession-of-the-credential-file">2.3 Restrict accession of the credential file</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chmod <span style="color:#ae81ff">0600</span> /etc/cloudflare/credential.ini
-</code></pre></div><h2 id="24-acquire-new-certificate">2.4 Acquire new certificate</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dns_cloudflare_email <span style="color:#f92672">=</span> cloudflare@example.com
+</span></span><span style="display:flex;"><span>dns_cloudflare_api_key <span style="color:#f92672">=</span> 0123456789abcdef0123456789abcdef01234
+</span></span></code></pre></div><h2 id="23-restrict-accession-of-the-credential-file">2.3 Restrict accession of the credential file</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod <span style="color:#ae81ff">0600</span> /etc/cloudflare/credential.ini
+</span></span></code></pre></div><h2 id="24-acquire-new-certificate">2.4 Acquire new certificate</h2>
 <p>Since the encryption already configured, here generate new certificate only:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo certbot certonly <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --dns-cloudflare <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --dns-cloudflare-credentials /etc/cloudflare/credential.ini
-  -d www.mydomain.com
-</code></pre></div><h2 id="25-test-certbot-automatic-renewal">2.5 Test certbot automatic renewal</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo certbot renew --dry-run
-</code></pre></div><p>Now, the auto renew is OK.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo certbot certonly <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --dns-cloudflare <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --dns-cloudflare-credentials /etc/cloudflare/credential.ini
+</span></span><span style="display:flex;"><span>  -d www.mydomain.com
+</span></span></code></pre></div><h2 id="25-test-certbot-automatic-renewal">2.5 Test certbot automatic renewal</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo certbot renew --dry-run
+</span></span></code></pre></div><p>Now, the auto renew is OK.</p>
 <h1 id="a-reference">A. Reference</h1>
 <ul>
 <li><a href="https://certbot.eff.org/docs/">certbot documentation</a></li>

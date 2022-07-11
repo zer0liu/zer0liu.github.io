@@ -11,21 +11,17 @@
 <meta property="og:description" content="There is still no official OneDrive client for Linux, the project &ldquo;OneDrive Client for Linux&rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.
 This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/" />
+<meta property="og:url" content="https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-01-23T22:31:09+08:00" />
 <meta property="article:modified_time" content="2022-01-23T22:31:09+08:00" />
 
+
 		<meta itemprop="name" content="Install and Setup OneDrive Client in a Headless Debian Server">
 <meta itemprop="description" content="There is still no official OneDrive client for Linux, the project &ldquo;OneDrive Client for Linux&rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.
-This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server.">
-<meta itemprop="datePublished" content="2022-01-23T22:31:09+08:00" />
+This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server."><meta itemprop="datePublished" content="2022-01-23T22:31:09+08:00" />
 <meta itemprop="dateModified" content="2022-01-23T22:31:09+08:00" />
 <meta itemprop="wordCount" content="1021">
-
-
-
 <meta itemprop="keywords" content="Linux,OneDrive," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install and Setup OneDrive Client in a Headless Debian Server"/>
 <meta name="twitter:description" content="There is still no official OneDrive client for Linux, the project &ldquo;OneDrive Client for Linux&rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.
@@ -40,17 +36,16 @@ This post is the workthrough of installation and configuration of OneDrive Linux
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -127,108 +122,108 @@ if (!doNotTrack) {
 <p>I am working on a server with Debian bullseye/11, kernel version 5.11 x86_64.</p>
 <h1 id="1-installation">1. Installation</h1>
 <p>It is quiet easy to install OneDrive Client in Debian:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
-$ sudo apt install onedrive
-</code></pre></div><p>If you&rsquo;d like to build from source, please read the <a href="https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md">document</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt install onedrive
+</span></span></code></pre></div><p>If you&rsquo;d like to build from source, please read the <a href="https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md">document</a>.</p>
 <h1 id="2-authorize-the-application-with-your-onedrive-account">2. Authorize the application with your OneDrive Account</h1>
 <p>authorization of the application with your OneDrive Account is necessary. Simply run the application without any command switches:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ onedrive
-</code></pre></div><p>You will be asked to open a specific URL by using your web browser where you will have to login into your Microsoft Account and give the application the permission to access your files. After giving permission to the application, you will be redirected to a blank page. Copy the URI of the blank page into the application.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ onedrive
-Configuring Global Azure AD Endpoints
-Authorize this app visiting:
-
-https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id<span style="color:#f92672">=</span>...
-
-Enter the response uri: https://login.microsoftonline.com/common/oauth2/nativeclient?code<span style="color:#f92672">=</span>...
-
-Application has been successfully authorised, however no additional command switches were provided.
-
-Please use --help <span style="color:#66d9ef">for</span> further assistance in regards to running this application.
-</code></pre></div><h1 id="3-configuration">3. Configuration</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ onedrive
+</span></span></code></pre></div><p>You will be asked to open a specific URL by using your web browser where you will have to login into your Microsoft Account and give the application the permission to access your files. After giving permission to the application, you will be redirected to a blank page. Copy the URI of the blank page into the application.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ onedrive
+</span></span><span style="display:flex;"><span>Configuring Global Azure AD Endpoints
+</span></span><span style="display:flex;"><span>Authorize this app visiting:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id<span style="color:#f92672">=</span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter the response uri: https://login.microsoftonline.com/common/oauth2/nativeclient?code<span style="color:#f92672">=</span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Application has been successfully authorised, however no additional command switches were provided.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Please use --help <span style="color:#66d9ef">for</span> further assistance in regards to running this application.
+</span></span></code></pre></div><h1 id="3-configuration">3. Configuration</h1>
 <h2 id="31-display-current-configuration">3.1 Display current configuration</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ onedrive --display-config
-</code></pre></div><p>E.g.,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">onedrive version                       <span style="color:#f92672">=</span> v2.4.10-1
-Config path                            <span style="color:#f92672">=</span> /home/user/.config/onedrive
-Config file found in config path       <span style="color:#f92672">=</span> false
-Config option <span style="color:#e6db74">&#39;check_nosync&#39;</span>           <span style="color:#f92672">=</span> false
-Config option <span style="color:#e6db74">&#39;sync_dir&#39;</span>               <span style="color:#f92672">=</span> /home/user/OneDrive
-Config option <span style="color:#e6db74">&#39;skip_dir&#39;</span>               <span style="color:#f92672">=</span> 
-Config option <span style="color:#e6db74">&#39;skip_file&#39;</span>              <span style="color:#f92672">=</span> ~*|.~*|*.tmp
-Config option <span style="color:#e6db74">&#39;skip_dotfiles&#39;</span>          <span style="color:#f92672">=</span> false
-Config option <span style="color:#e6db74">&#39;skip_symlinks&#39;</span>          <span style="color:#f92672">=</span> false
-Config option <span style="color:#e6db74">&#39;monitor_interval&#39;</span>       <span style="color:#f92672">=</span> <span style="color:#ae81ff">300</span>
-Config option <span style="color:#e6db74">&#39;min_notify_changes&#39;</span>     <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
-Config option <span style="color:#e6db74">&#39;log_dir&#39;</span>                <span style="color:#f92672">=</span> /var/log/onedrive/
-Config option <span style="color:#e6db74">&#39;classify_as_big_delete&#39;</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>
-Config option <span style="color:#e6db74">&#39;upload_only&#39;</span>            <span style="color:#f92672">=</span> false
-Config option <span style="color:#e6db74">&#39;no_remote_delete&#39;</span>       <span style="color:#f92672">=</span> false
-Config option <span style="color:#e6db74">&#39;remove_source_files&#39;</span>    <span style="color:#f92672">=</span> false
-Config option <span style="color:#e6db74">&#39;sync_root_files&#39;</span>        <span style="color:#f92672">=</span> false
-Selective sync <span style="color:#e6db74">&#39;sync_list&#39;</span> configured  <span style="color:#f92672">=</span> false
-Business Shared Folders configured     <span style="color:#f92672">=</span> false
-</code></pre></div><h2 id="32-customize-configuration">3.2 Customize configuration</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ onedrive --display-config
+</span></span></code></pre></div><p>E.g.,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>onedrive version                       <span style="color:#f92672">=</span> v2.4.10-1
+</span></span><span style="display:flex;"><span>Config path                            <span style="color:#f92672">=</span> /home/user/.config/onedrive
+</span></span><span style="display:flex;"><span>Config file found in config path       <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;check_nosync&#39;</span>           <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;sync_dir&#39;</span>               <span style="color:#f92672">=</span> /home/user/OneDrive
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;skip_dir&#39;</span>               <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;skip_file&#39;</span>              <span style="color:#f92672">=</span> ~*|.~*|*.tmp
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;skip_dotfiles&#39;</span>          <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;skip_symlinks&#39;</span>          <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;monitor_interval&#39;</span>       <span style="color:#f92672">=</span> <span style="color:#ae81ff">300</span>
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;min_notify_changes&#39;</span>     <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;log_dir&#39;</span>                <span style="color:#f92672">=</span> /var/log/onedrive/
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;classify_as_big_delete&#39;</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;upload_only&#39;</span>            <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;no_remote_delete&#39;</span>       <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;remove_source_files&#39;</span>    <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>Config option <span style="color:#e6db74">&#39;sync_root_files&#39;</span>        <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>Selective sync <span style="color:#e6db74">&#39;sync_list&#39;</span> configured  <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>Business Shared Folders configured     <span style="color:#f92672">=</span> false
+</span></span></code></pre></div><h2 id="32-customize-configuration">3.2 Customize configuration</h2>
 <p>The <em>config</em> file does not get created by default, and should only be created if you want to change the <em>default</em> operational parameters.</p>
 <p>Valid directories for the config file are:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~/.config/onedrive
-<span style="color:#75715e"># or</span>
-/etc/onedrive
-</code></pre></div><p>For Debian bullseye/11, the <em>config</em> file template is located at:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/usr/share/doc/onedrive/config
-</code></pre></div><p>So, you need to do:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir -p ~/.config/onedrive
-cp /usr/share/doc/onedrive/config ~/.config/onedrive/config
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.config/onedrive
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># or</span>
+</span></span><span style="display:flex;"><span>/etc/onedrive
+</span></span></code></pre></div><p>For Debian bullseye/11, the <em>config</em> file template is located at:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/share/doc/onedrive/config
+</span></span></code></pre></div><p>So, you need to do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir -p ~/.config/onedrive
+</span></span><span style="display:flex;"><span>cp /usr/share/doc/onedrive/config ~/.config/onedrive/config
+</span></span></code></pre></div><blockquote>
 <p>Please note, the latest OneDrive Client version is <strong>2.4.15</strong>, whereas in Debian bullseye/11, it is <strong>2.4.10</strong>. So there are slightly difference between these two versions.</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /usr/share/doc/onedrive/config
-<span style="color:#75715e"># Configuration for OneDrive Linux Client</span>
-<span style="color:#75715e"># This file contains the list of supported configuration fields</span>
-<span style="color:#75715e"># with their default values.</span>
-<span style="color:#75715e"># All values need to be enclosed in quotes</span>
-<span style="color:#75715e"># When changing a config option below, remove the &#39;#&#39; from the start of the line</span>
-<span style="color:#75715e"># For explanations of all config options below see docs/USAGE.md or the man page.</span>
-<span style="color:#75715e">#</span>
-<span style="color:#75715e"># sync_dir = &#34;~/OneDrive&#34;</span>
-<span style="color:#75715e"># skip_file = &#34;~*|.~*|*.tmp&#34;</span>
-<span style="color:#75715e"># monitor_interval = &#34;300&#34;</span>
-<span style="color:#75715e"># skip_dir = &#34;&#34;</span>
-<span style="color:#75715e"># log_dir = &#34;/var/log/onedrive/&#34;</span>
-<span style="color:#75715e"># drive_id = &#34;&#34;</span>
-<span style="color:#75715e"># upload_only = &#34;false&#34;</span>
-<span style="color:#75715e"># check_nomount = &#34;false&#34;</span>
-<span style="color:#75715e"># check_nosync = &#34;false&#34;</span>
-<span style="color:#75715e"># download_only = &#34;false&#34;</span>
-<span style="color:#75715e"># disable_notifications = &#34;false&#34;</span>
-<span style="color:#75715e"># disable_upload_validation = &#34;false&#34;</span>
-<span style="color:#75715e"># enable_logging = &#34;false&#34;</span>
-<span style="color:#75715e"># force_http_11 = &#34;false&#34;</span>
-<span style="color:#75715e"># force_http_2 = &#34;false&#34;</span>
-<span style="color:#75715e"># local_first = &#34;false&#34;</span>
-<span style="color:#75715e"># no_remote_delete = &#34;false&#34;</span>
-<span style="color:#75715e"># skip_symlinks = &#34;false&#34;</span>
-<span style="color:#75715e"># debug_https = &#34;false&#34;</span>
-<span style="color:#75715e"># skip_dotfiles = &#34;false&#34;</span>
-<span style="color:#75715e"># dry_run = &#34;false&#34;</span>
-<span style="color:#75715e"># min_notify_changes = &#34;5&#34;</span>
-<span style="color:#75715e"># monitor_log_frequency = &#34;5&#34;</span>
-<span style="color:#75715e"># monitor_fullscan_frequency = &#34;10&#34;</span>
-<span style="color:#75715e"># sync_root_files = &#34;false&#34;</span>
-<span style="color:#75715e"># classify_as_big_delete = &#34;1000&#34;</span>
-<span style="color:#75715e"># user_agent = &#34;&#34;</span>
-<span style="color:#75715e"># remove_source_files = &#34;false&#34;</span>
-<span style="color:#75715e"># skip_dir_strict_match = &#34;false&#34;</span>
-<span style="color:#75715e"># application_id = &#34;&#34;</span>
-<span style="color:#75715e"># resync = &#34;false&#34;</span>
-<span style="color:#75715e"># bypass_data_preservation = &#34;false&#34;</span>
-<span style="color:#75715e"># azure_ad_endpoint = &#34;&#34;</span>
-<span style="color:#75715e"># azure_tenant_id = &#34;common&#34;</span>
-<span style="color:#75715e"># sync_business_shared_folders = &#34;false&#34;</span>
-<span style="color:#75715e"># sync_dir_permissions = &#34;700&#34;</span>
-<span style="color:#75715e"># sync_file_permissions = &#34;600&#34;</span>
-<span style="color:#75715e"># rate_limit = &#34;131072&#34;</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /usr/share/doc/onedrive/config
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Configuration for OneDrive Linux Client</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This file contains the list of supported configuration fields</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># with their default values.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># All values need to be enclosed in quotes</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># When changing a config option below, remove the &#39;#&#39; from the start of the line</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># For explanations of all config options below see docs/USAGE.md or the man page.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sync_dir = &#34;~/OneDrive&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># skip_file = &#34;~*|.~*|*.tmp&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># monitor_interval = &#34;300&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># skip_dir = &#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># log_dir = &#34;/var/log/onedrive/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># drive_id = &#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># upload_only = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># check_nomount = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># check_nosync = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># download_only = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># disable_notifications = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># disable_upload_validation = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># enable_logging = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># force_http_11 = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># force_http_2 = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># local_first = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># no_remote_delete = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># skip_symlinks = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># debug_https = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># skip_dotfiles = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># dry_run = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># min_notify_changes = &#34;5&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># monitor_log_frequency = &#34;5&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># monitor_fullscan_frequency = &#34;10&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sync_root_files = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># classify_as_big_delete = &#34;1000&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># user_agent = &#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># remove_source_files = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># skip_dir_strict_match = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># application_id = &#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># resync = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># bypass_data_preservation = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># azure_ad_endpoint = &#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># azure_tenant_id = &#34;common&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sync_business_shared_folders = &#34;false&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sync_dir_permissions = &#34;700&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sync_file_permissions = &#34;600&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># rate_limit = &#34;131072&#34;</span>
+</span></span></code></pre></div><blockquote>
 <p>The <em>config</em> file for <strong>2.4.15</strong> can be viewed at <a href="https://raw.githubusercontent.com/abraunegg/onedrive/master/config">here</a>.</p>
 </blockquote>
 <h2 id="33-some-common-used-configuration-settings">3.3 Some common used configuration settings</h2>
@@ -243,8 +238,8 @@ cp /usr/share/doc/onedrive/config ~/.config/onedrive/config
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ onedrive --synchronize --resync
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ onedrive --synchronize --resync
+</span></span></code></pre></div><ul>
 <li>Directory and file permissions:
 <ul>
 <li>Directories: <code>0700</code>, or <code>drwx------</code></li>
@@ -337,23 +332,23 @@ cp /usr/share/doc/onedrive/config ~/.config/onedrive/config
 </ul>
 <h1 id="4-test-the-configuration">4. Test the configuration</h1>
 <p>You can test your configuration by utilising the <code>--dry-run</code> CLI option, no changes will be applied.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ onedrive --synchronize --verbose --dry-run
-DRY-RUN Configured. Output below shows what <span style="color:#e6db74">&#39;would&#39;</span> have occurred.
-Loading config ...
-Using Config Dir: /home/user/.config/onedrive
-Initializing the OneDrive API ...
-Opening the item database ...
-All operations will be performed in: /home/user/OneDrive
-Initializing the Synchronization Engine ...
-Account Type: personal
-...
-</code></pre></div><h1 id="5-performing-a-sync">5. Performing a sync</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ onedrive --synchronize --verbose --dry-run
+</span></span><span style="display:flex;"><span>DRY-RUN Configured. Output below shows what <span style="color:#e6db74">&#39;would&#39;</span> have occurred.
+</span></span><span style="display:flex;"><span>Loading config ...
+</span></span><span style="display:flex;"><span>Using Config Dir: /home/user/.config/onedrive
+</span></span><span style="display:flex;"><span>Initializing the OneDrive API ...
+</span></span><span style="display:flex;"><span>Opening the item database ...
+</span></span><span style="display:flex;"><span>All operations will be performed in: /home/user/OneDrive
+</span></span><span style="display:flex;"><span>Initializing the Synchronization Engine ...
+</span></span><span style="display:flex;"><span>Account Type: personal
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><h1 id="5-performing-a-sync">5. Performing a sync</h1>
 <p>Simply running:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ onedrive --synchronize
-</code></pre></div><h1 id="6-run-onedrive-as-a-non-root-user-via-systemd-in-debian">6. Run <code>onedrive</code> as a non-root user via systemd in Debian</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ systemctl --user enable onedrive
-$ systemctl --user start onedrive
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ onedrive --synchronize
+</span></span></code></pre></div><h1 id="6-run-onedrive-as-a-non-root-user-via-systemd-in-debian">6. Run <code>onedrive</code> as a non-root user via systemd in Debian</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ systemctl --user enable onedrive
+</span></span><span style="display:flex;"><span>$ systemctl --user start onedrive
+</span></span></code></pre></div><blockquote>
 <p><strong>NOTE:</strong> For other Linux distributions, please visit <a href="https://github.com/abraunegg/onedrive/blob/master/docs/USAGE.md#running-onedrive-as-a-system-service">document</a>.</p>
 </blockquote>
 <h1 id="a-reference">A. Reference</h1>

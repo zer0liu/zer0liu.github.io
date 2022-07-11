@@ -11,11 +11,10 @@
 <meta property="og:description" content="A blog for bioinformatics, statistics and Omics" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://omicx.cc/tags/debian/" />
-<meta property="og:updated_time" content="2021-06-22T12:55:33+08:00" />
+
 
 		<meta itemprop="name" content="Debian">
 <meta itemprop="description" content="A blog for bioinformatics, statistics and Omics">
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Debian"/>
 <meta name="twitter:description" content="A blog for bioinformatics, statistics and Omics"/>
@@ -30,17 +29,16 @@
 	<link rel="alternate" type="application/rss+xml" href="/tags/debian/index.xml" title="OmicX">
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -113,8 +111,8 @@ if (!doNotTrack) {
 	<div class="content list__excerpt post__content clearfix">
 		<p><a href="https://github.com/beagle-dev/beagle-lib">BEAGLE</a> is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.</p>
 <p>When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nvcc fatal   : Value <span style="color:#e6db74">&#39;compute_30&#39;</span> is not defined <span style="color:#66d9ef">for</span> option <span style="color:#e6db74">&#39;gpu-architecture&#39;</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nvcc fatal   : Value <span style="color:#e6db74">&#39;compute_30&#39;</span> is not defined <span style="color:#66d9ef">for</span> option <span style="color:#e6db74">&#39;gpu-architecture&#39;</span>
+</span></span></code></pre></div>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/">Read more…</a>

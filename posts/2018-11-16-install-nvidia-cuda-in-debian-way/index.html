@@ -13,23 +13,19 @@ For Debian stable/Stretch
 
 Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/" />
+<meta property="og:url" content="https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2018-11-16T10:03:23+00:00" />
 <meta property="article:modified_time" content="2018-11-16T10:03:23+00:00" />
+
 
 		<meta itemprop="name" content="Install Nvidia CUDA in Debian Way">
 <meta itemprop="description" content="
 For Debian stable/Stretch
 
-Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.">
-<meta itemprop="datePublished" content="2018-11-16T10:03:23+00:00" />
+Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way."><meta itemprop="datePublished" content="2018-11-16T10:03:23+00:00" />
 <meta itemprop="dateModified" content="2018-11-16T10:03:23+00:00" />
 <meta itemprop="wordCount" content="191">
-
-
-
 <meta itemprop="keywords" content="Nvidia,CUDA,Debian," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install Nvidia CUDA in Debian Way"/>
 <meta name="twitter:description" content="
@@ -46,17 +42,16 @@ Install NVidia driver in Linux server is always tedious and painful. Fortunatell
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -115,28 +110,28 @@ if (!doNotTrack) {
 <p>Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.</p>
 <h1 id="1-check-repository-source">1. Check repository source:</h1>
 <p>For Debian stable/Stretch, the content of <em>/etc/apt/sources.list</em> file may looks like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">deb http://ftp.debian.org/debian/ stretch main contrib non-free
-</code></pre></div><h1 id="2-remove-previous-installed-nvidia-drivers-if-necessary">2. Remove previous installed NVidia drivers if necessary</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># apt-get remove --purge nvidia*</span>
-</code></pre></div><h1 id="3-install-new-nvidia-drivers">3. Install new NVidia drivers</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># apt-get install nvidia-driver</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>deb http://ftp.debian.org/debian/ stretch main contrib non-free
+</span></span></code></pre></div><h1 id="2-remove-previous-installed-nvidia-drivers-if-necessary">2. Remove previous installed NVidia drivers if necessary</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># apt-get remove --purge nvidia*</span>
+</span></span></code></pre></div><h1 id="3-install-new-nvidia-drivers">3. Install new NVidia drivers</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># apt-get install nvidia-driver</span>
+</span></span></code></pre></div><ul>
 <li>The current nvidia-driver version is <strong>384.130</strong>.</li>
 </ul>
 <p>And CUDA</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># apt-get install nvidia-cuda-toolkit</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># apt-get install nvidia-cuda-toolkit</span>
+</span></span></code></pre></div><ul>
 <li>The current nvidia-cuda-toolkit version is <strong>8.0.44</strong>.</li>
 </ul>
 <h1 id="4-how-about-the-up-to-date-nvidia-driver-and-cuda-toolkit">4. How about the up-to-date NVidia driver and CUDA toolkit?</h1>
 <p>One possibility is to use Debian testing/Buster, or unstable/Sid distrubutions. If we&rsquo;d like to stick to stable/Stretch, the alternative way is to launch <a href="https://backports.debian.org">Debian stable backports</a>.</p>
 <p>At first, append this line to <em>/etc/apt/sources.list</em> file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">deb http://ftp.debian.org/debian stable-backports main contrib non-free
-</code></pre></div><p>Then, run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># apt-get update</span>
-</code></pre></div><p>Now we can install recent packages from backports distribution:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># apt-get -t stable-backports install nvidia-driver nvidia-cuda-toolkit</span>
-</code></pre></div><p>The current (2018-11-12) version of NVidia driver and CUDA toolkit in Debian stable backports are <strong>390.87</strong> and <strong>9.1.85</strong>, respectively.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>deb http://ftp.debian.org/debian stable-backports main contrib non-free
+</span></span></code></pre></div><p>Then, run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># apt-get update</span>
+</span></span></code></pre></div><p>Now we can install recent packages from backports distribution:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># apt-get -t stable-backports install nvidia-driver nvidia-cuda-toolkit</span>
+</span></span></code></pre></div><p>The current (2018-11-12) version of NVidia driver and CUDA toolkit in Debian stable backports are <strong>390.87</strong> and <strong>9.1.85</strong>, respectively.</p>
 		</div>
 		<footer class="post__footer">
 			

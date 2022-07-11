@@ -11,21 +11,17 @@
 <meta property="og:description" content="Calculating or verifying md5 checksums for lots of file always a time-consuming process. Here are some notes for how to work with md5 checksum via GNU parallel.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/" />
+<meta property="og:url" content="https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-04-28T11:51:45+08:00" />
 <meta property="article:modified_time" content="2021-04-28T11:51:45+08:00" />
 
+
 		<meta itemprop="name" content=" Batch Calculate and Verify MD5 Checksum With GNU Parallel">
 <meta itemprop="description" content="Calculating or verifying md5 checksums for lots of file always a time-consuming process. Here are some notes for how to work with md5 checksum via GNU parallel.
-">
-<meta itemprop="datePublished" content="2021-04-28T11:51:45+08:00" />
+"><meta itemprop="datePublished" content="2021-04-28T11:51:45+08:00" />
 <meta itemprop="dateModified" content="2021-04-28T11:51:45+08:00" />
 <meta itemprop="wordCount" content="111">
-
-
-
 <meta itemprop="keywords" content="GNU parallel,Linux," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=" Batch Calculate and Verify MD5 Checksum With GNU Parallel"/>
 <meta name="twitter:description" content="Calculating or verifying md5 checksums for lots of file always a time-consuming process. Here are some notes for how to work with md5 checksum via GNU parallel.
@@ -40,17 +36,16 @@
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -107,16 +102,16 @@ if (!doNotTrack) {
 <p><img src="https://www.gnu.org/software/parallel/logo-gray+black300.png" alt="GNU parallel logo"></p>
 <h1 id="1-install-gnu-parallel">1. Install GNU parallel</h1>
 <p>In Debian:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
-sudo apt install parallel
-</code></pre></div><h1 id="2-calaulate-md5-checksum-in-batch">2. Calaulate md5 checksum in batch</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find /data -type f | parallel -j <span style="color:#ae81ff">64</span> md5sum &gt; md5.txt
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install parallel
+</span></span></code></pre></div><h1 id="2-calaulate-md5-checksum-in-batch">2. Calaulate md5 checksum in batch</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find /data -type f | parallel -j <span style="color:#ae81ff">64</span> md5sum &gt; md5.txt
+</span></span></code></pre></div><blockquote>
 <p>The <code>-j</code> option indicates the maximum number of jobs that are run at the same time.</p>
 </blockquote>
 <h1 id="3-verify-md5-checksum-in-batch">3. Verify md5 checksum in batch</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat md5.txt | parallel --pipe -N1 md5sum -c
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat md5.txt | parallel --pipe -N1 md5sum -c
+</span></span></code></pre></div><blockquote>
 <p><code>-N</code> indicates use at most number of arguments per command line.</p>
 <p>If files are small, use <code>-N100</code>.</p>
 </blockquote>

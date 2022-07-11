@@ -15,9 +15,10 @@ fatal error: hdf5.h: No such file or directory
 compilation terminated.
 My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2020-10-20-install-hdf5r-package/" />
+<meta property="og:url" content="https://omicx.cc/posts/2020-10-20-install-hdf5r-package/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-10-20T15:35:10+00:00" />
 <meta property="article:modified_time" content="2020-10-20T15:35:10+00:00" />
+
 
 		<meta itemprop="name" content="Install hdf5r package in R 4.0.2">
 <meta itemprop="description" content="While installing the R package &ldquo;hdf5r&rdquo; version 1.3.3, I encountered the error:
@@ -25,15 +26,10 @@ fatal error: hdf5.h: No such file or directory
  #include &lt;hdf5.h&gt;
           ^~~~~~~~
 compilation terminated.
-My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files.">
-<meta itemprop="datePublished" content="2020-10-20T15:35:10+00:00" />
+My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been installed. It looks R cannot find the path of hdf5 header and library files."><meta itemprop="datePublished" content="2020-10-20T15:35:10+00:00" />
 <meta itemprop="dateModified" content="2020-10-20T15:35:10+00:00" />
 <meta itemprop="wordCount" content="95">
-
-
-
 <meta itemprop="keywords" content="R," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install hdf5r package in R 4.0.2"/>
 <meta name="twitter:description" content="While installing the R package &ldquo;hdf5r&rdquo; version 1.3.3, I encountered the error:
@@ -52,17 +48,16 @@ My OS is Debian buster/10.6, and the package &ldquo;libhdf5-dev&rdquo; has been 
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -115,21 +110,21 @@ if (!doNotTrack) {
 	</div>
 </div><div class="content post__content clearfix">
 			<p>While installing the R package &ldquo;<a href="https://cran.r-project.org/web/packages/hdf5r/index.html">hdf5r</a>&rdquo; version 1.3.3, I encountered the error:</p>
-<pre><code>fatal error: hdf5.h: No such file or directory
+<pre tabindex="0"><code>fatal error: hdf5.h: No such file or directory
  #include &lt;hdf5.h&gt;
           ^~~~~~~~
 compilation terminated.
 </code></pre><p>My OS is Debian buster/10.6, and the package <strong>&ldquo;libhdf5-dev&rdquo;</strong> has been installed. It looks R cannot find the path of hdf5 header and library files.</p>
 <p>It has been resolved by:</p>
 <h1 id="1-export-environment-variables-for-header-files">1. Export environment variables for header files</h1>
-<pre><code>export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH
+<pre tabindex="0"><code>export C_INCLUDE_PATH=/usr/include/hdf5/serial/:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=/usr/include/hdf5/serial/:$CPLUS_INCLUDE_PATH
 </code></pre><h1 id="2-create-symbolic-links-for-library-files">2. Create symbolic links for library files</h1>
-<pre><code>cd /usr/lib/x86_64-linux-gnu/
+<pre tabindex="0"><code>cd /usr/lib/x86_64-linux-gnu/
 sudo ln -s libhdf5_hl_cpp.so.100.1.2 libhdf5_hl.so.100
 sudo ln -s libhdf5_cpp.so.103.0.0  libhdf5.so.103
 </code></pre><h1 id="3-install-package-hdf5r">3. Install package &ldquo;hdf5r&rdquo;</h1>
-<pre><code>install.packages(&quot;hdf5r&quot;)
+<pre tabindex="0"><code>install.packages(&#34;hdf5r&#34;)
 </code></pre><p>Now there would be OK.</p>
 		</div>
 		<footer class="post__footer">

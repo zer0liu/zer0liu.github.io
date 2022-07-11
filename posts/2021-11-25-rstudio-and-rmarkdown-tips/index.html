@@ -14,24 +14,20 @@ See also:
 RStudio Cheatsheets
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/" />
+<meta property="og:url" content="https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-11-25T12:26:00+08:00" />
 <meta property="article:modified_time" content="2021-11-25T12:26:00+08:00" />
+
 
 		<meta itemprop="name" content="RStudio and R Markdown Tips">
 <meta itemprop="description" content="Here are some miscellaneous tips for working on RStudio and writing R Markdown file. This blog will be updated from time to time.
 See also:
 
 RStudio Cheatsheets
-">
-<meta itemprop="datePublished" content="2021-11-25T12:26:00+08:00" />
+"><meta itemprop="datePublished" content="2021-11-25T12:26:00+08:00" />
 <meta itemprop="dateModified" content="2021-11-25T12:26:00+08:00" />
 <meta itemprop="wordCount" content="218">
-
-
-
 <meta itemprop="keywords" content="R,R Markdown," />
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="RStudio and R Markdown Tips"/>
 <meta name="twitter:description" content="Here are some miscellaneous tips for working on RStudio and writing R Markdown file. This blog will be updated from time to time.
@@ -49,17 +45,16 @@ RStudio Cheatsheets
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-3NS8PNT6QP', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-3NS8PNT6QP', { 'anonymize_ip': false });
 }
 </script>
 
@@ -130,32 +125,31 @@ if (!doNotTrack) {
 <h1 id="1-rstudio">1. RStudio</h1>
 <h2 id="11-re-view-generated-html-file-in-rstudio">1.1 Re-view generated html file in RStudio</h2>
 <p>If need to view closed html result file, simply run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rstudioapi<span style="color:#f92672">::</span><span style="color:#a6e22e">viewer</span>(<span style="color:#e6db74">&#34;myfile.html&#34;</span>)
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>rstudioapi<span style="color:#f92672">::</span><span style="color:#a6e22e">viewer</span>(<span style="color:#e6db74">&#34;myfile.html&#34;</span>)
+</span></span></code></pre></div><hr>
 <h1 id="2-r-markdown">2. R Markdown</h1>
 <h2 id="21-show-code-but-not-run">2.1 Show code but not run</h2>
 <p>Add <code>eval=FALSE</code> in chunk option.</p>
 <h2 id="22-output-data-frames-as-tables">2.2 Output data frames as tables</h2>
 <p>Use <code>kable(data, caption)</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">data <span style="color:#f92672">&lt;-</span> faithful[1<span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>,]
-
-knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</span>(data,
-             caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Table with kable&#34;</span>)
-
-</code></pre></div><p>For a nice-looking table, the package <a href="https://cran.r-project.org/web/packages/htmlTable/vignettes/general.html">htmlTable</a> is what you need.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(htmlTalble)
-
-<span style="color:#a6e22e">htmlTable</span>(data, caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Table with htmlTable&#34;</span>)
-</code></pre></div><h2 id="23-output-text-as-raw-markdown-content">2.3 Output text as raw Markdown content</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> faithful[1<span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>,]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</span>(data,
+</span></span><span style="display:flex;"><span>             caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Table with kable&#34;</span>)
+</span></span></code></pre></div><p>For a nice-looking table, the package <a href="https://cran.r-project.org/web/packages/htmlTable/vignettes/general.html">htmlTable</a> is what you need.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(htmlTalble)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">htmlTable</span>(data, caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Table with htmlTable&#34;</span>)
+</span></span></code></pre></div><h2 id="23-output-text-as-raw-markdown-content">2.3 Output text as raw Markdown content</h2>
 <p>By default, text output from code chunks will be written out verbatim with two leading hashes. If you would like to output text as Markdown content, simply insert <code>results = 'asis'</code> into the chunk option. This option tells knitr not to wrap your text output in verbatim code blocks, but treat it “as is.” This can be particularly useful when you want to generate content dynamically from R code.</p>
 <p>E.g.,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">```{r, results=&#39;asis&#39;}
-cat(&#39;# This is a header&#39;)
-```
-</code></pre></div><p>will output as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>```{r, results=&#39;asis&#39;}
+</span></span><span style="display:flex;"><span>cat(&#39;# This is a header&#39;)
+</span></span><span style="display:flex;"><span>```
+</span></span></code></pre></div><p>will output as:</p>
 <h1 id="this-is-a-header">This is a header</h1>
 <p>Rather than:</p>
-<pre><code>## # This is a header
+<pre tabindex="0"><code>## # This is a header
 </code></pre><hr>
 <h1 id="a-reference">A. Reference</h1>
 <ol>
