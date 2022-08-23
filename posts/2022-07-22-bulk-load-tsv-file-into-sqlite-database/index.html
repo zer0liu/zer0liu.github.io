@@ -22,7 +22,7 @@ It is easy to operate TSV files in programming languages. But if the file were q
 It is easy to operate TSV files in programming languages. But if the file were quite large, for instance, millions of lines, it would be difficult to operate the file. Under this circumstances, load the large TSV file into an SQLite3 databasea would be convenient for further operations.
 "><meta itemprop="datePublished" content="2022-07-22T14:33:03+08:00" />
 <meta itemprop="dateModified" content="2022-07-22T14:33:03+08:00" />
-<meta itemprop="wordCount" content="264">
+<meta itemprop="wordCount" content="314">
 <meta itemprop="keywords" content="SQLite," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bulk Load Tsv File Into SQLite Database"/>
@@ -133,9 +133,16 @@ Bob Texas   75001
 </span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> PRAGMA locking_mode<span style="color:#f92672">=</span><span style="color:#66d9ef">EXCLUSIVE</span>;
 </span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> PRAGMA temp_store<span style="color:#f92672">=</span>MEMORY;
 </span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> PRAGMA cache_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000000</span>;
-</span></span></code></pre></div><h1 id="references">References</h1>
+</span></span></code></pre></div><p>Ok, how about <strong>CSV</strong> (comma-separated values) file? It is similar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> .<span style="color:#66d9ef">mode</span> csv
+</span></span><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> .import my.csv people
+</span></span></code></pre></div><p>Or omit the <strong>.mode</strong> command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>sqlite<span style="color:#f92672">&gt;</span> .import <span style="color:#75715e">--csv my.csv people
+</span></span></span></code></pre></div><p>Btw, you can skip the initial row of input file by using the option <code>--skip 1</code>.</p>
+<h1 id="references">References</h1>
 <ol>
 <li><a href="https://en.wikipedia.org/wiki/Tab-separated_values">Wikipedia: Tab-separated values</a></li>
+<li><a href="https://www.sqlite.org/cli.html">SQLite documentation: Command Line Shell For SQLite</a></li>
 <li><a href="https://www.sqlite.org/pragma.html">SQLite documentation: PRAGMA Statements</a></li>
 <li><a href="https://www.sqlite.org/faq.html">SQLite FAQs</a></li>
 </ol>
