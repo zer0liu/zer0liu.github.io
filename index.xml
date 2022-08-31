@@ -9,17 +9,6 @@
     <lastBuildDate>Tue, 30 Aug 2022 10:38:13 +0800</lastBuildDate><atom:link href="https://omicx.cc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install and Usage of yt-dlp</title>
-      <link>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp-omv/</link>
-      <pubDate>Tue, 30 Aug 2022 10:38:13 +0800</pubDate>
-      
-      <guid>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp-omv/</guid>
-      <description>&lt;p&gt;yt-dlp is a &lt;a href=&#34;https://github.com/ytdl-org/youtube-dl&#34;&gt;youtube-dl&lt;/a&gt; fork and able to download videos and audios from many streaming platforms, such as YouTube.&lt;/p&gt;
-&lt;p&gt;This blog describes installation in Debian bullseye and some common usage examples.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg&#34; alt=&#34;yt-dlp logo&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Install and Usage of yt-dlp</title>
       <link>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</link>
       <pubDate>Tue, 30 Aug 2022 10:38:13 +0800</pubDate>
       
@@ -47,7 +36,8 @@
       
       <guid>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://nbisweden.github.io/MrBayes/&#34;&gt;MrBayes 3&lt;/a&gt; is a program for Bayesian inference and model choice across a large space of phylogenetic and evolutionary models. And &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. BEAGLE is able to accelerate MrBayes analyses very much.&lt;/p&gt;
-&lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;</description>
+&lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nbisweden.github.io/MrBayes/img/bayes.jpg&#34; alt=&#34;MrBayes logo&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

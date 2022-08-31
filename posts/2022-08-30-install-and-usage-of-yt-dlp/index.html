@@ -22,8 +22,8 @@ This blog describes installation in Debian bullseye and some common usage exampl
 This blog describes installation in Debian bullseye and some common usage examples.
 "><meta itemprop="datePublished" content="2022-08-30T10:38:13+08:00" />
 <meta itemprop="dateModified" content="2022-08-30T10:38:13+08:00" />
-<meta itemprop="wordCount" content="1246">
-<meta itemprop="keywords" content="" />
+<meta itemprop="wordCount" content="1288">
+<meta itemprop="keywords" content="media," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install and Usage of yt-dlp"/>
 <meta name="twitter:description" content="yt-dlp is a youtube-dl fork and able to download videos and audios from many streaming platforms, such as YouTube.
@@ -84,7 +84,9 @@ This blog describes installation in Debian bullseye and some common usage exampl
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">omicx.cc</span>
 </div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-08-30T10:38:13&#43;08:00">August 30, 2022</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-08-30T10:38:13&#43;08:00">August 30, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/nas/" rel="category">NAS</a>
+	</span>
+</div></div>
 		</header>
 		
 <div class="post__toc toc">
@@ -95,6 +97,7 @@ This blog describes installation in Debian bullseye and some common usage exampl
     <li><a href="#1-installaation-yt-dlp-in-debian-bullseye">1. Installaation yt-dlp in Debian bullseye</a></li>
     <li><a href="#2-using-yt-dlp-in-command-line">2. Using <code>yt-dlp</code> in command line</a></li>
     <li><a href="#3-using-a-configuration-file">3. Using a configuration file</a></li>
+    <li><a href="#4-output-template">4. Output template</a></li>
     <li><a href="#references">References</a></li>
   </ul>
 </nav>
@@ -298,6 +301,9 @@ This blog describes installation in Debian bullseye and some common usage exampl
 <p>System Configuration: <code>/etc/yt-dlp.conf</code></p>
 </li>
 </ol>
+<h1 id="4-output-template">4. Output template</h1>
+<p>The <code>--output|-o</code> option is used to indicate a template for the output file names while <code>--paths|-P</code> option is used to specify the path each type of file should be saved to.</p>
+<p>Please see details in <a href="https://github.com/yt-dlp/yt-dlp#output-template">yt-dlp Documentation: Output Template</a>.</p>
 <h1 id="references">References</h1>
 <ol>
 <li><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp Documentation</a></li>
@@ -306,6 +312,17 @@ This blog describes installation in Debian bullseye and some common usage exampl
 <li><a href="https://technixleo.com/using-yt-dlp-youtube-dl-alternative/">Download YouTube Videos using yt-dlp – Youtube-dl alternative</a></li>
 </ol>
 		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/media/" rel="tag">media</a>
+		</li>
+	</ul>
+</div>
+		</footer>
 	</article>
 </main>
 
@@ -315,12 +332,6 @@ This blog describes installation in Debian bullseye and some common usage exampl
 		<a class="pager__link" href="/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
 			<p class="pager__title">Bulk Load Tsv File Into SQLite Database</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/2022-08-30-install-and-usage-of-yt-dlp-omv/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Install and Usage of yt-dlp</p>
 		</a>
 	</div>
 </nav>
@@ -360,11 +371,11 @@ This blog describes installation in Debian bullseye and some common usage exampl
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/2022-08-30-install-and-usage-of-yt-dlp-omv/">Install and Usage of yt-dlp</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2022-08-30-install-and-usage-of-yt-dlp/">Install and Usage of yt-dlp</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/">Bulk Load Tsv File Into SQLite Database</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2022-03-21-run-mrbayes-with-beagle-lib/">Run MrBayes Along With Beagle-lib</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/">Install and Setup Jellyfin Docker Image</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/">Install and Setup OneDrive Client in a Headless Debian Server</a></li>
 		</ul>
 	</div>
 </div>
@@ -390,6 +401,8 @@ This blog describes installation in Debian bullseye and some common usage exampl
 				<a class="widget__link" href="/categories/hugo/">Hugo</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/linux/">Linux</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/media/">media</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/metagenomics/">Metagenomics</a></li>
 			<li class="widget__item">
@@ -438,6 +451,7 @@ This blog describes installation in Debian bullseye and some common usage exampl
 		<a class="widget-taglist__link widget__link btn" href="/tags/kvm/" title="KVM">KVM</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/letsencrypt/" title="Letsencrypt">Letsencrypt</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/media/" title="media">media</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/metagenomics/" title="Metagenomics">Metagenomics</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mrbayes/" title="MrBayes">MrBayes</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nas/" title="NAS">NAS</a>
