@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp-omv/</loc>
+    <lastmod>2022-08-30T10:38:13+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</loc>
+    <lastmod>2022-08-30T10:38:13+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/</loc>
+    <lastmod>2022-08-30T10:38:13+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/posts/</loc>
+    <lastmod>2022-08-30T10:38:13+08:00</lastmod>
+  </url><url>
     <loc>https://omicx.cc/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/</loc>
     <lastmod>2022-07-22T14:33:03+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/categories/</loc>
-    <lastmod>2022-07-22T14:33:03+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/</loc>
-    <lastmod>2022-07-22T14:33:03+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/posts/</loc>
     <lastmod>2022-07-22T14:33:03+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/tags/sqlite/</loc>
@@ -53,7 +59,7 @@
     <loc>https://omicx.cc/categories/nas/</loc>
     <lastmod>2022-02-02T00:26:24+08:00</lastmod>
   </url><url>
-    <loc>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/</loc>
+    <loc>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</loc>
     <lastmod>2022-01-23T22:31:09+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/categories/linux/</loc>

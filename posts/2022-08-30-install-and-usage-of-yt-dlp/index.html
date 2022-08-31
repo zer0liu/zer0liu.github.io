@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Install and Usage of yt-dlp - OmicX</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Install and Usage of yt-dlp" />
+<meta property="og:description" content="yt-dlp is a youtube-dl fork and able to download videos and audios from many streaming platforms, such as YouTube.
+This blog describes installation in Debian bullseye and some common usage examples.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-30T10:38:13+08:00" />
+<meta property="article:modified_time" content="2022-08-30T10:38:13+08:00" />
+
+
+		<meta itemprop="name" content="Install and Usage of yt-dlp">
+<meta itemprop="description" content="yt-dlp is a youtube-dl fork and able to download videos and audios from many streaming platforms, such as YouTube.
+This blog describes installation in Debian bullseye and some common usage examples.
+"><meta itemprop="datePublished" content="2022-08-30T10:38:13+08:00" />
+<meta itemprop="dateModified" content="2022-08-30T10:38:13+08:00" />
+<meta itemprop="wordCount" content="1246">
+<meta itemprop="keywords" content="" />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install and Usage of yt-dlp"/>
+<meta name="twitter:description" content="yt-dlp is a youtube-dl fork and able to download videos and audios from many streaming platforms, such as YouTube.
+This blog describes installation in Debian bullseye and some common usage examples.
+"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3NS8PNT6QP');
+</script>
+
+
+    
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="OmicX" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/logo-512x512.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">OmicX</div>
+					<div class="logo__tagline">Omics &amp; Statistics</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Install and Usage of yt-dlp</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">omicx.cc</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-08-30T10:38:13&#43;08:00">August 30, 2022</time></div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-installaation-yt-dlp-in-debian-bullseye">1. Installaation yt-dlp in Debian bullseye</a></li>
+    <li><a href="#2-using-yt-dlp-in-command-line">2. Using <code>yt-dlp</code> in command line</a></li>
+    <li><a href="#3-using-a-configuration-file">3. Using a configuration file</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>yt-dlp is a <a href="https://github.com/ytdl-org/youtube-dl">youtube-dl</a> fork and able to download videos and audios from many streaming platforms, such as YouTube.</p>
+<p>This blog describes installation in Debian bullseye and some common usage examples.</p>
+<p><img src="https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg" alt="yt-dlp logo"></p>
+<h1 id="1-installaation-yt-dlp-in-debian-bullseye">1. Installaation yt-dlp in Debian bullseye</h1>
+<p>Before start installation, be sure to add <code>bullseys-backports</code> repository in<code>/etc/apt/sources.list</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deb https://deb.debian.org/debian bullseye-backports main contrib non-free
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt -t bullseye-backports install yt-dlp
+</span></span></code></pre></div><p>Current version is: <strong>2022.08.19</strong>.</p>
+<p>It depends <code>python3</code>, and also install <code>python3-brotli</code>, <code>python3-certifi</code>, <code>python3-mutagen</code>, <code>python3-pycryptodome</code> and <code>python3-websockets</code>.</p>
+<p>And these packages are recommended, especially <code>ffmpeg</code>, which is very useful to convert media file formats:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ apt install aria2 wget curl ca-certificates ffmpeg python3-pyxattr rtmpdump libfribidi-bin mpv 
+</span></span></code></pre></div><p>More installation options please see <a href="https://github.com/yt-dlp/yt-dlp#installation">yt-dlp documentation</a>.</p>
+<h1 id="2-using-yt-dlp-in-command-line">2. Using <code>yt-dlp</code> in command line</h1>
+<ul>
+<li>View the available formats and resolutions of a video:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --list-formats https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span></code></pre></div><p>The output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>youtube<span style="color:#f92672">]</span> r3eaGCk2Acs: Downloading webpage
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>youtube<span style="color:#f92672">]</span> r3eaGCk2Acs: Downloading android player API JSON
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>info<span style="color:#f92672">]</span> Available formats <span style="color:#66d9ef">for</span> r3eaGCk2Acs:
+</span></span><span style="display:flex;"><span>ID  EXT   RESOLUTION FPS CH │   FILESIZE   TBR PROTO │ VCODEC        VBR ACODEC      ABR ASR MORE INFO
+</span></span><span style="display:flex;"><span>──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>sb2 mhtml 48x27        <span style="color:#ae81ff">1</span>    │                  mhtml │ images                                storyboard
+</span></span><span style="display:flex;"><span>sb1 mhtml 80x45        <span style="color:#ae81ff">1</span>    │                  mhtml │ images                                storyboard
+</span></span><span style="display:flex;"><span>sb0 mhtml 160x90       <span style="color:#ae81ff">1</span>    │                  mhtml │ images                                storyboard
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">139</span> m4a   audio only      <span style="color:#ae81ff">2</span> │  831.13KiB   48k https │ audio only        mp4a.40.5   48k 22k low, m4a_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">249</span> webm  audio only      <span style="color:#ae81ff">2</span> │  867.37KiB   50k https │ audio only        opus        50k 48k low, webm_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">250</span> webm  audio only      <span style="color:#ae81ff">2</span> │    1.12MiB   66k https │ audio only        opus        66k 48k low, webm_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">140</span> m4a   audio only      <span style="color:#ae81ff">2</span> │    2.16MiB  127k https │ audio only        mp4a.40.2  127k 44k medium, m4a_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">251</span> webm  audio only      <span style="color:#ae81ff">2</span> │    2.24MiB  132k https │ audio only        opus       132k 48k medium, webm_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">17</span>  3gp   176x144     <span style="color:#ae81ff">12</span>  <span style="color:#ae81ff">1</span> │    1.32MiB   77k https │ mp4v.20.3     77k mp4a.40.2    0k 22k 144p
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">160</span> mp4   256x144     <span style="color:#ae81ff">24</span>    │    1.49MiB   88k https │ avc1.4d400c   88k video only          144p, mp4_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">278</span> webm  256x144     <span style="color:#ae81ff">24</span>    │    1.57MiB   92k https │ vp9           92k video only          144p, webm_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">133</span> mp4   426x240     <span style="color:#ae81ff">24</span>    │    3.42MiB  201k https │ avc1.4d4015  201k video only          240p, mp4_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">242</span> webm  426x240     <span style="color:#ae81ff">24</span>    │    3.35MiB  197k https │ vp9          197k video only          240p, webm_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">134</span> mp4   640x360     <span style="color:#ae81ff">24</span>    │    7.59MiB  446k https │ avc1.4d401e  446k video only          360p, mp4_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">18</span>  mp4   640x360     <span style="color:#ae81ff">24</span>  <span style="color:#ae81ff">2</span> │   12.32MiB  723k https │ avc1.42001E  723k mp4a.40.2    0k 44k 360p
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">243</span> webm  640x360     <span style="color:#ae81ff">24</span>    │    6.25MiB  367k https │ vp9          367k video only          360p, webm_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">135</span> mp4   854x480     <span style="color:#ae81ff">24</span>    │   14.83MiB  871k https │ avc1.4d401e  871k video only          480p, mp4_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">244</span> webm  854x480     <span style="color:#ae81ff">24</span>    │   11.46MiB  673k https │ vp9          673k video only          480p, webm_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">22</span>  mp4   1280x720    <span style="color:#ae81ff">24</span>  <span style="color:#ae81ff">2</span> │ ~ 28.36MiB 1625k https │ avc1.64001F 1625k mp4a.40.2    0k 44k 720p
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">136</span> mp4   1280x720    <span style="color:#ae81ff">24</span>    │   25.51MiB 1498k https │ avc1.4d401f 1498k video only          720p, mp4_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">247</span> webm  1280x720    <span style="color:#ae81ff">24</span>    │   21.89MiB 1286k https │ vp9         1286k video only          720p, webm_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">137</span> mp4   1920x1080   <span style="color:#ae81ff">24</span>    │   45.93MiB 2698k https │ avc1.640028 2698k video only          1080p, mp4_dash
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">248</span> webm  1920x1080   <span style="color:#ae81ff">24</span>    │   38.78MiB 2278k https │ vp9         2278k video only          1080p, webm_dash
+</span></span></code></pre></div><blockquote>
+<p>The option <code>-F</code> is the short mode of <code>--list-formats</code>.</p>
+</blockquote>
+<ul>
+<li>Download a video with default options:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>youtube<span style="color:#f92672">]</span> r3eaGCk2Acs: Downloading webpage
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>youtube<span style="color:#f92672">]</span> r3eaGCk2Acs: Downloading android player API JSON
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>info<span style="color:#f92672">]</span> r3eaGCk2Acs: Downloading <span style="color:#ae81ff">1</span> format<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>: 248+251
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>download<span style="color:#f92672">]</span> Destination: PANDAS - OFFICIAL TRAILER <span style="color:#f92672">[</span>HD<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>r3eaGCk2Acs<span style="color:#f92672">]</span>.f248.webm
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>download<span style="color:#f92672">]</span> 100% of 38.78MiB in 00:33 at 1.16MiB/s
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>download<span style="color:#f92672">]</span> Destination: PANDAS - OFFICIAL TRAILER <span style="color:#f92672">[</span>HD<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>r3eaGCk2Acs<span style="color:#f92672">]</span>.f251.webm
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>download<span style="color:#f92672">]</span> 100% of 2.24MiB in 00:00 at 5.01MiB/s
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Merger<span style="color:#f92672">]</span> Merging formats into <span style="color:#e6db74">&#34;PANDAS - OFFICIAL TRAILER [HD] [r3eaGCk2Acs].webm&#34;</span>
+</span></span><span style="display:flex;"><span>Deleting original file PANDAS - OFFICIAL TRAILER <span style="color:#f92672">[</span>HD<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>r3eaGCk2Acs<span style="color:#f92672">]</span>.f248.webm <span style="color:#f92672">(</span>pass -k to keep<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Deleting original file PANDAS - OFFICIAL TRAILER <span style="color:#f92672">[</span>HD<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>r3eaGCk2Acs<span style="color:#f92672">]</span>.f251.webm <span style="color:#f92672">(</span>pass -k to keep<span style="color:#f92672">)</span>
+</span></span></code></pre></div><blockquote>
+<p><code>-f</code> is the short mode of option <code>--format</code>.</p>
+</blockquote>
+<ul>
+<li>To download a video with the best video and best audio stream:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --format <span style="color:#e6db74">&#34;bv*+ba/b&#34;</span> https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span></code></pre></div><blockquote>
+<p><code>bv*+ba/b</code> is the default format selector, which means that if a combined video + audio format that is better than the best video-only format is found, the former will be preferred.</p>
+</blockquote>
+<ul>
+<li>To download a 1080p video with the best audio stream:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --format <span style="color:#e6db74">&#34;bv*[height=1080]+ba/b&#34;</span> https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span></code></pre></div><blockquote>
+<p>If there were NO 1080p resolution available, yt-flp prints error message and quit.</p>
+</blockquote>
+<ul>
+<li>To download a video with resolution better than 1080p:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --format <span style="color:#e6db74">&#34;bv*[height&gt;=1080]+ba/b&#34;</span> https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span></code></pre></div><ul>
+<li>To extract audio from a video:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --extract-audio https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs 
+</span></span></code></pre></div><ul>
+<li>To list available formats of available subtitles:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --list-subs https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>youtube<span style="color:#f92672">]</span> r3eaGCk2Acs: Downloading webpage
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>youtube<span style="color:#f92672">]</span> r3eaGCk2Acs: Downloading android player API JSON
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>info<span style="color:#f92672">]</span> Available automatic captions <span style="color:#66d9ef">for</span> r3eaGCk2Acs:
+</span></span><span style="display:flex;"><span>Language   Name                               Formats
+</span></span><span style="display:flex;"><span>af-en      Afrikaans from English             vtt, ttml, srv3, srv2, srv1, json3
+</span></span><span style="display:flex;"><span>ak-en      Akan from English                  vtt, ttml, srv3, srv2, srv1, json3
+</span></span><span style="display:flex;"><span>sq-en      Albanian from English              vtt, ttml, srv3, srv2, srv1, json3
+</span></span><span style="display:flex;"><span>...        ...                                ...
+</span></span><span style="display:flex;"><span>yi-en      Yiddish from English               vtt, ttml, srv3, srv2, srv1, json3
+</span></span><span style="display:flex;"><span>yo-en      Yoruba from English                vtt, ttml, srv3, srv2, srv1, json3
+</span></span><span style="display:flex;"><span>zu-en      Zulu from English                  vtt, ttml, srv3, srv2, srv1, json3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>info<span style="color:#f92672">]</span> Available subtitles <span style="color:#66d9ef">for</span> r3eaGCk2Acs:
+</span></span><span style="display:flex;"><span>Language Name    Formats
+</span></span><span style="display:flex;"><span>en       English vtt, ttml, srv3, srv2, srv1, json3
+</span></span></code></pre></div><ul>
+<li>To download subtitles (if available) of a video as a default:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --write-subs en https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span></code></pre></div><blockquote>
+<p>Default subtitle file format is <code>.vtt</code>.</p>
+</blockquote>
+<ul>
+<li>To specify the format to download subtitle:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --write-subs en --sub-format json3 https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span></code></pre></div><ul>
+<li>To embed subtitles into the video:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --format <span style="color:#e6db74">&#34;bv*+ba/b&#34;</span> --embed-subs --merge-output-format mp4 https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span></code></pre></div><blockquote>
+<p>The option <code>--embed-subs</code> works only for mp4, webm and mkv videos.</p>
+</blockquote>
+<ul>
+<li>To embed thumbnail into the video:</li>
+</ul>
+<p>The option <code>--embed-thumbnail</code> embed thumbnail (if available) on the video as cover art.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --format <span style="color:#e6db74">&#34;bv*+ba/b&#34;</span> --embed-thumbnail --merge-output-format mp4 https://www.youtube.com/watch?v<span style="color:#f92672">=</span>r3eaGCk2Acs
+</span></span></code></pre></div><ul>
+<li>To download a video that require login</li>
+</ul>
+<p>On YouTube, movies containing radical expressions such as violence and bloodshed can only be played by logging in to your account and verifying your age. Here the option <code>--cookies-from-browser</code> is useful.</p>
+<p>For example, to download the <a href="https://www.youtube.com/watch?v=Z1EbSXxrZ34">The Suicide Squad - Official Red Band Trailer</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --cookies-from-browser firefox https://www.youtube.com/watch?v<span style="color:#f92672">=</span>Z1EbSXxrZ34
+</span></span></code></pre></div><blockquote>
+<p>Supported browsers are: brave, chrome, chromium, edge, firefox, opera, safari, vivaldi</p>
+</blockquote>
+<ul>
+<li>To download all videos of a playlist or channel:</li>
+</ul>
+<p>Simply append the url of the playlist or channel to <code>yt=dlp</code> command. e.g.,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --format <span style="color:#e6db74">&#34;bv*+ba/b&#34;</span> --download-archive videos.txt https://www.youtube.com/c/NatGeo/channels
+</span></span></code></pre></div><blockquote>
+<p><code>--download-archive</code> option record the IDs of all downloaded videos in the file <code>videos.txt</code>.</p>
+</blockquote>
+<ul>
+<li>Batch download multiple videos:</li>
+</ul>
+<p>Create a text file containing multiple URLs, one URL per line. Lines starting with &lsquo;#&rsquo;, &lsquo;;&rsquo; or &lsquo;]&rsquo; are considered as comments and ignored.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yt-dlp --batch-file urls.txt
+</span></span></code></pre></div><blockquote>
+<p><code>-a</code> is the short mode of <code>--batch-file</code>.</p>
+</blockquote>
+<h1 id="3-using-a-configuration-file">3. Using a configuration file</h1>
+<p>You can configure yt-dlp by placing any supported command line option to a configuration file. The possible configuration file locations are:</p>
+<ol>
+<li>
+<p>Main Configuration: The file given by <code>--config-location</code></p>
+</li>
+<li>
+<p>Portable Configuration: <code>yt-dlp.conf</code> in the same directory as the bundled binary. If you are running from source-code (<code>&lt;root dir&gt;/yt_dlp/__main__.py</code>), the root directory is used instead.</p>
+</li>
+<li>
+<p>Home Configuration: <code>yt-dlp.conf</code> in the home path given by <code>-P</code>, or in the current directory if no such path is given</p>
+</li>
+<li>
+<p>User Configuration:</p>
+<ul>
+<li>
+<p><code>%XDG_CONFIG_HOME%/yt-dlp/config</code> (recommended on Linux/macOS)</p>
+</li>
+<li>
+<p><code>%XDG_CONFIG_HOME%/yt-dlp.conf</code></p>
+</li>
+<li>
+<p><code>%APPDATA%/yt-dlp/config</code> (recommended on Windows)</p>
+</li>
+<li>
+<p><code>%APPDATA%/yt-dlp/config.txt</code></p>
+</li>
+<li>
+<p><code>~/yt-dlp.conf</code></p>
+</li>
+<li>
+<p><code>~/yt-dlp.conf.txt</code></p>
+<ul>
+<li><code>%XDG_CONFIG_HOME%</code> defaults to <code>~/.config</code> if undefined.</li>
+<li>On windows, <code>%APPDATA%</code> generally points to <code>C:\Users\&lt;user name&gt;\AppData\Roaming</code> and <code>~</code> points to <code>%HOME%</code> if present, <code>%USERPROFILE%</code> (generally <code>C:\Users\&lt;user name&gt;</code>), or <code>%HOMEDRIVE%%HOMEPATH%</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>System Configuration: <code>/etc/yt-dlp.conf</code></p>
+</li>
+</ol>
+<h1 id="references">References</h1>
+<ol>
+<li><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp Documentation</a></li>
+<li><a href="https://gigazine.net/gsc_news/en/20220101-yt-dlp/">Summary of how to use &lsquo;yt-dlp&rsquo; that can download movies such as YouTube and Nico Nico video with the highest image quality and high sound quality, age-restricted movies can also be downloaded at once</a></li>
+<li><a href="https://www.linuxfordevices.com/tutorials/linux/yt-dlp-download-youtube-videos">yt-dlp – Easily download YouTube videos in the Terminal</a></li>
+<li><a href="https://technixleo.com/using-yt-dlp-youtube-dl-alternative/">Download YouTube Videos using yt-dlp – Youtube-dl alternative</a></li>
+</ol>
+		</div>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Bulk Load Tsv File Into SQLite Database</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/2022-08-30-install-and-usage-of-yt-dlp-omv/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Install and Usage of yt-dlp</p>
+		</a>
+	</div>
+</nav>
+
+  <article class="post">
+    <script 
+        data-isso="https://spt.a2h.top/isso/" 
+        data-isso-id="thread-id"
+        data-isso-css="true"
+        data-isso-lang="en"
+        data-isso-reply-to-self="true"
+        data-isso-require-author="true" 
+        data-isso-require-email="false" 
+        data-isso-avatar="true"
+        data-isso-avatar-bg=""
+        src="https://spt.a2h.top/isso/js/embed.min.js">
+    </script>
+    <noscript>Please enable JavaScript to view the comments powered by <a href="https://posativ.org/isso/">Isso</a>.</noscript>
+    <div>
+      <section id="isso-thread"></section>
+    </div>
+</article>
+
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://omicx.cc/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/2022-08-30-install-and-usage-of-yt-dlp-omv/">Install and Usage of yt-dlp</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2022-08-30-install-and-usage-of-yt-dlp/">Install and Usage of yt-dlp</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/">Bulk Load Tsv File Into SQLite Database</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2022-03-21-run-mrbayes-with-beagle-lib/">Run MrBayes Along With Beagle-lib</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/">Install and Setup Jellyfin Docker Image</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/bd-rhapsody/">BD Rhapsody</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/beast/">BEAST</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/blog/">blog</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/conda/">Conda</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/cuda/">CUDA</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/figtree/">FigTree</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/hardware/">Hardware</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/hugo/">Hugo</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/linux/">Linux</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/metagenomics/">Metagenomics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/nas/">NAS</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/ngs/">NGS</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/note/">Note</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/phylogenetics/">Phylogenetics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/pymol/">PyMOL</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/r/">R</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/raspberry-pi/">Raspberry Pi</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/scrna-seq/">scRNA-Seq</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/software/">Software</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/sqlite/">SQLite</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/website/">Website</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/aria2/" title="aria2">aria2</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bd-genomics/" title="BD Genomics">BD Genomics</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bd-rhapsody/" title="BD Rhapsody">BD Rhapsody</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/beagle/" title="BEAGLE">BEAGLE</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/beast/" title="BEAST">BEAST</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/certbot/" title="certbot">certbot</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cloudflare/" title="cloudflare">cloudflare</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/conda/" title="conda">conda</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cuda/" title="CUDA">CUDA</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/debian/" title="Debian">Debian</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/endnote/" title="EndNote">EndNote</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fry/" title="fry">fry</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gnu-parallel/" title="GNU parallel">GNU parallel</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/jellyfin/" title="Jellyfin">Jellyfin</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kvm/" title="KVM">KVM</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/letsencrypt/" title="Letsencrypt">Letsencrypt</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/metagenomics/" title="Metagenomics">Metagenomics</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mrbayes/" title="MrBayes">MrBayes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nas/" title="NAS">NAS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="nginx">nginx</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ngs/" title="NGS">NGS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/note/" title="Note">Note</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nvidia/" title="Nvidia">Nvidia</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/onedrive/" title="OneDrive">OneDrive</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pavian/" title="Pavian">Pavian</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pymol/" title="PyMOL">PyMOL</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/qemu/" title="QEMU">QEMU</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/r/" title="R">R</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/r-markdown/" title="R Markdown">R Markdown</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rna-seq/" title="RNA-Seq">RNA-Seq</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rstudio-server/" title="RStudio Server">RStudio Server</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/scrna-seq/" title="scRNA-Seq">scRNA-Seq</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sqlite/" title="SQLite">SQLite</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tips/" title="Tips">Tips</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tree/" title="Tree">Tree</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zer0liu" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:omicx.cc@gmail.com">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>omicx.cc@gmail.com</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2022 omicx.cc.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

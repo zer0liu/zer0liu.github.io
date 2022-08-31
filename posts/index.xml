@@ -6,7 +6,29 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Jul 2022 14:33:03 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Aug 2022 10:38:13 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install and Usage of yt-dlp</title>
+      <link>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp-omv/</link>
+      <pubDate>Tue, 30 Aug 2022 10:38:13 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp-omv/</guid>
+      <description>&lt;p&gt;yt-dlp is a &lt;a href=&#34;https://github.com/ytdl-org/youtube-dl&#34;&gt;youtube-dl&lt;/a&gt; fork and able to download videos and audios from many streaming platforms, such as YouTube.&lt;/p&gt;
+&lt;p&gt;This blog describes installation in Debian bullseye and some common usage examples.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg&#34; alt=&#34;yt-dlp logo&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Install and Usage of yt-dlp</title>
+      <link>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</link>
+      <pubDate>Tue, 30 Aug 2022 10:38:13 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</guid>
+      <description>&lt;p&gt;yt-dlp is a &lt;a href=&#34;https://github.com/ytdl-org/youtube-dl&#34;&gt;youtube-dl&lt;/a&gt; fork and able to download videos and audios from many streaming platforms, such as YouTube.&lt;/p&gt;
+&lt;p&gt;This blog describes installation in Debian bullseye and some common usage examples.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg&#34; alt=&#34;yt-dlp logo&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Bulk Load Tsv File Into SQLite Database</title>
       <link>https://omicx.cc/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/</link>
@@ -42,10 +64,10 @@
     
     <item>
       <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
-      <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/</link>
+      <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</link>
       <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
       
-      <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server-omv/</guid>
+      <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</guid>
       <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
 &lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server.&lt;/p&gt;</description>
     </item>
