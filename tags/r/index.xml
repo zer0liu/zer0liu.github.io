@@ -6,7 +6,16 @@
     <description>Recent content in R on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Nov 2021 12:26:00 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Nov 2022 00:15:45 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Check and Upgrade Bioconductor Packages</title>
+      <link>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages/</link>
+      <pubDate>Mon, 07 Nov 2022 00:15:45 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages/</guid>
+      <description>&lt;p&gt;A R version supports more than one version of Bioconductor. To take advantange of new features, users have to update Bioconductor packages regularly.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>RStudio and R Markdown Tips</title>
       <link>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</link>

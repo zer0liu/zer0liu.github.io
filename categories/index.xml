@@ -6,7 +6,25 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Aug 2022 10:38:13 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Nov 2022 00:15:45 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bioconductor</title>
+      <link>https://omicx.cc/categories/bioconductor/</link>
+      <pubDate>Mon, 07 Nov 2022 00:15:45 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/bioconductor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://omicx.cc/categories/r/</link>
+      <pubDate>Mon, 07 Nov 2022 00:15:45 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/r/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>NAS</title>
       <link>https://omicx.cc/categories/nas/</link>
@@ -67,15 +85,6 @@
       <pubDate>Fri, 17 Dec 2021 15:36:59 +0800</pubDate>
       
       <guid>https://omicx.cc/categories/metagenomics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://omicx.cc/categories/r/</link>
-      <pubDate>Thu, 25 Nov 2021 12:26:00 +0800</pubDate>
-      
-      <guid>https://omicx.cc/categories/r/</guid>
       <description></description>
     </item>
     

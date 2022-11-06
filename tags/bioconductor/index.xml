@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bioconductor on OmicX</title>
+    <link>https://omicx.cc/tags/bioconductor/</link>
+    <description>Recent content in Bioconductor on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Nov 2022 00:15:45 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/bioconductor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Check and Upgrade Bioconductor Packages</title>
+      <link>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages/</link>
+      <pubDate>Mon, 07 Nov 2022 00:15:45 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages/</guid>
+      <description>&lt;p&gt;A R version supports more than one version of Bioconductor. To take advantange of new features, users have to update Bioconductor packages regularly.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
