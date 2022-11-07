@@ -18,7 +18,7 @@
 		<meta itemprop="name" content="Check and Upgrade Bioconductor Packages">
 <meta itemprop="description" content="A R version supports more than one version of Bioconductor. To take advantange of new features, users have to update Bioconductor packages regularly."><meta itemprop="datePublished" content="2022-11-07T00:15:45+08:00" />
 <meta itemprop="dateModified" content="2022-11-07T00:15:45+08:00" />
-<meta itemprop="wordCount" content="141">
+<meta itemprop="wordCount" content="250">
 <meta itemprop="keywords" content="R,Bioconductor," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Check and Upgrade Bioconductor Packages"/>
@@ -118,7 +118,46 @@
 <p>Use the commands</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>BiocManager<span style="color:#f92672">::</span><span style="color:#a6e22e">valid</span>()     <span style="color:#75715e">## R version 3.5 or later</span>
 </span></span></code></pre></div><p>to flag packages that are either out-of-date or too new for your version of Bioconductor. The output suggests ways to solve identified problems.</p>
-<h2 id="reference">Reference</h2>
+<p>In my computer, it output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#f92672">*</span> <span style="color:#a6e22e">sessionInfo</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>R version <span style="color:#ae81ff">4.2.2</span> (<span style="color:#ae81ff">2022-10-31</span>)
+</span></span><span style="display:flex;"><span>Platform<span style="color:#f92672">:</span> x86_64<span style="color:#f92672">-</span>pc<span style="color:#f92672">-</span>linux<span style="color:#f92672">-</span><span style="color:#a6e22e">gnu </span>(<span style="color:#ae81ff">64</span><span style="color:#f92672">-</span>bit)
+</span></span><span style="display:flex;"><span>Running under<span style="color:#f92672">:</span> Debian GNU<span style="color:#f92672">/</span>Linux <span style="color:#ae81ff">11</span> (bullseye)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Matrix products<span style="color:#f92672">:</span> default
+</span></span><span style="display:flex;"><span>BLAS<span style="color:#f92672">:</span>   <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>x86_64<span style="color:#f92672">-</span>linux<span style="color:#f92672">-</span>gnu<span style="color:#f92672">/</span>atlas<span style="color:#f92672">/</span>libblas.so.3.10.3
+</span></span><span style="display:flex;"><span>LAPACK<span style="color:#f92672">:</span> <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>x86_64<span style="color:#f92672">-</span>linux<span style="color:#f92672">-</span>gnu<span style="color:#f92672">/</span>atlas<span style="color:#f92672">/</span>liblapack.so.3.10.3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>locale<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span> [1] LC_CTYPE<span style="color:#f92672">=</span>en_US.UTF<span style="color:#ae81ff">-8</span>       LC_NUMERIC<span style="color:#f92672">=</span>C              
+</span></span><span style="display:flex;"><span> [3] LC_TIME<span style="color:#f92672">=</span>en_US.UTF<span style="color:#ae81ff">-8</span>        LC_COLLATE<span style="color:#f92672">=</span>en_US.UTF<span style="color:#ae81ff">-8</span>    
+</span></span><span style="display:flex;"><span> [5] LC_MONETARY<span style="color:#f92672">=</span>en_US.UTF<span style="color:#ae81ff">-8</span>    LC_MESSAGES<span style="color:#f92672">=</span>en_US.UTF<span style="color:#ae81ff">-8</span>   
+</span></span><span style="display:flex;"><span> [7] LC_PAPER<span style="color:#f92672">=</span>en_US.UTF<span style="color:#ae81ff">-8</span>       LC_NAME<span style="color:#f92672">=</span>C                 
+</span></span><span style="display:flex;"><span> [9] LC_ADDRESS<span style="color:#f92672">=</span>C               LC_TELEPHONE<span style="color:#f92672">=</span>C            
+</span></span><span style="display:flex;"><span>[11] LC_MEASUREMENT<span style="color:#f92672">=</span>en_US.UTF<span style="color:#ae81ff">-8</span> LC_IDENTIFICATION<span style="color:#f92672">=</span>C       
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>attached base packages<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>[1] stats     graphics  grDevices utils     datasets  methods  
+</span></span><span style="display:flex;"><span>[7] base     
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>loaded via a <span style="color:#a6e22e">namespace </span>(and not attached)<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>[1] BiocManager_1.30.19 compiler_4.2.2      tools_4.2.2        
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Bioconductor version <span style="color:#e6db74">&#39;3.16&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span> packages out<span style="color:#f92672">-</span>of<span style="color:#f92672">-</span>date
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">*</span> <span style="color:#ae81ff">0</span> packages too new
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>create a valid installation with
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  BiocManager<span style="color:#f92672">::</span><span style="color:#a6e22e">install</span>(<span style="color:#e6db74">&#34;ggtree&#34;</span>, update <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>, ask <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, force <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>more details<span style="color:#f92672">:</span> BiocManager<span style="color:#f92672">::</span><span style="color:#a6e22e">valid</span>()<span style="color:#f92672">$</span>too_new, BiocManager<span style="color:#f92672">::</span><span style="color:#a6e22e">valid</span>()<span style="color:#f92672">$</span>out_of_date
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Warning message<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> packages out<span style="color:#f92672">-</span>of<span style="color:#f92672">-</span>date; <span style="color:#ae81ff">0</span> packages too new
+</span></span></code></pre></div><h2 id="reference">Reference</h2>
 <ol>
 <li><a href="https://www.bioconductor.org/install/">https://www.bioconductor.org/install/</a></li>
 </ol>
