@@ -22,7 +22,7 @@ This post described a workthrough on how to install and configure QEMU/KVM on a 
 This post described a workthrough on how to install and configure QEMU/KVM on a Debian 10/buster server.
 "><meta itemprop="datePublished" content="2021-06-22T12:55:33+08:00" />
 <meta itemprop="dateModified" content="2021-06-22T12:55:33+08:00" />
-<meta itemprop="wordCount" content="1190">
+<meta itemprop="wordCount" content="1254">
 <meta itemprop="keywords" content="QEMU,KVM,Debian,Linux," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install QEMU/KVM Server on Debian 10 Headless Server"/>
@@ -195,23 +195,38 @@ This post described a workthrough on how to install and configure QEMU/KVM on a 
 </span></span><span style="display:flex;"><span>$ newgrp libvirt-qemu
 </span></span></code></pre></div><h1 id="5-create-linux-bridge-for-kvm-vms">5. Create Linux bridge for KVM VMs</h1>
 <p>A networking bridge <code>virbr0</code> has been created for test environment. But if you&rsquo;d like to access your VMs over the network, an extra Linux bridge has to be created and attached to the physical nic of the Debian 10 server.</p>
-<p>Here edit the network configuration file <code>/etc/network/interfaces</code> and append the following contents:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Configure bridge and give it a static ip</span>
-</span></span><span style="display:flex;"><span>auto br0
+<p>Here edit the network configuration file <code>/etc/network/interfaces</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># This file describes the network interfaces available on your system</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># and how to activate them. For more information, see interfaces(5).</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># The loopback network interface</span>
+</span></span><span style="display:flex;"><span>auto lo br0
+</span></span><span style="display:flex;"><span>iface lo inet loopback
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set up interfaces manually, </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># avoiding conflicts with, e.g., network manager</span>
+</span></span><span style="display:flex;"><span>iface eth0 inet manual
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Bridge setup</span>
 </span></span><span style="display:flex;"><span>iface br0 inet static
-</span></span><span style="display:flex;"><span>        address 10.10.10.10
-</span></span><span style="display:flex;"><span>        netmask 255.255.255.0
-</span></span><span style="display:flex;"><span>        network 10.10.10.1
-</span></span><span style="display:flex;"><span>        broadcast 10.10.10.255
-</span></span><span style="display:flex;"><span>        gateway 10.10.10.1
-</span></span><span style="display:flex;"><span>        bridge_ports eno1
-</span></span><span style="display:flex;"><span>        bridge_stp off
-</span></span><span style="display:flex;"><span>        bridge_fd <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>        bridge_maxwait <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>        dns-nameservers 8.8.8.8
-</span></span></code></pre></div><p>Restart networking service to enable changes:</p>
+</span></span><span style="display:flex;"><span>  bridge_ports eno1
+</span></span><span style="display:flex;"><span>    address 10.10.10.10
+</span></span><span style="display:flex;"><span>    broadcast 10.10.10.255
+</span></span><span style="display:flex;"><span>    netmask 255.255.255.0
+</span></span><span style="display:flex;"><span>    gateway 10.10.10.1
+</span></span><span style="display:flex;"><span>    bridge_stp off
+</span></span><span style="display:flex;"><span>    bridge_fd <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    bridge_maxwait <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    dns-nameservers 8.8.8.8 8.8.4.4
+</span></span></code></pre></div><blockquote>
+<p>If you&rsquo;d like bridge over DHCP, the <code>Bridge setup</code> section would be simpler:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Bridge setup</span>
+</span></span><span style="display:flex;"><span>iface br0 inet dhcp
+</span></span><span style="display:flex;"><span>  bridge_ports eth0 eno1
+</span></span></code></pre></div></blockquote>
+<p>Restart networking service to enable changes:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl restart network-manager
-</span></span></code></pre></div><p>Next confrim whether the beidge <code>br0</code> was up:</p>
+</span></span></code></pre></div><p>Next confirm whether the beidge <code>br0</code> were up:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ip a s br0
 </span></span><span style="display:flex;"><span>3: br0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noqueue state UP group default qlen <span style="color:#ae81ff">1000</span>
 </span></span><span style="display:flex;"><span>    link/ether fe:54:00:b5:c9:02 brd ff:ff:ff:ff:ff:ff
@@ -332,7 +347,7 @@ This post described a workthrough on how to install and configure QEMU/KVM on a 
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo virsh help
 </span></span></code></pre></div><h1 id="a-reference">A. Reference</h1>
 <ol>
-<li><a href="https://wiki.debian.org/KVM">Debian wiki: KVM</a></li>
+<li><a href="https://wiki.debian.org/KVM">Debian Wiki: KVM</a></li>
 <li><a href="https://www.cyberciti.biz/faq/install-kvm-server-debian-linux-9-headless-server/">How to install KVM server on Debian 9/10 Headless Server</a></li>
 <li><a href="https://www.linuxtechi.com/install-configure-kvm-debian-10-buster/">How to Install and Configure KVM on Debian 10 (Buster)</a></li>
 <li><a href="https://linux.die.net/man/1/virt-install">Linux man page: virt-install</a></li>
@@ -340,6 +355,7 @@ This post described a workthrough on how to install and configure QEMU/KVM on a 
 <li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_virtualization/index">Red Hat Document: Configuring and managing virtualization</a></li>
 <li><a href="https://www.thegeekstuff.com/2015/02/add-memory-cpu-disk-to-kvm-vm/">How to Add Memory, vCPU, Hard Disk to Linux KVM Virtual Machine</a></li>
 <li><a href="https://www.unixarena.com/2015/12/linux-kvm-how-to-add-remove-memory-to-guest-on-fly.html/">Linux KVM – How to add /Remove Memory to Guest on Fly ? Part 8</a></li>
+<li><a href="https://wiki.debian.org/BridgeNetworkConnections#Installing_the_software">Debian Wiki: Bridging Network Connections</a></li>
 </ol>
 		</div>
 		<footer class="post__footer">
@@ -416,11 +432,11 @@ This post described a workthrough on how to install and configure QEMU/KVM on a 
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/2022-11-07-check-and-upgrade-bioconductor-packages-r7050/">Check and Upgrade Bioconductor Packages</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2022-11-07-check-and-upgrade-bioconductor-packages/">Check and Upgrade Bioconductor Packages</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2022-08-30-install-and-usage-of-yt-dlp/">Install and Usage of yt-dlp</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/">Bulk Load Tsv File Into SQLite Database</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2022-03-21-run-mrbayes-with-beagle-lib/">Run MrBayes Along With Beagle-lib</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/">Install and Setup Jellyfin Docker Image</a></li>
 		</ul>
 	</div>
 </div>
