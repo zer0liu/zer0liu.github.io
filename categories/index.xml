@@ -6,7 +6,25 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Nov 2022 00:15:45 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Nov 2022 16:39:19 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Phylogenetics</title>
+      <link>https://omicx.cc/categories/phylogenetics/</link>
+      <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/phylogenetics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>https://omicx.cc/categories/software/</link>
+      <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/software/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Bioconductor</title>
       <link>https://omicx.cc/categories/bioconductor/</link>
@@ -35,29 +53,11 @@
     </item>
     
     <item>
-      <title>Software</title>
-      <link>https://omicx.cc/categories/software/</link>
-      <pubDate>Tue, 30 Aug 2022 10:38:13 +0800</pubDate>
-      
-      <guid>https://omicx.cc/categories/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>SQLite</title>
       <link>https://omicx.cc/categories/sqlite/</link>
       <pubDate>Fri, 22 Jul 2022 14:33:03 +0800</pubDate>
       
       <guid>https://omicx.cc/categories/sqlite/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Phylogenetics</title>
-      <link>https://omicx.cc/categories/phylogenetics/</link>
-      <pubDate>Mon, 21 Mar 2022 15:13:11 +0800</pubDate>
-      
-      <guid>https://omicx.cc/categories/phylogenetics/</guid>
       <description></description>
     </item>
     

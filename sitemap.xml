@@ -2,34 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://omicx.cc/categories/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/posts/2022-11-22-create-phylogenetic-tree-of-sars-cov-2-by-usher/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/categories/phylogenetics/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/posts/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/categories/software/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/tags/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/tags/taxonium/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/tags/tree/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/tags/usher/</loc>
+    <lastmod>2022-11-22T16:39:19+08:00</lastmod>
+  </url><url>
     <loc>https://omicx.cc/tags/bioconductor/</loc>
     <lastmod>2022-11-07T00:15:45+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/categories/bioconductor/</loc>
     <lastmod>2022-11-07T00:15:45+08:00</lastmod>
   </url><url>
-    <loc>https://omicx.cc/categories/</loc>
-    <lastmod>2022-11-07T00:15:45+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages-r7050/</loc>
-    <lastmod>2022-11-07T00:15:45+08:00</lastmod>
-  </url><url>
     <loc>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages/</loc>
-    <lastmod>2022-11-07T00:15:45+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/</loc>
-    <lastmod>2022-11-07T00:15:45+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/posts/</loc>
     <lastmod>2022-11-07T00:15:45+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/tags/r/</loc>
     <lastmod>2022-11-07T00:15:45+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/categories/r/</loc>
-    <lastmod>2022-11-07T00:15:45+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/tags/</loc>
     <lastmod>2022-11-07T00:15:45+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</loc>
@@ -39,9 +54,6 @@
     <lastmod>2022-08-30T10:38:13+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/categories/nas/</loc>
-    <lastmod>2022-08-30T10:38:13+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/categories/software/</loc>
     <lastmod>2022-08-30T10:38:13+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/</loc>
@@ -57,9 +69,6 @@
     <lastmod>2022-03-21T15:13:11+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/tags/mrbayes/</loc>
-    <lastmod>2022-03-21T15:13:11+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/categories/phylogenetics/</loc>
     <lastmod>2022-03-21T15:13:11+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</loc>
@@ -249,9 +258,6 @@
     <lastmod>2019-06-22T21:26:00+00:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/categories/figtree/</loc>
-    <lastmod>2019-06-22T21:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/tags/tree/</loc>
     <lastmod>2019-06-22T21:26:00+00:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/tags/conda/</loc>
