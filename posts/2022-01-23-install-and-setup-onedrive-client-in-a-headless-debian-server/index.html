@@ -20,7 +20,7 @@ This post is the workthrough of installation and configuration of OneDrive Linux
 <meta itemprop="description" content="There is still no official OneDrive client for Linux, the project &ldquo;OneDrive Client for Linux&rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.
 This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server."><meta itemprop="datePublished" content="2022-01-23T22:31:09+08:00" />
 <meta itemprop="dateModified" content="2022-01-23T22:31:09+08:00" />
-<meta itemprop="wordCount" content="1021">
+<meta itemprop="wordCount" content="1170">
 <meta itemprop="keywords" content="Linux,OneDrive," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install and Setup OneDrive Client in a Headless Debian Server"/>
@@ -91,7 +91,16 @@ This post is the workthrough of installation and configuration of OneDrive Linux
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#1-installation">1. Installation</a></li>
+    <li><a href="#1-installation">1. Installation</a>
+      <ul>
+        <li><a href="#note-deprecated">Note: Deprecated</a></li>
+        <li><a href="#step-1-add-the-opensuse-build-service-repository-release-key">Step 1: Add the OpenSuSE Build Service repository release key</a></li>
+        <li><a href="#step-2-add-the-opensuse-build-service-repository">Step 2: Add the OpenSuSE Build Service repository</a></li>
+        <li><a href="#step-3-update-your-apt-package-cache">Step 3: Update your apt package cache</a></li>
+        <li><a href="#step-4-install-onedrive">Step 4: Install &lsquo;onedrive&rsquo;</a></li>
+        <li><a href="#step-5-read-known-issues-with-these-packages">Step 5: Read &lsquo;Known Issues&rsquo; with these packages</a></li>
+      </ul>
+    </li>
     <li><a href="#2-authorize-the-application-with-your-onedrive-account">2. Authorize the application with your OneDrive Account</a></li>
     <li><a href="#3-configuration">3. Configuration</a>
       <ul>
@@ -122,10 +131,29 @@ This post is the workthrough of installation and configuration of OneDrive Linux
 <p>This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server.</p>
 <p>I am working on a server with Debian bullseye/11, kernel version 5.11 x86_64.</p>
 <h1 id="1-installation">1. Installation</h1>
+<blockquote>
+<h2 id="note-deprecated">Note: Deprecated</h2>
 <p>It is quiet easy to install OneDrive Client in Debian:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
 </span></span><span style="display:flex;"><span>$ sudo apt install onedrive
-</span></span></code></pre></div><p>If you&rsquo;d like to build from source, please read the <a href="https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md">document</a>.</p>
+</span></span></code></pre></div></blockquote>
+<p>According to the <a href="https://github.com/abraunegg/onedrive/blob/master/docs/ubuntu-package-install.md">OneDrive Client for Linux Documentation</a>, it is <strong>Not</strong> recommended to install OneDrive Client from Debian Package Repositories.</p>
+<p>The recommended way is to install from OpenSuse Build Servicei according to the <a href="https://github.com/abraunegg/onedrive/blob/master/docs/ubuntu-package-install.md">Instructions</a>.</p>
+<h2 id="step-1-add-the-opensuse-build-service-repository-release-key">Step 1: Add the OpenSuSE Build Service repository release key</h2>
+<p>Add the OpenSuSE Build Service repository release key using the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget -qO - https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_11/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/obs-onedrive.gpg &gt; /dev/null
+</span></span></code></pre></div><h2 id="step-2-add-the-opensuse-build-service-repository">Step 2: Add the OpenSuSE Build Service repository</h2>
+<p>Add the OpenSuSE Build Service repository using the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;deb [arch=</span><span style="color:#66d9ef">$(</span>dpkg --print-architecture<span style="color:#66d9ef">)</span><span style="color:#e6db74"> signed-by=/usr/share/keyrings/obs-onedrive.gpg] https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_11/ ./&#34;</span> | sudo tee /etc/apt/sources.list.d/onedrive.list
+</span></span></code></pre></div><h2 id="step-3-update-your-apt-package-cache">Step 3: Update your apt package cache</h2>
+<p>Run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt update
+</span></span></code></pre></div><h2 id="step-4-install-onedrive">Step 4: Install &lsquo;onedrive&rsquo;</h2>
+<p>Run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install --no-install-recommends --no-install-suggests onedrive
+</span></span></code></pre></div><h2 id="step-5-read-known-issues-with-these-packages">Step 5: Read &lsquo;Known Issues&rsquo; with these packages</h2>
+<p>Read and understand the <a href="https://github.com/abraunegg/onedrive/blob/master/docs/ubuntu-package-install.md#known-issues-with-installing-from-the-above-packages">known issues</a> with these packages below, taking any action that is needed.</p>
+<p>If you&rsquo;d like to build from source, please read the <a href="https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md">document</a>.</p>
 <h1 id="2-authorize-the-application-with-your-onedrive-account">2. Authorize the application with your OneDrive Account</h1>
 <p>authorization of the application with your OneDrive Account is necessary. Simply run the application without any command switches:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ onedrive
