@@ -107,18 +107,18 @@ How to solve this problem?"/>
 	</div>
 </div><div class="content post__content clearfix">
 			<p>I installed Debian 11/bullseye recently, and I noticed the buttons of the &ldquo;Save&rdquo; dialog box are at the upper side of the window. It looked strange.</p>
-<p><img src="img/xfce4_save_dialog_160eec2b.png" alt="Xfce4 default save dialog"></p>
+<p><img src="/img/xfce4_save_dialog_160eec2b.png" alt="Xfce4 default save dialog"></p>
 <p>How to solve this problem?</p>
 <h2 id="method-1-through-the-xfce4-settings-editor">Method 1. Through the Xfce4 Settings Editor</h2>
-<p>Open the Xfce4 Setting Editor (in the main menu: Applications/Settings/Settings Editor):</p>
-<p><img src="img/xfce4_save_dialog_20dbcb5a.png" alt="Xfce4 Settings Editor"></p>
-<p>In the <strong>Xsettings</strong> channel, path <strong>Gtk</strong>, uncheck the <strong>Value</strong> of the <strong>DialogsUseHeader</strong> property. (<em>i.e.</em>, Set the <strong>DialogsUseHeader</strong> to *<strong>False</strong>).</p>
+<p>Open the Xfce4 Setting Editor (in the main menu: <strong>Applications/Settings/Settings Editor</strong>):</p>
+<p><img src="/img/xfce4_save_dialog_20dbcb5a.png" alt="Xfce4 Settings Editor"></p>
+<p>In the <strong>Xsettings</strong> channel, path <strong>Gtk</strong>, uncheck the <strong>Value</strong> of the <strong>DialogsUseHeader</strong> property. (<em>i.e.</em>, Set the <strong>DialogsUseHeader</strong> to <em><strong>False</strong></em>).</p>
 <h2 id="method-2-command-line">Method 2. Command line</h2>
-<p>Simple run:</p>
+<p>Simply run:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xfconf-query -c xsettings -p /Gtk/DialogsUseHeader -s false
 </span></span></code></pre></div><h2 id="result">Result</h2>
 <p>Now the problem has been fixed.</p>
-<p><img src="img/xfce4_save_dialog_3681e6c7.png" alt="Xfce4 new save dialog "></p>
+<p><img src="/img/xfce4_save_dialog_3681e6c7.png" alt="Xfce4 new save dialog"></p>
 <h2 id="references">References</h2>
 <ol>
 <li><a href="https://forum.xfce.org/viewtopic.php?id=14614">New layout of the &ldquo;Save&rdquo; dialog box</a></li>
