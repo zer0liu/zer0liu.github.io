@@ -6,7 +6,19 @@
     <description>Recent content on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Jan 2023 23:22:18 +0800</lastBuildDate><atom:link href="https://omicx.cc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Apr 2023 22:16:39 +0800</lastBuildDate><atom:link href="https://omicx.cc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archlinux WSL Installation and Configuration</title>
+      <link>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</link>
+      <pubDate>Mon, 17 Apr 2023 22:16:39 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Perhaps installing Windows Subsystem for Linux (WSL) from the Windows Store is the easiest way, and  this method will install WSL (such as Ubuntu) on the Windows system  drive by default. However, this will compress the storage space of the  system drive, so sometimes we want to install WSL on other disk  partitions. Here, taking archlinuxwsl as an example, we introduce a  general process of installing WSL.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Move Buttons of Save Dialog Box in Xfce4 to Bottom Right</title>
       <link>https://omicx.cc/posts/2023-01-19-move-buttons-of-save-dialog-box-in-xfce4-to-bottom-right/</link>
@@ -28,33 +40,6 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./mark_sur
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./mark_sur: error &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; loading shared libraries: libg2c.so.0: cannot open shared object file: No such file or directory
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Alignment of SARS-CoV-2 Reference Genome Sequences</title>
-      <link>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</link>
-      <pubDate>Fri, 25 Nov 2022 14:13:35 +0800</pubDate>
-      
-      <guid>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</guid>
-      <description>&lt;p&gt;Severe acute respiratory syndrome coronavirus 2 Wuhan-Hu-1 (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/nuccore/1798174254&#34;&gt;NC_045512.2&lt;/a&gt;) and hCoV-19/Wuhan/WIV04/2019 (&lt;a href=&#34;https://gisaid.org/wiv04/&#34;&gt;EPI_ISL_402124&lt;/a&gt;) are two general used reference genome sequences used for SARS-CoV-2 phylogenetic analyses.&lt;/p&gt;
-&lt;p&gt;Here is the alignment result of these two sequences by &lt;a href=&#34;https://emboss.sourceforge.net/&#34;&gt;EMBOSS&lt;/a&gt; needle.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Create Phylogenetic Tree of SARS CoV 2 by UShER</title>
-      <link>https://omicx.cc/posts/2022-11-22-create-phylogenetic-tree-of-sars-cov-2-by-usher/</link>
-      <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
-      
-      <guid>https://omicx.cc/posts/2022-11-22-create-phylogenetic-tree-of-sars-cov-2-by-usher/</guid>
-      <description>&lt;p&gt;There are nearly 14 million viral genome sequences right now in the GISAID EpiCoV ™ database. It is not likely  to infer the phylogenetic relationships for such a huge dataset by traditional maximum likelyhood or Bayesian methods in a shor time period. The UShER package was developed to generate ultra-large phylogenetic tree of SARS-CoV-2 genomes. The algorithm of the UShER program is to place new samples onto an existing phylogeny using maximum parsimony method. It is able to place given SARS-CoV-2 genome sequences into the GISAID global phylogeny in a couple of hours.  This program is particularly helpful in understanding the relationships of newly sequenced SARS-CoV-2 genomes with each other and with previously sequenced genomes in a global phylogeny.&lt;/p&gt;
-&lt;p&gt;The UShER package is composed by four programs:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;UShER&lt;/code&gt;: a program that rapidly places new samples onto an existing phylogeny using maximum parsimony.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;matUtils&lt;/code&gt;:  a toolkit for querying, interpreting and manipulating the mutation-annotated trees (MATs).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;matOptimize&lt;/code&gt;:  a program to rapidly and effectively optimize a mutation-annotated tree (MAT) for parsimony using subtree pruning and regrafting (SPR) moves within a user-defined radius.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;RIPPLES&lt;/code&gt;: a program that uses a phylogenomic technique to rapidly and sensitively detect recombinant nodes and their ancestors in a mutation-annotated tree (MAT).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The taxoniumtools and &lt;a href=&#34;https://taxonium.org/&#34;&gt;Taxonium website&lt;/a&gt; are used to display the MAT generated by UShER.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -97,19 +82,6 @@
       <description>&lt;p&gt;&lt;a href=&#34;http://nbisweden.github.io/MrBayes/&#34;&gt;MrBayes 3&lt;/a&gt; is a program for Bayesian inference and model choice across a large space of phylogenetic and evolutionary models. And &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. BEAGLE is able to accelerate MrBayes analyses very much.&lt;/p&gt;
 &lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://nbisweden.github.io/MrBayes/img/bayes.jpg&#34; alt=&#34;MrBayes logo&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Install and Setup Jellyfin Docker Image</title>
-      <link>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</link>
-      <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
-      
-      <guid>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://jellyfin.org/docs/images/branding-logo-yes-side.png&#34; alt=&#34;Jellyfin logo&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -165,15 +137,6 @@
 &lt;p&gt;This post introduces to secure RStudio Server by an Nginx reverse proxy.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/rstudio-server-logo.png&#34; alt=&#34;RStudio Server logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/certbot-logo.png&#34; alt=&#34;Certbot logo&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Setup BD Single Cell Genomics Rhapsody Analysis</title>
-      <link>https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/</link>
-      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
-      <guid>https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/</guid>
-      <description>&lt;p&gt;This post provides instruction of installing DB Genomics Rhapsody™ Analysis pipeline in a local Linux server.&lt;/p&gt;</description>
     </item>
     
     <item>
