@@ -6,7 +6,16 @@
     <description>Recent content in Tags on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Apr 2023 22:16:39 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2023 15:01:23 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R</title>
+      <link>https://omicx.cc/tags/r/</link>
+      <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/r/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Linux</title>
       <link>https://omicx.cc/tags/linux/</link>
@@ -49,15 +58,6 @@
       <pubDate>Mon, 07 Nov 2022 00:15:45 +0800</pubDate>
       
       <guid>https://omicx.cc/tags/bioconductor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://omicx.cc/tags/r/</link>
-      <pubDate>Mon, 07 Nov 2022 00:15:45 +0800</pubDate>
-      
-      <guid>https://omicx.cc/tags/r/</guid>
       <description></description>
     </item>
     

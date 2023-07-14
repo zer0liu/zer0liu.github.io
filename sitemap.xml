@@ -2,25 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</loc>
-    <lastmod>2023-04-17T22:16:39+08:00</lastmod>
-  </url><url>
     <loc>https://omicx.cc/categories/</loc>
+    <lastmod>2023-05-10T15:01:23+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/posts/2023-05-10-install-r-and-rstudio-using-scoop/</loc>
+    <lastmod>2023-05-10T15:01:23+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/</loc>
+    <lastmod>2023-05-10T15:01:23+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/posts/</loc>
+    <lastmod>2023-05-10T15:01:23+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/tags/r/</loc>
+    <lastmod>2023-05-10T15:01:23+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/categories/r/</loc>
+    <lastmod>2023-05-10T15:01:23+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/categories/software/</loc>
+    <lastmod>2023-05-10T15:01:23+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/tags/</loc>
+    <lastmod>2023-05-10T15:01:23+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</loc>
     <lastmod>2023-04-17T22:16:39+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/tags/linux/</loc>
     <lastmod>2023-04-17T22:16:39+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/categories/linux/</loc>
-    <lastmod>2023-04-17T22:16:39+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/</loc>
-    <lastmod>2023-04-17T22:16:39+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/posts/</loc>
-    <lastmod>2023-04-17T22:16:39+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/tags/</loc>
     <lastmod>2023-04-17T22:16:39+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/tags/wsl/</loc>
@@ -38,9 +50,6 @@
     <loc>https://omicx.cc/posts/2023-01-04-install-libg2c.so.0-for-zdock-in-debian-11/</loc>
     <lastmod>2023-01-04T15:22:55+08:00</lastmod>
   </url><url>
-    <loc>https://omicx.cc/categories/software/</loc>
-    <lastmod>2023-01-04T15:22:55+08:00</lastmod>
-  </url><url>
     <loc>https://omicx.cc/tags/zdock/</loc>
     <lastmod>2023-01-04T15:22:55+08:00</lastmod>
   </url><url>
@@ -51,12 +60,6 @@
     <lastmod>2022-11-07T00:15:45+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages/</loc>
-    <lastmod>2022-11-07T00:15:45+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/tags/r/</loc>
-    <lastmod>2022-11-07T00:15:45+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/categories/r/</loc>
     <lastmod>2022-11-07T00:15:45+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</loc>

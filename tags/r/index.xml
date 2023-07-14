@@ -6,7 +6,19 @@
     <description>Recent content in R on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Nov 2022 00:15:45 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2023 15:01:23 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install R and RStudio Using Scoop</title>
+      <link>https://omicx.cc/posts/2023-05-10-install-r-and-rstudio-using-scoop/</link>
+      <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2023-05-10-install-r-and-rstudio-using-scoop/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This post descripts the way to install R and Rstudio in Windows using Scoop.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Check and Upgrade Bioconductor Packages</title>
       <link>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages/</link>
