@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>SARS-CoV-2</title>
+      <link>https://omicx.cc/tags/sars-cov-2/</link>
+      <pubDate>Mon, 27 Feb 2023 10:44:20 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/sars-cov-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Xfce</title>
       <link>https://omicx.cc/tags/xfce/</link>
       <pubDate>Thu, 19 Jan 2023 23:22:18 +0800</pubDate>
@@ -49,6 +58,42 @@
       <pubDate>Wed, 04 Jan 2023 15:22:55 +0800</pubDate>
       
       <guid>https://omicx.cc/tags/zdock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>needle</title>
+      <link>https://omicx.cc/tags/needle/</link>
+      <pubDate>Fri, 25 Nov 2022 14:13:35 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/needle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Taxonium</title>
+      <link>https://omicx.cc/tags/taxonium/</link>
+      <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/taxonium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tree</title>
+      <link>https://omicx.cc/tags/tree/</link>
+      <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UShER</title>
+      <link>https://omicx.cc/tags/usher/</link>
+      <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/usher/</guid>
       <description></description>
     </item>
     
@@ -98,6 +143,24 @@
     </item>
     
     <item>
+      <title>Jellyfin</title>
+      <link>https://omicx.cc/tags/jellyfin/</link>
+      <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/jellyfin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NAS</title>
+      <link>https://omicx.cc/tags/nas/</link>
+      <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/nas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>OneDrive</title>
       <link>https://omicx.cc/tags/onedrive/</link>
       <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
@@ -139,6 +202,42 @@
       <pubDate>Wed, 21 Jul 2021 14:50:54 +0800</pubDate>
       
       <guid>https://omicx.cc/tags/rstudio-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BD Genomics</title>
+      <link>https://omicx.cc/tags/bd-genomics/</link>
+      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/bd-genomics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BD Rhapsody</title>
+      <link>https://omicx.cc/tags/bd-rhapsody/</link>
+      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/bd-rhapsody/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RNA-Seq</title>
+      <link>https://omicx.cc/tags/rna-seq/</link>
+      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/rna-seq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scRNA-Seq</title>
+      <link>https://omicx.cc/tags/scrna-seq/</link>
+      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/scrna-seq/</guid>
       <description></description>
     </item>
     
@@ -292,15 +391,6 @@
       <pubDate>Sat, 28 Mar 2020 21:41:07 +0000</pubDate>
       
       <guid>https://omicx.cc/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tree</title>
-      <link>https://omicx.cc/tags/tree/</link>
-      <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
-      
-      <guid>https://omicx.cc/tags/tree/</guid>
       <description></description>
     </item>
     
