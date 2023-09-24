@@ -6,7 +6,25 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 May 2023 15:01:23 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Sep 2023 23:38:31 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://omicx.cc/categories/linux/</link>
+      <pubDate>Sun, 24 Sep 2023 23:38:31 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VNC</title>
+      <link>https://omicx.cc/categories/vnc/</link>
+      <pubDate>Sun, 24 Sep 2023 23:38:31 +0800</pubDate>
+      
+      <guid>https://omicx.cc/categories/vnc/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>R</title>
       <link>https://omicx.cc/categories/r/</link>
@@ -22,24 +40,6 @@
       <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
       
       <guid>https://omicx.cc/categories/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://omicx.cc/categories/linux/</link>
-      <pubDate>Mon, 17 Apr 2023 22:16:39 +0800</pubDate>
-      
-      <guid>https://omicx.cc/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Phylogenetics</title>
-      <link>https://omicx.cc/categories/phylogenetics/</link>
-      <pubDate>Mon, 27 Feb 2023 10:44:20 +0800</pubDate>
-      
-      <guid>https://omicx.cc/categories/phylogenetics/</guid>
       <description></description>
     </item>
     
@@ -80,11 +80,11 @@
     </item>
     
     <item>
-      <title>media</title>
-      <link>https://omicx.cc/categories/media/</link>
-      <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
+      <title>Phylogenetics</title>
+      <link>https://omicx.cc/categories/phylogenetics/</link>
+      <pubDate>Mon, 21 Mar 2022 15:13:11 +0800</pubDate>
       
-      <guid>https://omicx.cc/categories/media/</guid>
+      <guid>https://omicx.cc/categories/phylogenetics/</guid>
       <description></description>
     </item>
     
@@ -94,24 +94,6 @@
       <pubDate>Fri, 17 Dec 2021 15:36:59 +0800</pubDate>
       
       <guid>https://omicx.cc/categories/metagenomics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>BD Rhapsody</title>
-      <link>https://omicx.cc/categories/bd-rhapsody/</link>
-      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
-      <guid>https://omicx.cc/categories/bd-rhapsody/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>scRNA-Seq</title>
-      <link>https://omicx.cc/categories/scrna-seq/</link>
-      <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
-      <guid>https://omicx.cc/categories/scrna-seq/</guid>
       <description></description>
     </item>
     
