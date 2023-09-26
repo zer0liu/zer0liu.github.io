@@ -6,7 +6,16 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Sep 2023 23:38:31 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Sep 2023 17:13:19 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 09 26 Install Nextstrain by Conda</title>
+      <link>https://omicx.cc/posts/2023-09-26-install-nextstrain-by-conda/</link>
+      <pubDate>Tue, 26 Sep 2023 17:13:19 +0800</pubDate>
+      
+      <guid>https://omicx.cc/posts/2023-09-26-install-nextstrain-by-conda/</guid>
+      <description>&lt;p&gt;This is a note of install Nextstrain-cli by conda.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Setup TigerVNC Server and Windows Client</title>
       <link>https://omicx.cc/posts/2023-09-24-setup-tigervnc-server-and-windows-client/</link>
