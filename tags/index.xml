@@ -6,7 +6,25 @@
     <description>Recent content in Tags on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Sep 2023 17:13:19 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Oct 2023 09:58:25 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flatpak</title>
+      <link>https://omicx.cc/tags/flatpak/</link>
+      <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/flatpak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://omicx.cc/tags/linux/</link>
+      <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>nextstrain</title>
       <link>https://omicx.cc/tags/nextstrain/</link>
@@ -31,15 +49,6 @@
       <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
       
       <guid>https://omicx.cc/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://omicx.cc/tags/linux/</link>
-      <pubDate>Mon, 17 Apr 2023 22:16:39 +0800</pubDate>
-      
-      <guid>https://omicx.cc/tags/linux/</guid>
       <description></description>
     </item>
     
