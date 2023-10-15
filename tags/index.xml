@@ -6,7 +6,16 @@
     <description>Recent content in Tags on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Oct 2023 09:58:25 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Oct 2023 18:55:34 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mamba</title>
+      <link>https://omicx.cc/tags/mamba/</link>
+      <pubDate>Sun, 15 Oct 2023 18:55:34 +0800</pubDate>
+      
+      <guid>https://omicx.cc/tags/mamba/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Flatpak</title>
       <link>https://omicx.cc/tags/flatpak/</link>
