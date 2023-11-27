@@ -6,12 +6,21 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Oct 2023 18:55:34 +0800</lastBuildDate><atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 16:33:41 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix Cmake &#39;Unsupported GNU Version&#39; Error</title>
+      <link>https://omicx.cc/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/</link>
+      <pubDate>Mon, 27 Nov 2023 16:33:41 +0800</pubDate>
+      <guid>https://omicx.cc/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/</guid>
+      <description>&lt;p&gt;While installing the latest &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;beagle-lib&lt;/a&gt; according to the &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib/wiki/LinuxInstallInstructions&#34;&gt;LinuxUnstallInstructions&lt;/a&gt;, I encountered this error:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag &amp;#39;-allow-unsupported-compiler&amp;#39; can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     <item>
       <title>Mamba and Its Usage</title>
       <link>https://omicx.cc/posts/2023-10-15-mamba-and-its-usage/</link>
       <pubDate>Sun, 15 Oct 2023 18:55:34 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-10-15-mamba-and-its-usage/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
@@ -31,117 +40,95 @@
 &lt;/ul&gt;
 &lt;p&gt;At the same time, &lt;code&gt;mamba&lt;/code&gt; utilizes the same command line parser, package installation and deinstallation code and transaction verification routines as &lt;code&gt;conda&lt;/code&gt; to stay as compatible as possible.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Common Used Flatpak Commands</title>
       <link>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands-omv/</link>
       <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands-omv/</guid>
       <description>&lt;p&gt;Flatpak is a easy-to-use software package management utility for Linux end-users. This is a note for common used Flatpak commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Common Used Flatpak Commands</title>
       <link>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands/</link>
       <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands/</guid>
       <description>&lt;p&gt;Flatpak is a easy-to-use software package management utility for Linux end-users. This is a note for common used Flatpak commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install Nextstrain by Conda</title>
       <link>https://omicx.cc/posts/2023-09-26-install-nextstrain-by-conda/</link>
       <pubDate>Tue, 26 Sep 2023 17:13:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-09-26-install-nextstrain-by-conda/</guid>
       <description>&lt;p&gt;This is a note of install Nextstrain-cli by conda.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Setup TigerVNC Server and Windows Client</title>
       <link>https://omicx.cc/posts/2023-09-24-setup-tigervnc-server-and-windows-client/</link>
       <pubDate>Sun, 24 Sep 2023 23:38:31 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-09-24-setup-tigervnc-server-and-windows-client/</guid>
       <description>&lt;p&gt;The Virtual Network Computer (VNC) enables people to access the remote desktop environment. It is a graphical desktop sharing system that uses the Remote Frame Buffer protocol (RFB). This post introduces install and configure TigerVNC server in Debian 12/bookworm and Windows client.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install R and RStudio Using Scoop</title>
       <link>https://omicx.cc/posts/2023-05-10-install-r-and-rstudio-using-scoop/</link>
       <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-05-10-install-r-and-rstudio-using-scoop/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This post descripts the way to install R and Rstudio in Windows using Scoop.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Archlinux WSL Installation and Configuration</title>
       <link>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</link>
       <pubDate>Mon, 17 Apr 2023 22:16:39 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Perhaps installing Windows Subsystem for Linux (WSL) from the Windows Store is the easiest way, and  this method will install WSL (such as Ubuntu) on the Windows system  drive by default. However, this will compress the storage space of the  system drive, so sometimes we want to install WSL on other disk  partitions. Here, taking archlinuxwsl as an example, we introduce a  general process of installing WSL.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Phylogenetic Analysis SARS CoV 2 With UShER</title>
       <link>https://omicx.cc/posts/2023-02-27-phylogenetic-analysis-sars-cov-2-with-usher/</link>
       <pubDate>Mon, 27 Feb 2023 10:44:20 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-02-27-phylogenetic-analysis-sars-cov-2-with-usher/</guid>
       <description>Create Multiple sequence alignment of your sequences Use SARS-CoV-2 isoloate Whuan-Hu-1 (NC_045512.2) as the reference.
 Download metadata Metadata from GISAID Data are available from EpiCoV.
 Fileds of GISAID metadata:
 # Column Example 1 Virus name hCoV-19/Ireland/LS-NVRL-M35IRL03088/2021 2 Last vaccinated 3 Passage details/history Original 4 Type betacoronavirus 5 Accession ID EPI_ISL_3848896 6 Collection date 2021-08-07 7 Location Europe / Ireland / Laois 8 Additional location information 9 Sequence length 29715 10 Host Human 11 Patient age 21-30 12 Gender unknown 13 Clade GK 14 Pango lineage AY.</description>
     </item>
-    
     <item>
       <title>Move Buttons of Save Dialog Box in Xfce4 to Bottom Right</title>
       <link>https://omicx.cc/posts/2023-01-19-move-buttons-of-save-dialog-box-in-xfce4-to-bottom-right/</link>
       <pubDate>Thu, 19 Jan 2023 23:22:18 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-01-19-move-buttons-of-save-dialog-box-in-xfce4-to-bottom-right/</guid>
       <description>&lt;p&gt;I installed Debian 11/bullseye recently, and I noticed the buttons of the &amp;ldquo;Save&amp;rdquo; dialog box are at the upper side of the window. It looked strange.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/xfce4_save_dialog_160eec2b.png&#34; alt=&#34;Xfce4 default save dialog&#34;&gt;&lt;/p&gt;
 &lt;p&gt;How to solve this problem?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install libg2c.so.0 for ZDOCK in Debian 11</title>
       <link>https://omicx.cc/posts/2023-01-04-install-libg2c.so.0-for-zdock-in-debian-11/</link>
       <pubDate>Wed, 04 Jan 2023 15:22:55 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-01-04-install-libg2c.so.0-for-zdock-in-debian-11/</guid>
       <description>&lt;p&gt;While using &lt;a href=&#34;https://zdock.umassmed.edu/&#34;&gt;ZDOCK&lt;/a&gt; in Debian 11, an error message shew:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./mark_sur
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./mark_sur: error &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; loading shared libraries: libg2c.so.0: cannot open shared object file: No such file or directory
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Alignment of SARS-CoV-2 Reference Genome Sequences</title>
       <link>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</link>
       <pubDate>Fri, 25 Nov 2022 14:13:35 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</guid>
       <description>&lt;p&gt;Severe acute respiratory syndrome coronavirus 2 Wuhan-Hu-1 (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/nuccore/1798174254&#34;&gt;NC_045512.2&lt;/a&gt;) and hCoV-19/Wuhan/WIV04/2019 (&lt;a href=&#34;https://gisaid.org/wiv04/&#34;&gt;EPI_ISL_402124&lt;/a&gt;) are two general used reference genome sequences used for SARS-CoV-2 phylogenetic analyses.&lt;/p&gt;
 &lt;p&gt;Here is the alignment result of these two sequences by &lt;a href=&#34;https://emboss.sourceforge.net/&#34;&gt;EMBOSS&lt;/a&gt; needle.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create Phylogenetic Tree of SARS CoV 2 by UShER</title>
       <link>https://omicx.cc/posts/2022-11-22-create-phylogenetic-tree-of-sars-cov-2-by-usher/</link>
       <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-11-22-create-phylogenetic-tree-of-sars-cov-2-by-usher/</guid>
       <description>&lt;p&gt;There are nearly 14 million viral genome sequences right now in the GISAID EpiCoV ™ database. It is not likely  to infer the phylogenetic relationships for such a huge dataset by traditional maximum likelyhood or Bayesian methods in a shor time period. The UShER package was developed to generate ultra-large phylogenetic tree of SARS-CoV-2 genomes. The algorithm of the UShER program is to place new samples onto an existing phylogeny using maximum parsimony method. It is able to place given SARS-CoV-2 genome sequences into the GISAID global phylogeny in a couple of hours.  This program is particularly helpful in understanding the relationships of newly sequenced SARS-CoV-2 genomes with each other and with previously sequenced genomes in a global phylogeny.&lt;/p&gt;
 &lt;p&gt;The UShER package is composed by four programs:&lt;/p&gt;
@@ -153,54 +140,44 @@ Fileds of GISAID metadata:
 &lt;/ol&gt;
 &lt;p&gt;The taxoniumtools and &lt;a href=&#34;https://taxonium.org/&#34;&gt;Taxonium website&lt;/a&gt; are used to display the MAT generated by UShER.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Check and Upgrade Bioconductor Packages</title>
       <link>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages/</link>
       <pubDate>Mon, 07 Nov 2022 00:15:45 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-11-07-check-and-upgrade-bioconductor-packages/</guid>
       <description>&lt;p&gt;A R version supports more than one version of Bioconductor. To take advantange of new features, users have to update Bioconductor packages regularly.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install and Usage of yt-dlp</title>
       <link>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</link>
       <pubDate>Tue, 30 Aug 2022 10:38:13 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</guid>
       <description>&lt;p&gt;yt-dlp is a &lt;a href=&#34;https://github.com/ytdl-org/youtube-dl&#34;&gt;youtube-dl&lt;/a&gt; fork and able to download videos and audios from many streaming platforms, such as YouTube.&lt;/p&gt;
 &lt;p&gt;This blog describes installation in Debian bullseye and some common usage examples.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg&#34; alt=&#34;yt-dlp logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Bulk Load Tsv File Into SQLite Database</title>
       <link>https://omicx.cc/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/</link>
       <pubDate>Fri, 22 Jul 2022 14:33:03 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/</guid>
       <description>&lt;p&gt;The Tab-Separeted Values (TSV) file is a simple text format and widely supported. The data are stored in a tabular structure, each record in the table is one line of the text file. And each field value of a record is separated by a tab character.&lt;/p&gt;
 &lt;p&gt;It is easy to operate TSV files in programming languages. But if the file were quite large, for instance, millions of lines, it would be difficult to operate the file. Under this circumstances, load the large TSV file into an SQLite3 databasea would be convenient for further operations.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.sqlite.org/images/sqlite370_banner.gif&#34; alt=&#34;SQLite3 banner&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Run MrBayes Along With Beagle-lib</title>
       <link>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</link>
       <pubDate>Mon, 21 Mar 2022 15:13:11 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://nbisweden.github.io/MrBayes/&#34;&gt;MrBayes 3&lt;/a&gt; is a program for Bayesian inference and model choice across a large space of phylogenetic and evolutionary models. And &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. BEAGLE is able to accelerate MrBayes analyses very much.&lt;/p&gt;
 &lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://nbisweden.github.io/MrBayes/img/bayes.jpg&#34; alt=&#34;MrBayes logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install and Setup Jellyfin Docker Image</title>
       <link>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</link>
       <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.&lt;/p&gt;
@@ -208,33 +185,27 @@ Fileds of GISAID metadata:
 &lt;p&gt;Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://jellyfin.org/docs/images/branding-logo-yes-side.png&#34; alt=&#34;Jellyfin logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
       <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</link>
       <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</guid>
       <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
 &lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install and Setup MetaPhlAn 3.0</title>
       <link>https://omicx.cc/posts/2021-12-17-install-and-setup-metaphlan-3/</link>
       <pubDate>Fri, 17 Dec 2021 15:36:59 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-12-17-install-and-setup-metaphlan-3/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://huttenhower.sph.harvard.edu/metaphlan/&#34;&gt;MetaPhlAn (Metagenomic Phylogenetic Analysis)&lt;/a&gt; is a computational tool for profiling the composition of microbial communities from metagenomic shotgun sequencing data.&lt;/p&gt;
 &lt;p&gt;This post describes the installation and setup of MetaPhlAn 3.0 in Debian 11/bullseye.&lt;/p&gt;
 &lt;p&gt;Last updated at: 2021-12-17.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>RStudio and R Markdown Tips</title>
       <link>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</link>
       <pubDate>Thu, 25 Nov 2021 12:26:00 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</guid>
       <description>&lt;p&gt;Here are some miscellaneous tips for working on RStudio and writing R Markdown file. This blog will be updated from time to time.&lt;/p&gt;
 &lt;p&gt;See also:&lt;/p&gt;
@@ -242,63 +213,51 @@ Fileds of GISAID metadata:
 &lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/resources/cheatsheets/&#34;&gt;RStudio Cheatsheets&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Fix Corrupted EndNote Library</title>
       <link>https://omicx.cc/posts/2021-11-04-fix-corrupted-endnote-library/</link>
       <pubDate>Thu, 04 Nov 2021 15:32:05 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-11-04-fix-corrupted-endnote-library/</guid>
       <description>&lt;p&gt;Due to the limited space of &lt;a href=&#34;https://support.clarivate.com/Endnote/s/article/EndNote-online-Data-limitations?language=en_US&#34;&gt;EndNote online&lt;/a&gt;, I still used to sync EndNote libraries through OneNote. The drawback is, the library might be corrupted occasionally (about once a couple of months).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Setup RStudio Server Over Nginx Https</title>
       <link>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</link>
       <pubDate>Wed, 21 Jul 2021 14:50:54 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</guid>
       <description>&lt;p&gt;I have introduced how to &lt;a href=&#34;https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/&#34;&gt;install R and RStudio Server&lt;/a&gt; before. But free version of &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download-server/&#34;&gt;RStudio Server&lt;/a&gt; lack of many security features, especially SSL.&lt;/p&gt;
 &lt;p&gt;This post introduces to secure RStudio Server by an Nginx reverse proxy.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/rstudio-server-logo.png&#34; alt=&#34;RStudio Server logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/certbot-logo.png&#34; alt=&#34;Certbot logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Setup BD Single Cell Genomics Rhapsody Analysis</title>
       <link>https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/</link>
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/</guid>
       <description>&lt;p&gt;This post provides instruction of installing DB Genomics Rhapsody™ Analysis pipeline in a local Linux server.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install QEMU/KVM Server on Debian 10 Headless Server</title>
       <link>https://omicx.cc/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/</link>
       <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/</guid>
       <description>&lt;p&gt;Kernel based Virtual Machine (KVM) is a widely used free and open source type 2 hypervisor for Linux distributions.&lt;/p&gt;
 &lt;p&gt;This post described a workthrough on how to install and configure QEMU/KVM on a Debian 10/buster server.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.linux-kvm.org/kvmless/kvmbanner-logo3.png&#34; alt=&#34;KVM logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title> Batch Calculate and Verify MD5 Checksum With GNU Parallel</title>
       <link>https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/</link>
       <pubDate>Wed, 28 Apr 2021 11:51:45 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/</guid>
       <description>&lt;p&gt;Calculating or verifying md5 checksums for lots of file always a time-consuming process. Here are some notes for how to work with md5 checksum via GNU parallel.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.gnu.org/software/parallel/logo-gray+black300.png&#34; alt=&#34;GNU parallel logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Step by Step Install Open Source Pymol 2.x in Windows by Conda</title>
       <link>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</link>
       <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;This post was first released at &lt;strong&gt;2019-05-26&lt;/strong&gt;, and updated at &lt;strong&gt;2021-04-20&lt;/strong&gt;.&lt;/p&gt;
@@ -308,12 +267,10 @@ Fileds of GISAID metadata:
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/120px-PyMOL_logo.png&#34; alt=&#34;PyMOL logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create a Hugo Blog, along with Isso comment server</title>
       <link>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</link>
       <pubDate>Sun, 18 Apr 2021 15:58:17 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</guid>
       <description>&lt;p&gt;This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/hugo-logo-wide-120.png&#34; alt=&#34;Hugo logo&#34;&gt; &lt;img src=&#34;https://omicx.cc/img/plus.png&#34; alt=&#34;Plus&#34;&gt; &lt;img src=&#34;https://omicx.cc/img/isso-logo-120.png&#34; alt=&#34;Isso logo&#34;&gt;&lt;/p&gt;
@@ -329,52 +286,42 @@ Fileds of GISAID metadata:
 &lt;p&gt;Both local computer and remote server work on &lt;a href=&#34;https://www.debian.org/releases/bullseye/&#34;&gt;Debian bullseye&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>Migrate to Hugo</title>
       <link>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</link>
       <pubDate>Fri, 16 Apr 2021 15:31:39 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</guid>
       <description>The dependency of Node.js packages is over complicated and I have wasted lost of time on it. So I migrated the blog from Hexo to Hugo. Further more, the comment system moved to a self-hosted Isso-based server.
 A workthrough will be online later.</description>
     </item>
-    
     <item>
       <title>Install beagle-lib for NVidia Tesla V100 on Debian buster</title>
       <link>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</link>
       <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.&lt;/p&gt;
 &lt;p&gt;When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvcc fatal   : Value &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;compute_30&amp;#39;&lt;/span&gt; is not defined &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gpu-architecture&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Tips: Pavian Load Large Data</title>
       <link>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</link>
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/fbreitwieser/pavian&#34;&gt;Pavian&lt;/a&gt; is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as &lt;a href=&#34;https://github.com/DerrickWood/kraken2&#34;&gt;Kraken&lt;/a&gt;, &lt;a href=&#34;https://github.com/DaehwanKimLab/centrifuge&#34;&gt;Centrifuge&lt;/a&gt; and &lt;a href=&#34;https://github.com/biobakery/MetaPhlAn&#34;&gt;MetaPhlAn&lt;/a&gt;. Here are a few tips for Pavian to work with large data.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install R and RStudio server in Debian</title>
       <link>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</link>
       <pubDate>Mon, 22 Feb 2021 16:29:04 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</guid>
       <description>&lt;p&gt;This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install hdf5r package in R 4.0.2</title>
       <link>https://omicx.cc/posts/2020-10-20-install-hdf5r-package/</link>
       <pubDate>Tue, 20 Oct 2020 15:35:10 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2020-10-20-install-hdf5r-package/</guid>
       <description>&lt;p&gt;While installing the R package &amp;ldquo;&lt;a href=&#34;https://cran.r-project.org/web/packages/hdf5r/index.html&#34;&gt;hdf5r&lt;/a&gt;&amp;rdquo; version 1.3.3, I encountered the error:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fatal error: hdf5.h: No such file or directory
@@ -383,31 +330,25 @@ A workthrough will be online later.</description>
 compilation terminated.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;My OS is Debian buster/10.6, and the package &lt;strong&gt;&amp;ldquo;libhdf5-dev&amp;rdquo;&lt;/strong&gt; has been installed. It looks R cannot find the path of hdf5 header and library files.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Resume aria2 download in ariang</title>
       <link>https://omicx.cc/posts/2020-09-21-resume-aria2-download-in-ariang/</link>
       <pubDate>Mon, 21 Sep 2020 16:04:04 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2020-09-21-resume-aria2-download-in-ariang/</guid>
       <description>&lt;p&gt;Aria2 creats a &amp;ldquo;&lt;em&gt;&lt;strong&gt;.aria2&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; file for each object it downloading. It can be used to resume the download if necessary.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Enable certbot automatic renewal for cloudflare CDN</title>
       <link>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</link>
       <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</guid>
       <description>&lt;p&gt;A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.&lt;/p&gt;
 &lt;p&gt;So I spent some time to fix the problem.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Nginx &#43; Letsencrypt &#43; Aria2</title>
       <link>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</link>
       <pubDate>Sat, 28 Mar 2020 21:41:07 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</guid>
       <description>&lt;p&gt;Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.&lt;/p&gt;
 &lt;p&gt;Components:&lt;/p&gt;
@@ -433,54 +374,43 @@ compilation terminated.
 &lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Create pdf file for huge phylogenetic tree</title>
       <link>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</link>
       <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</guid>
       <description>&lt;p&gt;Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by &lt;strong&gt;pdfposter&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install conda compiler tools</title>
       <link>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</link>
       <pubDate>Thu, 23 May 2019 23:36:56 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</guid>
       <description>&lt;p&gt;Conda is quite convenient for non-root users to install softwares in Linux system. But sometimes there is no packages available in anaconda repository and we have to install these softwares from source. This post introduces the way to compile and install softwares from source, use the &lt;a href=&#34;https://fallabs.com/kyotocabinet/&#34;&gt;Kyoto Cabinet&lt;/a&gt; Perl module as an example.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>通过 frp 穿透内网访问树莓派的 aria2</title>
       <link>https://omicx.cc/posts/2018-11-30-deploy-raspberrypi-aria2-frp/</link>
       <pubDate>Fri, 30 Nov 2018 10:48:45 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-30-deploy-raspberrypi-aria2-frp/</guid>
       <description>&lt;p&gt;几年前就已经搭建了基于树莓派 2B+ 的下载机，不过由于宽带没有外网 IP ，一直没有实现外网的访问和控制。最近花了几天空闲时间，搭建好基于 frp 的内网穿透服务。这里把搭建过程记录下来，与大家交流。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>BEAST Tips</title>
       <link>https://omicx.cc/posts/2018-11-16-beast-tips/</link>
       <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
       <description>&lt;p&gt;BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install Nvidia CUDA in Debian Way</title>
       <link>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</link>
       <pubDate>Fri, 16 Nov 2018 10:03:23 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;For Debian stable/Stretch&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,465 +6,364 @@
     <description>Recent content in Tags on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Oct 2023 18:55:34 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 16:33:41 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BEAGLE</title>
+      <link>https://omicx.cc/tags/beagle/</link>
+      <pubDate>Mon, 27 Nov 2023 16:33:41 +0800</pubDate>
+      <guid>https://omicx.cc/tags/beagle/</guid>
+      <description></description>
+    </item>
     <item>
       <title>mamba</title>
       <link>https://omicx.cc/tags/mamba/</link>
       <pubDate>Sun, 15 Oct 2023 18:55:34 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/mamba/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Flatpak</title>
       <link>https://omicx.cc/tags/flatpak/</link>
       <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/flatpak/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Linux</title>
       <link>https://omicx.cc/tags/linux/</link>
       <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>nextstrain</title>
       <link>https://omicx.cc/tags/nextstrain/</link>
       <pubDate>Tue, 26 Sep 2023 17:13:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/nextstrain/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>VNC</title>
       <link>https://omicx.cc/tags/vnc/</link>
       <pubDate>Sun, 24 Sep 2023 23:38:31 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/vnc/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R</title>
       <link>https://omicx.cc/tags/r/</link>
       <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/r/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>WSL</title>
       <link>https://omicx.cc/tags/wsl/</link>
       <pubDate>Mon, 17 Apr 2023 22:16:39 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/wsl/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SARS-CoV-2</title>
       <link>https://omicx.cc/tags/sars-cov-2/</link>
       <pubDate>Mon, 27 Feb 2023 10:44:20 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/sars-cov-2/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Xfce</title>
       <link>https://omicx.cc/tags/xfce/</link>
       <pubDate>Thu, 19 Jan 2023 23:22:18 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/xfce/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ZDOCK</title>
       <link>https://omicx.cc/tags/zdock/</link>
       <pubDate>Wed, 04 Jan 2023 15:22:55 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/zdock/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>needle</title>
       <link>https://omicx.cc/tags/needle/</link>
       <pubDate>Fri, 25 Nov 2022 14:13:35 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/needle/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Taxonium</title>
       <link>https://omicx.cc/tags/taxonium/</link>
       <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/taxonium/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tree</title>
       <link>https://omicx.cc/tags/tree/</link>
       <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/tree/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>UShER</title>
       <link>https://omicx.cc/tags/usher/</link>
       <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/usher/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Bioconductor</title>
       <link>https://omicx.cc/tags/bioconductor/</link>
       <pubDate>Mon, 07 Nov 2022 00:15:45 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/bioconductor/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>media</title>
       <link>https://omicx.cc/tags/media/</link>
       <pubDate>Tue, 30 Aug 2022 10:38:13 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/media/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SQLite</title>
       <link>https://omicx.cc/tags/sqlite/</link>
       <pubDate>Fri, 22 Jul 2022 14:33:03 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/sqlite/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>BEAGLE</title>
-      <link>https://omicx.cc/tags/beagle/</link>
-      <pubDate>Mon, 21 Mar 2022 15:13:11 +0800</pubDate>
-      
-      <guid>https://omicx.cc/tags/beagle/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>MrBayes</title>
       <link>https://omicx.cc/tags/mrbayes/</link>
       <pubDate>Mon, 21 Mar 2022 15:13:11 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/mrbayes/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Jellyfin</title>
       <link>https://omicx.cc/tags/jellyfin/</link>
       <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/jellyfin/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NAS</title>
       <link>https://omicx.cc/tags/nas/</link>
       <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/nas/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OneDrive</title>
       <link>https://omicx.cc/tags/onedrive/</link>
       <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/onedrive/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Metagenomics</title>
       <link>https://omicx.cc/tags/metagenomics/</link>
       <pubDate>Fri, 17 Dec 2021 15:36:59 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/metagenomics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R Markdown</title>
       <link>https://omicx.cc/tags/r-markdown/</link>
       <pubDate>Thu, 25 Nov 2021 12:26:00 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/r-markdown/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>EndNote</title>
       <link>https://omicx.cc/tags/endnote/</link>
       <pubDate>Thu, 04 Nov 2021 15:32:05 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/endnote/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>RStudio Server</title>
       <link>https://omicx.cc/tags/rstudio-server/</link>
       <pubDate>Wed, 21 Jul 2021 14:50:54 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/rstudio-server/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>BD Genomics</title>
       <link>https://omicx.cc/tags/bd-genomics/</link>
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/bd-genomics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>BD Rhapsody</title>
       <link>https://omicx.cc/tags/bd-rhapsody/</link>
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/bd-rhapsody/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>RNA-Seq</title>
       <link>https://omicx.cc/tags/rna-seq/</link>
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/rna-seq/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>scRNA-Seq</title>
       <link>https://omicx.cc/tags/scrna-seq/</link>
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/scrna-seq/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Debian</title>
       <link>https://omicx.cc/tags/debian/</link>
       <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/debian/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>KVM</title>
       <link>https://omicx.cc/tags/kvm/</link>
       <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/kvm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>QEMU</title>
       <link>https://omicx.cc/tags/qemu/</link>
       <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/qemu/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>GNU parallel</title>
       <link>https://omicx.cc/tags/gnu-parallel/</link>
       <pubDate>Wed, 28 Apr 2021 11:51:45 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/gnu-parallel/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PyMOL</title>
       <link>https://omicx.cc/tags/pymol/</link>
       <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/pymol/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tips</title>
       <link>https://omicx.cc/tags/tips/</link>
       <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/tips/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hugo</title>
       <link>https://omicx.cc/tags/hugo/</link>
       <pubDate>Sun, 18 Apr 2021 15:58:17 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Note</title>
       <link>https://omicx.cc/tags/note/</link>
       <pubDate>Fri, 16 Apr 2021 15:31:39 +0800</pubDate>
-      
       <guid>https://omicx.cc/tags/note/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>BEAST</title>
       <link>https://omicx.cc/tags/beast/</link>
       <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/beast/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CUDA</title>
       <link>https://omicx.cc/tags/cuda/</link>
       <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/cuda/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NGS</title>
       <link>https://omicx.cc/tags/ngs/</link>
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/ngs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Pavian</title>
       <link>https://omicx.cc/tags/pavian/</link>
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/pavian/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>aria2</title>
       <link>https://omicx.cc/tags/aria2/</link>
       <pubDate>Mon, 21 Sep 2020 16:04:04 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/aria2/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>certbot</title>
       <link>https://omicx.cc/tags/certbot/</link>
       <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/certbot/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>cloudflare</title>
       <link>https://omicx.cc/tags/cloudflare/</link>
       <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/cloudflare/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Letsencrypt</title>
       <link>https://omicx.cc/tags/letsencrypt/</link>
       <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/letsencrypt/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>nginx</title>
       <link>https://omicx.cc/tags/nginx/</link>
       <pubDate>Sat, 28 Mar 2020 21:41:07 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/nginx/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>conda</title>
       <link>https://omicx.cc/tags/conda/</link>
       <pubDate>Thu, 23 May 2019 23:36:56 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/conda/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>fry</title>
       <link>https://omicx.cc/tags/fry/</link>
       <pubDate>Fri, 30 Nov 2018 10:48:45 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/fry/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Raspberry Pi</title>
       <link>https://omicx.cc/tags/raspberry-pi/</link>
       <pubDate>Fri, 30 Nov 2018 10:48:45 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/raspberry-pi/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Nvidia</title>
       <link>https://omicx.cc/tags/nvidia/</link>
       <pubDate>Fri, 16 Nov 2018 10:03:23 +0000</pubDate>
-      
       <guid>https://omicx.cc/tags/nvidia/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

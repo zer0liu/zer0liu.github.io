@@ -6,87 +6,81 @@
     <description>Recent content in Linux on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Oct 2023 09:58:25 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 16:33:41 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix Cmake &#39;Unsupported GNU Version&#39; Error</title>
+      <link>https://omicx.cc/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/</link>
+      <pubDate>Mon, 27 Nov 2023 16:33:41 +0800</pubDate>
+      <guid>https://omicx.cc/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/</guid>
+      <description>&lt;p&gt;While installing the latest &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;beagle-lib&lt;/a&gt; according to the &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib/wiki/LinuxInstallInstructions&#34;&gt;LinuxUnstallInstructions&lt;/a&gt;, I encountered this error:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag &amp;#39;-allow-unsupported-compiler&amp;#39; can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     <item>
       <title>Common Used Flatpak Commands</title>
       <link>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands-omv/</link>
       <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands-omv/</guid>
       <description>&lt;p&gt;Flatpak is a easy-to-use software package management utility for Linux end-users. This is a note for common used Flatpak commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Common Used Flatpak Commands</title>
       <link>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands/</link>
       <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands/</guid>
       <description>&lt;p&gt;Flatpak is a easy-to-use software package management utility for Linux end-users. This is a note for common used Flatpak commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Setup TigerVNC Server and Windows Client</title>
       <link>https://omicx.cc/posts/2023-09-24-setup-tigervnc-server-and-windows-client/</link>
       <pubDate>Sun, 24 Sep 2023 23:38:31 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-09-24-setup-tigervnc-server-and-windows-client/</guid>
       <description>&lt;p&gt;The Virtual Network Computer (VNC) enables people to access the remote desktop environment. It is a graphical desktop sharing system that uses the Remote Frame Buffer protocol (RFB). This post introduces install and configure TigerVNC server in Debian 12/bookworm and Windows client.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Archlinux WSL Installation and Configuration</title>
       <link>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</link>
       <pubDate>Mon, 17 Apr 2023 22:16:39 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Perhaps installing Windows Subsystem for Linux (WSL) from the Windows Store is the easiest way, and  this method will install WSL (such as Ubuntu) on the Windows system  drive by default. However, this will compress the storage space of the  system drive, so sometimes we want to install WSL on other disk  partitions. Here, taking archlinuxwsl as an example, we introduce a  general process of installing WSL.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Move Buttons of Save Dialog Box in Xfce4 to Bottom Right</title>
       <link>https://omicx.cc/posts/2023-01-19-move-buttons-of-save-dialog-box-in-xfce4-to-bottom-right/</link>
       <pubDate>Thu, 19 Jan 2023 23:22:18 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-01-19-move-buttons-of-save-dialog-box-in-xfce4-to-bottom-right/</guid>
       <description>&lt;p&gt;I installed Debian 11/bullseye recently, and I noticed the buttons of the &amp;ldquo;Save&amp;rdquo; dialog box are at the upper side of the window. It looked strange.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/xfce4_save_dialog_160eec2b.png&#34; alt=&#34;Xfce4 default save dialog&#34;&gt;&lt;/p&gt;
 &lt;p&gt;How to solve this problem?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
       <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</link>
       <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</guid>
       <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
 &lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install QEMU/KVM Server on Debian 10 Headless Server</title>
       <link>https://omicx.cc/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/</link>
       <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/</guid>
       <description>&lt;p&gt;Kernel based Virtual Machine (KVM) is a widely used free and open source type 2 hypervisor for Linux distributions.&lt;/p&gt;
 &lt;p&gt;This post described a workthrough on how to install and configure QEMU/KVM on a Debian 10/buster server.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.linux-kvm.org/kvmless/kvmbanner-logo3.png&#34; alt=&#34;KVM logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title> Batch Calculate and Verify MD5 Checksum With GNU Parallel</title>
       <link>https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/</link>
       <pubDate>Wed, 28 Apr 2021 11:51:45 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/</guid>
       <description>&lt;p&gt;Calculating or verifying md5 checksums for lots of file always a time-consuming process. Here are some notes for how to work with md5 checksum via GNU parallel.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.gnu.org/software/parallel/logo-gray+black300.png&#34; alt=&#34;GNU parallel logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

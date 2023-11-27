@@ -2,8 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://omicx.cc/tags/beagle/</loc>
+    <lastmod>2023-11-27T16:33:41+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/categories/biosoft/</loc>
+    <lastmod>2023-11-27T16:33:41+08:00</lastmod>
+  </url><url>
     <loc>https://omicx.cc/categories/</loc>
-    <lastmod>2023-10-15T18:55:34+08:00</lastmod>
+    <lastmod>2023-11-27T16:33:41+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/</loc>
+    <lastmod>2023-11-27T16:33:41+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/categories/linux/</loc>
+    <lastmod>2023-11-27T16:33:41+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/</loc>
+    <lastmod>2023-11-27T16:33:41+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/posts/</loc>
+    <lastmod>2023-11-27T16:33:41+08:00</lastmod>
+  </url><url>
+    <loc>https://omicx.cc/tags/</loc>
+    <lastmod>2023-11-27T16:33:41+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/tags/mamba/</loc>
     <lastmod>2023-10-15T18:55:34+08:00</lastmod>
@@ -11,16 +32,7 @@
     <loc>https://omicx.cc/posts/2023-10-15-mamba-and-its-usage/</loc>
     <lastmod>2023-10-15T18:55:34+08:00</lastmod>
   </url><url>
-    <loc>https://omicx.cc/</loc>
-    <lastmod>2023-10-15T18:55:34+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/posts/</loc>
-    <lastmod>2023-10-15T18:55:34+08:00</lastmod>
-  </url><url>
     <loc>https://omicx.cc/categories/python/</loc>
-    <lastmod>2023-10-15T18:55:34+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/tags/</loc>
     <lastmod>2023-10-15T18:55:34+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands-omv/</loc>
@@ -34,12 +46,6 @@
   </url><url>
     <loc>https://omicx.cc/tags/linux/</loc>
     <lastmod>2023-10-12T09:58:25+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/categories/linux/</loc>
-    <lastmod>2023-10-12T09:58:25+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/categories/biosoft/</loc>
-    <lastmod>2023-09-26T17:13:19+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/categories/conda/</loc>
     <lastmod>2023-09-26T17:13:19+08:00</lastmod>
@@ -145,9 +151,6 @@
   </url><url>
     <loc>https://omicx.cc/categories/sqlite/</loc>
     <lastmod>2022-07-22T14:33:03+08:00</lastmod>
-  </url><url>
-    <loc>https://omicx.cc/tags/beagle/</loc>
-    <lastmod>2022-03-21T15:13:11+08:00</lastmod>
   </url><url>
     <loc>https://omicx.cc/tags/mrbayes/</loc>
     <lastmod>2022-03-21T15:13:11+08:00</lastmod>

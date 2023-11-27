@@ -6,12 +6,12 @@
     <description>Recent content in Tips on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Apr 2021 21:36:12 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 21:36:12 +0000</lastBuildDate>
+    <atom:link href="https://omicx.cc/tags/tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Step by Step Install Open Source Pymol 2.x in Windows by Conda</title>
       <link>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</link>
       <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;This post was first released at &lt;strong&gt;2019-05-26&lt;/strong&gt;, and updated at &lt;strong&gt;2021-04-20&lt;/strong&gt;.&lt;/p&gt;
@@ -21,33 +21,26 @@
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/120px-PyMOL_logo.png&#34; alt=&#34;PyMOL logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tips: Pavian Load Large Data</title>
       <link>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</link>
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/fbreitwieser/pavian&#34;&gt;Pavian&lt;/a&gt; is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as &lt;a href=&#34;https://github.com/DerrickWood/kraken2&#34;&gt;Kraken&lt;/a&gt;, &lt;a href=&#34;https://github.com/DaehwanKimLab/centrifuge&#34;&gt;Centrifuge&lt;/a&gt; and &lt;a href=&#34;https://github.com/biobakery/MetaPhlAn&#34;&gt;MetaPhlAn&lt;/a&gt;. Here are a few tips for Pavian to work with large data.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create pdf file for huge phylogenetic tree</title>
       <link>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</link>
       <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</guid>
       <description>&lt;p&gt;Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by &lt;strong&gt;pdfposter&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>BEAST Tips</title>
       <link>https://omicx.cc/posts/2018-11-16-beast-tips/</link>
       <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
       <description>&lt;p&gt;BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

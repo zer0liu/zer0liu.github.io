@@ -6,249 +6,196 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Oct 2023 18:55:34 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 16:33:41 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>biosoft</title>
+      <link>https://omicx.cc/categories/biosoft/</link>
+      <pubDate>Mon, 27 Nov 2023 16:33:41 +0800</pubDate>
+      <guid>https://omicx.cc/categories/biosoft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://omicx.cc/categories/linux/</link>
+      <pubDate>Mon, 27 Nov 2023 16:33:41 +0800</pubDate>
+      <guid>https://omicx.cc/categories/linux/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Python</title>
       <link>https://omicx.cc/categories/python/</link>
       <pubDate>Sun, 15 Oct 2023 18:55:34 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/python/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://omicx.cc/categories/linux/</link>
-      <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
-      
-      <guid>https://omicx.cc/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>biosoft</title>
-      <link>https://omicx.cc/categories/biosoft/</link>
-      <pubDate>Tue, 26 Sep 2023 17:13:19 +0800</pubDate>
-      
-      <guid>https://omicx.cc/categories/biosoft/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Conda</title>
       <link>https://omicx.cc/categories/conda/</link>
       <pubDate>Tue, 26 Sep 2023 17:13:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/conda/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>VNC</title>
       <link>https://omicx.cc/categories/vnc/</link>
       <pubDate>Sun, 24 Sep 2023 23:38:31 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/vnc/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R</title>
       <link>https://omicx.cc/categories/r/</link>
       <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/r/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Software</title>
       <link>https://omicx.cc/categories/software/</link>
       <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/software/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Phylogenetics</title>
       <link>https://omicx.cc/categories/phylogenetics/</link>
       <pubDate>Mon, 27 Feb 2023 10:44:20 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/phylogenetics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Xfce</title>
       <link>https://omicx.cc/categories/xfce/</link>
       <pubDate>Thu, 19 Jan 2023 23:22:18 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/xfce/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Bioconductor</title>
       <link>https://omicx.cc/categories/bioconductor/</link>
       <pubDate>Mon, 07 Nov 2022 00:15:45 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/bioconductor/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NAS</title>
       <link>https://omicx.cc/categories/nas/</link>
       <pubDate>Tue, 30 Aug 2022 10:38:13 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/nas/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SQLite</title>
       <link>https://omicx.cc/categories/sqlite/</link>
       <pubDate>Fri, 22 Jul 2022 14:33:03 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/sqlite/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>media</title>
       <link>https://omicx.cc/categories/media/</link>
       <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/media/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Metagenomics</title>
       <link>https://omicx.cc/categories/metagenomics/</link>
       <pubDate>Fri, 17 Dec 2021 15:36:59 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/metagenomics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>BD Rhapsody</title>
       <link>https://omicx.cc/categories/bd-rhapsody/</link>
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/bd-rhapsody/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>scRNA-Seq</title>
       <link>https://omicx.cc/categories/scrna-seq/</link>
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/scrna-seq/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PyMOL</title>
       <link>https://omicx.cc/categories/pymol/</link>
       <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
-      
       <guid>https://omicx.cc/categories/pymol/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>blog</title>
       <link>https://omicx.cc/categories/blog/</link>
       <pubDate>Sun, 18 Apr 2021 15:58:17 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/blog/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hugo</title>
       <link>https://omicx.cc/categories/hugo/</link>
       <pubDate>Sun, 18 Apr 2021 15:58:17 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Note</title>
       <link>https://omicx.cc/categories/note/</link>
       <pubDate>Fri, 16 Apr 2021 15:31:39 +0800</pubDate>
-      
       <guid>https://omicx.cc/categories/note/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CUDA</title>
       <link>https://omicx.cc/categories/cuda/</link>
       <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
-      
       <guid>https://omicx.cc/categories/cuda/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NGS</title>
       <link>https://omicx.cc/categories/ngs/</link>
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
-      
       <guid>https://omicx.cc/categories/ngs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Website</title>
       <link>https://omicx.cc/categories/website/</link>
       <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
-      
       <guid>https://omicx.cc/categories/website/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>FigTree</title>
       <link>https://omicx.cc/categories/figtree/</link>
       <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
-      
       <guid>https://omicx.cc/categories/figtree/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hardware</title>
       <link>https://omicx.cc/categories/hardware/</link>
       <pubDate>Fri, 30 Nov 2018 10:48:45 +0000</pubDate>
-      
       <guid>https://omicx.cc/categories/hardware/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Raspberry Pi</title>
       <link>https://omicx.cc/categories/raspberry-pi/</link>
       <pubDate>Fri, 30 Nov 2018 10:48:45 +0000</pubDate>
-      
       <guid>https://omicx.cc/categories/raspberry-pi/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>BEAST</title>
       <link>https://omicx.cc/categories/beast/</link>
       <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
-      
       <guid>https://omicx.cc/categories/beast/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

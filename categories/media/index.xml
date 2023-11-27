@@ -6,12 +6,12 @@
     <description>Recent content in media on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Feb 2022 00:26:24 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/media/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Feb 2022 00:26:24 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/media/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install and Setup Jellyfin Docker Image</title>
       <link>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</link>
       <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.&lt;/p&gt;
@@ -19,6 +19,5 @@
 &lt;p&gt;Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://jellyfin.org/docs/images/branding-logo-yes-side.png&#34; alt=&#34;Jellyfin logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

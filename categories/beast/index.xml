@@ -6,15 +6,14 @@
     <description>Recent content in BEAST on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Nov 2018 12:13:43 +0000</lastBuildDate><atom:link href="https://omicx.cc/categories/beast/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Nov 2018 12:13:43 +0000</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/beast/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BEAST Tips</title>
       <link>https://omicx.cc/posts/2018-11-16-beast-tips/</link>
       <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
       <description>&lt;p&gt;BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

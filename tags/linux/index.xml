@@ -6,42 +6,36 @@
     <description>Recent content in Linux on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Oct 2023 09:58:25 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Oct 2023 09:58:25 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Common Used Flatpak Commands</title>
       <link>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands-omv/</link>
       <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands-omv/</guid>
       <description>&lt;p&gt;Flatpak is a easy-to-use software package management utility for Linux end-users. This is a note for common used Flatpak commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Common Used Flatpak Commands</title>
       <link>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands/</link>
       <pubDate>Thu, 12 Oct 2023 09:58:25 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-10-12-common-used-flatpak-commands/</guid>
       <description>&lt;p&gt;Flatpak is a easy-to-use software package management utility for Linux end-users. This is a note for common used Flatpak commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Archlinux WSL Installation and Configuration</title>
       <link>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</link>
       <pubDate>Mon, 17 Apr 2023 22:16:39 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-04-17-archlinux-wsl/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Perhaps installing Windows Subsystem for Linux (WSL) from the Windows Store is the easiest way, and  this method will install WSL (such as Ubuntu) on the Windows system  drive by default. However, this will compress the storage space of the  system drive, so sometimes we want to install WSL on other disk  partitions. Here, taking archlinuxwsl as an example, we introduce a  general process of installing WSL.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install and Setup Jellyfin Docker Image</title>
       <link>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</link>
       <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.&lt;/p&gt;
@@ -49,57 +43,46 @@
 &lt;p&gt;Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://jellyfin.org/docs/images/branding-logo-yes-side.png&#34; alt=&#34;Jellyfin logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install and Setup OneDrive Client in a Headless Debian Server</title>
       <link>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</link>
       <pubDate>Sun, 23 Jan 2022 22:31:09 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/</guid>
       <description>&lt;p&gt;There is still no official OneDrive client for Linux, the project &amp;ldquo;&lt;a href=&#34;https://github.com/abraunegg/onedrive&#34;&gt;OneDrive Client for Linux&lt;/a&gt;&amp;rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.&lt;/p&gt;
 &lt;p&gt;This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install and Setup MetaPhlAn 3.0</title>
       <link>https://omicx.cc/posts/2021-12-17-install-and-setup-metaphlan-3/</link>
       <pubDate>Fri, 17 Dec 2021 15:36:59 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-12-17-install-and-setup-metaphlan-3/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://huttenhower.sph.harvard.edu/metaphlan/&#34;&gt;MetaPhlAn (Metagenomic Phylogenetic Analysis)&lt;/a&gt; is a computational tool for profiling the composition of microbial communities from metagenomic shotgun sequencing data.&lt;/p&gt;
 &lt;p&gt;This post describes the installation and setup of MetaPhlAn 3.0 in Debian 11/bullseye.&lt;/p&gt;
 &lt;p&gt;Last updated at: 2021-12-17.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Setup BD Single Cell Genomics Rhapsody Analysis</title>
       <link>https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/</link>
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-06-24-setup-bd-single-cell-genomics-rhapsody-analysis/</guid>
       <description>&lt;p&gt;This post provides instruction of installing DB Genomics Rhapsody™ Analysis pipeline in a local Linux server.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install QEMU/KVM Server on Debian 10 Headless Server</title>
       <link>https://omicx.cc/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/</link>
       <pubDate>Tue, 22 Jun 2021 12:55:33 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-06-22-install-qemu-kvm-server-on-debian-10-headless-server/</guid>
       <description>&lt;p&gt;Kernel based Virtual Machine (KVM) is a widely used free and open source type 2 hypervisor for Linux distributions.&lt;/p&gt;
 &lt;p&gt;This post described a workthrough on how to install and configure QEMU/KVM on a Debian 10/buster server.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.linux-kvm.org/kvmless/kvmbanner-logo3.png&#34; alt=&#34;KVM logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title> Batch Calculate and Verify MD5 Checksum With GNU Parallel</title>
       <link>https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/</link>
       <pubDate>Wed, 28 Apr 2021 11:51:45 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-28-calculate-and-verify-md5-checksum-with-gnu-parallel/</guid>
       <description>&lt;p&gt;Calculating or verifying md5 checksums for lots of file always a time-consuming process. Here are some notes for how to work with md5 checksum via GNU parallel.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.gnu.org/software/parallel/logo-gray+black300.png&#34; alt=&#34;GNU parallel logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

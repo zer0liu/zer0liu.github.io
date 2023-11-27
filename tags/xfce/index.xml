@@ -6,17 +6,16 @@
     <description>Recent content in Xfce on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Jan 2023 23:22:18 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/xfce/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Jan 2023 23:22:18 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/tags/xfce/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Move Buttons of Save Dialog Box in Xfce4 to Bottom Right</title>
       <link>https://omicx.cc/posts/2023-01-19-move-buttons-of-save-dialog-box-in-xfce4-to-bottom-right/</link>
       <pubDate>Thu, 19 Jan 2023 23:22:18 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-01-19-move-buttons-of-save-dialog-box-in-xfce4-to-bottom-right/</guid>
       <description>&lt;p&gt;I installed Debian 11/bullseye recently, and I noticed the buttons of the &amp;ldquo;Save&amp;rdquo; dialog box are at the upper side of the window. It looked strange.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/xfce4_save_dialog_160eec2b.png&#34; alt=&#34;Xfce4 default save dialog&#34;&gt;&lt;/p&gt;
 &lt;p&gt;How to solve this problem?&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

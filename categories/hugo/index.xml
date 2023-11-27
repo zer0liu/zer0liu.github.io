@@ -6,12 +6,12 @@
     <description>Recent content in Hugo on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Apr 2021 15:58:17 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 15:58:17 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a Hugo Blog, along with Isso comment server</title>
       <link>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</link>
       <pubDate>Sun, 18 Apr 2021 15:58:17 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-16-create-a-hugo-blog/</guid>
       <description>&lt;p&gt;This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/hugo-logo-wide-120.png&#34; alt=&#34;Hugo logo&#34;&gt; &lt;img src=&#34;https://omicx.cc/img/plus.png&#34; alt=&#34;Plus&#34;&gt; &lt;img src=&#34;https://omicx.cc/img/isso-logo-120.png&#34; alt=&#34;Isso logo&#34;&gt;&lt;/p&gt;
@@ -27,6 +27,5 @@
 &lt;p&gt;Both local computer and remote server work on &lt;a href=&#34;https://www.debian.org/releases/bullseye/&#34;&gt;Debian bullseye&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

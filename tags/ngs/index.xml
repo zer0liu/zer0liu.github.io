@@ -6,15 +6,14 @@
     <description>Recent content in NGS on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Mar 2021 15:54:55 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/ngs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Mar 2021 15:54:55 +0000</lastBuildDate>
+    <atom:link href="https://omicx.cc/tags/ngs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tips: Pavian Load Large Data</title>
       <link>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</link>
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/fbreitwieser/pavian&#34;&gt;Pavian&lt;/a&gt; is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as &lt;a href=&#34;https://github.com/DerrickWood/kraken2&#34;&gt;Kraken&lt;/a&gt;, &lt;a href=&#34;https://github.com/DaehwanKimLab/centrifuge&#34;&gt;Centrifuge&lt;/a&gt; and &lt;a href=&#34;https://github.com/biobakery/MetaPhlAn&#34;&gt;MetaPhlAn&lt;/a&gt;. Here are a few tips for Pavian to work with large data.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

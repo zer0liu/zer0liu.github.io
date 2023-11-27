@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled sorted 
+714e61bb4121e687cfb66f6d882d7cf734376a42 refs/heads/master
+278167e8bf863337cdce0fcb63559da9c759f2b6 refs/heads/master-omv
+8e7cc138e5f65f9fff85a410b1f41ce547d95665 refs/remotes/origin/master
+278167e8bf863337cdce0fcb63559da9c759f2b6 refs/remotes/origin/master-omv

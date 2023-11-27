@@ -6,12 +6,12 @@
     <description>Recent content in PyMOL on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Apr 2021 21:36:12 +0000</lastBuildDate><atom:link href="https://omicx.cc/categories/pymol/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 21:36:12 +0000</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/pymol/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Step by Step Install Open Source Pymol 2.x in Windows by Conda</title>
       <link>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</link>
       <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;This post was first released at &lt;strong&gt;2019-05-26&lt;/strong&gt;, and updated at &lt;strong&gt;2021-04-20&lt;/strong&gt;.&lt;/p&gt;
@@ -21,6 +21,5 @@
 &lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/120px-PyMOL_logo.png&#34; alt=&#34;PyMOL logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
