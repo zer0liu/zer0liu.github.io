@@ -13,8 +13,7 @@
       <link>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</link>
       <pubDate>Fri, 16 Apr 2021 15:31:39 +0800</pubDate>
       <guid>https://omicx.cc/posts/2021-04-16-migrate-to-hugo/</guid>
-      <description>The dependency of Node.js packages is over complicated and I have wasted lost of time on it. So I migrated the blog from Hexo to Hugo. Further more, the comment system moved to a self-hosted Isso-based server.
-A workthrough will be online later.</description>
+      <description>The dependency of Node.js packages is over complicated and I have wasted lost of time on it. So I migrated the blog from Hexo to Hugo. Further more, the comment system moved to a self-hosted Isso-based server.&#xA;A workthrough will be online later.</description>
     </item>
   </channel>
 </rss>

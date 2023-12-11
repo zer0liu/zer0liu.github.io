@@ -13,10 +13,7 @@
       <link>https://omicx.cc/posts/2023-01-04-install-libg2c.so.0-for-zdock-in-debian-11/</link>
       <pubDate>Wed, 04 Jan 2023 15:22:55 +0800</pubDate>
       <guid>https://omicx.cc/posts/2023-01-04-install-libg2c.so.0-for-zdock-in-debian-11/</guid>
-      <description>&lt;p&gt;While using &lt;a href=&#34;https://zdock.umassmed.edu/&#34;&gt;ZDOCK&lt;/a&gt; in Debian 11, an error message shew:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./mark_sur
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./mark_sur: error &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; loading shared libraries: libg2c.so.0: cannot open shared object file: No such file or directory
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;While using &lt;a href=&#34;https://zdock.umassmed.edu/&#34;&gt;ZDOCK&lt;/a&gt; in Debian 11, an error message shew:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./mark_sur&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./mark_sur: error &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; loading shared libraries: libg2c.so.0: cannot open shared object file: No such file or directory&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

@@ -13,8 +13,7 @@
       <link>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</link>
       <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
       <guid>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</guid>
-      <description>&lt;p&gt;A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.&lt;/p&gt;
-&lt;p&gt;So I spent some time to fix the problem.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.&lt;/p&gt;&#xA;&lt;p&gt;So I spent some time to fix the problem.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

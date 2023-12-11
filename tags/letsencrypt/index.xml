@@ -13,37 +13,14 @@
       <link>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</link>
       <pubDate>Tue, 04 Aug 2020 23:11:34 +0000</pubDate>
       <guid>https://omicx.cc/posts/2020-08-04-enable-certbot-automatic-renewal-for-cloudflare-cdn/</guid>
-      <description>&lt;p&gt;A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.&lt;/p&gt;
-&lt;p&gt;So I spent some time to fix the problem.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A couple of days ago, I received an email from the Let&amp;rsquo;s Encrypt and was told the certificate of my domain will expire soon. This domain has been encrypted by certbot and the automatic renewal worked well at that time. About one month ago, I added it to cloudflare CDN. It may hindered the certificate renew.&lt;/p&gt;&#xA;&lt;p&gt;So I spent some time to fix the problem.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nginx &#43; Letsencrypt &#43; Aria2</title>
       <link>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</link>
       <pubDate>Sat, 28 Mar 2020 21:41:07 +0000</pubDate>
       <guid>https://omicx.cc/posts/2020-03-28-aria2-1-35-0-letsencrypt/</guid>
-      <description>&lt;p&gt;Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.&lt;/p&gt;
-&lt;p&gt;Components:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;VPS
-&lt;ul&gt;
-&lt;li&gt;OpenVZ VPS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;OS
-&lt;ul&gt;
-&lt;li&gt;Debian 9.12&lt;/li&gt;
-&lt;li&gt;Kernel 2.6.32&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Softwares
-&lt;ul&gt;
-&lt;li&gt;aria2 1.35.0&lt;/li&gt;
-&lt;li&gt;AriaNg 1.1.4&lt;/li&gt;
-&lt;li&gt;Letsencrypt/certbot 0.28.0&lt;/li&gt;
-&lt;li&gt;Nginx 1.10.3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Most websites supports HTTPS right now. So I decided to re-configure my download server to HTTPS in weekend, and update aria2 to latest version.&lt;/p&gt;&#xA;&lt;p&gt;Components:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;VPS&#xA;&lt;ul&gt;&#xA;&lt;li&gt;OpenVZ VPS&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;OS&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Debian 9.12&lt;/li&gt;&#xA;&lt;li&gt;Kernel 2.6.32&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Softwares&#xA;&lt;ul&gt;&#xA;&lt;li&gt;aria2 1.35.0&lt;/li&gt;&#xA;&lt;li&gt;AriaNg 1.1.4&lt;/li&gt;&#xA;&lt;li&gt;Letsencrypt/certbot 0.28.0&lt;/li&gt;&#xA;&lt;li&gt;Nginx 1.10.3&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

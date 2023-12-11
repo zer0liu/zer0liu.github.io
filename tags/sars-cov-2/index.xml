@@ -13,18 +13,14 @@
       <link>https://omicx.cc/posts/2023-02-27-phylogenetic-analysis-sars-cov-2-with-usher/</link>
       <pubDate>Mon, 27 Feb 2023 10:44:20 +0800</pubDate>
       <guid>https://omicx.cc/posts/2023-02-27-phylogenetic-analysis-sars-cov-2-with-usher/</guid>
-      <description>Create Multiple sequence alignment of your sequences Use SARS-CoV-2 isoloate Whuan-Hu-1 (NC_045512.2) as the reference.
-Download metadata Metadata from GISAID Data are available from EpiCoV.
-Fileds of GISAID metadata:
-# Column Example 1 Virus name hCoV-19/Ireland/LS-NVRL-M35IRL03088/2021 2 Last vaccinated 3 Passage details/history Original 4 Type betacoronavirus 5 Accession ID EPI_ISL_3848896 6 Collection date 2021-08-07 7 Location Europe / Ireland / Laois 8 Additional location information 9 Sequence length 29715 10 Host Human 11 Patient age 21-30 12 Gender unknown 13 Clade GK 14 Pango lineage AY.</description>
+      <description>Create Multiple sequence alignment of your sequences Use SARS-CoV-2 isoloate Whuan-Hu-1 (NC_045512.2) as the reference.&#xA;Download metadata Metadata from GISAID Data are available from EpiCoV.&#xA;Fileds of GISAID metadata:&#xA;# Column Example 1 Virus name hCoV-19/Ireland/LS-NVRL-M35IRL03088/2021 2 Last vaccinated 3 Passage details/history Original 4 Type betacoronavirus 5 Accession ID EPI_ISL_3848896 6 Collection date 2021-08-07 7 Location Europe / Ireland / Laois 8 Additional location information 9 Sequence length 29715 10 Host Human 11 Patient age 21-30 12 Gender unknown 13 Clade GK 14 Pango lineage AY.</description>
     </item>
     <item>
       <title>Alignment of SARS-CoV-2 Reference Genome Sequences</title>
       <link>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</link>
       <pubDate>Fri, 25 Nov 2022 14:13:35 +0800</pubDate>
       <guid>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</guid>
-      <description>&lt;p&gt;Severe acute respiratory syndrome coronavirus 2 Wuhan-Hu-1 (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/nuccore/1798174254&#34;&gt;NC_045512.2&lt;/a&gt;) and hCoV-19/Wuhan/WIV04/2019 (&lt;a href=&#34;https://gisaid.org/wiv04/&#34;&gt;EPI_ISL_402124&lt;/a&gt;) are two general used reference genome sequences used for SARS-CoV-2 phylogenetic analyses.&lt;/p&gt;
-&lt;p&gt;Here is the alignment result of these two sequences by &lt;a href=&#34;https://emboss.sourceforge.net/&#34;&gt;EMBOSS&lt;/a&gt; needle.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Severe acute respiratory syndrome coronavirus 2 Wuhan-Hu-1 (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/nuccore/1798174254&#34;&gt;NC_045512.2&lt;/a&gt;) and hCoV-19/Wuhan/WIV04/2019 (&lt;a href=&#34;https://gisaid.org/wiv04/&#34;&gt;EPI_ISL_402124&lt;/a&gt;) are two general used reference genome sequences used for SARS-CoV-2 phylogenetic analyses.&lt;/p&gt;&#xA;&lt;p&gt;Here is the alignment result of these two sequences by &lt;a href=&#34;https://emboss.sourceforge.net/&#34;&gt;EMBOSS&lt;/a&gt; needle.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

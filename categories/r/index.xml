@@ -13,10 +13,7 @@
       <link>https://omicx.cc/posts/2023-05-10-install-r-and-rstudio-using-scoop/</link>
       <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
       <guid>https://omicx.cc/posts/2023-05-10-install-r-and-rstudio-using-scoop/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This post descripts the way to install R and Rstudio in Windows using Scoop.&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This post descripts the way to install R and Rstudio in Windows using Scoop.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Check and Upgrade Bioconductor Packages</title>
@@ -30,21 +27,14 @@
       <link>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</link>
       <pubDate>Thu, 25 Nov 2021 12:26:00 +0800</pubDate>
       <guid>https://omicx.cc/posts/2021-11-25-rstudio-and-rmarkdown-tips/</guid>
-      <description>&lt;p&gt;Here are some miscellaneous tips for working on RStudio and writing R Markdown file. This blog will be updated from time to time.&lt;/p&gt;
-&lt;p&gt;See also:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/resources/cheatsheets/&#34;&gt;RStudio Cheatsheets&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Here are some miscellaneous tips for working on RStudio and writing R Markdown file. This blog will be updated from time to time.&lt;/p&gt;&#xA;&lt;p&gt;See also:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/resources/cheatsheets/&#34;&gt;RStudio Cheatsheets&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Setup RStudio Server Over Nginx Https</title>
       <link>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</link>
       <pubDate>Wed, 21 Jul 2021 14:50:54 +0800</pubDate>
       <guid>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</guid>
-      <description>&lt;p&gt;I have introduced how to &lt;a href=&#34;https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/&#34;&gt;install R and RStudio Server&lt;/a&gt; before. But free version of &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download-server/&#34;&gt;RStudio Server&lt;/a&gt; lack of many security features, especially SSL.&lt;/p&gt;
-&lt;p&gt;This post introduces to secure RStudio Server by an Nginx reverse proxy.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/rstudio-server-logo.png&#34; alt=&#34;RStudio Server logo&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/certbot-logo.png&#34; alt=&#34;Certbot logo&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have introduced how to &lt;a href=&#34;https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/&#34;&gt;install R and RStudio Server&lt;/a&gt; before. But free version of &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download-server/&#34;&gt;RStudio Server&lt;/a&gt; lack of many security features, especially SSL.&lt;/p&gt;&#xA;&lt;p&gt;This post introduces to secure RStudio Server by an Nginx reverse proxy.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/rstudio-server-logo.png&#34; alt=&#34;RStudio Server logo&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/certbot-logo.png&#34; alt=&#34;Certbot logo&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install R and RStudio server in Debian</title>

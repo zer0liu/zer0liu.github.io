@@ -13,10 +13,7 @@
       <link>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</link>
       <pubDate>Wed, 21 Jul 2021 14:50:54 +0800</pubDate>
       <guid>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</guid>
-      <description>&lt;p&gt;I have introduced how to &lt;a href=&#34;https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/&#34;&gt;install R and RStudio Server&lt;/a&gt; before. But free version of &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download-server/&#34;&gt;RStudio Server&lt;/a&gt; lack of many security features, especially SSL.&lt;/p&gt;
-&lt;p&gt;This post introduces to secure RStudio Server by an Nginx reverse proxy.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/rstudio-server-logo.png&#34; alt=&#34;RStudio Server logo&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/certbot-logo.png&#34; alt=&#34;Certbot logo&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have introduced how to &lt;a href=&#34;https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/&#34;&gt;install R and RStudio Server&lt;/a&gt; before. But free version of &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download-server/&#34;&gt;RStudio Server&lt;/a&gt; lack of many security features, especially SSL.&lt;/p&gt;&#xA;&lt;p&gt;This post introduces to secure RStudio Server by an Nginx reverse proxy.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/rstudio-server-logo.png&#34; alt=&#34;RStudio Server logo&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/certbot-logo.png&#34; alt=&#34;Certbot logo&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
