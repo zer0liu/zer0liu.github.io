@@ -6,8 +6,15 @@
     <description>Recent content in Posts on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Nov 2023 16:33:41 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Dec 2023 22:53:01 +0800</lastBuildDate>
     <atom:link href="https://omicx.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install BookStack by Docker</title>
+      <link>https://omicx.cc/posts/2023-12-25-install-bookstack-by-docker/</link>
+      <pubDate>Mon, 25 Dec 2023 22:53:01 +0800</pubDate>
+      <guid>https://omicx.cc/posts/2023-12-25-install-bookstack-by-docker/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/bookstack_logo.png&#34; alt=&#34;BookStack logo&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information and documentation. Here is a note of the installatin BookStack on a Debian bookworm/12.4 server via Docker.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Fix Cmake &#39;Unsupported GNU Version&#39; Error</title>
       <link>https://omicx.cc/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/</link>

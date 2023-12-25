@@ -6,20 +6,20 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Nov 2023 16:33:41 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Dec 2023 22:53:01 +0800</lastBuildDate>
     <atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://omicx.cc/categories/linux/</link>
+      <pubDate>Mon, 25 Dec 2023 22:53:01 +0800</pubDate>
+      <guid>https://omicx.cc/categories/linux/</guid>
+      <description></description>
+    </item>
     <item>
       <title>biosoft</title>
       <link>https://omicx.cc/categories/biosoft/</link>
       <pubDate>Mon, 27 Nov 2023 16:33:41 +0800</pubDate>
       <guid>https://omicx.cc/categories/biosoft/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://omicx.cc/categories/linux/</link>
-      <pubDate>Mon, 27 Nov 2023 16:33:41 +0800</pubDate>
-      <guid>https://omicx.cc/categories/linux/</guid>
       <description></description>
     </item>
     <item>

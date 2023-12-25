@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Install BookStack by Docker - OmicX</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Install BookStack by Docker" />
+<meta property="og:description" content="
+BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information and documentation. Here is a note of the installatin BookStack on a Debian bookworm/12.4 server via Docker." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://omicx.cc/posts/2023-12-25-install-bookstack-by-docker/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-25T22:53:01+08:00" />
+<meta property="article:modified_time" content="2023-12-25T22:53:01+08:00" />
+
+
+		<meta itemprop="name" content="Install BookStack by Docker">
+<meta itemprop="description" content="
+BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information and documentation. Here is a note of the installatin BookStack on a Debian bookworm/12.4 server via Docker."><meta itemprop="datePublished" content="2023-12-25T22:53:01+08:00" />
+<meta itemprop="dateModified" content="2023-12-25T22:53:01+08:00" />
+<meta itemprop="wordCount" content="901">
+<meta itemprop="keywords" content="bookstack," />
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Install BookStack by Docker"/>
+<meta name="twitter:description" content="
+BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information and documentation. Here is a note of the installatin BookStack on a Debian bookworm/12.4 server via Docker."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS8PNT6QP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3NS8PNT6QP');
+</script>
+
+
+    
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="OmicX" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/logo-512x512.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">OmicX</div>
+					<div class="logo__tagline">Omics &amp; Statistics</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Install BookStack by Docker</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">omicx.cc</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-12-25T22:53:01&#43;08:00">December 25, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-install-docker">1. Install Docker</a></li>
+        <li><a href="#2-linux-post-installation-steps-for-docker-engine">2. Linux post-installation steps for Docker Engine</a>
+          <ul>
+            <li><a href="#21-manage-docker-as-a-non-root-user">2.1 Manage Docker as a non-root user</a></li>
+            <li><a href="#22-configure-docker-to-start-on-boot-with-systemd">2.2 Configure Docker to start on boot with systemd</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-install-docker-compose">3. Install Docker compose</a></li>
+        <li><a href="#4-setup-bookstack-via-docker-compose">4. Setup BookStack via <code>docker compose</code></a>
+          <ul>
+            <li><a href="#41-create-user-bookstack">4.1 Create user <code>bookstack</code></a></li>
+            <li><a href="#42-create-composeyml-file">4.2 Create <code>compose.yml</code> file</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-download-and-run-docker-images">4.2 Download and run docker images</a></li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><img src="/img/bookstack_logo.png" alt="BookStack logo"></p>
+<p>BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information and documentation. Here is a note of the installatin BookStack on a Debian bookworm/12.4 server via Docker.</p>
+<h2 id="1-install-docker">1. Install Docker</h2>
+<p>(1) Set up Docker&rsquo;s <code>apt</code> repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Add Docker&#39;s official GPG key:</span>
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install ca-certificates curl gnupg
+</span></span><span style="display:flex;"><span>sudo install -m <span style="color:#ae81ff">0755</span> -d /etc/apt/keyrings
+</span></span><span style="display:flex;"><span>curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+</span></span><span style="display:flex;"><span>sudo chmod a+r /etc/apt/keyrings/docker.gpg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add the repository to Apt sources:</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#34;deb [arch=&#34;</span><span style="color:#66d9ef">$(</span>dpkg --print-architecture<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;</span><span style="color:#66d9ef">$(</span>. /etc/os-release <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;</span>$VERSION_CODENAME<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34; stable&#34;</span> | <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span></code></pre></div><p>(2) Install the Docker packages.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</span></span></code></pre></div><blockquote>
+<p><strong>NOTE</strong>:</p>
+<p><code>docker compose</code> also installed here.</p>
+</blockquote>
+<p>(3) Verify that the installation is successful by running the <code>hello-world</code> image:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo docker run hello-world
+</span></span></code></pre></div><h2 id="2-linux-post-installation-steps-for-docker-engine">2. Linux post-installation steps for Docker Engine</h2>
+<h3 id="21-manage-docker-as-a-non-root-user">2.1 Manage Docker as a non-root user</h3>
+<p>The Docker daemon binds to a Unix socket, not a TCP port. By default it&rsquo;s the <code>root</code> user that owns the Unix socket, and other users can only access it using <code>sudo</code>. The Docker daemon always runs as the <code>root</code> user.</p>
+<p>If you don&rsquo;t want to preface the <code>docker</code> command with <code>sudo</code>, create a Unix group called <code>docker</code> and add users to it. When the Docker daemon starts, it creates a Unix socket accessible by members of the <code>docker</code> group. On some Linux distributions, the system automatically creates this group when installing Docker Engine using a package manager. In that case, there is no need for you to manually create the group.</p>
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>The <code>docker</code> group grants root-level privileges to the user. For details on how this impacts security in your system, see <a href="https://docs.docker.com/engine/security/#docker-daemon-attack-surface">Docker Daemon Attack Surface</a>.</p>
+</blockquote>
+<p>To create the <code>docker</code> group and add your user:</p>
+<p>(1) Create the <code>docker</code> group.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo groupadd docker
+</span></span></code></pre></div><p>(2) Add your user to the <code>docker</code> group.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo usermod -aG docker $USER
+</span></span></code></pre></div><p>(3) Log out and log back in so that your group membership is re-evaluated.</p>
+<blockquote>
+<p>If you&rsquo;re running Linux in a virtual machine, it may be necessary to restart the virtual machine for changes to take effect.</p>
+</blockquote>
+<p>You can also run the following command to activate the changes to groups:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ newgrp docker
+</span></span></code></pre></div><p>(4) Verify that you can run <code>docker</code> commands without <code>sudo</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker run hello-world
+</span></span></code></pre></div><p>(5) If you initially ran Docker CLI commands using <code>sudo</code> before adding your user to the <code>docker</code> group, you may see the following error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>WARNING: Error loading config file: /home/user/.docker/config.json -
+</span></span><span style="display:flex;"><span>stat /home/user/.docker/config.json: permission denied
+</span></span></code></pre></div><p>This error indicates that the permission settings for the <code>~/.docker/</code> directory are incorrect, due to having used the <code>sudo</code> command earlier.</p>
+<p>To fix this problem, either remove the <code>~/.docker/</code> directory (it&rsquo;s recreated automatically, but any custom settings are lost), or change its ownership and permissions using the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo chown <span style="color:#e6db74">&#34;</span>$USER<span style="color:#e6db74">&#34;</span>:<span style="color:#e6db74">&#34;</span>$USER<span style="color:#e6db74">&#34;</span> /home/<span style="color:#e6db74">&#34;</span>$USER<span style="color:#e6db74">&#34;</span>/.docker -R
+</span></span><span style="display:flex;"><span>$ sudo chmod g+rwx <span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.docker&#34;</span> -R
+</span></span></code></pre></div><h3 id="22-configure-docker-to-start-on-boot-with-systemd">2.2 Configure Docker to start on boot with systemd</h3>
+<p>Many modern Linux distributions use <a href="https://docs.docker.com/config/daemon/systemd/">systemd</a> to manage which services start when the system boots. On Debian and Ubuntu, the Docker service starts on boot by default. To automatically start Docker and containerd on boot for other Linux distributions using systemd, run the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl enable docker.service
+</span></span><span style="display:flex;"><span>$ sudo systemctl enable containerd.service
+</span></span></code></pre></div><p>To stop this behavior, use <code>disable</code> instead.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl disable docker.service
+</span></span><span style="display:flex;"><span>$ sudo systemctl disable containerd.service
+</span></span></code></pre></div><h2 id="3-install-docker-compose">3. Install Docker compose</h2>
+<p><code>Docker compose</code> has been installed as a docker plugin in <strong>Section 1</strong>.</p>
+<p>Check installed docker compose version:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose version
+</span></span><span style="display:flex;"><span>Docker Compose version v2.21.0
+</span></span></code></pre></div><h2 id="4-setup-bookstack-via-docker-compose">4. Setup BookStack via <code>docker compose</code></h2>
+<h3 id="41-create-user-bookstack">4.1 Create user <code>bookstack</code></h3>
+<p>Create a new user <code>bookstack</code> with uid and gid are <strong>2001</strong> to mantian the BookStack service and store the database under its home directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo addgroup --gid <span style="color:#ae81ff">2001</span> bookstack
+</span></span><span style="display:flex;"><span>$ sudo adduser --uid <span style="color:#ae81ff">2001</span> --gid <span style="color:#ae81ff">2001</span> bookstack
+</span></span></code></pre></div><p>Add user <code>bookstack</code> into the <code>docker</code> user group.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo usermod -aG docker bookstack
+</span></span></code></pre></div><p>Switch to user <code>bookstack</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo su bookstack
+</span></span></code></pre></div><p>Then create a directory <code>data</code> to store BookStack data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir data
+</span></span></code></pre></div><h3 id="42-create-composeyml-file">4.2 Create <code>compose.yml</code> file</h3>
+<p>Switch to the <code>data</code> directory first:</p>
+<pre tabindex="0"><code class="language-baash" data-lang="baash">$ cd data
+</code></pre><p>Let&rsquo;s assume the server IP address is <code>192.168.1.100</code>, create the compose file <code>compose.yml</code> as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;2&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">bookstack</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">lscr.io/linuxserver/bookstack</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">bookstack</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PUID=2001</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PGID=2001</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">APP_URL=http://192.168.1.100:6875</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">DB_HOST=bookstack_db</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">DB_PORT=3306</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">DB_USER=bookstack</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">DB_PASS=&lt;passwd&gt;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">DB_DATABASE=bookstackapp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./bookstack_app_data:/config</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">6875</span>:<span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">bookstack_db</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">bookstack_db</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">lscr.io/linuxserver/mariadb</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">bookstack_db</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PUID=2001</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PGID=2001</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">MYSQL_ROOT_PASSWORD=&lt;db_root_passwd&gt;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">TZ=Europe/London</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">MYSQL_DATABASE=bookstackapp</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">MYSQL_USER=bookstack</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">MYSQL_PASSWORD=&lt;passwd&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./bookstack_db_data:/config</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span></code></pre></div><blockquote>
+<p><strong>NOTE</strong>:</p>
+<ul>
+<li>Remember to replace <code>&lt;passwd&gt;</code> and <code>&lt;db_root_passwd&gt;</code> with your own password string.</li>
+<li><code>2001</code> is the UID and GID for user <code>bookstack</code>.</li>
+<li>Please read the <a href="https://github.com/linuxserver/docker-bookstack">linuxserver docker-bookstack document</a> for more configuration parameters.</li>
+</ul>
+</blockquote>
+<h2 id="42-download-and-run-docker-images">4.2 Download and run docker images</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose up -d
+</span></span></code></pre></div><p>If there were no error, it would create 2 new directories:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tree data -L <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>data
+</span></span><span style="display:flex;"><span>├── bookstack_app_data
+</span></span><span style="display:flex;"><span>│   ├── backups
+</span></span><span style="display:flex;"><span>│   ├── BOOKSTACK_APP_KEY.txt
+</span></span><span style="display:flex;"><span>│   ├── keys
+</span></span><span style="display:flex;"><span>│   ├── log
+</span></span><span style="display:flex;"><span>│   ├── nginx
+</span></span><span style="display:flex;"><span>│   ├── php
+</span></span><span style="display:flex;"><span>│   └── www
+</span></span><span style="display:flex;"><span>├── bookstack_db_data
+</span></span><span style="display:flex;"><span>│   ├── custom.cnf
+</span></span><span style="display:flex;"><span>│   ├── databases
+</span></span><span style="display:flex;"><span>│   └── log
+</span></span><span style="display:flex;"><span>└── compose.yml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">11</span> directories, <span style="color:#ae81ff">3</span> files
+</span></span></code></pre></div><p>Access your BookStack web interface at:</p>
+<ul>
+<li>http://192.168.1.100:6875</li>
+</ul>
+<p>The default administrative user account information:</p>
+<ul>
+<li>name:  <code>admin@admin.com</code></li>
+<li>passwd: <code>password</code></li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://docs.docker.com/engine/install/debian/">Install Docker Engine on Debian</a></li>
+<li><a href="https://docs.docker.com/engine/install/linux-postinstall/">Linux post-installation steps for Docker Engine</a></li>
+<li><a href="https://github.com/linuxserver/docker-bookstack">LinuxServer.io docker-bookstack</a></li>
+<li><a href="https://codeopolis.com/posts/how-to-install-bookstack-using-docker/">How to Install Bookstack using Docker</a></li>
+</ol>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/bookstack/" rel="tag">bookstack</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Fix Cmake &#39;Unsupported GNU Version&#39; Error</p>
+		</a>
+	</div>
+</nav>
+
+  <article class="post">
+    <script 
+        data-isso="https://spt.602204.xyz/isso/" 
+        data-isso-id="thread-id"
+        data-isso-css="true"
+        data-isso-lang="en"
+        data-isso-reply-to-self="true"
+        data-isso-require-author="true" 
+        data-isso-require-email="false" 
+        data-isso-avatar="true"
+        data-isso-avatar-bg=""
+        src="https://spt.602204.xyz/isso/js/embed.min.js">
+    </script>
+    <noscript>Please enable JavaScript to view the comments powered by <a href="https://posativ.org/isso/">Isso</a>.</noscript>
+    <div>
+      <section id="isso-thread"></section>
+    </div>
+</article>
+
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://omicx.cc/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/2023-12-25-install-bookstack-by-docker/">Install BookStack by Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/">Fix Cmake &#39;Unsupported GNU Version&#39; Error</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2023-10-15-mamba-and-its-usage/">Mamba and Its Usage</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2023-10-12-common-used-flatpak-commands/">Common Used Flatpak Commands</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/2023-09-26-install-nextstrain-by-conda/">Install Nextstrain by Conda</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/bd-rhapsody/">BD Rhapsody</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/beast/">BEAST</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/bioconductor/">Bioconductor</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/biosoft/">biosoft</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/blog/">blog</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/conda/">Conda</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/cuda/">CUDA</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/figtree/">FigTree</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/hardware/">Hardware</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/hugo/">Hugo</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/linux/">Linux</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/media/">media</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/metagenomics/">Metagenomics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/nas/">NAS</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/ngs/">NGS</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/note/">Note</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/phylogenetics/">Phylogenetics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/pymol/">PyMOL</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/python/">Python</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/r/">R</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/raspberry-pi/">Raspberry Pi</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/scrna-seq/">scRNA-Seq</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/software/">Software</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/sqlite/">SQLite</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/vnc/">VNC</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/website/">Website</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/xfce/">Xfce</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/aria2/" title="aria2">aria2</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bd-genomics/" title="BD Genomics">BD Genomics</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bd-rhapsody/" title="BD Rhapsody">BD Rhapsody</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/beagle/" title="BEAGLE">BEAGLE</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/beast/" title="BEAST">BEAST</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bioconductor/" title="Bioconductor">Bioconductor</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bookstack/" title="bookstack">bookstack</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/certbot/" title="certbot">certbot</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cloudflare/" title="cloudflare">cloudflare</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/conda/" title="conda">conda</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cuda/" title="CUDA">CUDA</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/debian/" title="Debian">Debian</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/endnote/" title="EndNote">EndNote</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/flatpak/" title="Flatpak">Flatpak</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fry/" title="fry">fry</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gnu-parallel/" title="GNU parallel">GNU parallel</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/jellyfin/" title="Jellyfin">Jellyfin</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kvm/" title="KVM">KVM</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/letsencrypt/" title="Letsencrypt">Letsencrypt</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mamba/" title="mamba">mamba</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/media/" title="media">media</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/metagenomics/" title="Metagenomics">Metagenomics</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mrbayes/" title="MrBayes">MrBayes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nas/" title="NAS">NAS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/needle/" title="needle">needle</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nextstrain/" title="nextstrain">nextstrain</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="nginx">nginx</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ngs/" title="NGS">NGS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/note/" title="Note">Note</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nvidia/" title="Nvidia">Nvidia</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/onedrive/" title="OneDrive">OneDrive</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pavian/" title="Pavian">Pavian</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pymol/" title="PyMOL">PyMOL</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/qemu/" title="QEMU">QEMU</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/r/" title="R">R</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/r-markdown/" title="R Markdown">R Markdown</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rna-seq/" title="RNA-Seq">RNA-Seq</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rstudio-server/" title="RStudio Server">RStudio Server</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sars-cov-2/" title="SARS-CoV-2">SARS-CoV-2</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/scrna-seq/" title="scRNA-Seq">scRNA-Seq</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sqlite/" title="SQLite">SQLite</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/taxonium/" title="Taxonium">Taxonium</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tips/" title="Tips">Tips</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tree/" title="Tree">Tree</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/usher/" title="UShER">UShER</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vnc/" title="VNC">VNC</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wsl/" title="WSL">WSL</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/xfce/" title="Xfce">Xfce</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zdock/" title="ZDOCK">ZDOCK</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zer0liu" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:omicx.cc@gmail.com">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>omicx.cc@gmail.com</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 omicx.cc.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
