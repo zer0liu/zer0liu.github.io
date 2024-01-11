@@ -6,14 +6,15 @@
     <description>Recent content in VNC on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Sep 2023 23:38:31 +0800</lastBuildDate>
-    <atom:link href="https://omicx.cc/categories/vnc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Sep 2023 23:38:31 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/vnc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup TigerVNC Server and Windows Client</title>
       <link>https://omicx.cc/posts/2023-09-24-setup-tigervnc-server-and-windows-client/</link>
       <pubDate>Sun, 24 Sep 2023 23:38:31 +0800</pubDate>
+      
       <guid>https://omicx.cc/posts/2023-09-24-setup-tigervnc-server-and-windows-client/</guid>
       <description>&lt;p&gt;The Virtual Network Computer (VNC) enables people to access the remote desktop environment. It is a graphical desktop sharing system that uses the Remote Frame Buffer protocol (RFB). This post introduces install and configure TigerVNC server in Debian 12/bookworm and Windows client.&lt;/p&gt;</description>
     </item>
+    
   </channel>
 </rss>
