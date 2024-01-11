@@ -6,26 +6,21 @@
     <description>Recent content in biosoft on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Nov 2023 16:33:41 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/biosoft/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 16:33:41 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/biosoft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fix Cmake &#39;Unsupported GNU Version&#39; Error</title>
       <link>https://omicx.cc/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/</link>
       <pubDate>Mon, 27 Nov 2023 16:33:41 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/</guid>
-      <description>&lt;p&gt;While installing the latest &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;beagle-lib&lt;/a&gt; according to the &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib/wiki/LinuxInstallInstructions&#34;&gt;LinuxUnstallInstructions&lt;/a&gt;, I encountered this error:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag &amp;#39;-allow-unsupported-compiler&amp;#39; can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;While installing the latest &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;beagle-lib&lt;/a&gt; according to the &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib/wiki/LinuxInstallInstructions&#34;&gt;LinuxUnstallInstructions&lt;/a&gt;, I encountered this error:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag &amp;#39;-allow-unsupported-compiler&amp;#39; can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
     <item>
       <title>Install Nextstrain by Conda</title>
       <link>https://omicx.cc/posts/2023-09-26-install-nextstrain-by-conda/</link>
       <pubDate>Tue, 26 Sep 2023 17:13:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-09-26-install-nextstrain-by-conda/</guid>
       <description>&lt;p&gt;This is a note of install Nextstrain-cli by conda.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

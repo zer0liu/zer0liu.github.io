@@ -6,27 +6,21 @@
     <description>Recent content in BEAST on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/beast/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate>
+    <atom:link href="https://omicx.cc/tags/beast/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install beagle-lib for NVidia Tesla V100 on Debian buster</title>
       <link>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</link>
       <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.&lt;/p&gt;
-&lt;p&gt;When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvcc fatal   : Value &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;compute_30&amp;#39;&lt;/span&gt; is not defined &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gpu-architecture&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.&lt;/p&gt;&#xA;&lt;p&gt;When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvcc fatal   : Value &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;compute_30&amp;#39;&lt;/span&gt; is not defined &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gpu-architecture&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>BEAST Tips</title>
       <link>https://omicx.cc/posts/2018-11-16-beast-tips/</link>
       <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
       <description>&lt;p&gt;BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,198 +6,126 @@
     <description>Recent content in Software on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 May 2023 15:01:23 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2023 15:01:23 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install R and RStudio Using Scoop</title>
       <link>https://omicx.cc/posts/2023-05-10-install-r-and-rstudio-using-scoop/</link>
       <pubDate>Wed, 10 May 2023 15:01:23 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-05-10-install-r-and-rstudio-using-scoop/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This post descripts the way to install R and Rstudio in Windows using Scoop.&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This post descripts the way to install R and Rstudio in Windows using Scoop.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install libg2c.so.0 for ZDOCK in Debian 11</title>
       <link>https://omicx.cc/posts/2023-01-04-install-libg2c.so.0-for-zdock-in-debian-11/</link>
       <pubDate>Wed, 04 Jan 2023 15:22:55 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-01-04-install-libg2c.so.0-for-zdock-in-debian-11/</guid>
-      <description>&lt;p&gt;While using &lt;a href=&#34;https://zdock.umassmed.edu/&#34;&gt;ZDOCK&lt;/a&gt; in Debian 11, an error message shew:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./mark_sur
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./mark_sur: error &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; loading shared libraries: libg2c.so.0: cannot open shared object file: No such file or directory
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;While using &lt;a href=&#34;https://zdock.umassmed.edu/&#34;&gt;ZDOCK&lt;/a&gt; in Debian 11, an error message shew:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./mark_sur&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./mark_sur: error &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; loading shared libraries: libg2c.so.0: cannot open shared object file: No such file or directory&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Alignment of SARS-CoV-2 Reference Genome Sequences</title>
       <link>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</link>
       <pubDate>Fri, 25 Nov 2022 14:13:35 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</guid>
-      <description>&lt;p&gt;Severe acute respiratory syndrome coronavirus 2 Wuhan-Hu-1 (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/nuccore/1798174254&#34;&gt;NC_045512.2&lt;/a&gt;) and hCoV-19/Wuhan/WIV04/2019 (&lt;a href=&#34;https://gisaid.org/wiv04/&#34;&gt;EPI_ISL_402124&lt;/a&gt;) are two general used reference genome sequences used for SARS-CoV-2 phylogenetic analyses.&lt;/p&gt;
-&lt;p&gt;Here is the alignment result of these two sequences by &lt;a href=&#34;https://emboss.sourceforge.net/&#34;&gt;EMBOSS&lt;/a&gt; needle.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Severe acute respiratory syndrome coronavirus 2 Wuhan-Hu-1 (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/nuccore/1798174254&#34;&gt;NC_045512.2&lt;/a&gt;) and hCoV-19/Wuhan/WIV04/2019 (&lt;a href=&#34;https://gisaid.org/wiv04/&#34;&gt;EPI_ISL_402124&lt;/a&gt;) are two general used reference genome sequences used for SARS-CoV-2 phylogenetic analyses.&lt;/p&gt;&#xA;&lt;p&gt;Here is the alignment result of these two sequences by &lt;a href=&#34;https://emboss.sourceforge.net/&#34;&gt;EMBOSS&lt;/a&gt; needle.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create Phylogenetic Tree of SARS CoV 2 by UShER</title>
       <link>https://omicx.cc/posts/2022-11-22-create-phylogenetic-tree-of-sars-cov-2-by-usher/</link>
       <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-11-22-create-phylogenetic-tree-of-sars-cov-2-by-usher/</guid>
-      <description>&lt;p&gt;There are nearly 14 million viral genome sequences right now in the GISAID EpiCoV ™ database. It is not likely  to infer the phylogenetic relationships for such a huge dataset by traditional maximum likelyhood or Bayesian methods in a shor time period. The UShER package was developed to generate ultra-large phylogenetic tree of SARS-CoV-2 genomes. The algorithm of the UShER program is to place new samples onto an existing phylogeny using maximum parsimony method. It is able to place given SARS-CoV-2 genome sequences into the GISAID global phylogeny in a couple of hours.  This program is particularly helpful in understanding the relationships of newly sequenced SARS-CoV-2 genomes with each other and with previously sequenced genomes in a global phylogeny.&lt;/p&gt;
-&lt;p&gt;The UShER package is composed by four programs:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;UShER&lt;/code&gt;: a program that rapidly places new samples onto an existing phylogeny using maximum parsimony.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;matUtils&lt;/code&gt;:  a toolkit for querying, interpreting and manipulating the mutation-annotated trees (MATs).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;matOptimize&lt;/code&gt;:  a program to rapidly and effectively optimize a mutation-annotated tree (MAT) for parsimony using subtree pruning and regrafting (SPR) moves within a user-defined radius.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;RIPPLES&lt;/code&gt;: a program that uses a phylogenomic technique to rapidly and sensitively detect recombinant nodes and their ancestors in a mutation-annotated tree (MAT).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The taxoniumtools and &lt;a href=&#34;https://taxonium.org/&#34;&gt;Taxonium website&lt;/a&gt; are used to display the MAT generated by UShER.&lt;/p&gt;</description>
+      <description>&lt;p&gt;There are nearly 14 million viral genome sequences right now in the GISAID EpiCoV ™ database. It is not likely  to infer the phylogenetic relationships for such a huge dataset by traditional maximum likelyhood or Bayesian methods in a shor time period. The UShER package was developed to generate ultra-large phylogenetic tree of SARS-CoV-2 genomes. The algorithm of the UShER program is to place new samples onto an existing phylogeny using maximum parsimony method. It is able to place given SARS-CoV-2 genome sequences into the GISAID global phylogeny in a couple of hours.  This program is particularly helpful in understanding the relationships of newly sequenced SARS-CoV-2 genomes with each other and with previously sequenced genomes in a global phylogeny.&lt;/p&gt;&#xA;&lt;p&gt;The UShER package is composed by four programs:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;UShER&lt;/code&gt;: a program that rapidly places new samples onto an existing phylogeny using maximum parsimony.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;matUtils&lt;/code&gt;:  a toolkit for querying, interpreting and manipulating the mutation-annotated trees (MATs).&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;matOptimize&lt;/code&gt;:  a program to rapidly and effectively optimize a mutation-annotated tree (MAT) for parsimony using subtree pruning and regrafting (SPR) moves within a user-defined radius.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;RIPPLES&lt;/code&gt;: a program that uses a phylogenomic technique to rapidly and sensitively detect recombinant nodes and their ancestors in a mutation-annotated tree (MAT).&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The taxoniumtools and &lt;a href=&#34;https://taxonium.org/&#34;&gt;Taxonium website&lt;/a&gt; are used to display the MAT generated by UShER.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install and Usage of yt-dlp</title>
       <link>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</link>
       <pubDate>Tue, 30 Aug 2022 10:38:13 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</guid>
-      <description>&lt;p&gt;yt-dlp is a &lt;a href=&#34;https://github.com/ytdl-org/youtube-dl&#34;&gt;youtube-dl&lt;/a&gt; fork and able to download videos and audios from many streaming platforms, such as YouTube.&lt;/p&gt;
-&lt;p&gt;This blog describes installation in Debian bullseye and some common usage examples.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg&#34; alt=&#34;yt-dlp logo&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;yt-dlp is a &lt;a href=&#34;https://github.com/ytdl-org/youtube-dl&#34;&gt;youtube-dl&lt;/a&gt; fork and able to download videos and audios from many streaming platforms, such as YouTube.&lt;/p&gt;&#xA;&lt;p&gt;This blog describes installation in Debian bullseye and some common usage examples.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg&#34; alt=&#34;yt-dlp logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Run MrBayes Along With Beagle-lib</title>
       <link>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</link>
       <pubDate>Mon, 21 Mar 2022 15:13:11 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://nbisweden.github.io/MrBayes/&#34;&gt;MrBayes 3&lt;/a&gt; is a program for Bayesian inference and model choice across a large space of phylogenetic and evolutionary models. And &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. BEAGLE is able to accelerate MrBayes analyses very much.&lt;/p&gt;
-&lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://nbisweden.github.io/MrBayes/img/bayes.jpg&#34; alt=&#34;MrBayes logo&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nbisweden.github.io/MrBayes/&#34;&gt;MrBayes 3&lt;/a&gt; is a program for Bayesian inference and model choice across a large space of phylogenetic and evolutionary models. And &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. BEAGLE is able to accelerate MrBayes analyses very much.&lt;/p&gt;&#xA;&lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://nbisweden.github.io/MrBayes/img/bayes.jpg&#34; alt=&#34;MrBayes logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Fix Corrupted EndNote Library</title>
       <link>https://omicx.cc/posts/2021-11-04-fix-corrupted-endnote-library/</link>
       <pubDate>Thu, 04 Nov 2021 15:32:05 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-11-04-fix-corrupted-endnote-library/</guid>
       <description>&lt;p&gt;Due to the limited space of &lt;a href=&#34;https://support.clarivate.com/Endnote/s/article/EndNote-online-Data-limitations?language=en_US&#34;&gt;EndNote online&lt;/a&gt;, I still used to sync EndNote libraries through OneNote. The drawback is, the library might be corrupted occasionally (about once a couple of months).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Setup RStudio Server Over Nginx Https</title>
       <link>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</link>
       <pubDate>Wed, 21 Jul 2021 14:50:54 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-07-21-setup-rstudio-server-over-nginx-https/</guid>
-      <description>&lt;p&gt;I have introduced how to &lt;a href=&#34;https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/&#34;&gt;install R and RStudio Server&lt;/a&gt; before. But free version of &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download-server/&#34;&gt;RStudio Server&lt;/a&gt; lack of many security features, especially SSL.&lt;/p&gt;
-&lt;p&gt;This post introduces to secure RStudio Server by an Nginx reverse proxy.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/rstudio-server-logo.png&#34; alt=&#34;RStudio Server logo&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/certbot-logo.png&#34; alt=&#34;Certbot logo&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have introduced how to &lt;a href=&#34;https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/&#34;&gt;install R and RStudio Server&lt;/a&gt; before. But free version of &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download-server/&#34;&gt;RStudio Server&lt;/a&gt; lack of many security features, especially SSL.&lt;/p&gt;&#xA;&lt;p&gt;This post introduces to secure RStudio Server by an Nginx reverse proxy.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/rstudio-server-logo.png&#34; alt=&#34;RStudio Server logo&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/certbot-logo.png&#34; alt=&#34;Certbot logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Step by Step Install Open Source Pymol 2.x in Windows by Conda</title>
       <link>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</link>
       <pubDate>Tue, 20 Apr 2021 21:36:12 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-20-install-pymol-windows/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;This post was first released at &lt;strong&gt;2019-05-26&lt;/strong&gt;, and updated at &lt;strong&gt;2021-04-20&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Since PyMOL 2.x released, there were no binary installer avaliable for Windows.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;PyMOL Wiki&lt;/a&gt; provides the way to install open source PyMOL in Windows under Python 3.x.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/120px-PyMOL_logo.png&#34; alt=&#34;PyMOL logo&#34;&gt;&lt;/p&gt;
-&lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This post was first released at &lt;strong&gt;2019-05-26&lt;/strong&gt;, and updated at &lt;strong&gt;2021-04-20&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Since PyMOL 2.x released, there were no binary installer avaliable for Windows.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;PyMOL Wiki&lt;/a&gt; provides the way to install open source PyMOL in Windows under Python 3.x.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://omicx.cc/img/120px-PyMOL_logo.png&#34; alt=&#34;PyMOL logo&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This post provided the method to install PyMOL 2.x by conda (Anaconda or Minoconda) in Windows.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install beagle-lib for NVidia Tesla V100 on Debian buster</title>
       <link>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</link>
       <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.&lt;/p&gt;
-&lt;p&gt;When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvcc fatal   : Value &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;compute_30&amp;#39;&lt;/span&gt; is not defined &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gpu-architecture&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.&lt;/p&gt;&#xA;&lt;p&gt;When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvcc fatal   : Value &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;compute_30&amp;#39;&lt;/span&gt; is not defined &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gpu-architecture&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Tips: Pavian Load Large Data</title>
       <link>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</link>
       <pubDate>Mon, 15 Mar 2021 15:54:55 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-03-15-tips-pavian-load-large-data/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/fbreitwieser/pavian&#34;&gt;Pavian&lt;/a&gt; is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as &lt;a href=&#34;https://github.com/DerrickWood/kraken2&#34;&gt;Kraken&lt;/a&gt;, &lt;a href=&#34;https://github.com/DaehwanKimLab/centrifuge&#34;&gt;Centrifuge&lt;/a&gt; and &lt;a href=&#34;https://github.com/biobakery/MetaPhlAn&#34;&gt;MetaPhlAn&lt;/a&gt;. Here are a few tips for Pavian to work with large data.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install R and RStudio server in Debian</title>
       <link>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</link>
       <pubDate>Mon, 22 Feb 2021 16:29:04 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-02-22-install-r-and-rstudio-server-in-debian/</guid>
       <description>&lt;p&gt;This post introduces how to complie latest R for RStidio, and install RStudio Server in a Debian host.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install hdf5r package in R 4.0.2</title>
       <link>https://omicx.cc/posts/2020-10-20-install-hdf5r-package/</link>
       <pubDate>Tue, 20 Oct 2020 15:35:10 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2020-10-20-install-hdf5r-package/</guid>
-      <description>&lt;p&gt;While installing the R package &amp;ldquo;&lt;a href=&#34;https://cran.r-project.org/web/packages/hdf5r/index.html&#34;&gt;hdf5r&lt;/a&gt;&amp;rdquo; version 1.3.3, I encountered the error:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fatal error: hdf5.h: No such file or directory
- #include &amp;lt;hdf5.h&amp;gt;
-          ^~~~~~~~
-compilation terminated.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;My OS is Debian buster/10.6, and the package &lt;strong&gt;&amp;ldquo;libhdf5-dev&amp;rdquo;&lt;/strong&gt; has been installed. It looks R cannot find the path of hdf5 header and library files.&lt;/p&gt;</description>
+      <description>&lt;p&gt;While installing the R package &amp;ldquo;&lt;a href=&#34;https://cran.r-project.org/web/packages/hdf5r/index.html&#34;&gt;hdf5r&lt;/a&gt;&amp;rdquo; version 1.3.3, I encountered the error:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fatal error: hdf5.h: No such file or directory&#xA; #include &amp;lt;hdf5.h&amp;gt;&#xA;          ^~~~~~~~&#xA;compilation terminated.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;My OS is Debian buster/10.6, and the package &lt;strong&gt;&amp;ldquo;libhdf5-dev&amp;rdquo;&lt;/strong&gt; has been installed. It looks R cannot find the path of hdf5 header and library files.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create pdf file for huge phylogenetic tree</title>
       <link>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</link>
       <pubDate>Sat, 22 Jun 2019 21:26:00 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2019-06-22-create-pdf-files-for-huge-phylogenetic-tree/</guid>
       <description>&lt;p&gt;Viewing and annotation of a huge phylogenetic tree, especially with hundreds or even thousamds taxa, is always a problem. This post provides a method to split a phylogenetic tree into multiple pages of a PDF file by &lt;strong&gt;pdfposter&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install conda compiler tools</title>
       <link>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</link>
       <pubDate>Thu, 23 May 2019 23:36:56 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2019-05-23-install-conda-compiler-tools/</guid>
       <description>&lt;p&gt;Conda is quite convenient for non-root users to install softwares in Linux system. But sometimes there is no packages available in anaconda repository and we have to install these softwares from source. This post introduces the way to compile and install softwares from source, use the &lt;a href=&#34;https://fallabs.com/kyotocabinet/&#34;&gt;Kyoto Cabinet&lt;/a&gt; Perl module as an example.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>BEAST Tips</title>
       <link>https://omicx.cc/posts/2018-11-16-beast-tips/</link>
       <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
       <description>&lt;p&gt;BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install Nvidia CUDA in Debian Way</title>
       <link>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</link>
       <pubDate>Fri, 16 Nov 2018 10:03:23 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;For Debian stable/Stretch&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;For Debian stable/Stretch&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

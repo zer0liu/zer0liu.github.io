@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on OmicX</title>
+    <link>https://omicx.cc/categories/programming/</link>
+    <description>Recent content in Programming on OmicX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Jan 2024 11:06:12 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VS Code Connect to Remote Server over Intranet</title>
+      <link>https://omicx.cc/posts/2024-01-11-vs-code-connect-to-remote-server-in-intranet/</link>
+      <pubDate>Thu, 11 Jan 2024 11:06:12 +0800</pubDate>
+      <guid>https://omicx.cc/posts/2024-01-11-vs-code-connect-to-remote-server-in-intranet/</guid>
+      <description>&lt;p&gt;This post is a walkthrough to setup and connect Visual Studio Code to remote server over Intranet or behind a firewall.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://code.visualstudio.com/assets/docs/remote/ssh/architecture-ssh.png&#34; alt=&#34;Architecture-ssh&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

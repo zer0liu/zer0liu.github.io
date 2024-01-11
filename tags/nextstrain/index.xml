@@ -6,15 +6,14 @@
     <description>Recent content in nextstrain on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Sep 2023 17:13:19 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/nextstrain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Sep 2023 17:13:19 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/tags/nextstrain/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Nextstrain by Conda</title>
       <link>https://omicx.cc/posts/2023-09-26-install-nextstrain-by-conda/</link>
       <pubDate>Tue, 26 Sep 2023 17:13:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-09-26-install-nextstrain-by-conda/</guid>
       <description>&lt;p&gt;This is a note of install Nextstrain-cli by conda.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

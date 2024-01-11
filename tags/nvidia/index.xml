@@ -6,18 +6,14 @@
     <description>Recent content in Nvidia on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Nov 2018 10:03:23 +0000</lastBuildDate><atom:link href="https://omicx.cc/tags/nvidia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Nov 2018 10:03:23 +0000</lastBuildDate>
+    <atom:link href="https://omicx.cc/tags/nvidia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Nvidia CUDA in Debian Way</title>
       <link>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</link>
       <pubDate>Fri, 16 Nov 2018 10:03:23 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;For Debian stable/Stretch&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;For Debian stable/Stretch&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

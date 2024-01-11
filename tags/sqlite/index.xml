@@ -6,17 +6,14 @@
     <description>Recent content in SQLite on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Jul 2022 14:33:03 +0800</lastBuildDate><atom:link href="https://omicx.cc/tags/sqlite/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jul 2022 14:33:03 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/tags/sqlite/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bulk Load Tsv File Into SQLite Database</title>
       <link>https://omicx.cc/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/</link>
       <pubDate>Fri, 22 Jul 2022 14:33:03 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-07-22-bulk-load-tsv-file-into-sqlite-database/</guid>
-      <description>&lt;p&gt;The Tab-Separeted Values (TSV) file is a simple text format and widely supported. The data are stored in a tabular structure, each record in the table is one line of the text file. And each field value of a record is separated by a tab character.&lt;/p&gt;
-&lt;p&gt;It is easy to operate TSV files in programming languages. But if the file were quite large, for instance, millions of lines, it would be difficult to operate the file. Under this circumstances, load the large TSV file into an SQLite3 databasea would be convenient for further operations.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sqlite.org/images/sqlite370_banner.gif&#34; alt=&#34;SQLite3 banner&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;The Tab-Separeted Values (TSV) file is a simple text format and widely supported. The data are stored in a tabular structure, each record in the table is one line of the text file. And each field value of a record is separated by a tab character.&lt;/p&gt;&#xA;&lt;p&gt;It is easy to operate TSV files in programming languages. But if the file were quite large, for instance, millions of lines, it would be difficult to operate the file. Under this circumstances, load the large TSV file into an SQLite3 databasea would be convenient for further operations.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.sqlite.org/images/sqlite370_banner.gif&#34; alt=&#34;SQLite3 banner&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

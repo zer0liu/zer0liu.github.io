@@ -6,31 +6,14 @@
     <description>Recent content in Python on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Oct 2023 18:55:34 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Oct 2023 18:55:34 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mamba and Its Usage</title>
       <link>https://omicx.cc/posts/2023-10-15-mamba-and-its-usage/</link>
       <pubDate>Sun, 15 Oct 2023 18:55:34 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-10-15-mamba-and-its-usage/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;what-is-mamba&#34;&gt;What is Mamba?&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;mamba&lt;/code&gt; is a reimplementation of the conda package manager in C++.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;parallel downloading of repository data and package files using multi-threading&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;libsolv for much faster dependency solving, a state of the art library used in the RPM package manager of Red Hat, Fedora and OpenSUSE&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;core parts of &lt;code&gt;mamba&lt;/code&gt; are implemented in C++ for maximum efficiency&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;At the same time, &lt;code&gt;mamba&lt;/code&gt; utilizes the same command line parser, package installation and deinstallation code and transaction verification routines as &lt;code&gt;conda&lt;/code&gt; to stay as compatible as possible.&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Kindly provided by &lt;a href=&#34;mailto:xum2813@gmail.com&#34;&gt;Xu Meng&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-is-mamba&#34;&gt;What is Mamba?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;mamba&lt;/code&gt; is a reimplementation of the conda package manager in C++.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;parallel downloading of repository data and package files using multi-threading&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;libsolv for much faster dependency solving, a state of the art library used in the RPM package manager of Red Hat, Fedora and OpenSUSE&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;core parts of &lt;code&gt;mamba&lt;/code&gt; are implemented in C++ for maximum efficiency&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;At the same time, &lt;code&gt;mamba&lt;/code&gt; utilizes the same command line parser, package installation and deinstallation code and transaction verification routines as &lt;code&gt;conda&lt;/code&gt; to stay as compatible as possible.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,30 +6,21 @@
     <description>Recent content in CUDA on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate><atom:link href="https://omicx.cc/categories/cuda/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 15:30:10 +0000</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/cuda/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install beagle-lib for NVidia Tesla V100 on Debian buster</title>
       <link>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</link>
       <pubDate>Fri, 09 Apr 2021 15:30:10 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.&lt;/p&gt;
-&lt;p&gt;When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvcc fatal   : Value &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;compute_30&amp;#39;&lt;/span&gt; is not defined &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gpu-architecture&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.&lt;/p&gt;&#xA;&lt;p&gt;When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvcc fatal   : Value &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;compute_30&amp;#39;&lt;/span&gt; is not defined &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gpu-architecture&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Install Nvidia CUDA in Debian Way</title>
       <link>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</link>
       <pubDate>Fri, 16 Nov 2018 10:03:23 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-install-nvidia-cuda-in-debian-way/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;For Debian stable/Stretch&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;For Debian stable/Stretch&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Install NVidia driver in Linux server is always tedious and painful. Fortunatelly, Debian stable/Stretch provids ready-to-use NVidia drivers and CUDA toolkits. This post indicates the proper way to install up-to-date Nvidia driver and CUDA in Debian way.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

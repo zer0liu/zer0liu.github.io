@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.119.0">
+	<meta name="generator" content="Hugo 0.121.2">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +13,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://omicx.cc/" />
 
+
 		<meta itemprop="name" content="OmicX">
 <meta itemprop="description" content="A blog for bioinformatics, statistics and Omics">
-		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="OmicX"/>
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="OmicX"/>
 <meta name="twitter:description" content="A blog for bioinformatics, statistics and Omics"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,6 +68,79 @@
 			
 <main class="main list" role="main">
 	<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/" rel="bookmark">
+			Install and Setup Jellyfin Docker Image
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">omicx.cc</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-02-02T00:26:24&#43;08:00">February 02, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/nas/" rel="category">NAS</a>, <a class="meta__link" href="/categories/media/" rel="category">media</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<blockquote>
+<p>Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.</p>
+</blockquote>
+<p>Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS.</p>
+<p><img src="https://jellyfin.org/docs/images/branding-logo-yes-side.png" alt="Jellyfin logo"></p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/" rel="bookmark">
+			Install and Setup OneDrive Client in a Headless Debian Server
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">omicx.cc</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-01-23T22:31:09&#43;08:00">January 23, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>There is still no official OneDrive client for Linux, the project &ldquo;<a href="https://github.com/abraunegg/onedrive">OneDrive Client for Linux</a>&rdquo; is the only choice. It provides a powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.</p>
+<p>This post is the workthrough of installation and configuration of OneDrive Linux ina headless Debian bullseye/11 server.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2022-01-23-install-and-setup-onedrive-client-in-a-headless-debian-server/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/2021-12-17-install-and-setup-metaphlan-3/" rel="bookmark">
+			Install and Setup MetaPhlAn 3.0
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">omicx.cc</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-12-17T15:36:59&#43;08:00">December 17, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/metagenomics/" rel="category">Metagenomics</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p><a href="https://huttenhower.sph.harvard.edu/metaphlan/">MetaPhlAn (Metagenomic Phylogenetic Analysis)</a> is a computational tool for profiling the composition of microbial communities from metagenomic shotgun sequencing data.</p>
+<p>This post describes the installation and setup of MetaPhlAn 3.0 in Debian 11/bullseye.</p>
+<p>Last updated at: 2021-12-17.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/2021-12-17-install-and-setup-metaphlan-3/">Read more…</a>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
@@ -237,85 +310,6 @@
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/2021-04-20-install-pymol-windows/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2021-04-16-create-a-hugo-blog/" rel="bookmark">
-			Create a Hugo Blog, along with Isso comment server
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">omicx.cc</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-18T15:58:17&#43;08:00">April 18, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/blog/" rel="category">blog</a>, <a class="meta__link" href="/categories/hugo/" rel="category">Hugo</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This post includes the workthrough of installation, configuration and integration of Hugo and Isso comment server.</p>
-<p><img src="/img/hugo-logo-wide-120.png" alt="Hugo logo"> <img src="/img/plus.png" alt="Plus"> <img src="/img/isso-logo-120.png" alt="Isso logo"></p>
-<p>Steps:</p>
-<ul>
-<li>Install and configure of Hugo</li>
-<li>Install and configure of Isso comment server in a remote server</li>
-<li>Integrate Isso with Hugo</li>
-<li>Publish to an existing <a href="https://pages.github.com/">GitHub Page</a></li>
-</ul>
-<p>Environment:</p>
-<blockquote>
-<p>Both local computer and remote server work on <a href="https://www.debian.org/releases/bullseye/">Debian bullseye</a>.</p>
-</blockquote>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/2021-04-16-create-a-hugo-blog/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2021-04-16-migrate-to-hugo/" rel="bookmark">
-			Migrate to Hugo
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">omicx.cc</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-16T15:31:39&#43;08:00">April 16, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/note/" rel="category">Note</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		The dependency of Node.js packages is over complicated and I have wasted lost of time on it. So I migrated the blog from Hexo to Hugo. Further more, the comment system moved to a self-hosted Isso-based server.
-A workthrough will be online later.
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/" rel="bookmark">
-			Install beagle-lib for NVidia Tesla V100 on Debian buster
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">omicx.cc</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-09T15:30:10Z">April 09, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/software/" rel="category">Software</a>, <a class="meta__link" href="/categories/cuda/" rel="category">CUDA</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p><a href="https://github.com/beagle-dev/beagle-lib">BEAGLE</a> is a high-performance library to accelerate the calculations of Bayesian and Maximun Likelihood phylogenetics analyses. The latest version of beagle-lib was released on Dec 4, 2018.</p>
-<p>When compiled for NVidia Tesla V100 on Debian buster 10.9, an error was encountered:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nvcc fatal   : Value <span style="color:#e6db74">&#39;compute_30&#39;</span> is not defined <span style="color:#66d9ef">for</span> option <span style="color:#e6db74">&#39;gpu-architecture&#39;</span>
-</span></span></code></pre></div>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/2021-04-09-install-beagle-lib-for-nvidia-tesla-v100-on-debian-buster/">Read more…</a>
-	</div>
 </article>
 </main>
 
@@ -339,11 +333,11 @@ A workthrough will be online later.
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/2024-01-11-vs-code-connect-to-remote-server-in-intranet/">VS Code Connect to Remote Server over Intranet</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2023-12-25-install-bookstack-by-docker/">Install BookStack by Docker</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2023-11-27-fix-cmake-unsupported-gnu-version-error/">Fix Cmake &#39;Unsupported GNU Version&#39; Error</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2023-10-15-mamba-and-its-usage/">Mamba and Its Usage</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/2023-10-12-common-used-flatpak-commands/">Common Used Flatpak Commands</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/2023-09-26-install-nextstrain-by-conda/">Install Nextstrain by Conda</a></li>
 		</ul>
 	</div>
 </div>
@@ -385,6 +379,8 @@ A workthrough will be online later.
 				<a class="widget__link" href="/categories/note/">Note</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/phylogenetics/">Phylogenetics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/programming/">Programming</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/pymol/">PyMOL</a></li>
 			<li class="widget__item">

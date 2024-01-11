@@ -6,65 +6,42 @@
     <description>Recent content in Phylogenetics on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Feb 2023 10:44:20 +0800</lastBuildDate><atom:link href="https://omicx.cc/categories/phylogenetics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2023 10:44:20 +0800</lastBuildDate>
+    <atom:link href="https://omicx.cc/categories/phylogenetics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Phylogenetic Analysis SARS CoV 2 With UShER</title>
       <link>https://omicx.cc/posts/2023-02-27-phylogenetic-analysis-sars-cov-2-with-usher/</link>
       <pubDate>Mon, 27 Feb 2023 10:44:20 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2023-02-27-phylogenetic-analysis-sars-cov-2-with-usher/</guid>
-      <description>Create Multiple sequence alignment of your sequences Use SARS-CoV-2 isoloate Whuan-Hu-1 (NC_045512.2) as the reference.
-Download metadata Metadata from GISAID Data are available from EpiCoV.
-Fileds of GISAID metadata:
-# Column Example 1 Virus name hCoV-19/Ireland/LS-NVRL-M35IRL03088/2021 2 Last vaccinated 3 Passage details/history Original 4 Type betacoronavirus 5 Accession ID EPI_ISL_3848896 6 Collection date 2021-08-07 7 Location Europe / Ireland / Laois 8 Additional location information 9 Sequence length 29715 10 Host Human 11 Patient age 21-30 12 Gender unknown 13 Clade GK 14 Pango lineage AY.</description>
+      <description>Create Multiple sequence alignment of your sequences Use SARS-CoV-2 isoloate Whuan-Hu-1 (NC_045512.2) as the reference.&#xA;Download metadata Metadata from GISAID Data are available from EpiCoV.&#xA;Fileds of GISAID metadata:&#xA;# Column Example 1 Virus name hCoV-19/Ireland/LS-NVRL-M35IRL03088/2021 2 Last vaccinated 3 Passage details/history Original 4 Type betacoronavirus 5 Accession ID EPI_ISL_3848896 6 Collection date 2021-08-07 7 Location Europe / Ireland / Laois 8 Additional location information 9 Sequence length 29715 10 Host Human 11 Patient age 21-30 12 Gender unknown 13 Clade GK 14 Pango lineage AY.</description>
     </item>
-    
     <item>
       <title>Alignment of SARS-CoV-2 Reference Genome Sequences</title>
       <link>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</link>
       <pubDate>Fri, 25 Nov 2022 14:13:35 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-11-25-alignment-of-sars-cov-2-reference-genome-sequences/</guid>
-      <description>&lt;p&gt;Severe acute respiratory syndrome coronavirus 2 Wuhan-Hu-1 (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/nuccore/1798174254&#34;&gt;NC_045512.2&lt;/a&gt;) and hCoV-19/Wuhan/WIV04/2019 (&lt;a href=&#34;https://gisaid.org/wiv04/&#34;&gt;EPI_ISL_402124&lt;/a&gt;) are two general used reference genome sequences used for SARS-CoV-2 phylogenetic analyses.&lt;/p&gt;
-&lt;p&gt;Here is the alignment result of these two sequences by &lt;a href=&#34;https://emboss.sourceforge.net/&#34;&gt;EMBOSS&lt;/a&gt; needle.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Severe acute respiratory syndrome coronavirus 2 Wuhan-Hu-1 (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/nuccore/1798174254&#34;&gt;NC_045512.2&lt;/a&gt;) and hCoV-19/Wuhan/WIV04/2019 (&lt;a href=&#34;https://gisaid.org/wiv04/&#34;&gt;EPI_ISL_402124&lt;/a&gt;) are two general used reference genome sequences used for SARS-CoV-2 phylogenetic analyses.&lt;/p&gt;&#xA;&lt;p&gt;Here is the alignment result of these two sequences by &lt;a href=&#34;https://emboss.sourceforge.net/&#34;&gt;EMBOSS&lt;/a&gt; needle.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create Phylogenetic Tree of SARS CoV 2 by UShER</title>
       <link>https://omicx.cc/posts/2022-11-22-create-phylogenetic-tree-of-sars-cov-2-by-usher/</link>
       <pubDate>Tue, 22 Nov 2022 16:39:19 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-11-22-create-phylogenetic-tree-of-sars-cov-2-by-usher/</guid>
-      <description>&lt;p&gt;There are nearly 14 million viral genome sequences right now in the GISAID EpiCoV ™ database. It is not likely  to infer the phylogenetic relationships for such a huge dataset by traditional maximum likelyhood or Bayesian methods in a shor time period. The UShER package was developed to generate ultra-large phylogenetic tree of SARS-CoV-2 genomes. The algorithm of the UShER program is to place new samples onto an existing phylogeny using maximum parsimony method. It is able to place given SARS-CoV-2 genome sequences into the GISAID global phylogeny in a couple of hours.  This program is particularly helpful in understanding the relationships of newly sequenced SARS-CoV-2 genomes with each other and with previously sequenced genomes in a global phylogeny.&lt;/p&gt;
-&lt;p&gt;The UShER package is composed by four programs:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;UShER&lt;/code&gt;: a program that rapidly places new samples onto an existing phylogeny using maximum parsimony.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;matUtils&lt;/code&gt;:  a toolkit for querying, interpreting and manipulating the mutation-annotated trees (MATs).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;matOptimize&lt;/code&gt;:  a program to rapidly and effectively optimize a mutation-annotated tree (MAT) for parsimony using subtree pruning and regrafting (SPR) moves within a user-defined radius.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;RIPPLES&lt;/code&gt;: a program that uses a phylogenomic technique to rapidly and sensitively detect recombinant nodes and their ancestors in a mutation-annotated tree (MAT).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The taxoniumtools and &lt;a href=&#34;https://taxonium.org/&#34;&gt;Taxonium website&lt;/a&gt; are used to display the MAT generated by UShER.&lt;/p&gt;</description>
+      <description>&lt;p&gt;There are nearly 14 million viral genome sequences right now in the GISAID EpiCoV ™ database. It is not likely  to infer the phylogenetic relationships for such a huge dataset by traditional maximum likelyhood or Bayesian methods in a shor time period. The UShER package was developed to generate ultra-large phylogenetic tree of SARS-CoV-2 genomes. The algorithm of the UShER program is to place new samples onto an existing phylogeny using maximum parsimony method. It is able to place given SARS-CoV-2 genome sequences into the GISAID global phylogeny in a couple of hours.  This program is particularly helpful in understanding the relationships of newly sequenced SARS-CoV-2 genomes with each other and with previously sequenced genomes in a global phylogeny.&lt;/p&gt;&#xA;&lt;p&gt;The UShER package is composed by four programs:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;UShER&lt;/code&gt;: a program that rapidly places new samples onto an existing phylogeny using maximum parsimony.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;matUtils&lt;/code&gt;:  a toolkit for querying, interpreting and manipulating the mutation-annotated trees (MATs).&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;matOptimize&lt;/code&gt;:  a program to rapidly and effectively optimize a mutation-annotated tree (MAT) for parsimony using subtree pruning and regrafting (SPR) moves within a user-defined radius.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;RIPPLES&lt;/code&gt;: a program that uses a phylogenomic technique to rapidly and sensitively detect recombinant nodes and their ancestors in a mutation-annotated tree (MAT).&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The taxoniumtools and &lt;a href=&#34;https://taxonium.org/&#34;&gt;Taxonium website&lt;/a&gt; are used to display the MAT generated by UShER.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Run MrBayes Along With Beagle-lib</title>
       <link>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</link>
       <pubDate>Mon, 21 Mar 2022 15:13:11 +0800</pubDate>
-      
       <guid>https://omicx.cc/posts/2022-03-21-run-mrbayes-with-beagle-lib/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://nbisweden.github.io/MrBayes/&#34;&gt;MrBayes 3&lt;/a&gt; is a program for Bayesian inference and model choice across a large space of phylogenetic and evolutionary models. And &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. BEAGLE is able to accelerate MrBayes analyses very much.&lt;/p&gt;
-&lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://nbisweden.github.io/MrBayes/img/bayes.jpg&#34; alt=&#34;MrBayes logo&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nbisweden.github.io/MrBayes/&#34;&gt;MrBayes 3&lt;/a&gt; is a program for Bayesian inference and model choice across a large space of phylogenetic and evolutionary models. And &lt;a href=&#34;https://github.com/beagle-dev/beagle-lib&#34;&gt;BEAGLE&lt;/a&gt; is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages. BEAGLE is able to accelerate MrBayes analyses very much.&lt;/p&gt;&#xA;&lt;p&gt;This post introduces the way to run MrBayes along with BEAGLE.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://nbisweden.github.io/MrBayes/img/bayes.jpg&#34; alt=&#34;MrBayes logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>BEAST Tips</title>
       <link>https://omicx.cc/posts/2018-11-16-beast-tips/</link>
       <pubDate>Fri, 16 Nov 2018 12:13:43 +0000</pubDate>
-      
       <guid>https://omicx.cc/posts/2018-11-16-beast-tips/</guid>
       <description>&lt;p&gt;BEAST (and BEAST 2, of course) is widely uesed for phylogenetic inference. But it is quite complicated. This post represents some useful tips while using BEAST.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
