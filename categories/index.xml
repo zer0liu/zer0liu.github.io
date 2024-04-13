@@ -6,19 +6,19 @@
     <description>Recent content in Categories on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jan 2024 23:38:27 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Apr 2024 12:09:11 +0800</lastBuildDate>
     <atom:link href="https://omicx.cc/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PyMOL</title>
       <link>https://omicx.cc/categories/pymol/</link>
-      <pubDate>Tue, 30 Jan 2024 23:38:27 +0800</pubDate>
+      <pubDate>Sat, 13 Apr 2024 12:09:11 +0800</pubDate>
       <guid>https://omicx.cc/categories/pymol/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
       <link>https://omicx.cc/categories/software/</link>
-      <pubDate>Tue, 30 Jan 2024 23:38:27 +0800</pubDate>
+      <pubDate>Sat, 13 Apr 2024 12:09:11 +0800</pubDate>
       <guid>https://omicx.cc/categories/software/</guid>
       <description></description>
     </item>
@@ -37,7 +37,7 @@
       <description></description>
     </item>
     <item>
-      <title>biosoft</title>
+      <title>Biosoft</title>
       <link>https://omicx.cc/categories/biosoft/</link>
       <pubDate>Mon, 27 Nov 2023 16:33:41 +0800</pubDate>
       <guid>https://omicx.cc/categories/biosoft/</guid>
@@ -107,7 +107,7 @@
       <description></description>
     </item>
     <item>
-      <title>media</title>
+      <title>Media</title>
       <link>https://omicx.cc/categories/media/</link>
       <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
       <guid>https://omicx.cc/categories/media/</guid>
@@ -128,14 +128,14 @@
       <description></description>
     </item>
     <item>
-      <title>scRNA-Seq</title>
+      <title>ScRNA-Seq</title>
       <link>https://omicx.cc/categories/scrna-seq/</link>
       <pubDate>Thu, 24 Jun 2021 12:28:10 +0800</pubDate>
       <guid>https://omicx.cc/categories/scrna-seq/</guid>
       <description></description>
     </item>
     <item>
-      <title>blog</title>
+      <title>Blog</title>
       <link>https://omicx.cc/categories/blog/</link>
       <pubDate>Sun, 18 Apr 2021 15:58:17 +0800</pubDate>
       <guid>https://omicx.cc/categories/blog/</guid>

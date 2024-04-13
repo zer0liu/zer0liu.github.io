@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on OmicX</title>
+    <title>Blog on OmicX</title>
     <link>https://omicx.cc/categories/blog/</link>
-    <description>Recent content in blog on OmicX</description>
+    <description>Recent content in Blog on OmicX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Apr 2021 15:58:17 +0800</lastBuildDate>
