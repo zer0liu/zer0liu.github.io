@@ -10,9 +10,9 @@
     <atom:link href="https://omicx.cc/categories/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Open Source PyMOL 3.0 in Windows 11</title>
-      <link>https://omicx.cc/posts/2024-04-13-install-open-source-pymol-3.0-in-windows-11/</link>
+      <link>https://omicx.cc/posts/2024-04-13-install-open-source-pymol-3-in-windows-11/</link>
       <pubDate>Sat, 13 Apr 2024 12:09:11 +0800</pubDate>
-      <guid>https://omicx.cc/posts/2024-04-13-install-open-source-pymol-3.0-in-windows-11/</guid>
+      <guid>https://omicx.cc/posts/2024-04-13-install-open-source-pymol-3-in-windows-11/</guid>
       <description>&lt;p&gt;Open-source wheels for PyMOL 3.0.x have been released in April 9, 2024, and the software distribution method has been changed. Former installation methods &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; could not work at all. Here provides a new walk through to install open-source PyMOL 3.0.x in Windows 11.&lt;/p&gt;</description>
     </item>
     <item>
