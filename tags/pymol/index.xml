@@ -16,11 +16,11 @@
       <description>&lt;p&gt;Open-source wheels for PyMOL 3.0.x have been released in April 9, 2024, and the software distribution method has been changed. Former installation methods &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; could not work at all. Here provides a new walk through to install open-source PyMOL 3.0.x in Windows 11.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Install Open Source PyMOL in Windows 11</title>
+      <title>Install Open Source PyMOL in Windows 11 (Outdated)</title>
       <link>https://omicx.cc/posts/2024-01-30-install-open-source-pymol-in-windows-11/</link>
       <pubDate>Tue, 30 Jan 2024 23:38:27 +0800</pubDate>
       <guid>https://omicx.cc/posts/2024-01-30-install-open-source-pymol-in-windows-11/</guid>
-      <description>&lt;p&gt;The way to install open source PyMOL in the &lt;a href=&#34;https://omicx.cc/posts/2021-04-20-install-pymol-windows/&#34;&gt;previous post&lt;/a&gt; can not work in Windows 11. The PyMOLWiki described the method to &lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;install PyMOL in windows&lt;/a&gt;. Here we provided more details of the installation.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The method to install PyMOL in Windows 11 is out of date. Please refer to the most recent post: &lt;a href=&#34;https://omicx.cc/posts/2024-04-13-install-open-source-pymol-3.0.x-in-windows-11/&#34;&gt;Install Open Source PyMOL 3.0.x in Windows 11&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;The way to install open source PyMOL in the &lt;a href=&#34;https://omicx.cc/posts/2021-04-20-install-pymol-windows/&#34;&gt;previous post&lt;/a&gt; can not work in Windows 11. The PyMOLWiki described the method to &lt;a href=&#34;https://pymolwiki.org/index.php/Windows_Install&#34;&gt;install PyMOL in windows&lt;/a&gt;. Here we provided more details of the installation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Step by Step Install Open Source Pymol 2.x in Windows by Conda</title>

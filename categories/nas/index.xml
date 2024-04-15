@@ -15,12 +15,5 @@
       <guid>https://omicx.cc/posts/2022-08-30-install-and-usage-of-yt-dlp/</guid>
       <description>&lt;p&gt;yt-dlp is a &lt;a href=&#34;https://github.com/ytdl-org/youtube-dl&#34;&gt;youtube-dl&lt;/a&gt; fork and able to download videos and audios from many streaming platforms, such as YouTube.&lt;/p&gt;&#xA;&lt;p&gt;This blog describes installation in Debian bullseye and some common usage examples.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg&#34; alt=&#34;yt-dlp logo&#34;&gt;&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>Install and Setup Jellyfin Docker Image</title>
-      <link>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</link>
-      <pubDate>Wed, 02 Feb 2022 00:26:24 +0800</pubDate>
-      <guid>https://omicx.cc/posts/2022-02-02-install-and-setup-jellyfin-docker-imagae/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Here recorded the walkthrough of install and setup of Jellyfin docker image in a Debian bullseye/11.2 x86-64 NAS.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://jellyfin.org/docs/images/branding-logo-yes-side.png&#34; alt=&#34;Jellyfin logo&#34;&gt;&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
