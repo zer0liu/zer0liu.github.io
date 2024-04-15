@@ -90,7 +90,7 @@
       <ul>
         <li><a href="#1-install-miniconda-for-windows">1. Install Miniconda for Windows</a></li>
         <li><a href="#2-create-an-environment-for-pymol">2. Create an environment for PyMOL</a></li>
-        <li><a href="#3-download-whell-file-and-install-pymol">3. Download whell file and install PyMOL</a></li>
+        <li><a href="#3-download-wheel-file-and-install-pymol">3. Download wheel file and install PyMOL</a></li>
       </ul>
     </li>
   </ul>
@@ -102,23 +102,23 @@
 <p>First install Miniconda for Windows as described in a <a href="https://omicx.cc/posts/2024-01-30-install-open-source-pymol-in-windows-11/">previous post</a>.</p>
 <h2 id="2-create-an-environment-for-pymol">2. Create an environment for PyMOL</h2>
 <p>Create a conda environment for PyMOL 3.0.x:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>base<span style="color:#f92672">)</span> C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\u</span>sername&gt;conda create -n pymol-3.0 python<span style="color:#f92672">=</span>3.12 pip
-</span></span></code></pre></div><p>Then activate this environment and install necessary packages:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>base<span style="color:#f92672">)</span> C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\u</span>sername&gt;conda activate pymol-3.0
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install necessary packages</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>pymol-3.0<span style="color:#f92672">)</span> C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\u</span>sername&gt;python -m pip install numpy pmw pyqt5
-</span></span></code></pre></div><h2 id="3-download-whell-file-and-install-pymol">3. Download whell file and install PyMOL</h2>
+<pre tabindex="0"><code>(base) C:\Users\username&gt;conda create -n pymol-3.0 python=3.12 pip
+</code></pre><p>Then activate this environment and install necessary packages:</p>
+<pre tabindex="0"><code>(base) C:\Users\username&gt;conda activate pymol-3.0
+
+# Install necessary packages
+(pymol-3.0) C:\Users\username&gt;python -m pip install numpy pmw pyqt5
+</code></pre><h2 id="3-download-wheel-file-and-install-pymol">3. Download wheel file and install PyMOL</h2>
 <p>Pymol-open-source wheels for Python on Windows have been released in a GitHub repository <a href="https://github.com/cgohlke/pymol-open-source-wheels/">cgohlke/pymol-open-source-wheels</a>, which can be downloaded from the <a href="https://github.com/cgohlke/pymol-open-source-wheels/releases">release page</a>.</p>
 <p>For Windows 11 x64, download <a href="https://github.com/cgohlke/pymol-open-source-wheels/releases/download/v2024.4.9/pymol-3.0.0-cp312-cp312-win_amd64.whl">pymol-3.0.0-cp312-cp312-win_amd64.whl</a>.</p>
 <p>Now install as:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>pymol-3.0<span style="color:#f92672">)</span> C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\u</span>sername&gt;python -m pip install pymol-3.0.0-cp312-cp312-win_amd64.whl
-</span></span></code></pre></div><blockquote>
+<pre tabindex="0"><code>(pymol-3.0) C:\Users\username&gt;python -m pip install pymol-3.0.0-cp312-cp312-win_amd64.whl
+</code></pre><blockquote>
 <p>Please note the path of this wheel file.</p>
 </blockquote>
 <p>If there were no error message, launch PyMOL via:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>pymol-3.0<span style="color:#f92672">)</span> C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\u</span>sername&gt;pymol
-</span></span></code></pre></div><p>Have fun!</p>
+<pre tabindex="0"><code>(pymol-3.0) C:\Users\username&gt;pymol
+</code></pre><p>Have fun!</p>
 <blockquote>
 <p><strong>NOTE:</strong></p>
 <ul>
